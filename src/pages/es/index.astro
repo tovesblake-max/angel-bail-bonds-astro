@@ -47,36 +47,34 @@ const structuredData = {
   structuredData={structuredData}
 >
   <!-- Hero -->
-  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+  <section class="section-padding" style="background: var(--navy-deep);">
     <div class="max-w-4xl mx-auto text-center">
-      <p class="text-gold font-semibold text-lg mb-4">Hablamos Español • Servicio 24/7</p>
-      <h1 class="text-cream font-display text-4xl md:text-5xl mb-6 leading-tight">
+      <p class="font-semibold text-lg mb-4" style="color: var(--blue);">Hablamos Español • Servicio 24/7</p>
+      <h1 class="text-white font-display text-4xl md:text-5xl mb-6 leading-tight">
         Servicios de Fianzas en Stillwater y Oklahoma Central
       </h1>
-      <p class="text-cream/90 text-lg mb-8 max-w-2xl mx-auto">
+      <p class="text-lg mb-8 max-w-2xl mx-auto" style="color: white; opacity: 0.9;">
         Angel Bail Bonds ofrece servicios profesionales de fianzas las 24 horas del día, los 7 días de la semana. Más de 15 años de experiencia ayudando a familias en todo Oklahoma central.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">
+        <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.1rem; padding: 14px 32px;">
           Llame Ahora: (405) 614-3000
         </a>
-        <a href="/es/servicios-de-fianzas" class="inline-block bg-white/20 hover:bg-white/30 text-cream font-bold py-4 px-8 rounded-lg transition-all border border-cream">
+        <a href="/es/servicios-de-fianzas" class="inline-block bg-white/20 hover:bg-white/30 text-white font-bold py-4 px-8 rounded-lg transition-all" style="border: 1px solid white;">
           Nuestros Servicios
         </a>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8 border-t border-cream/30">
-        <div class="text-center"><p class="text-3xl font-bold text-gold">24/7</p><p class="text-cream text-sm">Siempre Disponible</p></div>
-        <div class="text-center"><p class="text-3xl font-bold text-gold">5.0</p><p class="text-cream text-sm">Estrellas en Google</p></div>
-        <div class="text-center"><p class="text-3xl font-bold text-gold">15+</p><p class="text-cream text-sm">Años de Experiencia</p></div>
-        <div class="text-center"><p class="text-3xl font-bold text-gold">5</p><p class="text-cream text-sm">Condados Servidos</p></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8" style="border-top: 1px solid rgba(255, 255, 255, 0.3);">
+        <div class="text-center"><p class="text-3xl font-bold" style="color: var(--blue);">24/7</p><p class="text-white text-sm">Siempre Disponible</p></div>
+        <div class="text-center"><p class="text-3xl font-bold" style="color: var(--blue);">5.0</p><p class="text-white text-sm">Estrellas en Google</p></div>
+        <div class="text-center"><p class="text-3xl font-bold" style="color: var(--blue);">15+</p><p class="text-white text-sm">Años de Experiencia</p></div>
+        <div class="text-center"><p class="text-3xl font-bold" style="color: var(--blue);">5</p><p class="text-white text-sm">Condados Servidos</p></div>
       </div>
     </div>
   </section>
 
-  <div class="gold-divider"></div>
-
   <!-- Qué es una Fianza -->
-  <section class="section-padding bg-cream">
+  <section class="section-padding" style="background: var(--slate-50);">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-agate font-display text-3xl mb-6">¿Necesita una Fianza en Oklahoma?</h2>
       <p class="text-charcoal/80 mb-4">
@@ -91,59 +89,53 @@ const structuredData = {
     </div>
   </section>
 
-  <div class="gold-divider"></div>
-
   <!-- Servicios -->
   <section class="section-padding bg-white">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-agate font-display text-3xl mb-8 text-center">Tipos de Fianzas que Manejamos</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Delitos Graves</h3><p class="text-charcoal/80">Manejo experto de cargos serios que requieren montos de fianza sustanciales.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Delitos Menores</h3><p class="text-charcoal/80">Procesamiento rápido para cargos menores con opciones de pago flexibles.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Fianzas por DUI/DWI</h3><p class="text-charcoal/80">Experiencia especializada con cargos de conducir bajo la influencia.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Violencia Doméstica</h3><p class="text-charcoal/80">Manejo confidencial de asuntos familiares sensibles.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Cargos de Drogas</h3><p class="text-charcoal/80">Asistencia experta con arrestos relacionados con drogas.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Órdenes de Arresto</h3><p class="text-charcoal/80">Resolución rápida para órdenes de arresto pendientes.</p></div>
+        <div class="card" style="background: var(--slate-50);"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Delitos Graves</h3><p class="text-charcoal/80">Manejo experto de cargos serios que requieren montos de fianza sustanciales.</p></div>
+        <div class="card" style="background: var(--slate-50);"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Delitos Menores</h3><p class="text-charcoal/80">Procesamiento rápido para cargos menores con opciones de pago flexibles.</p></div>
+        <div class="card" style="background: var(--slate-50);"><h3 class="text-agate font-display text-xl mb-2">Fianzas por DUI/DWI</h3><p class="text-charcoal/80">Experiencia especializada con cargos de conducir bajo la influencia.</p></div>
+        <div class="card" style="background: var(--slate-50);"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Violencia Doméstica</h3><p class="text-charcoal/80">Manejo confidencial de asuntos familiares sensibles.</p></div>
+        <div class="card" style="background: var(--slate-50);"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Cargos de Drogas</h3><p class="text-charcoal/80">Asistencia experta con arrestos relacionados con drogas.</p></div>
+        <div class="card" style="background: var(--slate-50);"><h3 class="text-agate font-display text-xl mb-2">Fianzas por Órdenes de Arresto</h3><p class="text-charcoal/80">Resolución rápida para órdenes de arresto pendientes.</p></div>
       </div>
     </div>
   </section>
 
-  <div class="gold-divider"></div>
-
   <!-- Áreas de Servicio -->
-  <section class="section-padding bg-cream">
+  <section class="section-padding" style="background: var(--slate-50);">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-agate font-display text-3xl mb-8 text-center">Áreas de Servicio</h2>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl text-gold mb-2">Payne</h3><p class="text-charcoal/70 text-sm">Incluyendo Stillwater</p></div>
-        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl text-gold mb-2">Pawnee</h3><p class="text-charcoal/70 text-sm">Área Central</p></div>
-        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl text-gold mb-2">Lincoln</h3><p class="text-charcoal/70 text-sm">Área Sur</p></div>
-        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl text-gold mb-2">Kay</h3><p class="text-charcoal/70 text-sm">Área Norte</p></div>
-        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl text-gold mb-2">Noble</h3><p class="text-charcoal/70 text-sm">Área Este</p></div>
+        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl" style="color: var(--blue);">Payne</h3><p class="text-charcoal/70 text-sm">Incluyendo Stillwater</p></div>
+        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl" style="color: var(--blue);">Pawnee</h3><p class="text-charcoal/70 text-sm">Área Central</p></div>
+        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl" style="color: var(--blue);">Lincoln</h3><p class="text-charcoal/70 text-sm">Área Sur</p></div>
+        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl" style="color: var(--blue);">Kay</h3><p class="text-charcoal/70 text-sm">Área Norte</p></div>
+        <div class="text-center p-6 bg-white rounded-lg"><h3 class="font-display text-2xl" style="color: var(--blue);">Noble</h3><p class="text-charcoal/70 text-sm">Área Este</p></div>
       </div>
     </div>
   </section>
-
-  <div class="gold-divider"></div>
 
   <!-- Preguntas Frecuentes -->
   <section class="section-padding bg-white">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-agate font-display text-3xl mb-8 text-center">Preguntas Frecuentes sobre Fianzas</h2>
       <div class="space-y-6">
-        <div class="bg-cream rounded-lg p-6">
+        <div class="rounded-lg p-6" style="background: var(--slate-50);">
           <h3 class="text-agate font-display text-lg mb-2">¿Cómo funciona una fianza en Oklahoma?</h3>
           <p class="text-charcoal/80">Una fianza permite que una persona arrestada sea liberada de la cárcel mientras espera su fecha de corte. El costo típico es el 10% del monto total de la fianza. Llame a Angel Bail Bonds al (405) 614-3000 para asistencia inmediata en español.</p>
         </div>
-        <div class="bg-cream rounded-lg p-6">
+        <div class="rounded-lg p-6" style="background: var(--slate-50);">
           <h3 class="text-agate font-display text-lg mb-2">¿Cuánto cuesta una fianza en Oklahoma?</h3>
           <p class="text-charcoal/80">En Oklahoma, la prima de fianza es típicamente el 10% del monto total establecido por el juez. Angel Bail Bonds ofrece planes de pago flexibles para ayudar a las familias.</p>
         </div>
-        <div class="bg-cream rounded-lg p-6">
+        <div class="rounded-lg p-6" style="background: var(--slate-50);">
           <h3 class="text-agate font-display text-lg mb-2">¿Hablan español en Angel Bail Bonds?</h3>
           <p class="text-charcoal/80">Sí, Angel Bail Bonds ofrece servicios en español para la comunidad hispana de Oklahoma central. Llámenos al (405) 614-3000 a cualquier hora del día o la noche.</p>
         </div>
-        <div class="bg-cream rounded-lg p-6">
+        <div class="rounded-lg p-6" style="background: var(--slate-50);">
           <h3 class="text-agate font-display text-lg mb-2">¿Qué necesito para sacar a alguien de la cárcel?</h3>
           <p class="text-charcoal/80">Necesitará el nombre completo de la persona arrestada, la cárcel donde se encuentra, y una forma de identificación válida. Angel Bail Bonds le guiará paso a paso por el proceso.</p>
         </div>
@@ -151,14 +143,12 @@ const structuredData = {
     </div>
   </section>
 
-  <div class="gold-divider"></div>
-
   <!-- CTA -->
-  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+  <section class="section-padding" style="background: var(--navy-deep);">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-cream font-display text-3xl mb-6">¿Necesita Ayuda Ahora?</h2>
-      <p class="text-cream/90 text-lg mb-8">Llame a Angel Bail Bonds para asistencia inmediata y confidencial en español.</p>
-      <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">(405) 614-3000</a>
+      <h2 class="text-white font-display text-3xl mb-6">¿Necesita Ayuda Ahora?</h2>
+      <p class="text-lg" style="color: white; opacity: 0.9; margin-bottom: 32px;">Llame a Angel Bail Bonds para asistencia inmediata y confidencial en español.</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.1rem; padding: 14px 32px;">(405) 614-3000</a>
     </div>
   </section>
 </BaseLayout>

@@ -8,7 +8,7 @@ const structuredData = {
   description: 'Bail bond services for Noble County Jail in Perry, Oklahoma. 24/7 availability, fast processing, payment plans available.',
   image: '/images/logo.webp',
   telephone: '(405) 614-3000',
-  address: { '@type': 'PostalAddress', addressLocality: 'Perry', addressRegion: 'OK', postalCode: '73077', addressCountry: 'US' },
+  address: { '@type': 'PostalAddress', streetAddress: '721 Cedar St', addressLocality: 'Perry', addressRegion: 'OK', postalCode: '73077', addressCountry: 'US' },
   areaServed: { '@type': 'AdministrativeArea', name: 'Noble County, Oklahoma' },
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
   openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' }
@@ -19,8 +19,8 @@ const faqData = {
   '@type': 'FAQPage',
   mainEntity: [
     { '@type': 'Question', name: 'How do I bail someone out of Noble County Jail in Perry, Oklahoma?', acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000. We serve Noble County from Stillwater and can post bonds at the Noble County Jail in Perry. You\'ll need the inmate\'s name and charges. We handle all paperwork and only charge the 10% premium required by Oklahoma law.' } },
-    { '@type': 'Question', name: 'What is Noble County Jail\'s phone number and address?', acceptedAnswer: { '@type': 'Answer', text: 'Noble County Jail is located in Perry, Oklahoma. You can reach them at (580) 336-1001 for inmate information, bail amounts, and general inquiries. They are available 24 hours a day.' } },
-    { '@type': 'Question', name: 'What are the visitation hours at Noble County Jail?', acceptedAnswer: { '@type': 'Answer', text: 'Noble County Jail offers both in-person and virtual visitation. In-person visits are scheduled on specific days and require security screening and appropriate dress code. Virtual visits can be booked at prodigysales.com.' } },
+    { '@type': 'Question', name: 'What is Noble County Jail\'s phone number and address?', acceptedAnswer: { '@type': 'Answer', text: 'Noble County Jail is located at 721 Cedar St, Perry, Oklahoma 73077. You can reach them at (580) 336-1001 for inmate information, bail amounts, and general inquiries. They are available 24 hours a day.' } },
+    { '@type': 'Question', name: 'What are the visitation hours at Noble County Jail?', acceptedAnswer: { '@type': 'Answer', text: 'Contact the jail at (580) 336-1001 for current visitation schedule and requirements. A valid government-issued photo ID is required.' } },
     { '@type': 'Question', name: 'What forms of payment does Noble County Jail accept for bail?', acceptedAnswer: { '@type': 'Answer', text: 'Noble County Jail accepts cash, credit cards, and money orders for direct bail payment. If using a bail bondsman like Angel Bail Bonds, you only pay the 10% premium and we accept cash, credit cards, and offer payment plans.' } }
   ]
 };
@@ -47,11 +47,12 @@ const howToData = {
   <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
   <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
 
-  <section style="background: linear-gradient(135deg, #1a6b6a 0%, #145453 100%); min-height: 50vh;" class="flex items-center text-cream">
+  <!-- Hero Section -->
+  <section style="background: var(--navy-deep); min-height: 50vh;" class="flex items-center text-white">
     <div class="max-w-7xl mx-auto px-4 py-20 w-full">
-      <p class="section-label" style="color: var(--gold);">Noble County Jail — Perry, OK</p>
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4">Bail Bonds for<br><span style="color: var(--gold);">Noble County Jail</span></h1>
-      <p class="text-lg md:text-xl max-w-2xl mb-8 opacity-90">Perry, Oklahoma — 48-bed county facility. Angel Bail Bonds serves Noble County from nearby Stillwater with fast response times.</p>
+      <p class="section-label">Noble County Jail — Perry, OK</p>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4 text-white">Bail Bonds for<br><span style="color: var(--blue);">Noble County Jail</span></h1>
+      <p class="text-lg md:text-xl max-w-2xl mb-8 text-white opacity-90">Perry, Oklahoma — Angel Bail Bonds serves Noble County from nearby Stillwater with fast response times.</p>
       <div class="flex flex-wrap gap-4">
         <a href="tel:+14056143000" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(405) 614-3000</a>
         <a href="#how-to-bail" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">How Bail Works Here</a>
@@ -59,51 +60,121 @@ const howToData = {
     </div>
   </section>
 
-  <section style="background: var(--cream); padding: 80px 0;">
+  <!-- Facility Details Section -->
+  <section style="background: var(--slate-50); padding: 80px 0;">
     <div class="max-w-7xl mx-auto px-4">
       <p class="section-label">Facility Details</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Noble County Jail Information</h2>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--slate-900);">Noble County Jail Information</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="card reveal"><div class="icon-box">📍</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Location</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">Perry, Oklahoma<br>Noble County</p></div>
-        <div class="card reveal reveal-delay-1"><div class="icon-box">📞</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Phone (24/7)</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">(580) 336-1001</p></div>
-        <div class="card reveal reveal-delay-2"><div class="icon-box">🏢</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Capacity</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">48-bed facility<br>Misdemeanor & felony housing</p></div>
-        <div class="card reveal reveal-delay-3"><div class="icon-box">👥</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Visitation</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">In-person & virtual visits<br>Schedule at prodigysales.com</p></div>
+        <div class="card reveal">
+          <div class="icon-box">📍</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Location</h3>
+          <p style="color: var(--slate-500); opacity: 0.9; font-size: 0.95rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=721+Cedar+St+Perry+OK+73077" target="_blank" rel="noopener" style="color: var(--blue); text-decoration: underline;">721 Cedar St<br>Perry, OK 73077</a>
+          </p>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <div class="icon-box">📞</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Phone (24/7)</h3>
+          <p style="color: var(--slate-500); opacity: 0.9; font-size: 0.95rem;"><a href="tel:+15803361001" style="color: var(--blue); text-decoration: underline;">(580) 336-1001</a></p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="icon-box">👥</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Visitation</h3>
+          <p style="color: var(--slate-500); opacity: 0.9; font-size: 0.95rem;">Contact the jail at (580) 336-1001 for current visitation schedule and requirements. A valid government-issued photo ID is required.</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="icon-box">💰</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Bail Info</h3>
+          <p style="color: var(--slate-500); opacity: 0.9; font-size: 0.95rem;">Call (580) 336-1001 for bail amounts. 10% premium through Angel Bail Bonds.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- How to Bail Out Section -->
   <section id="how-to-bail" style="padding: 100px 0; background: white;">
     <div class="max-w-4xl mx-auto px-4">
       <p class="section-label">Step-by-Step Guide</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-4" style="color: var(--agate);">How to Bail Someone Out of Noble County Jail</h2>
-      <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 48px; font-size: 1.1rem;">Noble County Jail in Perry is about 30 minutes from Stillwater. Angel Bail Bonds serves this facility regularly and knows the process inside and out.</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-4" style="color: var(--slate-900);">How to Bail Someone Out of Noble County Jail</h2>
+      <p style="color: var(--slate-500); opacity: 0.9; margin-bottom: 48px; font-size: 1.1rem;">Noble County Jail in Perry is about 30 minutes from Stillwater. Angel Bail Bonds serves this facility regularly and knows the process inside and out.</p>
       <div style="display: flex; flex-direction: column; gap: 32px;">
-        <div class="reveal" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">1</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Call the Jail for Inmate Info</h3><p style="color: var(--charcoal); opacity: 0.8;">Call Noble County Jail at <strong>(580) 336-1001</strong> (available 24/7) to confirm the person is in custody, get their charges, and find out the bail amount.</p></div></div>
-        <div class="reveal reveal-delay-1" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">2</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Call Angel Bail Bonds</h3><p style="color: var(--charcoal); opacity: 0.8;">Call <strong>(405) 614-3000</strong> any time. We serve Noble County from Stillwater and can have a bond posted quickly. We'll explain the process and your financial options.</p></div></div>
-        <div class="reveal reveal-delay-2" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">3</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Sign Bond & Pay 10% Premium</h3><p style="color: var(--charcoal); opacity: 0.8;">Complete the bond paperwork and pay 10% of the bail amount. We accept cash, credit cards, and offer payment plans so finances don't delay the release.</p></div></div>
-        <div class="reveal reveal-delay-3" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">4</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Bond Posted — Release Begins</h3><p style="color: var(--charcoal); opacity: 0.8;">We post the bond with Noble County Jail staff and the release process begins. We'll stay in contact until your loved one is free.</p></div></div>
+        <div class="reveal" style="display: flex; gap: 20px;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">1</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Call the Jail for Inmate Info</h3>
+            <p style="color: var(--slate-500); opacity: 0.9;">Call Noble County Jail at <strong>(580) 336-1001</strong> (available 24/7) to confirm the person is in custody, get their charges, and find out the bail amount.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1" style="display: flex; gap: 20px;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">2</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Call Angel Bail Bonds</h3>
+            <p style="color: var(--slate-500); opacity: 0.9;">Call <strong>(405) 614-3000</strong> any time. We serve Noble County from Stillwater and can have a bond posted quickly. We'll explain the process and your financial options.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2" style="display: flex; gap: 20px;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">3</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Sign Bond & Pay 10% Premium</h3>
+            <p style="color: var(--slate-500); opacity: 0.9;">Complete the bond paperwork and pay 10% of the bail amount. We accept cash, credit cards, and offer payment plans so finances don't delay the release.</p>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-3" style="display: flex; gap: 20px;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">4</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Bond Posted — Release Begins</h3>
+            <p style="color: var(--slate-500); opacity: 0.9;">We post the bond with Noble County Jail staff and the release process begins. We'll stay in contact until your loved one is free.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section style="padding: 80px 0; background: var(--cream);">
+  <!-- FAQ Section -->
+  <section style="padding: 80px 0; background: var(--slate-50);">
     <div class="max-w-4xl mx-auto px-4">
       <p class="section-label">Common Questions</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Noble County Jail Bail FAQ</h2>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--slate-900);">Noble County Jail Bail FAQ</h2>
       <div style="display: flex; flex-direction: column; gap: 16px;">
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>How do I bail someone out of Noble County Jail?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Call Angel Bail Bonds at (405) 614-3000. We need the inmate's name and charges. We serve Noble County regularly and can post bonds at the jail in Perry. You pay just 10% of the bail amount.</p></details>
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>What is Noble County Jail's phone number?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Noble County Jail can be reached 24/7 at (580) 336-1001. They can provide inmate information, bail amounts, and booking details.</p></details>
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>How do I visit someone at Noble County Jail?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Noble County Jail offers both in-person and virtual visitation. In-person visits require scheduling in advance, security screening, and appropriate attire. Virtual visits can be booked at prodigysales.com. Contact the jail for current visitation schedules.</p></details>
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>What payment methods does Noble County Jail accept for bail?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">For paying the full bail directly, Noble County Jail accepts cash, credit cards, and money orders. If you use Angel Bail Bonds, you only pay 10% and we accept cash, credit cards, and offer flexible payment plans.</p></details>
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
+            <span>How do I bail someone out of Noble County Jail?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--slate-500); opacity: 0.9; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Call Angel Bail Bonds at (405) 614-3000. We need the inmate's name and charges. We serve Noble County regularly and can post bonds at the jail in Perry. You pay just 10% of the bail amount.</p>
+        </details>
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
+            <span>What is Noble County Jail's phone number?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--slate-500); opacity: 0.9; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Noble County Jail can be reached 24/7 at (580) 336-1001. They can provide inmate information, bail amounts, and booking details.</p>
+        </details>
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
+            <span>How do I visit someone at Noble County Jail?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--slate-500); opacity: 0.9; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Contact the jail at (580) 336-1001 for current visitation schedule and requirements. A valid government-issued photo ID is required.</p>
+        </details>
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
+            <span>What payment methods does Noble County Jail accept for bail?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--slate-500); opacity: 0.9; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">For paying the full bail directly, Noble County Jail accepts cash, credit cards, and money orders. If you use Angel Bail Bonds, you only pay 10% and we accept cash, credit cards, and offer flexible payment plans.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section style="background: linear-gradient(135deg, #1a6b6a 0%, #145453 100%); padding: 80px 0;" class="text-cream">
+  <!-- Final CTA Section -->
+  <section style="background: var(--navy-deep); padding: 80px 0;" class="text-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="section-label" style="color: var(--gold);">Available 24/7</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-6">Someone in Noble County Jail?</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Angel Bail Bonds serves Noble County from Stillwater. We know the process, we know the staff, and we'll get your loved one out fast.</p>
+      <p class="section-label" style="color: var(--blue);">Available 24/7</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-6 text-white">Someone in Noble County Jail?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto text-white opacity-90">Angel Bail Bonds serves Noble County from Stillwater. We know the process, we know the staff, and we'll get your loved one out fast.</p>
       <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.3rem; padding: 16px 40px;">(405) 614-3000</a>
     </div>
   </section>

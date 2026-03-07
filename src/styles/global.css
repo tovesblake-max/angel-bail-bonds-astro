@@ -110,7 +110,7 @@ p {
 
 /* ─── LAYOUT ─── */
 .section-padding {
-  padding: 96px 2rem;
+  padding: 96px 2.5rem;
 }
 
 .container {
@@ -403,13 +403,13 @@ p {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .section-padding {
-    padding: 72px 1.25rem;
+    padding: 72px 1.5rem;
   }
 }
 
 @media (max-width: 600px) {
   .section-padding {
-    padding: 56px 1rem;
+    padding: 56px 1.25rem;
   }
 
   .stat-number {
