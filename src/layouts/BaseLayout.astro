@@ -72,9 +72,12 @@ const fullTitle = title + ' | Angel Bail Bonds';
             <a href="/contact" class="px-3 py-2 text-sm font-medium rounded-lg transition-colors" style="color: #475569;" onmouseover="this.style.color='#1e3a5f';this.style.background='#f8fafc'" onmouseout="this.style.color='#475569';this.style.background='transparent'">Contact</a>
           </div>
 
-          <!-- CTA + Mobile -->
+          <!-- CTA + Language + Mobile -->
           <div class="flex items-center gap-3">
-            <a href="tel:+14056143000" class="hidden sm:inline-flex items-center gap-2 font-bold text-sm py-2.5 px-5 rounded-lg transition-all" style="background: #dc2626; color: white; box-shadow: 0 2px 10px rgba(220,38,38,0.2);">
+            <a href="/es/" class="hidden md:inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-md transition-colors" style="color: #475569; border: 1px solid #e2e8f0;" aria-label="Español">
+              🌐 <span>Español</span>
+            </a>
+            <a href="tel:+14056143000" class="hidden sm:inline-flex items-center gap-2 font-extrabold text-base py-2.5 px-5 rounded-lg transition-all" style="background: #dc2626; color: white; box-shadow: 0 2px 10px rgba(220,38,38,0.2);">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               (405) 614-3000
             </a>
@@ -99,6 +102,7 @@ const fullTitle = title + ' | Angel Bail Bonds';
             <a href="/about" class="px-4 py-2.5 rounded-lg transition-all text-sm font-medium" style="color: #334155;">About</a>
             <a href="/blog" class="px-4 py-2.5 rounded-lg transition-all text-sm font-medium" style="color: #334155;">Blog</a>
             <a href="/contact" class="px-4 py-2.5 rounded-lg transition-all text-sm font-medium" style="color: #334155;">Contact</a>
+            <a href="/es/" class="px-4 py-2.5 rounded-lg transition-all text-sm font-medium flex items-center gap-2" style="color: #334155;">🌐 Español</a>
           </div>
           <div class="mt-4 px-4">
             <a href="tel:+14056143000" class="flex items-center justify-center gap-2 font-bold py-3 rounded-lg text-sm w-full" style="background: #dc2626; color: white;">
@@ -131,12 +135,16 @@ const fullTitle = title + ' | Angel Bail Bonds';
               </svg>
               <span class="font-bold text-base" style="color: white;">Angel Bail Bonds</span>
             </div>
-            <p class="text-sm leading-relaxed mb-5" style="color: rgba(255,255,255,0.5);">
+            <p class="text-sm leading-relaxed mb-4" style="color: rgba(255,255,255,0.5);">
               15+ years of experience serving Central Oklahoma with integrity, compassion, and 24/7 availability.
             </p>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 mb-4">
               <span class="text-sm" style="color: #f59e0b;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span class="text-sm" style="color: rgba(255,255,255,0.4);">5.0 &bull; 27+ Reviews</span>
+            </div>
+            <div class="space-y-2 text-xs" style="color: rgba(255,255,255,0.4);">
+              <p>Licensed &amp; Insured &bull; Women-Owned</p>
+              <p style="font-weight: 600; color: rgba(255,255,255,0.6);">Open 24 Hours, 7 Days a Week, 365 Days a Year</p>
             </div>
           </div>
 
@@ -144,11 +152,11 @@ const fullTitle = title + ' | Angel Bail Bonds';
           <div>
             <h4 class="font-semibold text-sm uppercase tracking-wider mb-5" style="color: rgba(255,255,255,0.9);">Service Areas</h4>
             <ul class="space-y-2.5">
-              <li><a href="/payne-county-detention-center-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Payne County</a></li>
-              <li><a href="/pawnee-county-jail-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Pawnee County</a></li>
-              <li><a href="/lincoln-county-jail-chandler-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Lincoln County</a></li>
-              <li><a href="/kay-county-detention-center-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Kay County</a></li>
-              <li><a href="/noble-county-jail-perry-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Noble County</a></li>
+              <li><a href="/payne-county-detention-center-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Payne County — Stillwater</a></li>
+              <li><a href="/pawnee-county-jail-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Pawnee County — Pawnee</a></li>
+              <li><a href="/lincoln-county-jail-chandler-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Lincoln County — Chandler</a></li>
+              <li><a href="/kay-county-detention-center-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Kay County — Newkirk</a></li>
+              <li><a href="/noble-county-jail-perry-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Noble County — Perry</a></li>
               <li><a href="/stillwater-city-jail-bail-bonds" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Stillwater City Jail</a></li>
             </ul>
           </div>
@@ -164,6 +172,17 @@ const fullTitle = title + ' | Angel Bail Bonds';
               <li><a href="/contact" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Contact</a></li>
               <li><a href="/es/" class="text-sm transition-colors" style="color: rgba(255,255,255,0.5);">Espa&ntilde;ol</a></li>
             </ul>
+            <!-- Payment Methods -->
+            <div class="mt-6">
+              <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color: rgba(255,255,255,0.4);">We Accept</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-block px-2 py-1 rounded text-[10px] font-bold" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);">Visa</span>
+                <span class="inline-block px-2 py-1 rounded text-[10px] font-bold" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);">MC</span>
+                <span class="inline-block px-2 py-1 rounded text-[10px] font-bold" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);">Cash</span>
+                <span class="inline-block px-2 py-1 rounded text-[10px] font-bold" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);">Zelle</span>
+                <span class="inline-block px-2 py-1 rounded text-[10px] font-bold" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);">Venmo</span>
+              </div>
+            </div>
           </div>
 
           <!-- Contact -->
@@ -174,7 +193,7 @@ const fullTitle = title + ' | Angel Bail Bonds';
                 <div class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors" style="background: rgba(255,255,255,0.05);">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 </div>
-                <span class="text-sm">(405) 614-3000</span>
+                <span class="text-sm font-semibold" style="color: rgba(255,255,255,0.7);">(405) 614-3000</span>
               </a>
               <a href="mailto:bailbondangel@gmail.com" class="flex items-center gap-3 transition-colors group" style="color: rgba(255,255,255,0.5);">
                 <div class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors" style="background: rgba(255,255,255,0.05);">
@@ -188,13 +207,22 @@ const fullTitle = title + ' | Angel Bail Bonds';
                 </div>
                 <span class="text-sm">Stillwater, Oklahoma</span>
               </div>
+              <p class="text-xs mt-2" style="color: rgba(255,255,255,0.35);">Hablamos Espa&ntilde;ol</p>
             </div>
           </div>
         </div>
 
-        <div class="border-t pt-8 flex flex-col sm:flex-row justify-between items-center gap-4" style="border-color: rgba(255,255,255,0.08);">
+        <!-- SEO City List -->
+        <div class="mb-8 pb-8 border-b" style="border-color: rgba(255,255,255,0.06);">
+          <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.25);">
+            Proudly serving Stillwater, Perkins, Cushing, Yale, Glencoe, Ripley, Drumright, Pawnee, Cleveland, Perry, Morrison, Billings, Red Rock, Tonkawa, Ponca City, Blackwell, Newkirk, Chandler, Stroud, Prague, Meeker, Davenport, and all of Central Oklahoma.
+          </p>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p class="text-xs" style="color: rgba(255,255,255,0.3);">&copy; {new Date().getFullYear()} Angel Bail Bonds. All rights reserved.</p>
-          <p class="text-xs" style="color: rgba(255,255,255,0.3);">24/7 Availability &bull; Women-Owned Business</p>
+          <p class="text-xs text-center" style="color: rgba(255,255,255,0.25);">Bail bond services do not constitute legal advice. Contact an attorney for legal counsel.</p>
         </div>
       </div>
     </footer>
