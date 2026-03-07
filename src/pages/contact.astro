@@ -7,26 +7,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Contact Angel Bail Bonds in Stillwater, Oklahoma. Phone: (405) 614-3000. Available 24/7 for emergency bail bond services."
 >
   <!-- Hero -->
-  <section style="background: var(--navy-deep);" class="text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h1 class="font-display text-4xl md:text-5xl mb-4">Contact Us</h1>
-      <p class="text-lg max-w-2xl mx-auto">
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 80px 1.5rem 56px;">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 style="color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem;">Contact Us</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 1.1rem; max-width: 480px; margin: 0 auto;">
         Get in touch with Angel Bail Bonds. Available 24/7 for emergencies.
       </p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="section-padding bg-cream">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+  <section class="section-padding" style="background: var(--slate-50);">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <!-- Contact Info -->
         <div>
-          <h2 class="text-agate font-display text-3xl mb-8">Get In Touch</h2>
+          <h2 style="color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 2rem;">Get In Touch</h2>
 
           <!-- Phone -->
           <div class="mb-8">
-            <h3 class="text-agate font-display text-xl mb-2">Phone</h3>
+            <h3 class="text-agate text-xl mb-2">Phone</h3>
             <a 
               href="tel:+14056143000" 
               class="text-gold text-2xl font-bold hover:text-agate transition-colors"
@@ -38,7 +38,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Email -->
           <div class="mb-8">
-            <h3 class="text-agate font-display text-xl mb-2">Email</h3>
+            <h3 class="text-agate text-xl mb-2">Email</h3>
             <a 
               href="mailto:bailbondangel@gmail.com" 
               class="text-gold hover:text-agate transition-colors"
@@ -50,7 +50,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Location -->
           <div class="mb-8">
-            <h3 class="text-agate font-display text-xl mb-2">Location</h3>
+            <h3 class="text-agate text-xl mb-2">Location</h3>
             <p class="text-charcoal/80 mb-2">
               <strong>Stillwater, Oklahoma</strong>
             </p>
@@ -61,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Hours -->
           <div class="mb-8 bg-gold/10 border-2 border-gold/30 rounded-lg p-6">
-            <h3 class="text-agate font-display text-xl mb-4">Hours</h3>
+            <h3 class="text-agate text-xl mb-4">Hours</h3>
             <div class="space-y-2 text-charcoal/80 text-sm">
               <p><strong>Monday - Friday:</strong> 24/7 Available</p>
               <p><strong>Saturday - Sunday:</strong> 24/7 Available</p>
@@ -72,7 +72,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Quick Links -->
           <div>
-            <h3 class="text-agate font-display text-xl mb-4">Quick Links</h3>
+            <h3 class="text-agate text-xl mb-4">Quick Links</h3>
             <ul class="space-y-2">
               <li>
                 <a href="/services" class="text-agate hover:text-gold transition-colors font-semibold">
@@ -101,7 +101,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Contact Form -->
         <div>
           <div class="card bg-white">
-            <h3 class="text-agate font-display text-2xl mb-6">Send Us a Message</h3>
+            <h3 class="text-agate text-2xl mb-6">Send Us a Message</h3>
 
             <form action="/api/contact" method="POST" class="space-y-4">
               <!-- Name -->
@@ -114,7 +114,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   id="name" 
                   name="name" 
                   required
-                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
                   placeholder="John Doe"
                 />
               </div>
@@ -129,7 +129,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   id="email" 
                   name="email" 
                   required
-                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
@@ -143,7 +143,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   type="tel" 
                   id="phone" 
                   name="phone" 
-                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
                   placeholder="(405) 555-0000"
                 />
               </div>
@@ -157,7 +157,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   id="subject" 
                   name="subject" 
                   required
-                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
                 >
                   <option value="">Select a subject</option>
                   <option value="emergency">Emergency Bail Bond Needed</option>
@@ -177,7 +177,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   name="message" 
                   rows="5"
                   required
-                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors resize-none"
+                  class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors resize-none"
                   placeholder="Tell us how we can help..."
                 ></textarea>
               </div>
@@ -207,7 +207,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Service Areas Map -->
   <section class="section-padding bg-white">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-agate font-display text-3xl mb-8 text-center">Service Areas</h2>
+      <h2 class="text-agate text-3xl mb-8 text-center">Service Areas</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Map Placeholder -->
@@ -220,7 +220,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Counties List -->
         <div>
-          <h3 class="text-agate font-display text-2xl mb-6">We Serve:</h3>
+          <h3 class="text-agate text-2xl mb-6">We Serve:</h3>
 
           <div class="space-y-4">
             <div class="flex items-start gap-4 p-4 bg-cream rounded-lg">
@@ -279,7 +279,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- FAQ Section -->
   <section class="section-padding" style="background: var(--slate-50);">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-agate font-display text-3xl mb-8 text-center">Frequently Asked Questions</h2>
+      <h2 class="text-agate text-3xl mb-8 text-center">Frequently Asked Questions</h2>
 
       <div class="space-y-4">
         <details class="card bg-white group cursor-pointer">
@@ -350,7 +350,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Final CTA -->
   <section class="section-padding text-white" style="background: var(--navy-deep);">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="font-display text-3xl md:text-4xl mb-6">Need Immediate Help?</h2>
+      <h2 class="text-3xl md:text-4xl mb-6">Need Immediate Help?</h2>
       <p class="text-lg mb-8">
         Don't wait. Call Angel Bail Bonds now for 24/7 emergency bail bond services.
       </p>
