@@ -1,0 +1,464 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://angelbailbonds.com/es/' },
+        { '@type': 'ListItem', position: 2, name: 'Servicios de Fianzas', item: 'https://angelbailbonds.com/es/servicios-de-fianzas' },
+      ],
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://angelbailbonds.com/#business',
+      name: 'Angel Bail Bonds',
+      description: 'Servicios profesionales de fianzas en Stillwater, Oklahoma. Disponible 24/7. Más de 15 años de experiencia. Hablamos español.',
+      telephone: '(405) 614-3000',
+      email: 'bailbondangel@gmail.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '27' },
+      availableLanguage: ['English', 'Spanish'],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Qué es una fianza por delito grave?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Una fianza por delito grave se aplica a cargos criminales serios como asalto, robo o delitos graves. Estos cargos requieren montos de fianza más altos. Angel Bail Bonds tiene experiencia manejando estos casos complejos.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la diferencia entre fianza por delito grave y delito menor?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Los delitos graves (felonies) son crímenes más serios con penas potenciales de más de un año de cárcel. Los delitos menores (misdemeanors) son crímenes menos graves. Las fianzas por delitos menores generalmente cuestan menos y se procesan más rápidamente.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la diferencia entre DUI y DWI?',
+          acceptedAnswer: { '@type': 'Answer', text: 'DUI significa "Driving Under the Influence" (conducir bajo la influencia) y DWI significa "Driving While Intoxicated" (conducir mientras está intoxicado). En Oklahoma, estos términos se usan frecuentemente de manera intercambiable. Angel Bail Bonds tiene experiencia con ambos casos.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la diferencia entre violencia doméstica y otros delitos?',
+          acceptedAnswer: { '@type': 'Answer', text: 'La violencia doméstica es un delito que involucra violencia entre personas que tienen una relación personal cercana. Estos casos requieren un manejo especial y confidencial. Angel Bail Bonds ofrece asistencia discreta y profesional.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Qué son los cargos de drogas?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Los cargos de drogas incluyen posesión, distribución, o manufactura de sustancias controladas. Estos cargos pueden ser graves o menores dependiendo de la sustancia y la cantidad. Angel Bail Bonds tiene experiencia con todo tipo de cargos de drogas.' },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Qué es una orden de arresto?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Una orden de arresto es un documento legal que autoriza a la policía a arrestar a una persona. Si hay una orden de arresto contra usted o un ser querido, Angel Bail Bonds puede ayudar a resolverla rápidamente.' },
+        },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: 'Fianzas por Delitos Graves',
+      description: 'Servicios expertos de fianzas para cargos criminales graves que requieren montos de fianza sustanciales. Más de 15 años de experiencia.',
+      provider: { '@type': 'LocalBusiness', name: 'Angel Bail Bonds' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      availableLanguage: ['English', 'Spanish'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Fianzas por Delitos Menores',
+      description: 'Procesamiento rápido y eficiente para cargos menores con opciones de pago flexibles disponibles.',
+      provider: { '@type': 'LocalBusiness', name: 'Angel Bail Bonds' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      availableLanguage: ['English', 'Spanish'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Fianzas por DUI/DWI',
+      description: 'Experiencia especializada en cargos de conducir bajo la influencia con conocimiento local de las leyes de Oklahoma.',
+      provider: { '@type': 'LocalBusiness', name: 'Angel Bail Bonds' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      availableLanguage: ['English', 'Spanish'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Fianzas por Violencia Doméstica',
+      description: 'Manejo confidencial y profesional de asuntos sensibles de violencia doméstica con discreción completa.',
+      provider: { '@type': 'LocalBusiness', name: 'Angel Bail Bonds' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      availableLanguage: ['English', 'Spanish'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Fianzas por Cargos de Drogas',
+      description: 'Asistencia experta con arrestos relacionados con drogas, desde posesión hasta distribución.',
+      provider: { '@type': 'LocalBusiness', name: 'Angel Bail Bonds' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      availableLanguage: ['English', 'Spanish'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Fianzas por Órdenes de Arresto',
+      description: 'Resolución rápida de órdenes de arresto pendientes con procesamiento eficiente.',
+      provider: { '@type': 'LocalBusiness', name: 'Angel Bail Bonds' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+      availableLanguage: ['English', 'Spanish'],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Servicios de Fianzas - Angel Bail Bonds"
+  description="Angel Bail Bonds ofrece servicios especializados de fianzas en Oklahoma: delitos graves, delitos menores, DUI/DWI, violencia doméstica, cargos de drogas y órdenes de arresto. Servicio en español disponible 24/7."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <!-- Hero -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-cream font-display text-4xl md:text-5xl mb-6 leading-tight">
+        Servicios Especializados de Fianzas
+      </h1>
+      <p class="text-cream/90 text-lg mb-8 max-w-2xl mx-auto">
+        Angel Bail Bonds ofrece servicios de fianzas especializados para todo tipo de cargos criminales. Disponible 24/7 en español.
+      </p>
+      <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">
+        Llame Ahora: (405) 614-3000
+      </a>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- Servicios por Tipo -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <!-- Fianzas por Delitos Graves -->
+      <div class="mb-16 pb-16 border-b border-gold/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-agate font-display text-3xl mb-4">Fianzas por Delitos Graves</h2>
+            <p class="text-charcoal/80 mb-4">
+              Los delitos graves son crímenes serios que pueden resultar en una sentencia de prisión de más de un año. Estos cargos incluyen asalto agravado, robo, tráfico de drogas, homicidio y otros crímenes graves.
+            </p>
+            <p class="text-charcoal/80 mb-4">
+              Cuando se enfrenta a un cargo grave, el monto de la fianza puede ser sustancial y el proceso puede ser complicado. Angel Bail Bonds tiene más de 15 años de experiencia manejando casos graves complejos en Oklahoma central.
+            </p>
+            <p class="text-charcoal/80">
+              Nuestro equipo experto entenderá los detalles de su caso y trabajará rápidamente para obtener la liberación de su ser querido. Ofrecemos planes de pago flexibles para hacer que el proceso sea más manejable.
+            </p>
+          </div>
+          <div class="bg-cream p-8 rounded-lg">
+            <h3 class="text-agate font-display text-xl mb-4">Cargos Graves Comunes</h3>
+            <ul class="space-y-3 text-charcoal/80">
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Asalto agravado</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Robo a mano armada</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Tráfico de drogas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Delitos sexuales</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Homicidio</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Fraude grave</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fianzas por Delitos Menores -->
+      <div class="mb-16 pb-16 border-b border-gold/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="bg-cream p-8 rounded-lg order-2 md:order-1">
+            <h3 class="text-agate font-display text-xl mb-4">Cargos Menores Comunes</h3>
+            <ul class="space-y-3 text-charcoal/80">
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Conducta desordenada</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Agresión simple</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Vandalismo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Posesión de marihuana</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Allanamiento de morada</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Violación de orden de restricción</span>
+              </li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-agate font-display text-3xl mb-4">Fianzas por Delitos Menores</h2>
+            <p class="text-charcoal/80 mb-4">
+              Los delitos menores son crímenes menos graves que normalmente resultan en una sentencia de cárcel de menos de un año o multas. Aunque son menos graves que los delitos graves, aún pueden afectar su registro criminal de manera significativa.
+            </p>
+            <p class="text-charcoal/80 mb-4">
+              Los casos de delitos menores se procesan más rápidamente que los casos graves. Angel Bail Bonds puede obtener su liberación en cuestión de horas, no días.
+            </p>
+            <p class="text-charcoal/80">
+              Con planes de pago flexibles y procesamiento rápido, nuestro equipo hace que el proceso sea lo menos estresante posible para usted y su familia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fianzas por DUI/DWI -->
+      <div class="mb-16 pb-16 border-b border-gold/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-agate font-display text-3xl mb-4">Fianzas por DUI/DWI</h2>
+            <p class="text-charcoal/80 mb-4">
+              DUI (Driving Under the Influence) y DWI (Driving While Intoxicated) son cargos comunes en Oklahoma. Si está arrestado por conducir bajo la influencia del alcohol o drogas, Angel Bail Bonds puede ayudarle a obtener su liberación rápidamente.
+            </p>
+            <p class="text-charcoal/80 mb-4">
+              Las consecuencias de una condena por DUI/DWI pueden ser graves, incluyendo la pérdida del carné de conducir, multas sustanciales y tiempo de cárcel. Es importante contar con la ayuda de profesionales experimentados desde el principio.
+            </p>
+            <p class="text-charcoal/80">
+              Nuestro equipo entiende el sistema legal de Oklahoma y trabajará para asegurar que su caso se maneje de manera rápida y eficiente.
+            </p>
+          </div>
+          <div class="bg-cream p-8 rounded-lg">
+            <h3 class="text-agate font-display text-xl mb-4">Información Importante sobre DUI/DWI</h3>
+            <ul class="space-y-3 text-charcoal/80 text-sm">
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Los cargos de DUI pueden ser graves o menores dependiendo del nivel de contenido de alcohol en sangre</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>El carné de conducir puede ser suspendido inmediatamente</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Las multas pueden oscilar entre $500 y $5,000 o más</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Puede enfrentar tiempo de cárcel incluso para una primera ofensa</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Una condena quedará en su registro criminal permanentemente</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fianzas por Violencia Doméstica -->
+      <div class="mb-16 pb-16 border-b border-gold/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="bg-cream p-8 rounded-lg order-2 md:order-1">
+            <h3 class="text-agate font-display text-xl mb-4">Lo que Necesita Saber</h3>
+            <ul class="space-y-3 text-charcoal/80 text-sm">
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>La violencia doméstica es tomada muy en serio en Oklahoma</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Las órdenes de protección pueden ser expedidas rápidamente</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Es importante actuar rápidamente para obtener representación legal</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Angel Bail Bonds maneja estos casos con máxima discreción</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Entendemos la sensibilidad de estas situaciones</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Disponible para ayudar en cualquier momento del día o la noche</span>
+              </li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-agate font-display text-3xl mb-4">Fianzas por Violencia Doméstica</h2>
+            <p class="text-charcoal/80 mb-4">
+              Los cargos de violencia doméstica son tomados muy en serio en Oklahoma. Si ha sido arrestado o un ser querido ha sido arrestado por violencia doméstica, es importante obtener ayuda legal y de fianzas de inmediato.
+            </p>
+            <p class="text-charcoal/80 mb-4">
+              Estos casos requieren un manejo especial y confidencial. Angel Bail Bonds entiende la sensibilidad de estas situaciones y trabajará con discreción y profesionalismo para ayudar a su familia durante este tiempo difícil.
+            </p>
+            <p class="text-charcoal/80">
+              Nuestro equipo sabe que estos asuntos son personales y delicados. Ofrecemos confidencialidad completa y apoyo compasivo durante todo el proceso.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fianzas por Cargos de Drogas -->
+      <div class="mb-16 pb-16 border-b border-gold/30">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-agate font-display text-3xl mb-4">Fianzas por Cargos de Drogas</h2>
+            <p class="text-charcoal/80 mb-4">
+              Los cargos de drogas pueden variar desde posesión simple hasta distribución y manufactura. La severidad del cargo depende del tipo de sustancia, la cantidad encontrada y las circunstancias del arresto.
+            </p>
+            <p class="text-charcoal/80 mb-4">
+              Angel Bail Bonds tiene amplia experiencia manejando todo tipo de cargos de drogas. Entendemos que estas acusaciones pueden cambiar la vida de una persona y su familia, y trabajamos rápidamente para obtener la liberación y asegurar que sus derechos sean protegidos.
+            </p>
+            <p class="text-charcoal/80">
+              Desde cargos menores de posesión hasta delitos graves de distribución, nuestro equipo tiene el conocimiento y la experiencia para ayudarle.
+            </p>
+          </div>
+          <div class="bg-cream p-8 rounded-lg">
+            <h3 class="text-agate font-display text-xl mb-4">Categorías de Cargos de Drogas</h3>
+            <ul class="space-y-3 text-charcoal/80">
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Posesión de sustancia controlada</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Distribución de drogas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Tráfico de drogas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Manufactura de drogas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Posesión con intención de distribuir</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Consumo de drogas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fianzas por Órdenes de Arresto -->
+      <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="bg-cream p-8 rounded-lg order-2 md:order-1">
+            <h3 class="text-agate font-display text-xl mb-4">Tipos de Órdenes de Arresto</h3>
+            <ul class="space-y-3 text-charcoal/80 text-sm">
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Órdenes de arresto por incumplimiento de pago de manutención infantil</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Órdenes de arresto por violación de libertad condicional</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Órdenes de arresto por faltas de comparecencia</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Órdenes de arresto por deuda de multas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Órdenes de arresto por violación de orden de restricción</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-gold font-bold mr-3">•</span>
+                <span>Órdenes de arresto federales</span>
+              </li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-agate font-display text-3xl mb-4">Fianzas por Órdenes de Arresto</h2>
+            <p class="text-charcoal/80 mb-4">
+              Una orden de arresto es un documento legal que autoriza a la policía a arrestar a una persona. Puede haber una orden de arresto pendiente en su contra por diversas razones, incluyendo falta de comparecencia en corte, incumplimiento de libertad condicional, o deudas no pagadas.
+            </p>
+            <p class="text-charcoal/80 mb-4">
+              Si sospecha que hay una orden de arresto pendiente en su contra, es importante actuar rápidamente. Angel Bail Bonds puede ayudarle a resolver la situación de manera rápida y discreta.
+            </p>
+            <p class="text-charcoal/80">
+              No espere a ser arrestado. Llámenos hoy para obtener ayuda inmediata en la resolución de su orden de arresto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Preguntas Frecuentes sobre Nuestros Servicios</h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">¿Qué es una fianza por delito grave?</h3>
+          <p class="text-charcoal/80">Una fianza por delito grave se aplica a cargos criminales serios como asalto, robo o delitos graves. Estos cargos requieren montos de fianza más altos. Angel Bail Bonds tiene experiencia manejando estos casos complejos y puede ayudarle a obtener la liberación rápidamente.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">¿Cuál es la diferencia entre fianza por delito grave y delito menor?</h3>
+          <p class="text-charcoal/80">Los delitos graves (felonies) son crímenes más serios con penas potenciales de más de un año de cárcel. Los delitos menores (misdemeanors) son crímenes menos graves. Las fianzas por delitos menores generalmente cuestan menos y se procesan más rápidamente.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">¿Cuál es la diferencia entre DUI y DWI?</h3>
+          <p class="text-charcoal/80">DUI significa "Driving Under the Influence" (conducir bajo la influencia) y DWI significa "Driving While Intoxicated" (conducir mientras está intoxicado). En Oklahoma, estos términos se usan frecuentemente de manera intercambiable. Angel Bail Bonds tiene experiencia con ambos casos.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">¿Cuál es la diferencia entre violencia doméstica y otros delitos?</h3>
+          <p class="text-charcoal/80">La violencia doméstica es un delito que involucra violencia entre personas que tienen una relación personal cercana. Estos casos requieren un manejo especial y confidencial. Angel Bail Bonds ofrece asistencia discreta y profesional.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">¿Qué son los cargos de drogas?</h3>
+          <p class="text-charcoal/80">Los cargos de drogas incluyen posesión, distribución, o manufactura de sustancias controladas. Estos cargos pueden ser graves o menores dependiendo de la sustancia y la cantidad. Angel Bail Bonds tiene experiencia con todo tipo de cargos de drogas.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">¿Qué es una orden de arresto?</h3>
+          <p class="text-charcoal/80">Una orden de arresto es un documento legal que autoriza a la policía a arrestar a una persona. Si hay una orden de arresto contra usted o un ser querido, Angel Bail Bonds puede ayudar a resolverla rápidamente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- CTA -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-cream font-display text-3xl mb-6">¿Necesita Asistencia con Fianzas?</h2>
+      <p class="text-cream/90 text-lg mb-8">Cualquiera que sea su situación, Angel Bail Bonds está aquí para ayudarle. Llame ahora para obtener asistencia inmediata en español.</p>
+      <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">(405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

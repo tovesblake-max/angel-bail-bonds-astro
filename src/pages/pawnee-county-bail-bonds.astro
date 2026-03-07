@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://angelbailbonds.com/#business',
+      name: 'Angel Bail Bonds',
+      description: 'Professional bail bond services for Pawnee County, Oklahoma. 24/7 emergency bail bonds with 15+ years experience.',
+      telephone: '(405) 614-3000',
+      email: 'bailbondangel@gmail.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Pawnee County, Oklahoma' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '27' },
+    },
+    {
+      '@type': 'Service',
+      name: 'Pawnee County Bail Bond Services',
+      provider: { '@id': 'https://angelbailbonds.com/#business' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Pawnee County, Oklahoma' },
+      description: 'Fast, confidential bail bond services for Pawnee County arrests and jail releases.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://angelbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Pawnee County Bail Bonds', item: 'https://angelbailbonds.com/pawnee-county-bail-bonds' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I get a bail bond in Pawnee County?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Pawnee County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does a bail bond cost in Pawnee County?',
+          acceptedAnswer: { '@type': 'Answer', text: 'In Oklahoma, bail bond premiums are typically 10% of the total bail amount. Angel Bail Bonds offers flexible payment plans to help families manage the cost.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to get released from Pawnee County Jail?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Pawnee County Jail occur within 1-4 hours depending on jail processing.' },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Pawnee County Bail Bonds"
+  description="24/7 bail bond services for Pawnee County, Oklahoma. Angel Bail Bonds offers fast, confidential bail bond processing. 15+ years experience, 5.0 stars. Call (405) 614-3000."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <!-- Breadcrumb -->
+  <nav class="bg-agate/10 py-3" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4">
+      <ol class="flex text-sm text-charcoal/70">
+        <li><a href="/" class="hover:text-gold transition-colors">Home</a></li>
+        <li class="mx-2">/</li>
+        <li class="text-agate font-semibold">Pawnee County Bail Bonds</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-cream font-display text-4xl md:text-5xl mb-6">Pawnee County Bail Bonds</h1>
+      <p class="text-cream/90 text-lg mb-8 max-w-2xl mx-auto">
+        Angel Bail Bonds provides fast, confidential bail bond services throughout Pawnee County, Oklahoma. Available 24 hours a day, 7 days a week.
+      </p>
+      <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">
+        Call Now: (405) 614-3000
+      </a>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- About This Area -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-6">Bail Bond Services in Pawnee County</h2>
+      <p class="text-charcoal/80 mb-4">
+        When someone you care about is arrested in Pawnee County, you need a bail bondsman who understands the local court system and can act fast. Angel Bail Bonds, led by Karri McBride with over 15 years of experience, has been helping families in Pawnee County navigate the bail process with compassion and professionalism.
+      </p>
+      <p class="text-charcoal/80 mb-4">
+        Pawnee County, located in north-central Oklahoma, includes the city of Pawnee and surrounding communities. We handle all types of charges in Pawnee County including felony bonds, misdemeanor bonds, DUI/DWI bonds, domestic violence bonds, drug charge bonds, and outstanding warrant bonds.
+      </p>
+      <p class="text-charcoal/80">
+        As a women-owned business with a 5.0 Google rating from 27+ reviews, Angel Bail Bonds is trusted by families throughout the region for discreet, reliable bail bond service.
+      </p>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- Services Grid -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Types of Bail Bonds We Handle in Pawnee County</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Felony Bail Bonds</h3><p class="text-charcoal/80">Experienced handling of serious charges with substantial bail amounts in Pawnee County courts.</p></div>
+        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Misdemeanor Bonds</h3><p class="text-charcoal/80">Quick processing for misdemeanor arrests in Pawnee County with flexible payment options.</p></div>
+        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">DUI/DWI Bonds</h3><p class="text-charcoal/80">Specialized experience with impaired driving charges throughout Pawnee County.</p></div>
+        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Domestic Violence Bonds</h3><p class="text-charcoal/80">Confidential handling of sensitive family matters with protective conditions.</p></div>
+        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Drug Charge Bonds</h3><p class="text-charcoal/80">Expert assistance with drug-related arrests in Pawnee County.</p></div>
+        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Warrant Bonds</h3><p class="text-charcoal/80">Fast resolution for outstanding warrants in Pawnee County.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Pawnee County Bail Bonds FAQ</h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">How do I get a bail bond in Pawnee County?</h3>
+          <p class="text-charcoal/80">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Pawnee County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">How much does a bail bond cost in Pawnee County?</h3>
+          <p class="text-charcoal/80">In Oklahoma, bail bond premiums are typically 10% of the total bail amount. Angel Bail Bonds offers flexible payment plans to help families manage the cost.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6">
+          <h3 class="text-agate font-display text-lg mb-2">How long does it take to get released from Pawnee County Jail?</h3>
+          <p class="text-charcoal/80">Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Pawnee County Jail occur within 1-4 hours depending on jail processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider"></div>
+
+  <!-- CTA -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-cream font-display text-3xl mb-6">Need a Bail Bond in Pawnee County?</h2>
+      <p class="text-cream/90 text-lg mb-8">Contact Angel Bail Bonds now for immediate, confidential assistance.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">(405) 614-3000</a>
+        <a href="/contact" class="inline-block bg-white/20 hover:bg-white/30 text-cream font-bold py-4 px-8 rounded-lg transition-all border border-cream">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
