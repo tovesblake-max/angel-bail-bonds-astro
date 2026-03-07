@@ -25,7 +25,7 @@ User-agent: Perplexity
 Allow: /
 
 # Sitemap
-Sitemap: https://angelbailbonds.com/sitemap.xml
+Sitemap: https://stillwaterokbailbonds.com/sitemap.xml
 
 # Crawl delay (optional - allows fast crawling)
 Crawl-delay: 0
