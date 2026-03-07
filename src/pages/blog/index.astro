@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const blogPosts = [
+  {
+    title: 'What to Do If Arrested in Stillwater, Oklahoma',
+    slug: 'what-to-do-if-arrested-in-stillwater-oklahoma',
+    excerpt: 'A step-by-step guide to navigating the arrest process in Stillwater and Central Oklahoma. Know your rights and how to contact bail bonds.',
+    date: '2024-03-01',
+    author: 'Karri McBride',
+    category: 'Guide',
+  },
+];
+---
+
+<BaseLayout 
+  title="Blog"
+  description="Read articles about bail bonds, the legal process, and how to navigate arrest in Central Oklahoma."
+>
+  <!-- Hero -->
+  <section class="bg-agate text-cream py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Blog</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Resources and insights about bail bonds and the legal process
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-8">
+        {blogPosts.map((post) => (
+          <article class="card bg-white hover:shadow-xl transition-shadow">
+            <div class="flex justify-between items-start gap-4 mb-4">
+              <div>
+                <h2 class="text-agate font-display text-2xl hover:text-gold transition-colors">
+                  <a href={`/blog/${post.slug}`}>{post.title}</a>
+                </h2>
+                <p class="text-charcoal/60 text-sm mt-2">
+                  {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} • By {post.author}
+                </p>
+              </div>
+              <span class="bg-gold/20 text-agate px-3 py-1 rounded text-sm font-semibold whitespace-nowrap">
+                {post.category}
+              </span>
+            </div>
+
+            <p class="text-charcoal/80 mb-4">{post.excerpt}</p>
+
+            <a 
+              href={`/blog/${post.slug}`}
+              class="inline-block text-gold font-semibold hover:text-agate transition-colors"
+            >
+              Read More →
+            </a>
+          </article>
+        ))}
+      </div>
+
+      {blogPosts.length === 0 && (
+        <div class="text-center py-12">
+          <p class="text-charcoal/80 text-lg">No blog posts yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Categories -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Categories</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="text-center p-6 bg-cream rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+          <p class="text-3xl mb-2">📘</p>
+          <h3 class="font-semibold text-agate">Guides</h3>
+          <p class="text-charcoal/70 text-sm mt-2">How-to articles and step-by-step guides</p>
+        </div>
+
+        <div class="text-center p-6 bg-cream rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+          <p class="text-3xl mb-2">⚖️</p>
+          <h3 class="font-semibold text-agate">Legal Info</h3>
+          <p class="text-charcoal/70 text-sm mt-2">Understanding Oklahoma law</p>
+        </div>
+
+        <div class="text-center p-6 bg-cream rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+          <p class="text-3xl mb-2">💡</p>
+          <h3 class="font-semibold text-agate">Tips & Advice</h3>
+          <p class="text-charcoal/70 text-sm mt-2">Practical advice and best practices</p>
+        </div>
+
+        <div class="text-center p-6 bg-cream rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+          <p class="text-3xl mb-2">📰</p>
+          <h3 class="font-semibold text-agate">News</h3>
+          <p class="text-charcoal/70 text-sm mt-2">Recent updates and announcements</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- CTA -->
+  <section class="section-padding bg-agate text-cream">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-4xl mb-6">Need Help Right Now?</h2>
+      <p class="text-lg mb-8">
+        Don't wait for information. Contact Angel Bail Bonds immediately for 24/7 emergency services.
+      </p>
+
+      <a 
+        href="tel:+14056143000" 
+        class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all"
+      >
+        (405) 614-3000
+      </a>
+    </div>
+  </section>
+</BaseLayout>

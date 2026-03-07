@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Angel Bail Bonds',
+  description: 'Professional bail bond services in Stillwater, Oklahoma. 15+ years of experience serving Central Oklahoma counties.',
+  image: '/images/logo.png',
+  telephone: '(405) 614-3000',
+  email: 'bailbondangel@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Stillwater',
+    addressRegion: 'OK',
+    addressCountry: 'US',
+  },
+  priceRange: '$$',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '27',
+  },
+  areaServed: [
+    'Payne County',
+    'Pawnee County',
+    'Lincoln County',
+    'Kay County',
+    'Noble County',
+  ],
+};
+---
+
+<BaseLayout 
+  title="Bail Bonds in Stillwater, Oklahoma"
+  description="Angel Bail Bonds offers 24/7 professional bail bond services in Stillwater and Central Oklahoma. 15+ years experience, 5.0 stars, women-owned. Emergency bail bonds for Payne, Pawnee, Lincoln, Kay & Noble counties."
+  ogImage="/images/hero-agate.jpg"
+  structuredData={structuredData}
+>
+  <!-- Hero Section -->
+  <section 
+    class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);"
+  >
+    <div class="absolute inset-0 opacity-20" style="background-image: url('/images/agate-dark.jpg"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-white font-display text-5xl md:text-6xl mb-6 leading-tight">
+        Professional Bail Bonds in Stillwater & Central Oklahoma
+      </h1>
+      
+      <p class="text-cream text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+        24/7 Emergency Bail Bond Services • Fast, Confidential, Compassionate
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="tel:+14056143000" 
+          class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105"
+        >
+          Call Now: (405) 614-3000
+        </a>
+        <a 
+          href="#services" 
+          class="inline-block bg-white/20 hover:bg-white/30 text-cream font-bold py-4 px-8 rounded-lg transition-all border border-cream"
+        >
+          Learn More
+        </a>
+      </div>
+
+      <!-- Trust Signals -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8 border-t border-cream/30">
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gold">24/7</p>
+          <p class="text-cream text-sm">Always Available</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gold">5.0⭐</p>
+          <p class="text-cream text-sm">Google Rating</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gold">15+</p>
+          <p class="text-cream text-sm">Years Experience</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gold">♀️</p>
+          <p class="text-cream text-sm">Women-Owned</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding bg-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-agate font-display text-4xl mb-4">Our Services</h2>
+        <p class="text-lg text-charcoal/80 max-w-2xl mx-auto">
+          We handle all types of bail situations with discretion and professionalism
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Felony Bail -->
+        <div class="card bg-white">
+          <h3 class="text-agate font-display text-xl mb-3">Felony Bail Bonds</h3>
+          <p class="text-charcoal/80 mb-4">
+            Experienced handling of serious charges requiring substantial bail amounts.
+          </p>
+          <p class="text-gold font-semibold">10% Premium</p>
+        </div>
+
+        <!-- Misdemeanor Bail -->
+        <div class="card bg-white">
+          <h3 class="text-agate font-display text-xl mb-3">Misdemeanor Bail Bonds</h3>
+          <p class="text-charcoal/80 mb-4">
+            Quick processing for less serious charges with flexible payment options.
+          </p>
+          <p class="text-gold font-semibold">10% Premium</p>
+        </div>
+
+        <!-- DUI/DWI -->
+        <div class="card bg-white">
+          <h3 class="text-agate font-display text-xl mb-3">DUI/DWI Bonds</h3>
+          <p class="text-charcoal/80 mb-4">
+            Specialized experience with impaired driving charges across Oklahoma counties.
+          </p>
+          <p class="text-gold font-semibold">10% Premium</p>
+        </div>
+
+        <!-- Domestic Violence -->
+        <div class="card bg-white">
+          <h3 class="text-agate font-display text-xl mb-3">Domestic Violence Bonds</h3>
+          <p class="text-charcoal/80 mb-4">
+            Confidential handling of sensitive family matters with protective conditions.
+          </p>
+          <p class="text-gold font-semibold">10% Premium</p>
+        </div>
+
+        <!-- Drug Charges -->
+        <div class="card bg-white">
+          <h3 class="text-agate font-display text-xl mb-3">Drug Charges Bonds</h3>
+          <p class="text-charcoal/80 mb-4">
+            Expert assistance with possession and trafficking charges.
+          </p>
+          <p class="text-gold font-semibold">10% Premium</p>
+        </div>
+
+        <!-- Traffic/Warrants -->
+        <div class="card bg-white">
+          <h3 class="text-agate font-display text-xl mb-3">Traffic & Warrant Bonds</h3>
+          <p class="text-charcoal/80 mb-4">
+            Fast resolution for traffic violations and outstanding warrant issues.
+          </p>
+          <p class="text-gold font-semibold">10% Premium</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a 
+          href="/services" 
+          class="inline-block bg-agate hover:bg-agate/90 text-white font-bold py-3 px-8 rounded transition-colors"
+        >
+          View All Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Counties Section -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-agate font-display text-4xl mb-4">Service Areas</h2>
+        <p class="text-lg text-charcoal/80 max-w-2xl mx-auto">
+          Serving 5 Central Oklahoma Counties
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+        <div class="text-center p-6 bg-cream rounded-lg">
+          <h3 class="font-display text-2xl text-gold mb-2">Payne</h3>
+          <p class="text-charcoal/70 text-sm">Including Stillwater</p>
+        </div>
+        <div class="text-center p-6 bg-cream rounded-lg">
+          <h3 class="font-display text-2xl text-gold mb-2">Pawnee</h3>
+          <p class="text-charcoal/70 text-sm">Central Area</p>
+        </div>
+        <div class="text-center p-6 bg-cream rounded-lg">
+          <h3 class="font-display text-2xl text-gold mb-2">Lincoln</h3>
+          <p class="text-charcoal/70 text-sm">South Jurisdiction</p>
+        </div>
+        <div class="text-center p-6 bg-cream rounded-lg">
+          <h3 class="font-display text-2xl text-gold mb-2">Kay</h3>
+          <p class="text-charcoal/70 text-sm">North Coverage</p>
+        </div>
+        <div class="text-center p-6 bg-cream rounded-lg">
+          <h3 class="font-display text-2xl text-gold mb-2">Noble</h3>
+          <p class="text-charcoal/70 text-sm">East Territory</p>
+        </div>
+      </div>
+
+      <div class="bg-agate/10 border-2 border-gold/30 rounded-lg p-8 text-center">
+        <h3 class="font-display text-2xl text-agate mb-4">Payne County Jail Specialist</h3>
+        <p class="text-charcoal/80 mb-6">
+          We specialize in Payne County Jail bonds with expedited processing and deep local knowledge.
+        </p>
+        <a 
+          href="/payne-county-jail-bail-bonds" 
+          class="inline-block text-gold font-semibold hover:text-agate transition-colors"
+        >
+          Learn about Payne County Jail Bonds →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #f5efe6 0%, #e8dcc8 100%);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-agate font-display text-4xl mb-4">Why Choose Angel Bail Bonds?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <span class="text-3xl">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-agate mb-2">15+ Years Experience</h3>
+            <p class="text-charcoal/80">
+              Karri McBride brings over 15 years of bail bond expertise to serve you.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <span class="text-3xl">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-agate mb-2">24/7 Availability</h3>
+            <p class="text-charcoal/80">
+              We're always ready to help in emergency situations, day or night.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <span class="text-3xl">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-agate mb-2">Women-Owned Business</h3>
+            <p class="text-charcoal/80">
+              Supporting female entrepreneurship with compassionate service.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <span class="text-3xl">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-agate mb-2">5.0 Star Rating</h3>
+            <p class="text-charcoal/80">
+              27+ verified reviews showcasing our commitment to excellence.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <span class="text-3xl">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-agate mb-2">Discretion & Confidentiality</h3>
+            <p class="text-charcoal/80">
+              Your privacy is our priority. All matters handled with utmost professionalism.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <span class="text-3xl">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-agate mb-2">Flexible Payment Plans</h3>
+            <p class="text-charcoal/80">
+              We work with you to find affordable solutions during difficult times.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Reviews Section -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-agate font-display text-4xl mb-4">Client Testimonials</h2>
+        <p class="text-charcoal/80">5.0 Star Rating • 27+ Google Reviews</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-white border-l-4 border-gold">
+          <div class="flex items-center mb-4">
+            <span class="text-gold">★★★★★</span>
+          </div>
+          <p class="text-charcoal/80 mb-4">
+            "Karri was incredibly helpful during a stressful time. She made the process simple and treated us with compassion. Highly recommend Angel Bail Bonds!"
+          </p>
+          <p class="font-semibold text-agate">— J. Martinez, Stillwater</p>
+        </div>
+
+        <div class="card bg-white border-l-4 border-gold">
+          <div class="flex items-center mb-4">
+            <span class="text-gold">★★★★★</span>
+          </div>
+          <p class="text-charcoal/80 mb-4">
+            "Excellent service and support. Available whenever I needed them. Best bail bond company in Stillwater. Thank you, Angel Bail Bonds!"
+          </p>
+          <p class="font-semibold text-agate">— M. Thompson, Payne County</p>
+        </div>
+
+        <div class="card bg-white border-l-4 border-gold">
+          <div class="flex items-center mb-4">
+            <span class="text-gold">★★★★★</span>
+          </div>
+          <p class="text-charcoal/80 mb-4">
+            "Professional, caring, and quick. Karri really went above and beyond to help us during a difficult situation. Grateful for her service."
+          </p>
+          <p class="font-semibold text-agate">— R. Johnson, Central Oklahoma</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-charcoal/80 mb-6">
+          See all 27+ reviews on <span class="text-gold font-semibold">Google</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Final CTA -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-cream font-display text-4xl mb-6">Need Help Right Now?</h2>
+      <p class="text-cream text-lg mb-8">
+        Don't wait. Contact Angel Bail Bonds immediately for 24/7 emergency bail bond services.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="tel:+14056143000" 
+          class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all"
+        >
+          (405) 614-3000
+        </a>
+        <a 
+          href="/contact" 
+          class="inline-block bg-white/20 hover:bg-white/30 text-cream font-bold py-4 px-8 rounded-lg transition-all border border-cream"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

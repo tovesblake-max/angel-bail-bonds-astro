@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Contact Angel Bail Bonds"
+  description="Contact Angel Bail Bonds in Stillwater, Oklahoma. Phone: (405) 614-3000. Available 24/7 for emergency bail bond services."
+>
+  <!-- Hero -->
+  <section class="bg-agate text-cream py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Contact Us</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Get in touch with Angel Bail Bonds. Available 24/7 for emergencies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-agate font-display text-3xl mb-8">Get In Touch</h2>
+
+          <!-- Phone -->
+          <div class="mb-8">
+            <h3 class="text-agate font-display text-xl mb-2">Phone</h3>
+            <a 
+              href="tel:+14056143000" 
+              class="text-gold text-2xl font-bold hover:text-agate transition-colors"
+            >
+              (405) 614-3000
+            </a>
+            <p class="text-charcoal/80 mt-2">Available 24/7 for emergencies</p>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-8">
+            <h3 class="text-agate font-display text-xl mb-2">Email</h3>
+            <a 
+              href="mailto:bailbondangel@gmail.com" 
+              class="text-gold hover:text-agate transition-colors"
+            >
+              bailbondangel@gmail.com
+            </a>
+            <p class="text-charcoal/80 mt-2">We'll respond as soon as possible</p>
+          </div>
+
+          <!-- Location -->
+          <div class="mb-8">
+            <h3 class="text-agate font-display text-xl mb-2">Location</h3>
+            <p class="text-charcoal/80 mb-2">
+              <strong>Stillwater, Oklahoma</strong>
+            </p>
+            <p class="text-charcoal/80 text-sm">
+              Serving Payne, Pawnee, Lincoln, Kay & Noble Counties
+            </p>
+          </div>
+
+          <!-- Hours -->
+          <div class="mb-8 bg-gold/10 border-2 border-gold/30 rounded-lg p-6">
+            <h3 class="text-agate font-display text-xl mb-4">Hours</h3>
+            <div class="space-y-2 text-charcoal/80 text-sm">
+              <p><strong>Monday - Friday:</strong> 24/7 Available</p>
+              <p><strong>Saturday - Sunday:</strong> 24/7 Available</p>
+              <p><strong>Holidays:</strong> 24/7 Available</p>
+              <p class="text-gold font-semibold mt-3">Always Ready for Emergencies</p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-agate font-display text-xl mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/services" class="text-agate hover:text-gold transition-colors font-semibold">
+                  View Services →
+                </a>
+              </li>
+              <li>
+                <a href="/how-bail-works" class="text-agate hover:text-gold transition-colors font-semibold">
+                  How Bail Works →
+                </a>
+              </li>
+              <li>
+                <a href="/about" class="text-agate hover:text-gold transition-colors font-semibold">
+                  About Karri →
+                </a>
+              </li>
+              <li>
+                <a href="/" class="text-agate hover:text-gold transition-colors font-semibold">
+                  Back to Home →
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <div class="card bg-white">
+            <h3 class="text-agate font-display text-2xl mb-6">Send Us a Message</h3>
+
+            <form action="/api/contact" method="POST" class="space-y-4">
+              <!-- Name -->
+              <div>
+                <label for="name" class="block text-charcoal font-semibold mb-2">
+                  Your Name
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-charcoal font-semibold mb-2">
+                  Email Address
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label for="phone" class="block text-charcoal font-semibold mb-2">
+                  Phone Number
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                  placeholder="(405) 555-0000"
+                />
+              </div>
+
+              <!-- Subject -->
+              <div>
+                <label for="subject" class="block text-charcoal font-semibold mb-2">
+                  Subject
+                </label>
+                <select 
+                  id="subject" 
+                  name="subject" 
+                  required
+                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="emergency">Emergency Bail Bond Needed</option>
+                  <option value="question">General Question</option>
+                  <option value="service">Service Information</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-charcoal font-semibold mb-2">
+                  Message
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5"
+                  required
+                  class="w-full px-4 py-2 border border-charcoal/20 rounded-lg focus:outline-none focus:border-agate transition-colors resize-none"
+                  placeholder="Tell us how we can help..."
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit"
+                class="w-full bg-agate hover:bg-agate/90 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+
+            <div class="mt-6 p-4 bg-gold/10 border-l-4 border-gold rounded">
+              <p class="text-charcoal/80 text-sm">
+                <strong>For emergencies:</strong> Call us immediately at <a href="tel:+14056143000" class="text-gold font-bold">(405) 614-3000</a>. This form is for general inquiries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Service Areas Map -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Service Areas</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Map Placeholder -->
+        <div class="bg-agate/5 border-2 border-agate/20 rounded-lg h-96 flex items-center justify-center">
+          <div class="text-center">
+            <p class="text-charcoal/60 mb-4">Service Map</p>
+            <p class="text-2xl text-gold">5 Central Oklahoma Counties</p>
+          </div>
+        </div>
+
+        <!-- Counties List -->
+        <div>
+          <h3 class="text-agate font-display text-2xl mb-6">We Serve:</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 bg-cream rounded-lg">
+              <span class="text-gold text-2xl">📍</span>
+              <div>
+                <h4 class="font-semibold text-agate">Payne County</h4>
+                <p class="text-charcoal/80 text-sm">Including Stillwater • Primary Service Area</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-cream rounded-lg">
+              <span class="text-gold text-2xl">📍</span>
+              <div>
+                <h4 class="font-semibold text-agate">Pawnee County</h4>
+                <p class="text-charcoal/80 text-sm">Central Oklahoma Coverage</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-cream rounded-lg">
+              <span class="text-gold text-2xl">📍</span>
+              <div>
+                <h4 class="font-semibold text-agate">Lincoln County</h4>
+                <p class="text-charcoal/80 text-sm">South Service Territory</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-cream rounded-lg">
+              <span class="text-gold text-2xl">📍</span>
+              <div>
+                <h4 class="font-semibold text-agate">Kay County</h4>
+                <p class="text-charcoal/80 text-sm">North Coverage Area</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-cream rounded-lg">
+              <span class="text-gold text-2xl">📍</span>
+              <div>
+                <h4 class="font-semibold text-agate">Noble County</h4>
+                <p class="text-charcoal/80 text-sm">East Territory</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-agate/10 border-2 border-agate/20 rounded-lg p-6">
+            <p class="text-charcoal/80">
+              <strong>Not in our service area?</strong> Contact us anyway. We may be able to help or refer you to a trusted partner.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- FAQ Section -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #f5efe6 0%, #e8dcc8 100%);">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Frequently Asked Questions</h2>
+
+      <div class="space-y-4">
+        <details class="card bg-white group cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-agate">
+            <span>What is a bail bond?</span>
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-charcoal/80 mt-4 pt-4 border-t">
+            A bail bond is a contract where we (Angel Bail Bonds) agree to pay the full bail amount to the court if you fail to appear at your court date. You pay us a non-refundable premium (typically 10% of the bail amount) instead of paying the full bail to the court.
+          </p>
+        </details>
+
+        <details class="card bg-white group cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-agate">
+            <span>How quickly can you get someone out of jail?</span>
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-charcoal/80 mt-4 pt-4 border-t">
+            In most cases, we can have someone released within 1-2 hours of posting the bail bond. The exact time depends on the jail's processing time. Call us immediately when bail is set and we'll work as fast as possible.
+          </p>
+        </details>
+
+        <details class="card bg-white group cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-agate">
+            <span>Do you offer payment plans?</span>
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-charcoal/80 mt-4 pt-4 border-t">
+            Yes! We understand that bail can be a financial burden. We work with most clients to create flexible payment plans that fit their budget. Call us to discuss your options.
+          </p>
+        </details>
+
+        <details class="card bg-white group cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-agate">
+            <span>What do I need to get a bail bond?</span>
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-charcoal/80 mt-4 pt-4 border-t">
+            You'll need: (1) The inmate's name and booking number, (2) The jail location, (3) The bail amount set by the judge, (4) Proof of income or ability to pay the premium, and (5) A valid photo ID.
+          </p>
+        </details>
+
+        <details class="card bg-white group cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-agate">
+            <span>What happens if they miss court?</span>
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-charcoal/80 mt-4 pt-4 border-t">
+            If the defendant fails to appear, you (or the co-signer) become liable for the full bail amount. A warrant will be issued and we may contact you to help locate them. This is why choosing a responsible co-signer is critical.
+          </p>
+        </details>
+
+        <details class="card bg-white group cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-agate">
+            <span>Are you available 24/7?</span>
+            <span class="group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-charcoal/80 mt-4 pt-4 border-t">
+            Yes! We're available 24 hours a day, 7 days a week, 365 days a year. Arrests don't happen on a schedule, and neither do we take time off. Call (405) 614-3000 anytime.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Final CTA -->
+  <section class="section-padding bg-agate text-cream">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-4xl mb-6">Need Immediate Help?</h2>
+      <p class="text-lg mb-8">
+        Don't wait. Call Angel Bail Bonds now for 24/7 emergency bail bond services.
+      </p>
+
+      <a 
+        href="tel:+14056143000" 
+        class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all text-xl"
+      >
+        (405) 614-3000
+      </a>
+    </div>
+  </section>
+</BaseLayout>

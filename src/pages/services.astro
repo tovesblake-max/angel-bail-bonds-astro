@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const services = [
+  {
+    title: 'Felony Bail Bonds',
+    description: 'For serious felony charges requiring substantial bail amounts. Our experienced team handles complex cases across all 5 service counties.',
+    details: ['Violent crimes', 'Drug trafficking', 'Property crimes', 'White-collar offenses'],
+  },
+  {
+    title: 'Misdemeanor Bail Bonds',
+    description: 'Quick and efficient processing for less serious charges. We specialize in fast turnaround times for misdemeanor cases.',
+    details: ['Simple assault', 'Shoplifting', 'Disorderly conduct', 'Minor drug possession'],
+  },
+  {
+    title: 'DUI/DWI Bonds',
+    description: 'Specialized experience with impaired driving charges. We understand Oklahoma DUI laws and courthouse procedures.',
+    details: ['First offense DUI', 'Felony DUI', 'Breath test refusal', 'Child endangerment DUI'],
+  },
+  {
+    title: 'Domestic Violence Bonds',
+    description: 'Sensitive handling of family-related charges with protective conditions and discretion.',
+    details: ['Assault charges', 'Protective orders', 'Family disputes', 'Confidential service'],
+  },
+  {
+    title: 'Drug Charges Bonds',
+    description: 'Expert assistance navigating Oklahoma drug laws for possession through trafficking charges.',
+    details: ['Possession', 'Trafficking', 'Manufacturing', 'Intent to distribute'],
+  },
+  {
+    title: 'Warrant Bonds',
+    description: 'Fast resolution for active warrants, bench warrants, and failure to appear charges.',
+    details: ['Active warrants', 'Bench warrants', 'Failure to appear', 'Quick resolution'],
+  },
+  {
+    title: 'Traffic Violation Bonds',
+    description: 'Efficient handling of serious traffic violations requiring bail.',
+    details: ['Reckless driving', 'Suspended license', 'Hit and run', 'Traffic court representation'],
+  },
+  {
+    title: 'Federal Bonds',
+    description: 'Experience with federal bail proceedings and complex federal charges.',
+    details: ['Federal charges', 'Interstate cases', 'Immigration matters', 'Federal court procedures'],
+  },
+];
+---
+
+<BaseLayout 
+  title="Bail Bond Services"
+  description="Angel Bail Bonds offers comprehensive bail bond services including felony, misdemeanor, DUI, domestic violence, drug charges, warrants, and more. 10% premium with flexible payment options."
+>
+  <!-- Hero -->
+  <section class="bg-agate text-cream py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Our Services</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Comprehensive bail bond services for all charge types across Central Oklahoma
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {services.map((service) => (
+          <div class="card bg-white">
+            <h3 class="text-agate font-display text-2xl mb-3">{service.title}</h3>
+            <p class="text-charcoal/80 mb-6">{service.description}</p>
+            
+            <div class="mb-6">
+              <h4 class="font-semibold text-charcoal mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                {service.details.map((detail) => (
+                  <li class="flex items-start gap-2 text-charcoal/80">
+                    <span class="text-gold mt-1">•</span>
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="border-t pt-4 mt-4">
+              <p class="text-gold font-semibold">10% Premium</p>
+              <p class="text-sm text-charcoal/70">Flexible payment plans available</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- County Tags -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Available in All Service Counties</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
+        {['Payne', 'Pawnee', 'Lincoln', 'Kay', 'Noble'].map((county) => (
+          <div class="text-center p-6 bg-agate/5 border-2 border-agate/20 rounded-lg hover:border-gold/50 transition-colors">
+            <h3 class="font-display text-lg text-agate font-bold">{county}</h3>
+            <p class="text-sm text-charcoal/70">County</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-gold/10 border-2 border-gold/30 rounded-lg p-8">
+        <h3 class="font-display text-2xl text-agate mb-4">Payne County Specialist</h3>
+        <p class="text-charcoal/80 mb-4">
+          Based in Stillwater, Oklahoma, we specialize in Payne County Jail bonds with intimate knowledge of local procedures and judges.
+        </p>
+        <a href="/payne-county-jail-bail-bonds" class="text-gold font-semibold hover:text-agate transition-colors">
+          View Payne County Details →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- Pricing Info -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #f5efe6 0%, #e8dcc8 100%);">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-agate font-display text-3xl mb-8 text-center">Affordable, Transparent Pricing</h2>
+
+      <div class="bg-white rounded-lg p-8 mb-8">
+        <h3 class="text-agate font-display text-2xl mb-6 text-center">Standard Rate: 10% Premium</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <p class="text-gray-500 text-sm mb-2">Bail Amount</p>
+            <p class="font-display text-2xl text-agate">$5,000</p>
+            <p class="text-gold font-bold text-lg mt-2">$500</p>
+          </div>
+          <div class="text-center">
+            <p class="text-gray-500 text-sm mb-2">Bail Amount</p>
+            <p class="font-display text-2xl text-agate">$10,000</p>
+            <p class="text-gold font-bold text-lg mt-2">$1,000</p>
+          </div>
+          <div class="text-center">
+            <p class="text-gray-500 text-sm mb-2">Bail Amount</p>
+            <p class="font-display text-2xl text-agate">$25,000</p>
+            <p class="text-gold font-bold text-lg mt-2">$2,500</p>
+          </div>
+        </div>
+
+        <div class="border-t pt-6">
+          <h4 class="font-semibold text-agate mb-4">Flexible Payment Options:</h4>
+          <ul class="space-y-2 text-charcoal/80">
+            <li class="flex items-center gap-2">
+              <span class="text-gold">✓</span>
+              <span>Cash payments</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold">✓</span>
+              <span>Credit/Debit cards accepted</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold">✓</span>
+              <span>Payment plans available</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold">✓</span>
+              <span>Collateral options</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gold Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- CTA -->
+  <section class="section-padding bg-agate text-cream">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-4xl mb-6">Ready to Help Right Now</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Contact Angel Bail Bonds today for fast, professional service 24/7
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="tel:+14056143000" 
+          class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all"
+        >
+          (405) 614-3000
+        </a>
+        <a 
+          href="/contact" 
+          class="inline-block bg-white/20 hover:bg-white/30 text-cream font-bold py-4 px-8 rounded-lg border border-cream transition-all"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
