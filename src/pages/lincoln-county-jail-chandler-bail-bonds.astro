@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org', '@type': 'LocalBusiness',
+  name: 'Angel Bail Bonds - Lincoln County Jail',
+  description: 'Bail bond services for Lincoln County Jail at 811 Manvel Ave, Chandler, OK. Available 24/7 from Stillwater.',
+  image: '/images/logo.webp', telephone: '(405) 614-3000',
+  address: { '@type': 'PostalAddress', streetAddress: '811 Manvel Ave #14', addressLocality: 'Chandler', addressRegion: 'OK', postalCode: '74834', addressCountry: 'US' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Lincoln County, Oklahoma' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
+  openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' }
+};
+
+const faqData = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+  { '@type': 'Question', name: 'How do I bail someone out of Lincoln County Jail in Chandler?', acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000. We serve Lincoln County and can post bonds at the jail in Chandler. You pay just 10% of the bail amount. Payment plans are available.' } },
+  { '@type': 'Question', name: 'What is Lincoln County Jail\'s phone number?', acceptedAnswer: { '@type': 'Answer', text: 'Lincoln County Jail in Chandler can be reached at (405) 258-1191 ext 294. Call for inmate information, bail amounts, and booking details.' } },
+  { '@type': 'Question', name: 'What are visitation hours at Lincoln County Jail?', acceptedAnswer: { '@type': 'Answer', text: 'On-site visitation at Lincoln County Jail is Monday through Friday, 10:00 AM to 3:00 PM. Visits must be scheduled 24 hours in advance through Prodigy (prodigysales.com). A government-issued photo ID is required.' } },
+  { '@type': 'Question', name: 'What forms of payment does Lincoln County Jail accept for bail?', acceptedAnswer: { '@type': 'Answer', text: 'Lincoln County Jail accepts cash, credit, and money orders for direct bail payment. Property in Lincoln County can also be used as collateral. Through Angel Bail Bonds, you pay 10% and we accept cash, credit cards, and offer payment plans.' } }
+] };
+
+const howToData = { '@context': 'https://schema.org', '@type': 'HowTo',
+  name: 'How to Bail Someone Out of Lincoln County Jail in Chandler, OK',
+  description: 'Complete guide to posting bail at Lincoln County Jail in Chandler, Oklahoma.',
+  step: [
+    { '@type': 'HowToStep', name: 'Get inmate info', text: 'Call Lincoln County Jail at (405) 258-1191 or search the inmate roster at lincolncountysheriffok.gov.' },
+    { '@type': 'HowToStep', name: 'Call Angel Bail Bonds', text: 'Call (405) 614-3000 any time 24/7.' },
+    { '@type': 'HowToStep', name: 'Pay 10% premium', text: 'Sign the bond and pay 10%. Payment plans available.' },
+    { '@type': 'HowToStep', name: 'Release', text: 'Bond posted at Lincoln County Jail, release process begins.' }
+  ]
+};
+---
+
+<BaseLayout
+  title="Lincoln County Jail Bail Bonds Chandler OK | 24/7 Service"
+  description="Need bail bonds for Lincoln County Jail at 811 Manvel Ave, Chandler OK? Angel Bail Bonds serves Lincoln County 24/7. Fast processing, payment plans. Call (405) 614-3000."
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
+
+  <section style="background: linear-gradient(135deg, #1a6b6a 0%, #145453 100%); min-height: 50vh;" class="flex items-center text-cream">
+    <div class="max-w-7xl mx-auto px-4 py-20 w-full">
+      <p class="section-label" style="color: var(--gold);">Lincoln County Jail — Chandler, OK</p>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4">Bail Bonds for<br><span style="color: var(--gold);">Lincoln County Jail</span></h1>
+      <p class="text-lg md:text-xl max-w-2xl mb-8 opacity-90">811 Manvel Avenue #14, Chandler, OK 74834 — Angel Bail Bonds serves Lincoln County from Stillwater.</p>
+      <a href="tel:+14056143000" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(405) 614-3000</a>
+    </div>
+  </section>
+
+  <section style="background: var(--cream); padding: 80px 0;">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="section-label">Facility Details</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Lincoln County Jail Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card reveal"><div class="icon-box">📍</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Address</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">811 Manvel Avenue #14<br>Chandler, OK 74834</p></div>
+        <div class="card reveal reveal-delay-1"><div class="icon-box">📞</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Phone</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">(405) 258-1191 ext 294</p></div>
+        <div class="card reveal reveal-delay-2"><div class="icon-box">👥</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Visitation</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">M-F: 10:00am - 3:00pm<br>Schedule 24hrs ahead via Prodigy</p></div>
+        <div class="card reveal reveal-delay-3"><div class="icon-box">💰</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Bail Payments</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">Cash, credit, money orders<br>Property bonds accepted</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 100px 0; background: white;">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="section-label">Step-by-Step Guide</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-4" style="color: var(--agate);">How to Bail Someone Out of Lincoln County Jail</h2>
+      <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 48px; font-size: 1.1rem;">Lincoln County Jail in Chandler is about an hour south of Stillwater. We serve this facility and can post bonds quickly.</p>
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+        <div class="reveal" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700;">1</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Look Up the Inmate</h3><p style="color: var(--charcoal); opacity: 0.8;">Search the inmate roster at <strong>lincolncountysheriffok.gov/inmate-search</strong> or call <strong>(405) 258-1191</strong> for bail amounts and booking details.</p></div></div>
+        <div class="reveal reveal-delay-1" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700;">2</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Call Angel Bail Bonds</h3><p style="color: var(--charcoal); opacity: 0.8;">Call <strong>(405) 614-3000</strong> — available 24/7. We'll confirm the bail amount, explain the 10% premium, and discuss payment plan options.</p></div></div>
+        <div class="reveal reveal-delay-2" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700;">3</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Sign Bond & Pay Premium</h3><p style="color: var(--charcoal); opacity: 0.8;">Complete the bond agreement and pay 10% of the bail amount. We accept cash, credit cards, and offer flexible payment plans.</p></div></div>
+        <div class="reveal reveal-delay-3" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700;">4</div><div><h3 class="font-display text-xl mb-2" style="color: var(--agate);">Bond Posted — Release Begins</h3><p style="color: var(--charcoal); opacity: 0.8;">We post the bond at Lincoln County Jail and the release process starts. We'll keep you updated throughout.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 80px 0; background: var(--cream);">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="section-label">Common Questions</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Lincoln County Jail Bail FAQ</h2>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>How do I bail someone out of Lincoln County Jail?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Call Angel Bail Bonds at (405) 614-3000. We post bonds at Lincoln County Jail in Chandler and only charge the 10% premium. Payment plans available.</p></details>
+        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>What are visitation hours at Lincoln County Jail?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Monday through Friday, 10:00 AM to 3:00 PM. You must schedule 24 hours in advance through prodigysales.com. Bring a government-issued photo ID (driver's license, state ID, military ID, or passport).</p></details>
+        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--agate);"><span>Can I use property as bail collateral at Lincoln County?</span><span>▼</span></summary><p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Yes, Lincoln County accepts property bonds using county property as collateral. Contact the jail at (405) 258-1191 for property bond requirements. Note that property bonds take longer to process than using a bail bondsman.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(135deg, #1a6b6a 0%, #145453 100%); padding: 80px 0;" class="text-cream">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="section-label" style="color: var(--gold);">Available 24/7</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-6">Someone in Lincoln County Jail?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Angel Bail Bonds serves Lincoln County from Stillwater. Fast processing, payment plans, and 24/7 availability.</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.3rem; padding: 16px 40px;">(405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

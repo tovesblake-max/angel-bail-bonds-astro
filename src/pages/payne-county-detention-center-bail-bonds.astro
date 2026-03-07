@@ -1,0 +1,364 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Angel Bail Bonds - Payne County Detention Center',
+  description: 'Fast bail bond services for the Payne County Detention Center at 606 S Husband St, Stillwater, OK 74074. Available 24/7 with immediate response.',
+  image: '/images/logo.webp',
+  telephone: '(405) 614-3000',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '606 S Husband St',
+    addressLocality: 'Stillwater',
+    addressRegion: 'OK',
+    postalCode: '74074',
+    addressCountry: 'US'
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Payne County, Oklahoma'
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '127'
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    opens: '00:00',
+    closes: '23:59'
+  }
+};
+
+const faqData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I bail someone out of the Payne County Detention Center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Call Angel Bail Bonds at (405) 614-3000. We need the inmate\'s full name, booking number, and charges. We handle the paperwork and post the bond directly at the detention center. Most releases take 1-2 hours after the bond is posted.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Where do I pay bail for Payne County Detention Center inmates?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cash bail can be paid at the Payne County Court Clerk\'s office (Suite 207, 606 S Husband St, Stillwater) Monday-Friday 8am-5pm. After hours, exact cash is accepted at the detention center itself. Or call Angel Bail Bonds and we handle everything for you 24/7.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the visitation hours at Payne County Detention Center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In-person visitation is available on Wednesdays with 15-minute visits at the Sheriff\'s Office lobby kiosk (free). Remote video visitation through CityTeleCoin is available daily. Register at CityTeleCoin.com to schedule visits.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a bail bond cost at Payne County Detention Center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oklahoma law sets the bail bond premium at 10% of the total bail amount. For a $5,000 bail, you pay $500. For a $10,000 bail, you pay $1,000. Angel Bail Bonds also offers flexible payment plans so finances don\'t delay your loved one\'s release.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I look up an inmate at Payne County Detention Center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Search the online inmate roster at paynecountyok.gov/inmate-search (updated hourly) or call the detention center at (405) 372-4522. You\'ll need the inmate\'s name to look up their booking info, charges, and bail amount.'
+      }
+    }
+  ]
+};
+
+const howToData = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Bail Someone Out of Payne County Detention Center',
+  description: 'Step-by-step guide to posting bail and getting someone released from the Payne County Detention Center in Stillwater, Oklahoma.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      name: 'Get the inmate information',
+      text: 'Find the inmate\'s full legal name, booking number, and charges. Search paynecountyok.gov/inmate-search or call (405) 372-4522.'
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Contact Angel Bail Bonds',
+      text: 'Call (405) 614-3000 any time, 24/7. Provide the inmate details and we\'ll confirm the bail amount and explain your options.'
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Complete the bond agreement',
+      text: 'Sign the bail bond agreement and pay the 10% premium. We accept cash, credit cards, and offer payment plans.'
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Bond is posted at the detention center',
+      text: 'We post the bond directly with Payne County Detention Center staff. Processing typically takes 30-60 minutes.'
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Inmate is released',
+      text: 'The inmate is processed out and released. Total time from bond posting to release is typically 1-2 hours at Payne County.'
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Payne County Detention Center Bail Bonds | 24/7 Fast Release"
+  description="Need bail bonds for Payne County Detention Center at 606 S Husband St, Stillwater OK? Angel Bail Bonds posts bonds 24/7 with 1-2 hour release times. Call (405) 614-3000."
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1a6b6a 0%, #145453 100%); min-height: 50vh;" class="flex items-center text-cream">
+    <div class="max-w-7xl mx-auto px-4 py-20 w-full">
+      <p class="section-label" style="color: var(--gold);">Payne County Detention Center</p>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4">
+        Bail Bonds for Payne County<br><span style="color: var(--gold);">Detention Center</span>
+      </h1>
+      <p class="text-lg md:text-xl max-w-2xl mb-8 opacity-90">
+        606 S Husband St, Stillwater, OK 74074 — We're located minutes away and post bonds 24 hours a day, 7 days a week.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:+14056143000" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (405) 614-3000
+        </a>
+        <a href="#how-to-bail" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">How Bail Works Here</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facility Quick Facts -->
+  <section style="background: var(--cream); padding: 80px 0;">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="section-label">Facility Details</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Payne County Detention Center Information</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="card reveal">
+          <div class="icon-box">📍</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Address</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">606 S Husband Street<br>Stillwater, OK 74074</p>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <div class="icon-box">📞</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Jail Phone</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">(405) 372-4522</p>
+          <p style="color: var(--charcoal); opacity: 0.6; font-size: 0.85rem; margin-top: 4px;">Court Clerk: (405) 372-4774</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="icon-box">👥</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Visitation</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">Wednesdays: 15-min in-person<br>Daily: Remote video via CityTeleCoin</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="icon-box">💰</div>
+          <h3 class="font-semibold mt-4 mb-2" style="color: var(--agate);">Bail Payments</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem;">Court Clerk: M-F 8am-5pm<br>After hours: Exact cash at jail</p>
+        </div>
+      </div>
+
+      <div class="card reveal" style="border-left: 4px solid var(--gold); background: white;">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          <div class="flex-1">
+            <h3 class="font-display text-xl mb-3" style="color: var(--agate);">Skip the Hassle — Call Angel Bail Bonds</h3>
+            <p style="color: var(--charcoal); opacity: 0.8;">Instead of navigating court clerk hours and exact-cash requirements, call us. We post bonds at the Payne County Detention Center 24/7, handle all the paperwork, and only require the 10% premium. Payment plans available.</p>
+          </div>
+          <a href="tel:+14056143000" class="btn-primary whitespace-nowrap">(405) 614-3000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Bail Someone Out -->
+  <section id="how-to-bail" style="padding: 100px 0; background: white;">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="section-label">Step-by-Step Guide</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-4" style="color: var(--agate);">How to Bail Someone Out of Payne County Detention Center</h2>
+      <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 48px; font-size: 1.1rem;">Follow these steps to get your loved one released as quickly as possible.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+        <div class="reveal" style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">1</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--agate);">Look Up the Inmate</h3>
+            <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 8px;">Search the Payne County inmate roster at <strong>paynecountyok.gov/inmate-search</strong> (updated hourly) or call the detention center at <strong>(405) 372-4522</strong>. Write down their full legal name, booking number, and charges.</p>
+            <p style="color: var(--gold); font-weight: 600; font-size: 0.9rem;">💡 The roster shows current charges and booking info — have this ready when you call us.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1" style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">2</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--agate);">Call Angel Bail Bonds</h3>
+            <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 8px;">Call <strong>(405) 614-3000</strong> — we answer 24 hours a day, 7 days a week, including holidays. We'll confirm the bail amount and walk you through your options. If bail hasn't been set yet, we'll monitor the case and act the moment it is.</p>
+            <p style="color: var(--gold); font-weight: 600; font-size: 0.9rem;">💡 We're minutes from the Payne County Detention Center — no delays waiting for an out-of-town bondsman.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2" style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">3</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--agate);">Sign the Bond & Pay the Premium</h3>
+            <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 8px;">Sign the bail bond agreement and pay the 10% premium (set by Oklahoma law). For a $10,000 bail, you pay $1,000 instead of the full amount. We accept cash, credit cards, and debit cards. <strong>Payment plans are available</strong> — don't let money be the reason your loved one stays locked up.</p>
+            <p style="color: var(--gold); font-weight: 600; font-size: 0.9rem;">💡 We can often complete paperwork at the jail or even remotely — no office visit required.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-3" style="display: flex; gap: 20px; align-items: flex-start;">
+          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--agate); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">4</div>
+          <div>
+            <h3 class="font-display text-xl mb-2" style="color: var(--agate);">Bond is Posted — Release Begins</h3>
+            <p style="color: var(--charcoal); opacity: 0.8; margin-bottom: 8px;">We deliver the bond directly to Payne County Detention Center staff. Once the bond is processed, the jail begins the release procedure. <strong>Typical release time: 1-2 hours after bond posting.</strong> We'll stay in contact until your loved one walks out.</p>
+            <p style="color: var(--gold); font-weight: 600; font-size: 0.9rem;">💡 Our established relationships with detention center staff help speed up the process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bail Payment Options -->
+  <section style="padding: 80px 0; background: linear-gradient(135deg, #f5efe6 0%, #e8dcc8 100%);">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="section-label">Payment Options</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">How to Pay Bail at Payne County Detention Center</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card reveal" style="background: white;">
+          <h3 class="font-display text-lg mb-3" style="color: var(--agate);">Pay Full Cash Bail Yourself</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem; margin-bottom: 12px;">Pay the full bail amount (100%) at the Court Clerk's office, Suite 207, 606 S Husband St. Hours: Monday-Friday, 8am-5pm. Cash or certified cashier's check only, payable to "Payne County Court Clerk."</p>
+          <p style="color: var(--charcoal); opacity: 0.6; font-size: 0.85rem;">After hours: Exact cash accepted at the detention center.</p>
+        </div>
+        <div class="card reveal reveal-delay-1" style="background: white;">
+          <h3 class="font-display text-lg mb-3" style="color: var(--agate);">Property Bond</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem; margin-bottom: 12px;">Use real property in Payne County as collateral. Contact the Court Clerk at (405) 372-4774 for requirements. This process takes longer and requires a property evaluation.</p>
+          <p style="color: var(--charcoal); opacity: 0.6; font-size: 0.85rem;">Typically takes several days to process.</p>
+        </div>
+        <div class="card reveal reveal-delay-2" style="border: 2px solid var(--gold); background: white;">
+          <div style="background: var(--gold); color: var(--charcoal); display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">RECOMMENDED</div>
+          <h3 class="font-display text-lg mb-3" style="color: var(--agate);">Use a Bail Bondsman (10%)</h3>
+          <p style="color: var(--charcoal); opacity: 0.8; font-size: 0.95rem; margin-bottom: 12px;">Pay just 10% of the bail amount. Available 24/7 — no court clerk hours to worry about. Angel Bail Bonds handles everything and posts the bond directly. Payment plans available.</p>
+          <a href="tel:+14056143000" style="color: var(--gold); font-weight: 700;">Call (405) 614-3000 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Charges -->
+  <section style="padding: 80px 0; background: white;">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="section-label">What We Handle</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Charges We Bond at Payne County Detention Center</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card reveal"><h3 class="font-semibold mb-3" style="color: var(--agate);">DUI / DWI</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">Driving under the influence arrests are common in the Stillwater area. We post DUI bonds quickly so you can get home and prepare your defense.</p></div>
+        <div class="card reveal reveal-delay-1"><h3 class="font-semibold mb-3" style="color: var(--agate);">Drug Charges</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">From possession to distribution charges, we handle all drug-related bonds at Payne County Detention Center.</p></div>
+        <div class="card reveal reveal-delay-2"><h3 class="font-semibold mb-3" style="color: var(--agate);">Domestic Violence</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">DV charges often carry higher bail amounts. We can post these bonds and explain any protective order conditions.</p></div>
+        <div class="card reveal reveal-delay-3"><h3 class="font-semibold mb-3" style="color: var(--agate);">Warrants & FTA</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">Outstanding warrants and failure-to-appear charges. We'll help resolve the situation and get you released.</p></div>
+        <div class="card reveal"><h3 class="font-semibold mb-3" style="color: var(--agate);">Assault & Battery</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">Simple and aggravated assault bonds. We know how Payne County handles these cases and can expedite the process.</p></div>
+        <div class="card reveal reveal-delay-1"><h3 class="font-semibold mb-3" style="color: var(--agate);">Theft & Burglary</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">Property crimes from petty theft to burglary. We've bonded hundreds of these cases at the Payne County facility.</p></div>
+        <div class="card reveal reveal-delay-2"><h3 class="font-semibold mb-3" style="color: var(--agate);">Felony Charges</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">Higher bail amounts for serious felony charges. We handle large bonds and offer payment plans to make it manageable.</p></div>
+        <div class="card reveal reveal-delay-3"><h3 class="font-semibold mb-3" style="color: var(--agate);">All Other Charges</h3><p style="color: var(--charcoal); opacity: 0.8; font-size: 0.9rem;">Probation violations, trespassing, public intoxication — if there's a bail amount, we can bond it. Call us for any charge.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 80px 0; background: var(--cream);">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="section-label">Common Questions</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--agate);">Payne County Detention Center Bail FAQ</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--agate);">
+            <span>How do I bail someone out of the Payne County Detention Center?</span>
+            <span style="transition: transform 0.2s;">▼</span>
+          </summary>
+          <p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            Call Angel Bail Bonds at (405) 614-3000. We need the inmate's full name, booking number, and charges. We handle the paperwork and post the bond directly at the detention center. Most releases take 1-2 hours after the bond is posted.
+          </p>
+        </details>
+
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--agate);">
+            <span>Where do I pay bail for Payne County Detention Center inmates?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            Cash bail can be paid at the Payne County Court Clerk's office (Suite 207, 606 S Husband St, Stillwater) Monday-Friday 8am-5pm. Payments must be cash or certified cashier's check payable to the Payne County Court Clerk. After hours, exact cash is accepted at the detention center. Or call Angel Bail Bonds — we post bonds 24/7 and only charge the 10% premium.
+          </p>
+        </details>
+
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--agate);">
+            <span>What are visitation hours at Payne County Detention Center?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            In-person visitation is available on Wednesdays — 15-minute visits at the Sheriff's Office front lobby kiosk at no charge. Remote video visitation through CityTeleCoin is available daily. Register at CityTeleCoin.com to set up a direct pay account and schedule visits.
+          </p>
+        </details>
+
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--agate);">
+            <span>How much does a bail bond cost at Payne County?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            Oklahoma law sets the bail bond premium at 10% of the total bail amount. For a $5,000 bail, you pay $500. For a $10,000 bail, you pay $1,000. This is non-refundable but saves you from putting up the full bail amount. Angel Bail Bonds offers flexible payment plans.
+          </p>
+        </details>
+
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--agate);">
+            <span>How do I look up an inmate at Payne County Detention Center?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            Search the online inmate roster at paynecountyok.gov/inmate-search — it's updated hourly and shows booking info, charges, and inmate details. You can also call the detention center directly at (405) 372-4522 for inmate information.
+          </p>
+        </details>
+
+        <details class="card" style="background: white; cursor: pointer;">
+          <summary class="flex justify-between items-center font-semibold" style="color: var(--agate);">
+            <span>How long does it take to get released from Payne County Detention Center?</span>
+            <span>▼</span>
+          </summary>
+          <p style="color: var(--charcoal); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            After a bail bond is posted, release from Payne County Detention Center typically takes 1-2 hours. The booking process itself (fingerprinting, photos, personal info) takes 1-2 hours. If bail hasn't been set yet, the defendant will see a judge within 24-72 hours for an initial appearance.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: linear-gradient(135deg, #1a6b6a 0%, #145453 100%); padding: 80px 0;" class="text-cream">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="section-label" style="color: var(--gold);">Available 24/7</p>
+      <h2 class="font-display text-3xl md:text-4xl mb-6">Someone in Payne County Detention Center?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+        Don't wait until morning. Angel Bail Bonds is based in Stillwater and can post your bond right now. Call us — we'll walk you through everything.
+      </p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.3rem; padding: 16px 40px;">
+        (405) 614-3000
+      </a>
+    </div>
+  </section>
+</BaseLayout>
