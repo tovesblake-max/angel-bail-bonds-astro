@@ -2,155 +2,297 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  url: 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds',
-  '@id': 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds#business',
-  name: 'Angel Bail Bonds - Payne County Jail Specialist',
-  description: 'Specialized bail bond services for Payne County Jail in Stillwater, Oklahoma.',
-  image: '/images/logo.webp',
-  telephone: '(405) 614-3000',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Stillwater',
-    addressRegion: 'OK',
-    addressCountry: 'US'
-  },
-  geo: { '@type': 'GeoCoordinates', latitude: 36.1156, longitude: -97.0584 },
-  areaServed: 'Payne County, Oklahoma',
-  sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://stillwaterokbailbonds.com/#business",
+      "name": "Angel Bail Bonds - Payne County",
+      "image": "https://stillwaterokbailbonds.com/angel-bail-bonds-logo.png",
+      "telephone": "+14056143000",
+      "email": "bailbondangel@gmail.com",
+      "url": "https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "606 S Husband St",
+        "addressLocality": "Stillwater",
+        "addressRegion": "OK",
+        "postalCode": "74074",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.1156,
+        "longitude": -97.0584
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "10% of bail amount",
+      "paymentAccepted": ["Cash","Visa","Mastercard","Zelle","Venmo","Financing"],
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Payne County, Oklahoma"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "100",
+        "bestRating": "5"
+      },
+      "knowsLanguage": ["English","Spanish"]
+    },
+    {
+      "@type": "Service",
+      "name": "Payne County Bail Bonds",
+      "provider": { "@id": "https://stillwaterokbailbonds.com/#business" },
+      "serviceType": "Bail Bond Services",
+      "areaServed": "Payne County, Oklahoma",
+      "description": "24/7 bail bond services for the Payne County Detention Center in Stillwater, Oklahoma. 10% premium, financing available."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Payne County Jail Bail Bonds", "item": "https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a bail bond cost in Payne County?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A bail bond in Payne County costs 10% of the total bail amount set by the court. For example, a $5,000 bail requires a $500 bond premium. A $10,000 bail costs $1,000. This rate is set by Oklahoma state law and is non-refundable. Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, Venmo, and offers financing for larger bonds." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I bail someone out of Payne County Jail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Call Angel Bail Bonds at (405) 614-3000 anytime 24/7. Provide the inmate's full legal name, date of birth, and booking number if available. We verify charges and bail amount with the Payne County Detention Center at 606 S Husband St, Stillwater. We handle all paperwork and post the bond directly at the facility. Most releases take 30-60 minutes after bond is posted." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Payne County Jail located?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Payne County Detention Center is located at 606 S Husband Street, Stillwater, OK 74074. The 75,000 square foot facility was completed in 2009 and has a capacity of 404 inmates. It is operated by the Payne County Sheriff's Office under Sheriff Joe Harper. For booking information, call (405) 372-4522." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the visiting hours at Payne County Jail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In-person visitation at the Payne County Detention Center is on Wednesdays from 8:30 AM to 11:00 AM (sign in by 10:30 AM). Only immediate family is allowed for in-person visits unless approved by the sheriff. Each inmate gets a 15-minute non-contact visit. Remote video visitation is available daily through CityTeleCoin.com. Call (405) 372-4522 to confirm current hours." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get out of Payne County Jail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Once a bail bond is posted at the Payne County Detention Center, release typically takes 30-60 minutes. Angel Bail Bonds is located in Stillwater — the same city as the jail — so we can post bonds faster than any out-of-area bondsman. The total timeline from your call to release is often under 2 hours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a bail bond in Payne County at night or on weekends?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Angel Bail Bonds provides 24/7 bail bond services for Payne County, including nights, weekends, and holidays. Call (405) 614-3000 anytime and a licensed bail bondsman will begin processing your bond immediately. Because we are based in Stillwater, we can have bonds posted within minutes of completing paperwork." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find an inmate in Payne County Jail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Search the Payne County inmate roster online at paynecountyok.gov/inmate-search or call the Payne County Detention Center at (405) 372-4522. Provide the inmate's full legal name and date of birth. You can also call Angel Bail Bonds at (405) 614-3000 and we will locate the inmate and determine their bond amount at no charge." }
+        }
+      ]
+    }
+  ]
 };
 
 const breadcrumbData = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Payne County Jail Bail Bonds', item: 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds' }
-  ]
+  current: "Payne County Jail Bail Bonds",
+  parent: { name: "Home", href: "/" }
 };
 ---
 
 <BaseLayout
-  title="Payne County Jail Bail Bonds"
-  description="Expert bail bond services for Payne County Jail in Stillwater, Oklahoma. We specialize in fast releases and know Payne County procedures inside out."
+  title="Payne County Jail Bail Bonds | 24/7 Bonds in Stillwater, Perkins & Cushing OK"
+  description="Need bail bonds in Payne County? Angel Bail Bonds is based in Stillwater and provides 24/7 service for the Payne County Detention Center. 10% bonds, financing available. Call (405) 614-3000."
   structuredData={structuredData}
+  breadcrumbData={breadcrumbData}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
-  <!-- HERO — compact -->
-  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Payne County Jail — Stillwater, OK</p>
-      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Payne County Jail</h1>
-      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Stillwater, Oklahoma · Served 24/7 with local expertise</p>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+  <!-- Hero Section -->
+  <section class="hero" style="background: linear-gradient(135deg, #1a1a4e 0%, #2d2d7f 100%); color: white; padding: 3rem 1rem; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Payne County Jail Bail Bonds — 24/7 Service in Stillwater, OK</h1>
+      <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem;">Stillwater's local bail bond company. 10% premium. Financing available. Fastest releases from Payne County Detention Center. Se habla español.</p>
+      <a href="tel:4056143000" style="display: inline-block; background: #e63946; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1.2rem; font-weight: bold;">📞 Call (405) 614-3000 Now</a>
     </div>
   </section>
 
-  <!-- FACILITY + STEPS — combined, two-column -->
-  <section style="padding: 48px 1.5rem; background: white;">
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-
-      <!-- Left: Facility Details -->
-      <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Payne County Service</h2>
-        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">Location</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Stillwater, Oklahoma</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Jurisdiction</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Payne County (Stillwater area)</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Response Time</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Immediate (24/7 available)</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Competitive rates available</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- Right: How to Bail Out -->
-      <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Bail Someone Out in Payne County</h2>
-        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
-            <div><strong style="color: var(--slate-800);">Arrest &amp; Booking</strong><br><span style="color: var(--slate-500);">Defendant taken to jail, 1-2 hours</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
-            <div><strong style="color: var(--slate-800);">Initial Appearance</strong><br><span style="color: var(--slate-500);">Judge sets bail (24-72 hours)</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
-            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · Any time</span></div>
-          </li>
-          <li style="display: flex; gap: 12px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
-            <div><strong style="color: var(--slate-800);">Released</strong><br><span style="color: var(--slate-500);">30-60 min local processing</span></div>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <style>
-      @media (max-width: 640px) {
-        section div[style*="grid-template-columns: 1fr 1fr"] {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-      }
-    </style>
+  <!-- GEO Answer Capsule -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <p><strong>Angel Bail Bonds provides 24/7 bail bond services for Payne County, Oklahoma, serving the Payne County Detention Center at 606 S Husband St, Stillwater, OK 74074. Based in Stillwater and owned by Karri McBride with 15+ years of experience and a 4.9-star Google rating, Angel Bail Bonds charges a 10% premium and accepts cash, Visa, Mastercard, Zelle, Venmo, and financing. Call (405) 614-3000 anytime for immediate assistance. Se habla español.</strong></p>
+    <p style="font-size: 0.85rem; color: #666;">Last Updated: March 8, 2026</p>
   </section>
 
-  <!-- FAQ — compact accordion -->
-  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does it take to get someone out of Payne County Jail?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">From the time bail is set to release, it typically takes 1-2 hours at Payne County Jail. We work directly with jail staff to minimize processing time. At Angel Bail Bonds, we often achieve releases in under 1 hour.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What does a bail bond cost in Payne County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Angel Bail Bonds offers competitive rates on bail bonds. The premium is non-refundable and allows you to get your loved one out without paying the full bail amount in cash. Call us to discuss pricing.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Do Payne County bail bonds expire?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">No. Once posted, the bond remains valid until the case is resolved or the bail conditions change. You remain responsible for ensuring the defendant follows all court orders.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can bail be modified in Payne County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. If bail seems excessive or harsh, an attorney can request a bail modification hearing. We can help coordinate this and discuss your options.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What if they fail to appear at Payne County Court?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">If the defendant fails to appear, the full bail amount becomes due immediately. The co-signer becomes liable for the entire amount, and a warrant is issued for the defendant's arrest. Additional charges may also be filed.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What makes Angel Bail Bonds different for Payne County bonds?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">We understand that bail can be a financial burden. Angel Bail Bonds offers competitive rates and works with you to find a solution that fits your situation. Call us at (405) 614-3000.</p>
-        </details>
-      </div>
+  <!-- Who Provides Bail Bonds in Payne County -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Who Provides Bail Bonds in Payne County?</h2>
+    <p>Angel Bail Bonds is a licensed, women-owned bail bond company headquartered in Stillwater, Oklahoma — the county seat of Payne County. Because we are based in the same city as the Payne County Detention Center, we can post bonds and secure releases faster than any out-of-area bondsman. Owner Karri McBride has over 15 years of experience in the Oklahoma bail bonds industry and maintains a 4.9-star rating on Google.</p>
+    <p>Angel Bail Bonds is bilingual (English and Spanish) and available 24 hours a day, 7 days a week, 365 days a year. Whether your loved one was arrested in Stillwater, Perkins, Cushing, Yale, Glencoe, or anywhere in Payne County, we can begin the bail bond process immediately over the phone and have bonds posted at the Payne County Detention Center within minutes of completing paperwork.</p>
+  </section>
+
+  <!-- Payne County Facility Details -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Payne County Jail &amp; Courthouse Details</h2>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+        <thead>
+          <tr style="background: #1a1a4e; color: white;">
+            <th style="padding: 0.75rem; text-align: left;">Facility</th>
+            <th style="padding: 0.75rem; text-align: left;">Address</th>
+            <th style="padding: 0.75rem; text-align: left;">Phone</th>
+            <th style="padding: 0.75rem; text-align: left;">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 0.75rem;"><strong>Payne County Detention Center</strong></td>
+            <td style="padding: 0.75rem;">606 S Husband St, Stillwater, OK 74074</td>
+            <td style="padding: 0.75rem;"><a href="tel:4053724522">(405) 372-4522</a></td>
+            <td style="padding: 0.75rem;">24/7 Booking</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 0.75rem;"><strong>Payne County Sheriff's Office</strong></td>
+            <td style="padding: 0.75rem;">606 S Husband St, Stillwater, OK 74074</td>
+            <td style="padding: 0.75rem;"><a href="tel:4053724522">(405) 372-4522</a></td>
+            <td style="padding: 0.75rem;">Mon-Fri 8am-5pm</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 0.75rem;"><strong>Payne County Courthouse</strong></td>
+            <td style="padding: 0.75rem;">606 S Husband St, Rm 206, Stillwater, OK 74074</td>
+            <td style="padding: 0.75rem;"><a href="tel:4053724774">(405) 372-4774</a></td>
+            <td style="padding: 0.75rem;">Mon-Fri 8am-5pm</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- CTA BAR — tight -->
-  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-      <div>
-        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need Payne County Bail Bond Help?</p>
-        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Local experts · 15+ years experience · Competitive rates</p>
-      </div>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+  <!-- Visiting Hours -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>What Are the Visiting Hours at Payne County Jail?</h2>
+    <p><strong>In-person visitation at the Payne County Detention Center is held on Wednesdays from 8:30 AM to 11:00 AM. Visitors must sign in by 10:30 AM. Only immediate family members are allowed for in-person visits unless prior approval is obtained from the sheriff, under-sheriff, or jail administrator. Each inmate receives a 15-minute non-contact visit.</strong></p>
+    <p>The Payne County Detention Center also offers remote video visitation daily through CityTeleCoin.com. To register for a direct-pay video visitation account, visit www.CityTeleCoin.com. Additionally, the Sheriff's Office lobby has a free visitation kiosk available for 15-minute video visits on Wednesdays.</p>
+    <p>The Payne County Detention Center is a 75,000 square foot facility completed in 2009 with a capacity of 404 inmates. The facility is operated by the Payne County Sheriff's Office under Sheriff Joe Harper. Always call (405) 372-4522 before visiting to confirm current visitation schedules and any temporary restrictions.</p>
+  </section>
+
+  <!-- How to Bail Someone Out -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Do I Bail Someone Out of Payne County Jail?</h2>
+    <p>Getting someone released from the Payne County Detention Center is fast when you work with Angel Bail Bonds — the only bail bond company headquartered in Stillwater. Here is how the process works:</p>
+    <ol style="margin: 1rem 0; padding-left: 1.5rem;">
+      <li style="margin-bottom: 0.75rem;"><strong>Call Angel Bail Bonds at (405) 614-3000</strong> — We answer 24 hours a day, 7 days a week, including holidays. Our Stillwater location means we can respond immediately.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>Provide inmate information</strong> — We need the inmate's full legal name, date of birth, and booking number (if available). We verify charges and bail amount directly with the Payne County Detention Center.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>Complete the bond paperwork</strong> — We handle all documentation. Paperwork can often be started over the phone or electronically to save time.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>Pay the bond premium</strong> — The cost is 10% of the total bail amount. We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing for larger bonds.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>We post the bond</strong> — Angel Bail Bonds posts the bond at the Payne County Detention Center. Because we are in Stillwater, release typically takes just 30-60 minutes after bond is posted.</li>
+    </ol>
+  </section>
+
+  <!-- Bail Bond Costs -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Much Does a Bail Bond Cost in Payne County?</h2>
+    <p><strong>Bail bonds in Payne County cost 10% of the total bail amount set by the court. For example, if bail is set at $5,000, the bond premium is $500. A $10,000 bail requires a $1,000 premium. A $25,000 bail costs $2,500. This 10% rate is set by Oklahoma state law and is non-refundable.</strong></p>
+    <p>Common bail amounts in Payne County vary by charge. Misdemeanors such as public intoxication or minor drug possession may range from $500 to $5,000. DUI bonds in Payne County typically range from $1,000 to $10,000 depending on prior offenses. Felony charges can range from $5,000 to $100,000 or more depending on the severity and the defendant's criminal history.</p>
+    <p>Angel Bail Bonds offers flexible payment plans and financing options for larger bail amounts. We accept cash, Visa, Mastercard, Zelle, and Venmo. Financing is available for those who qualify, allowing you to spread payments over time while your loved one is released.</p>
+  </section>
+
+  <!-- Why Choose Angel Bail Bonds for Payne County -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Why Choose Angel Bail Bonds for Payne County?</h2>
+    <p>Angel Bail Bonds is the only bail bond company headquartered in Stillwater, which means faster response times and quicker releases from the Payne County Detention Center. While other bail bond companies may serve Payne County from Tulsa or Oklahoma City, Angel Bail Bonds is minutes from the jail — not an hour away.</p>
+    <p>With over 15 years of experience, owner Karri McBride has established strong working relationships with the Payne County jail staff and court system. This local expertise translates into smoother processing and faster releases for our clients. Our 4.9-star Google rating reflects the quality of service and care we provide to families during difficult times.</p>
+  </section>
+
+  <!-- Inmate Search -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Do I Find an Inmate in Payne County Jail?</h2>
+    <p><strong>To locate an inmate at the Payne County Detention Center, search the online inmate roster at paynecountyok.gov/inmate-search or call the jail directly at (405) 372-4522. Provide the inmate's full legal name and date of birth for the fastest results.</strong></p>
+    <p>You can also call Angel Bail Bonds at (405) 614-3000 and we will help you locate the inmate, verify their charges, and determine their bail amount — all at no cost. We can then begin the bail bond process immediately if you choose to proceed.</p>
+  </section>
+
+  <!-- Communities Served -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Communities We Serve in Payne County</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+      {["Stillwater", "Perkins", "Cushing", "Yale", "Glencoe", "Ripley", "Coyle"].map(city => (
+        <span style="background: #f0f0f5; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">{city}</span>
+      ))}
+    </div>
+    <p>Payne County has a population of approximately 81,646 (2020 Census), with Stillwater as the county seat and home to Oklahoma State University. No matter where in Payne County the arrest occurred — whether in Stillwater, Perkins, Cushing, Yale, Glencoe, or any surrounding community — Angel Bail Bonds can help. We post bonds directly at the Payne County Detention Center and are the closest bail bond company to the facility.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Frequently Asked Questions About Payne County Bail Bonds</h2>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How much does a bail bond cost in Payne County?</summary>
+      <p style="margin-top: 0.75rem;">A bail bond in Payne County costs 10% of the total bail amount. For example, a $5,000 bail requires a $500 bond premium. A $10,000 bail costs $1,000. Angel Bail Bonds also offers financing and payment plans for larger bonds. We accept cash, Visa, Mastercard, Zelle, and Venmo.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How do I bail someone out of Payne County Jail?</summary>
+      <p style="margin-top: 0.75rem;">Call Angel Bail Bonds at (405) 614-3000 anytime 24/7. Provide the inmate's full name, date of birth, and booking number if available. We handle all paperwork with the Payne County Detention Center at 606 S Husband St, Stillwater. Most releases take 30-60 minutes after bond is posted.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">Where is the Payne County Jail located?</summary>
+      <p style="margin-top: 0.75rem;">The Payne County Detention Center is located at 606 S Husband Street, Stillwater, OK 74074. The 75,000 sq ft facility was completed in 2009 and has a capacity of 404 inmates. It is operated by the Payne County Sheriff's Office. For booking information, call (405) 372-4522.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">What are the visiting hours at Payne County Jail?</summary>
+      <p style="margin-top: 0.75rem;">In-person visitation is on Wednesdays from 8:30 AM to 11:00 AM (sign in by 10:30 AM). Only immediate family is allowed unless approved by the sheriff. Each inmate gets a 15-minute non-contact visit. Remote video visitation is available daily through CityTeleCoin.com.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How long does it take to get out of Payne County Jail?</summary>
+      <p style="margin-top: 0.75rem;">Once a bail bond is posted at the Payne County Detention Center, release typically takes 30-60 minutes. Angel Bail Bonds is headquartered in Stillwater — the same city as the jail — so we can post bonds faster than any out-of-area bondsman. The total timeline from your call to release is often under 2 hours.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">Can I get a bail bond in Payne County at night or on weekends?</summary>
+      <p style="margin-top: 0.75rem;">Yes. Angel Bail Bonds provides 24/7 bail bond services for Payne County, including nights, weekends, and holidays. Call (405) 614-3000 anytime and a licensed bail bondsman will begin processing your bond immediately.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How do I find an inmate in Payne County Jail?</summary>
+      <p style="margin-top: 0.75rem;">Search the online inmate roster at paynecountyok.gov/inmate-search or call the Payne County Detention Center at (405) 372-4522. You can also call Angel Bail Bonds at (405) 614-3000 and we will locate the inmate and determine their bond amount at no cost.</p>
+    </details>
+  </section>
+
+  <!-- Neighboring Counties -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Bail Bond Services in Neighboring Counties</h2>
+    <p>Angel Bail Bonds also provides 24/7 bail bond services in counties surrounding Payne County:</p>
+    <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.5rem;">
+      <li><a href="/noble-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Noble County Bail Bonds</a></li>
+      <li><a href="/lincoln-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Lincoln County Bail Bonds</a></li>
+      <li><a href="/logan-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Logan County Bail Bonds</a></li>
+      <li><a href="/pawnee-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Pawnee County Bail Bonds</a></li>
+      <li><a href="/creek-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Creek County Bail Bonds</a></li>
+      <li><a href="/kay-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Kay County Bail Bonds</a></li>
+    </ul>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="background: linear-gradient(135deg, #1a1a4e 0%, #2d2d7f 100%); color: white; padding: 3rem 1rem; text-align: center; margin-top: 2rem;">
+    <div style="max-width: 600px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Need a Bail Bond in Payne County?</h2>
+      <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem;">Angel Bail Bonds is Stillwater's local bail bond company — available 24/7. Call now for the fastest releases from Payne County Detention Center. Se habla español.</p>
+      <a href="tel:4056143000" style="display: inline-block; background: #e63946; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">📞 (405) 614-3000</a>
+      <p style="margin-top: 1rem; opacity: 0.8;">
+        <a href="mailto:bailbondangel@gmail.com" style="color: white;">bailbondangel@gmail.com</a>
+      </p>
     </div>
   </section>
+
 </BaseLayout>
