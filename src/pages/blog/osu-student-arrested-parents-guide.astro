@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const publishedDate = new Date('2026-03-07');
+const formattedDate = publishedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: 'OSU Student Arrested in Stillwater: A Parent\'s Guide',
+      description: 'A comprehensive guide for parents whose college student has been arrested in Stillwater, Oklahoma. Learn about common student charges, bail bonds, the OSU Student Conduct process, and how to handle everything — even from out of state.',
+      author: { '@type': 'Person', name: 'Karri McBride' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Angel Bail Bonds',
+        url: 'https://stillwaterokbailbonds.com',
+      },
+      datePublished: '2026-03-07',
+      dateModified: '2026-03-07',
+      image: 'https://stillwaterokbailbonds.com/images/hero-agate.webp',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://stillwaterokbailbonds.com/blog/osu-student-arrested-parents-guide',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://stillwaterokbailbonds.com/blog' },
+        { '@type': 'ListItem', position: 3, name: 'OSU Student Arrested: Parent\'s Guide', item: 'https://stillwaterokbailbonds.com/blog/osu-student-arrested-parents-guide' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Can I bail my college student out of jail from out of state?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Angel Bail Bonds handles the entire bail bond process by phone. You can call from anywhere in the country, provide the necessary information, make payment over the phone, and we will post bail at the jail in Stillwater. You do not need to be physically present. Call (405) 614-3000 to get started immediately.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Will my student be expelled from OSU for getting arrested?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'An arrest does not automatically mean expulsion from Oklahoma State University. OSU has a separate Student Conduct process that reviews incidents independently from the criminal case. Most misdemeanor charges like minor in possession or public intoxication result in educational sanctions such as probation, community service, or alcohol education courses rather than expulsion. Felony charges are treated more seriously. It is important to hire an attorney who understands both the criminal and student conduct sides.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does it cost to bail a student out of jail in Stillwater?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bail amounts for common student charges in Stillwater vary. Misdemeanor charges such as minor in possession or public intoxication often have lower bail amounts. Angel Bail Bonds offers competitive rates on bail bond premiums. The exact cost depends on the charges and bail amount set by the judge. Call (405) 614-3000 for a free consultation and specific pricing.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where will my student be held after being arrested in Stillwater?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'If your student was arrested by the Stillwater Police Department, they will likely be held at the Stillwater City Jail. If the arrest was made by the OSU Police Department or the Payne County Sheriff, they will typically be booked into the Payne County Detention Center. In some cases, students arrested by city police may be transferred to the county facility. Angel Bail Bonds posts bail at both locations.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What should my student do after being released on bail?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'After release, your student should hire a local Stillwater attorney experienced in criminal defense, attend every scheduled court date without exception, follow all bail conditions set by the judge, avoid discussing the case on social media, and prepare for the OSU Student Conduct process if applicable. Missing a court date can result in additional charges, a warrant for arrest, and forfeiture of the bail bond.',
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="OSU Student Arrested in Stillwater: A Parent's Guide | Angel Bail Bonds"
+  description="Your OSU student was arrested in Stillwater? Stay calm. This parent's guide covers bail bonds, common student charges, the Student Conduct process, and how to handle everything by phone — even from out of state. Call Angel Bail Bonds at (405) 614-3000."
+  structuredData={structuredData}
+>
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p style="color: white; opacity: 0.85; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Parent's Guide</p>
+      <h1 style="color: white; font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; font-weight: 700;">OSU Student Arrested in Stillwater: A Parent's Guide</h1>
+      <p style="color: white; opacity: 0.9; font-size: 1.125rem;">Published {formattedDate} &bull; By Karri McBride</p>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section style="background: var(--slate-50); padding: 3rem 1.5rem;">
+    <article style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Answer-first paragraph -->
+      <p style="color: var(--slate-700); font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+        If your college student just called from Stillwater saying they have been arrested, take a deep breath. This situation is more common than you think, and it is almost always manageable. Your first step is to call a local bail bondsman at <a href="tel:+14056143000" style="color: var(--gold); font-weight: 600;">(405) 614-3000</a> so your student can be released as quickly as possible &mdash; Angel Bail Bonds can handle everything by phone, even if you are calling from another state.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        As a parent, getting that phone call in the middle of the night is terrifying. Your mind races. You feel helpless, especially if you are hundreds or thousands of miles away from Stillwater. This guide was written specifically for parents like you &mdash; to walk you through every step of what happens next, what your options are, and how to help your student get through this. At Angel Bail Bonds, we have helped hundreds of Oklahoma State University families navigate this exact situation over the past 15 years, and we are here to help yours too.
+      </p>
+
+      <!-- Section 1 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">What Should I Do First as a Parent?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        The first thing you need to do is stay calm. Your student needs you to be clear-headed right now, not panicked. Here is a step-by-step checklist for the next 30 minutes:
+      </p>
+
+      <ol style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem;">
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Get the basic facts from your student.</strong> Ask what they have been charged with, where they are being held (Stillwater City Jail or Payne County Detention Center), and if they are injured. Tell them not to answer any police questions without an attorney and not to discuss the incident with other inmates.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Call Angel Bail Bonds at <a href="tel:+14056143000" style="color: var(--gold);">(405) 614-3000</a>.</strong> We are available 24 hours a day, 7 days a week. We will need your student's full legal name, date of birth, the jail where they are being held, and the charges if you know them. We can look up the rest.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Arrange payment over the phone.</strong> You do not need to drive to Stillwater. We accept payment by phone and can begin the bonding process immediately.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Contact a local attorney.</strong> Not right at 2 AM, but first thing in the morning. A Stillwater attorney experienced in criminal defense can advise your student on next steps and represent them in court.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Reassure your student.</strong> Remind them that an arrest is not the end of the world. Many students go through this and go on to graduate, start careers, and live normal lives.</li>
+      </ol>
+
+      <div style="background: var(--blue-light); border: 2px solid var(--blue); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem;">
+        <p style="color: var(--slate-900); font-weight: 600; margin: 0;">You do not need to be in Stillwater to help your student. Angel Bail Bonds handles bail for out-of-state families every week. One phone call is all it takes to start the release process.</p>
+      </div>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        For a more detailed overview of the arrest-to-release process, read our complete guide on <a href="/blog/someone-arrested-stillwater-what-to-do" style="color: var(--gold); font-weight: 500;">what to do when someone is arrested in Stillwater</a>.
+      </p>
+
+      <!-- Section 2 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">What Are the Most Common Student Arrests in Stillwater?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Stillwater is a college town, and the most common arrests involving OSU students reflect that reality. These are not violent crimes or dangerous situations in most cases. They are the kinds of mistakes that young adults sometimes make, and law enforcement in Stillwater sees them regularly. Here are the charges we see most often when helping student families:
+      </p>
+
+      <!-- Common Student Arrests Table -->
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+          <caption style="color: var(--agate); font-weight: 700; font-size: 1.15rem; margin-bottom: 0.75rem; text-align: left;">Common Student Arrests in Stillwater</caption>
+          <thead>
+            <tr style="background: var(--navy-deep);">
+              <th style="color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600;">Charge Type</th>
+              <th style="color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600;">Common Scenarios</th>
+              <th style="color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600;">Typical Bail</th>
+              <th style="color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600;">Severity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: white;">
+              <td style="color: var(--slate-700); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); font-weight: 600;">MIP (Minor in Possession)</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Under 21 with alcohol at a party, bar, or tailgate</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">$500 &ndash; $1,000</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Misdemeanor</td>
+            </tr>
+            <tr style="background: var(--slate-50);">
+              <td style="color: var(--slate-700); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); font-weight: 600;">Public Intoxication</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Intoxicated on The Strip, near campus, or at events</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">$300 &ndash; $500</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Misdemeanor</td>
+            </tr>
+            <tr style="background: white;">
+              <td style="color: var(--slate-700); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); font-weight: 600;">DUI / DWI</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Driving after drinking, stopped at checkpoints or for traffic violations</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">$1,000 &ndash; $5,000</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Misdemeanor / Felony</td>
+            </tr>
+            <tr style="background: var(--slate-50);">
+              <td style="color: var(--slate-700); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); font-weight: 600;">Fake ID / False Identification</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Using a fake or borrowed ID to enter bars or purchase alcohol</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">$500 &ndash; $1,500</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Misdemeanor</td>
+            </tr>
+            <tr style="background: white;">
+              <td style="color: var(--slate-700); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200); font-weight: 600;">Marijuana Possession</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Found with marijuana in dorm, car, or during a traffic stop</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">$500 &ndash; $2,500</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem; border-bottom: 1px solid var(--slate-200);">Misdemeanor / Felony</td>
+            </tr>
+            <tr style="background: var(--slate-50);">
+              <td style="color: var(--slate-700); padding: 0.75rem 1rem; font-weight: 600;">Noise / Party Violations</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem;">Loud parties in neighborhoods near campus, repeated complaints</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem;">$200 &ndash; $500</td>
+              <td style="color: var(--slate-600); padding: 0.75rem 1rem;">Misdemeanor / Citation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        DUI arrests are among the most serious charges on this list. If your student is facing a DUI, we strongly recommend reading our detailed guide on <a href="/blog/dui-arrest-stillwater-oklahoma" style="color: var(--gold); font-weight: 500;">DUI arrests in Stillwater, Oklahoma</a> to understand the specific consequences and timeline involved.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        It is worth noting that OSU game days, homecoming weekend, and the beginning of fall and spring semesters tend to see a higher number of student arrests. Law enforcement increases patrols during these times, and both the Stillwater Police Department and the OSU Police Department are active in areas around campus and The Strip.
+      </p>
+
+      <!-- Section 3 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">Where Will My Student Be Held?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        This is one of the first questions parents ask, and it depends on which law enforcement agency made the arrest. Stillwater has two separate police forces that regularly interact with students:
+      </p>
+
+      <ul style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc;">
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Stillwater Police Department.</strong> The city police handle arrests that occur off campus &mdash; at bars on The Strip, in neighborhoods, on city streets, and at off-campus housing. Students arrested by Stillwater PD are typically booked into the <a href="/stillwater-city-jail-bail-bonds" style="color: var(--gold); font-weight: 500;">Stillwater City Jail</a>.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">OSU Police Department (OSUPD).</strong> The university has its own sworn police force with full arrest authority. OSUPD handles incidents that occur on campus property, including residence halls, parking lots, and university buildings. Students arrested by OSUPD are typically booked into the <a href="/payne-county-jail-bail-bonds" style="color: var(--gold); font-weight: 500;">Payne County Detention Center</a>.</li>
+      </ul>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        In some situations, a student arrested by city police may be transferred from the Stillwater City Jail to the Payne County Detention Center, especially for more serious charges or if the city jail is at capacity. If you are not sure where your student is being held, call us at <a href="tel:+14056143000" style="color: var(--gold); font-weight: 600;">(405) 614-3000</a> and we will locate them immediately. We post bail at both facilities every day and know exactly how each one operates.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        It is important to understand that the OSU Police Department is a fully commissioned law enforcement agency, not a campus security team. OSUPD officers have the same authority as city or county officers, and an arrest by OSUPD results in real criminal charges processed through the Payne County court system.
+      </p>
+
+      <!-- Section 4 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">Can I Post Bail From Out of State?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        <strong style="color: var(--slate-800);">Yes, absolutely.</strong> This is one of the most common concerns we hear from parents, and we want to put your mind at ease right away. You do not need to drive to Stillwater, fly to Oklahoma, or be physically present to bail your student out of jail. Angel Bail Bonds handles out-of-state bail for OSU families regularly.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Here is how the process works when you are calling from another state:
+      </p>
+
+      <ol style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem;">
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Call us at (405) 614-3000.</strong> We will ask for your student's full name, date of birth, and the charges if known. If you do not have all the details, we will look them up.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">We verify the bail amount.</strong> We contact the jail directly, confirm the charges, and determine the exact bail that has been set.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Complete paperwork by phone or electronically.</strong> We walk you through every document and can handle signatures and forms remotely.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Payment by phone.</strong> We accept payment over the phone so you can take care of everything from your living room in Texas, California, Illinois, or wherever you are.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">We post the bond in person.</strong> Our agent goes to the jail and posts the bail bond. Your student is released, typically within one to three hours after the bond is posted.</li>
+      </ol>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        We have helped families calling from every state in the country. The distance does not change anything about the quality or speed of our service. Your student will be released just as quickly as if you were standing in our office.
+      </p>
+
+      <!-- Section 5 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">How Much Will a Student's Bail Bond Cost?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        The cost of a bail bond depends on the bail amount set by the judge or the standard bail schedule for the specific charge. Angel Bail Bonds offers competitive rates on all bail bonds in Payne County. For a detailed breakdown of how bail bond pricing works, visit our guide on <a href="/blog/bail-bond-cost-stillwater-oklahoma" style="color: var(--gold); font-weight: 500;">bail bond costs in Stillwater, Oklahoma</a>.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Here are some general guidelines to give you an idea of what to expect:
+      </p>
+
+      <ul style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc;">
+        <li style="margin-bottom: 0.5rem;"><strong style="color: var(--slate-800);">Misdemeanor charges</strong> like MIP, public intoxication, and noise violations tend to have lower bail amounts, often between $200 and $1,000.</li>
+        <li style="margin-bottom: 0.5rem;"><strong style="color: var(--slate-800);">DUI and drug possession charges</strong> may carry higher bail amounts ranging from $1,000 to $5,000 or more depending on the circumstances.</li>
+        <li style="margin-bottom: 0.5rem;"><strong style="color: var(--slate-800);">Felony charges</strong> carry higher bail amounts that vary significantly based on the nature and severity of the offense.</li>
+      </ul>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        Every situation is different, and we believe in being transparent about costs from the very first phone call. Call us at <a href="tel:+14056143000" style="color: var(--gold); font-weight: 600;">(405) 614-3000</a> for a free, no-obligation consultation. We will tell you exactly what the bond will cost before you commit to anything.
+      </p>
+
+      <!-- Section 6 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">Will an Arrest Affect My Student's Education?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        This is often the question that causes parents the most anxiety, and we want to be honest with you: it depends, but it is rarely as catastrophic as you are imagining right now.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Oklahoma State University has a <strong style="color: var(--slate-800);">Student Conduct process</strong> that is entirely separate from the criminal justice system. When a student is arrested, OSU may initiate its own internal review, but this does not mean automatic expulsion. Here is what you need to know:
+      </p>
+
+      <ul style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc;">
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">The Student Conduct process is separate from the criminal case.</strong> Your student may face consequences from both, and the outcomes of one do not determine the other. A criminal case dismissal does not automatically clear the student conduct charge, and vice versa.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Most misdemeanor offenses do not result in expulsion.</strong> For first-time misdemeanor charges like MIP or public intoxication, OSU typically imposes educational sanctions such as conduct probation, alcohol education courses, community service, or reflective assignments.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Felony charges are taken more seriously.</strong> Charges involving drugs with intent to distribute, assault, or other felonies may lead to suspension or expulsion depending on the circumstances.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Students in Greek life, athletics, or leadership positions</strong> may face additional consequences from their organizations, separate from both the university and the court system.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">An attorney can help with both processes.</strong> A good Stillwater attorney who understands the OSU Student Conduct system can advise your student on how to navigate both the criminal case and the university proceedings simultaneously.</li>
+      </ul>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        The most important thing right now is to get your student released from jail so they can meet with an attorney and begin preparing their response to both the criminal charges and any potential university action. That starts with posting bail.
+      </p>
+
+      <!-- Section 7 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">What Should My Student Do After Release?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Once your student is released on bail, the situation is not over, but the immediate crisis is. Here is a practical list of what they should do in the days following their release:
+      </p>
+
+      <ol style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem;">
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Hire a local criminal defense attorney.</strong> This is the single most important step. Do not rely on a family lawyer back home who is not licensed in Oklahoma. You need someone who knows the Payne County courts, the local judges, and the Stillwater legal landscape. Ask for referrals or call us &mdash; we can point you in the right direction.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Attend every single court date.</strong> Missing a court appearance results in a Failure to Appear charge, a bench warrant, and forfeiture of the bail bond. Your student's court dates are non-negotiable, and they should treat them as more important than any exam or class.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Follow all bail conditions exactly.</strong> The judge may have imposed conditions such as no alcohol consumption, curfew, travel restrictions, or no contact with certain individuals. Violating these conditions can result in the bail bond being revoked and your student going back to jail.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Do not discuss the case on social media.</strong> This is critical. No posts, tweets, stories, or messages about the arrest, the charges, the night in question, or the legal process. Anything posted online can be used as evidence. Tell your student to assume that the prosecution is watching.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Prepare for the OSU Student Conduct process.</strong> If the university initiates a conduct review, your student has the right to respond and present their side. An attorney experienced with the OSU conduct process can help them prepare.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">Take care of their mental health.</strong> Being arrested is traumatic, embarrassing, and stressful. Make sure your student knows it is okay to seek counseling. OSU offers counseling services through the University Counseling Center, and there is no shame in using them.</li>
+      </ol>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        For more detailed information on the steps after release, read our guide on <a href="/blog/someone-arrested-stillwater-what-to-do" style="color: var(--gold); font-weight: 500;">what to do when someone is arrested in Stillwater</a>.
+      </p>
+
+      <!-- Section 8 -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">How Does Angel Bail Bonds Help OSU Families?</h2>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Angel Bail Bonds is a women-owned bail bond company in Stillwater, Oklahoma, owned by Karri McBride. With over 15 years of experience in the bail bonds industry, we have helped countless OSU families through some of the most stressful moments of their lives. We understand the unique concerns that come with a student arrest, and we approach every case with compassion, discretion, and urgency.
+      </p>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+        Here is what sets us apart:
+      </p>
+
+      <ul style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 1.5rem; list-style-type: disc;">
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">We understand the OSU community.</strong> We live here. We know how the Stillwater City Jail and Payne County Detention Center operate. We know the booking procedures, the bail schedules, and the people involved. That local knowledge means faster releases for your student.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">We specialize in out-of-state families.</strong> We know you are scared and far away. We are here to be your eyes and ears on the ground in Stillwater. We will keep you informed every step of the way.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">We are discreet.</strong> We understand that privacy matters, especially for students. We handle every case with confidentiality and professionalism.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">We are compassionate, not judgmental.</strong> We have seen every type of student arrest there is. We do not lecture or judge. We help. That is our job, and we are good at it.</li>
+        <li style="margin-bottom: 0.75rem;"><strong style="color: var(--slate-800);">5-star reputation.</strong> We maintain a 5.0-star rating with 27 Google reviews from families we have helped. Our reputation in this community means everything to us.</li>
+      </ul>
+
+      <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+        We serve Payne, Pawnee, Lincoln, Kay, and Noble counties across central Oklahoma. Whether your student was arrested at a house party near campus, pulled over on Perkins Road, or picked up by OSUPD in a residence hall, we can help.
+      </p>
+
+      <!-- Section 9 - FAQs -->
+      <h2 style="color: var(--agate); font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">Frequently Asked Questions</h2>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--slate-800); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Can I bail my college student out of jail from out of state?</h3>
+        <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8;">
+          Yes. Angel Bail Bonds handles the entire bail bond process by phone. You can call from anywhere in the country, provide the necessary information, make payment over the phone, and we will post bail at the jail in Stillwater. You do not need to be physically present. Call <a href="tel:+14056143000" style="color: var(--gold); font-weight: 600;">(405) 614-3000</a> to get started immediately.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--slate-800); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Will my student be expelled from OSU for getting arrested?</h3>
+        <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8;">
+          An arrest does not automatically mean expulsion from Oklahoma State University. OSU has a separate Student Conduct process that reviews incidents independently from the criminal case. Most misdemeanor charges like minor in possession or public intoxication result in educational sanctions such as probation, community service, or alcohol education courses rather than expulsion. Felony charges are treated more seriously. It is important to hire an attorney who understands both the criminal and student conduct sides.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--slate-800); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">How much does it cost to bail a student out of jail in Stillwater?</h3>
+        <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8;">
+          Bail amounts for common student charges in Stillwater vary. Misdemeanor charges such as minor in possession or public intoxication often have lower bail amounts. Angel Bail Bonds offers competitive rates on bail bond premiums. The exact cost depends on the charges and bail amount set by the judge. Call <a href="tel:+14056143000" style="color: var(--gold); font-weight: 600;">(405) 614-3000</a> for a free consultation and specific pricing.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="color: var(--slate-800); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">Where will my student be held after being arrested in Stillwater?</h3>
+        <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8;">
+          If your student was arrested by the Stillwater Police Department, they will likely be held at the <a href="/stillwater-city-jail-bail-bonds" style="color: var(--gold); font-weight: 500;">Stillwater City Jail</a>. If the arrest was made by the OSU Police Department or the Payne County Sheriff, they will typically be booked into the <a href="/payne-county-jail-bail-bonds" style="color: var(--gold); font-weight: 500;">Payne County Detention Center</a>. In some cases, students arrested by city police may be transferred to the county facility. Angel Bail Bonds posts bail at both locations.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h3 style="color: var(--slate-800); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">What should my student do after being released on bail?</h3>
+        <p style="color: var(--slate-600); font-size: 1.05rem; line-height: 1.8;">
+          After release, your student should hire a local Stillwater attorney experienced in criminal defense, attend every scheduled court date without exception, follow all bail conditions set by the judge, avoid discussing the case on social media, and prepare for the OSU Student Conduct process if applicable. Missing a court date can result in additional charges, a warrant for arrest, and forfeiture of the bail bond.
+        </p>
+      </div>
+
+      <!-- CTA Section -->
+      <div style="background: var(--navy-deep); border-radius: 0.75rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+        <h3 style="color: white; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem;">Your Student Needs You &mdash; and We Are Here to Help</h3>
+        <p style="color: white; opacity: 0.9; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          If your OSU student has been arrested in Stillwater, do not wait. Call Angel Bail Bonds now. We will walk you through every step, handle everything by phone, and get your student released as quickly as possible.
+        </p>
+        <a href="tel:+14056143000" style="display: inline-block; background: var(--gold); color: var(--navy-deep); padding: 1rem 2.5rem; border-radius: 0.5rem; font-weight: 700; font-size: 1.15rem; text-decoration: none;">Call Now: (405) 614-3000</a>
+        <p style="color: white; opacity: 0.7; font-size: 0.9rem; margin-top: 1rem;">Available 24/7 &bull; Se habla espa&ntilde;ol &bull; <a href="mailto:bailbondangel@gmail.com" style="color: white; opacity: 0.9;">bailbondangel@gmail.com</a></p>
+      </div>
+
+      <!-- Legal Disclaimer -->
+      <p style="color: var(--slate-500); font-size: 0.875rem; text-align: center; font-style: italic; margin-top: 2rem; margin-bottom: 2rem; line-height: 1.6;">
+        This article is for informational purposes only and does not constitute legal advice. Every case is different, and outcomes depend on the specific facts and circumstances involved. Always consult with a qualified Oklahoma attorney for legal guidance regarding criminal charges, bail, and the OSU Student Conduct process. Angel Bail Bonds is a bail bond company, not a law firm.
+      </p>
+
+      <!-- Author Bio -->
+      <div style="background: white; border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 0.5rem; display: flex; gap: 1.5rem; align-items: flex-start; margin-top: 2rem;">
+        <img src="/images/karri.webp" alt="Karri McBride, Owner of Angel Bail Bonds" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" />
+        <div>
+          <p style="font-weight: 700; color: var(--agate); margin-bottom: 0.25rem;">Written by Karri McBride</p>
+          <p style="font-size: 0.875rem; color: var(--charcoal); opacity: 0.8; line-height: 1.6;">
+            Karri McBride is the owner of Angel Bail Bonds in Stillwater, Oklahoma, with over 15 years of experience in the bail bonds industry. As a women-owned business, Angel Bail Bonds has built a reputation for compassionate, discreet service &mdash; earning a 5.0-star rating from 27 Google reviews. Karri is a licensed bail bondsman serving Payne, Pawnee, Lincoln, Kay, and Noble counties. For questions about student bail bonds or the bail process, call <a href="tel:+14056143000" style="color: var(--gold);">(405) 614-3000</a> or email <a href="mailto:bailbondangel@gmail.com" style="color: var(--gold);">bailbondangel@gmail.com</a>.
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </section>
+</BaseLayout>

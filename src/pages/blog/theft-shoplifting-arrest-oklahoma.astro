@@ -1,0 +1,424 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Arrested for Theft or Shoplifting in Oklahoma: Bail & Penalties";
+const description = "Learn about Oklahoma theft and shoplifting laws, petit vs grand larceny thresholds after SQ 780, bail amounts, first-time offender programs, and how Angel Bail Bonds can help.";
+const canonical = "https://stillwaterokbailbonds.com/blog/theft-shoplifting-arrest-oklahoma";
+const publishedDate = "2026-03-08";
+const modifiedDate = "2026-03-08";
+const author = "Karri McBride";
+const category = "Legal Info";
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "headline": title,
+  "description": description,
+  "image": "https://stillwaterokbailbonds.com/images/theft-shoplifting-oklahoma.webp",
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "url": "https://stillwaterokbailbonds.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Angel Bail Bonds",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://stillwaterokbailbonds.com/images/angel-bail-bonds-logo.webp"
+    }
+  },
+  "datePublished": publishedDate,
+  "dateModified": modifiedDate,
+  "articleSection": category,
+  "wordCount": 2200,
+  "keywords": "theft arrest Oklahoma, shoplifting bail bonds Oklahoma, petit larceny Oklahoma, grand larceny Oklahoma, SQ 780 theft threshold, bail bonds Stillwater OK, shoplifting charges Payne County"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://stillwaterokbailbonds.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://stillwaterokbailbonds.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": title,
+      "item": canonical
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is shoplifting a felony in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shoplifting can be either a misdemeanor or a felony in Oklahoma depending on the value of the merchandise. Under SQ 780, which took effect in 2017, the felony threshold for theft was raised to $1,000. Shoplifting merchandise valued at less than $1,000 is a misdemeanor (petit larceny), while shoplifting merchandise valued at $1,000 or more is a felony (grand larceny). Prior convictions can also affect the classification of your charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is bail for a theft charge in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bail for a theft charge in Oklahoma varies depending on the severity of the charge and the county. For misdemeanor petit larceny, bail typically ranges from $250 to $1,500. For felony grand larceny, bail can range from $2,500 to $10,000 or more. Factors such as criminal history, flight risk, and the specific circumstances of the offense can affect the amount. Angel Bail Bonds offers competitive rates and is available 24/7 to help."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can shoplifting charges be reduced or dismissed in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, shoplifting charges can sometimes be reduced or dismissed in Oklahoma, particularly for first-time offenders. Many county district attorneys offer deferred prosecution or diversion programs that allow eligible defendants to complete community service, pay restitution, and attend educational courses in exchange for having the charge reduced or dismissed. An experienced criminal defense attorney can advise you on whether these options are available in your case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a civil demand letter after shoplifting in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A civil demand letter is a written notice sent by a retailer or their attorney demanding payment for damages related to a shoplifting incident. Under Oklahoma law (21 O.S. Section 1731.1), retailers can seek civil penalties of up to $5,000 plus the retail value of the merchandise if it was not recovered in sellable condition. A civil demand letter is separate from any criminal charges and does not come from the court or the police. You should consult with an attorney before responding to a civil demand letter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there first-time offender programs for theft in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, many Oklahoma counties offer first-time offender or diversion programs for theft and shoplifting charges. These programs typically require the defendant to complete community service hours, pay restitution to the victim or retailer, attend a theft awareness or anti-shoplifting course, and remain arrest-free during a probationary period. Successful completion usually results in the charges being dismissed. Eligibility requirements vary by county, so consult with a local defense attorney."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Breadcrumb Navigation -->
+  <nav style="background: var(--slate-100); padding: 12px 1.5rem; font-size: 0.875rem;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <a href="/" style="color: var(--navy); text-decoration: none;">Home</a>
+      <span style="color: var(--slate-400); margin: 0 8px;">/</span>
+      <a href="/blog" style="color: var(--navy); text-decoration: none;">Blog</a>
+      <span style="color: var(--slate-400); margin: 0 8px;">/</span>
+      <span style="color: var(--slate-600);">Theft &amp; Shoplifting Arrest in Oklahoma</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <span style="color: var(--gold); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 12px;">Legal Info</span>
+      <h1 style="color: white; font-size: 2.25rem; font-weight: 800; line-height: 1.2; margin: 0 0 16px 0;">Arrested for Theft or Shoplifting in Oklahoma: Bail &amp; Penalties</h1>
+      <div style="color: rgba(255,255,255,0.8); font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+        <span style="color: rgba(255,255,255,0.8);">By Karri McBride</span>
+        <span style="color: rgba(255,255,255,0.4);">|</span>
+        <time datetime="2026-03-08" style="color: rgba(255,255,255,0.8);">March 8, 2026</time>
+        <span style="color: rgba(255,255,255,0.4);">|</span>
+        <span style="color: rgba(255,255,255,0.8);">~11 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Body -->
+  <article style="background: var(--slate-50); padding: 48px 1.5rem 64px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+
+      <!-- Answer-First Paragraph -->
+      <p style="color: var(--slate-800); font-size: 1.15rem; line-height: 1.8; margin-bottom: 32px; font-weight: 500;">
+        If you or someone you know has been arrested for theft or shoplifting in Oklahoma, the consequences depend on the value of the property taken. Thanks to State Question 780, which voters approved in 2016, theft of property valued at less than $1,000 is classified as a misdemeanor rather than a felony. This single threshold change has reshaped how theft cases are charged, sentenced, and bonded across the entire state.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+        Shoplifting and theft are among the most common criminal charges filed in Oklahoma courts every year. Whether the incident involved taking merchandise from a retail store, stealing personal property, or any other form of larceny, understanding the legal landscape is essential. The charge you face, the bail amount required for release, and the potential penalties all depend on several factors, including the value of the stolen property, your prior criminal history, and the specific circumstances of the offense.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 40px;">
+        At <a href="/" style="color: var(--navy); font-weight: 600;">Angel Bail Bonds</a>, we have over 15 years of experience helping individuals and families in Payne County and surrounding areas navigate the bail process for theft and shoplifting charges. We are available 24 hours a day, 7 days a week at <a href="tel:4056143000" style="color: var(--navy); font-weight: 600;">(405) 614-3000</a>. This guide covers everything you need to know about Oklahoma theft laws, the differences between petit and grand larceny, how bail is determined, civil demand letters, first-time offender programs, and how we can help you or your loved one get home quickly.
+      </p>
+
+      <!-- Section 1: Oklahoma Theft and Shoplifting Laws -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">What Are Oklahoma's Theft and Shoplifting Laws?</h2>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Oklahoma law addresses theft and shoplifting under several statutes. The two most relevant are <strong>21 O.S. &sect;1731</strong>, which specifically covers larceny of merchandise from a retailer (shoplifting), and <strong>21 O.S. &sect;1701</strong>, which defines the broader crime of larceny (theft of personal property). Both statutes use the same value thresholds to determine whether a charge is filed as a misdemeanor or a felony.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">State Question 780 and the $1,000 Threshold</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Before SQ 780 took effect on July 1, 2017, the felony threshold for theft in Oklahoma was just $500. This meant that stealing merchandise worth $500 or more &ndash; even in a single shoplifting incident &ndash; could result in a felony charge carrying potential prison time. SQ 780 raised that threshold to <strong>$1,000</strong>, meaning that theft of property valued below $1,000 is now classified as a misdemeanor (petit larceny) rather than a felony.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        This change was significant. It means that many theft and shoplifting cases that would have been prosecuted as felonies before 2017 are now misdemeanor offenses. While a misdemeanor conviction still carries real consequences &ndash; including potential jail time, fines, and a criminal record &ndash; it is far less severe than a felony, which can include state prison time and a permanent mark that affects employment, housing, and other opportunities for years to come.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">21 O.S. &sect;1731: Larceny of Merchandise from a Retailer</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        This statute specifically addresses shoplifting. It covers the taking of merchandise from a store or retail establishment with the intent to permanently deprive the retailer of the goods without paying the full purchase price. This includes concealing merchandise on your person or in a bag, altering or removing price tags, transferring merchandise to different containers, and any other act designed to take goods without paying.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">21 O.S. &sect;1701: General Larceny</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        The general larceny statute covers the broader crime of taking personal property belonging to another person without their consent and with the intent to permanently deprive them of it. This includes theft from vehicles, theft of bicycles, stealing packages from porches, taking property from a workplace, and other forms of property theft that do not involve a retail setting.
+      </p>
+
+      <!-- Section 2: Petit vs Grand Larceny -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">What Is the Difference Between Petit and Grand Larceny?</h2>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+        The primary distinction between petit larceny and grand larceny in Oklahoma is the value of the stolen property. This distinction determines whether you face a misdemeanor or a felony, which in turn affects bail amounts, potential sentences, and long-term consequences. For more information about <a href="/blog/bail-bond-cost-stillwater-oklahoma" style="color: var(--navy); font-weight: 600;">bail bond costs in Stillwater</a>, see our detailed guide.
+      </p>
+
+      <!-- Comparison Table -->
+      <div style="overflow-x: auto; margin-bottom: 32px;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+          <caption style="color: var(--navy-deep); font-weight: 700; font-size: 1.1rem; padding: 16px; text-align: left; caption-side: top;">Oklahoma Theft Charges: Petit vs Grand Larceny</caption>
+          <thead>
+            <tr style="background: var(--navy-deep);">
+              <th style="color: white; padding: 14px 16px; text-align: left; font-weight: 600;">Charge</th>
+              <th style="color: white; padding: 14px 16px; text-align: left; font-weight: 600;">Value Threshold</th>
+              <th style="color: white; padding: 14px 16px; text-align: left; font-weight: 600;">Classification</th>
+              <th style="color: white; padding: 14px 16px; text-align: left; font-weight: 600;">Typical Bail Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--slate-200);">
+              <td style="color: var(--slate-700); padding: 14px 16px; font-weight: 500;">Petit Larceny</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Less than $1,000</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Misdemeanor</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$250 &ndash; $1,500</td>
+            </tr>
+            <tr style="background: var(--slate-50); border-bottom: 1px solid var(--slate-200);">
+              <td style="color: var(--slate-700); padding: 14px 16px; font-weight: 500;">Grand Larceny</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$1,000 or more</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Felony</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$2,500 &ndash; $10,000+</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--slate-200);">
+              <td style="color: var(--slate-700); padding: 14px 16px; font-weight: 500;">Larceny from Retailer</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Less than $1,000</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Misdemeanor</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$250 &ndash; $1,500</td>
+            </tr>
+            <tr style="background: var(--slate-50); border-bottom: 1px solid var(--slate-200);">
+              <td style="color: var(--slate-700); padding: 14px 16px; font-weight: 500;">Larceny from Retailer</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$1,000 or more</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Felony</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$2,500 &ndash; $10,000+</td>
+            </tr>
+            <tr style="background: var(--slate-50);">
+              <td style="color: var(--slate-700); padding: 14px 16px; font-weight: 500;">Larceny from Person</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Any value</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">Felony</td>
+              <td style="color: var(--slate-700); padding: 14px 16px;">$5,000 &ndash; $25,000+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color: var(--slate-500); font-size: 0.9rem; line-height: 1.6; margin-bottom: 32px; font-style: italic;">
+        Note: Bail amounts are general ranges and may vary depending on the specific facts of your case, your criminal history, and the judge assigned to your case. These figures are provided for informational purposes only.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        <strong>Petit larceny</strong> is punishable by up to 6 months in the county jail, a fine of up to $500, or both. For a first offense with no aggravating factors, many defendants receive probation, community service, and an order to pay restitution rather than jail time. However, repeat petit larceny convictions can carry enhanced penalties, and a second or subsequent misdemeanor theft conviction can result in up to one year in jail.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        <strong>Grand larceny</strong> is a felony offense punishable by imprisonment in the Oklahoma Department of Corrections for up to 5 years, a fine of up to $5,000, or both. A felony conviction carries far-reaching consequences beyond the immediate sentence, including difficulty finding employment, loss of voting rights during incarceration and supervision, potential loss of professional licenses, and ineligibility for certain types of housing.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        <strong>Larceny from the person</strong> is a distinct and more serious offense under 21 O.S. &sect;1731. It involves taking property directly from another person &ndash; such as pickpocketing or purse snatching &ndash; and is classified as a felony regardless of the value of the property taken. This charge carries a potential sentence of up to 5 years in prison.
+      </p>
+
+      <!-- Section 3: How Is Bail Set -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">How Is Bail Set for Theft Charges?</h2>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        When a person is arrested for theft or shoplifting in Oklahoma, bail is typically set based on the severity of the charge, the defendant's criminal history, and any additional factors the judge considers relevant. For misdemeanor petit larceny charges, many counties use a standard bail schedule that allows defendants to post bail shortly after booking without waiting for a judge. This means that for lower-level shoplifting offenses, it may be possible to arrange release within hours of the arrest.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        For felony grand larceny charges, the process often requires an arraignment or bond hearing before a judge. The judge will consider the defendant's ties to the community, employment status, prior criminal record, and the specific circumstances of the alleged offense when setting bail. In some cases, particularly for defendants with no prior criminal history and strong community ties, the court may agree to release the defendant on their own recognizance (OR), meaning no monetary bail is required.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Working with <a href="/" style="color: var(--navy); font-weight: 600;">Angel Bail Bonds</a> means you typically pay a non-refundable premium at a competitive rate rather than the full bail amount out of pocket. We handle all of the necessary paperwork and coordinate directly with the jail to secure the fastest possible release. To learn more about the bonding process, read our guide on <a href="/blog/how-bail-bonds-work-payne-county" style="color: var(--navy); font-weight: 600;">how bail bonds work in Payne County</a>.
+      </p>
+
+      <!-- Section 4: Civil Demand Letters -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">What Are Civil Demand Letters?</h2>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        In addition to potential criminal charges, many retailers pursue civil remedies against individuals accused of shoplifting. Under Oklahoma law (21 O.S. &sect;1731.1), a merchant or retailer can send a <strong>civil demand letter</strong> seeking monetary damages from the individual who allegedly stole merchandise. These letters are typically sent by the retailer's attorney or a third-party civil recovery company and demand payment that may include the retail value of the merchandise (if not recovered in sellable condition), a civil penalty of up to $5,000, and the retailer's attorney fees and costs.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        It is important to understand that a civil demand letter is <strong>entirely separate from any criminal charges</strong>. The letter does not come from the court, the police, or the district attorney. It is a private legal demand from the retailer. Paying or not paying the civil demand does not affect your criminal case, and the criminal prosecutor is not involved in the civil recovery process.
+      </p>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Many people who receive civil demand letters feel pressured to pay immediately, but it is generally advisable to consult with an attorney before responding. An attorney can help you evaluate whether the demand is legally valid, whether the amount requested is reasonable, and whether paying the demand could have any implications for your criminal case. In some situations, the civil demand may be negotiable or may not hold up if the retailer cannot prove their claimed damages.
+      </p>
+
+      <!-- Section 5: First-Time Offender Programs -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">First-Time Offender Programs and Diversion</h2>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        One of the most important things to know about theft and shoplifting charges in Oklahoma is that many counties offer <strong>first-time offender programs</strong> or <strong>diversion programs</strong> that can result in charges being reduced or dismissed entirely. These programs recognize that a single mistake should not necessarily define a person's future, and they provide an alternative to the traditional criminal prosecution track.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">Deferred Prosecution</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Under a deferred prosecution agreement, the district attorney agrees to postpone prosecution for a specified period, typically 6 to 12 months. During this period, the defendant must comply with certain conditions, which may include completing community service hours, paying restitution to the victim or retailer, attending a theft awareness or anti-shoplifting class, submitting to drug or alcohol testing if applicable, and remaining arrest-free. If the defendant successfully completes all conditions during the deferral period, the charges are dismissed. A deferred prosecution is not a conviction and, if dismissed, may be eligible for expungement from your criminal record.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">Community Service and Restitution</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Even outside of formal diversion programs, judges in Payne County and surrounding areas frequently order community service and restitution as part of a sentence for theft offenses. Restitution requires the defendant to compensate the victim for the value of the stolen property, while community service allows the defendant to give back to the community through volunteer work. For first-time offenders facing misdemeanor charges, a sentence of probation with community service and restitution is common, particularly when the defendant demonstrates genuine remorse and takes responsibility for their actions.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">Deferred Sentencing</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        A deferred sentence is another option available to defendants in Oklahoma theft cases. Under a deferred sentence, the defendant enters a guilty plea, but the court delays sentencing for a specified period. If the defendant completes all terms of probation during this period, the guilty plea is withdrawn and the case is dismissed. Like deferred prosecution, a successfully completed deferred sentence may be eligible for expungement. This option gives defendants a strong incentive to comply with probation conditions, and it is frequently used in first-time theft and shoplifting cases.
+      </p>
+
+      <!-- Section 6: How Angel Bail Bonds Can Help -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">How Can Angel Bail Bonds Help?</h2>
+
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Being arrested for theft or shoplifting is a stressful and often embarrassing experience. Whether you are a college student who made a mistake at a local store, a parent facing charges that could affect your family, or someone dealing with a more serious grand larceny allegation, getting released from jail quickly is the first priority. That is where <a href="/" style="color: var(--navy); font-weight: 600;">Angel Bail Bonds</a> can help.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">24/7 Availability</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Arrests do not happen only during business hours, and neither do we. Angel Bail Bonds is available around the clock, including weekends and holidays. You can reach us at any time by calling <a href="tel:4056143000" style="color: var(--navy); font-weight: 600;">(405) 614-3000</a>. We can often begin the bonding process over the phone and have your loved one released within hours.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">Experience With Theft and Shoplifting Bonds</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        Theft and shoplifting bonds are among the most common types of bonds we process. Our owner, Karri McBride, has over 15 years of experience in the bail bond industry and understands the procedures at the <a href="/payne-county-jail-bail-bonds" style="color: var(--navy); font-weight: 600;">Payne County Jail</a> and local facilities throughout north-central Oklahoma. We know what paperwork is required, what information the jail needs, and how to move the process forward as efficiently as possible.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">Competitive Rates</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        We offer competitive rates on all bail bonds, including those for theft and shoplifting charges. If you are concerned about affordability, call us and let us walk you through the options. We understand that an arrest creates financial stress, and we work with our clients to make the bonding process as manageable as possible. For additional information, see our guide on <a href="/blog/bail-someone-out-no-money-oklahoma" style="color: var(--navy); font-weight: 600;">how to bail someone out with limited funds in Oklahoma</a>.
+      </p>
+
+      <h3 style="color: var(--navy); font-size: 1.2rem; font-weight: 600; margin: 28px 0 12px 0;">Service Across Multiple Counties</h3>
+      <p style="color: var(--slate-700); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+        While we are based in Stillwater, Angel Bail Bonds serves clients across <strong>Payne, Pawnee, Lincoln, Kay, and Noble counties</strong>. No matter where the arrest occurred in the north-central Oklahoma region, we can help you navigate the bail process and get your loved one home.
+      </p>
+
+      <!-- Blue Callout Box -->
+      <div style="background: var(--blue-50, #eff6ff); border-left: 4px solid var(--navy); padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 28px 0 32px 0;">
+        <p style="color: var(--navy-deep); font-size: 1rem; line-height: 1.7; margin: 0; font-weight: 500;">
+          <strong>Important:</strong> We are bail bond professionals, not attorneys. The information in this article is intended to help you understand the general legal landscape for theft and shoplifting charges in Oklahoma. We strongly recommend consulting with a qualified criminal defense attorney who can advise you on the specific facts of your case, potential defenses, and the best course of action for your situation.
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <h2 style="color: var(--navy-deep); font-size: 1.6rem; font-weight: 700; margin: 48px 0 20px 0; line-height: 1.3;">Frequently Asked Questions</h2>
+
+      <div style="margin-bottom: 28px; border-bottom: 1px solid var(--slate-200); padding-bottom: 24px;">
+        <h3 style="color: var(--navy); font-size: 1.15rem; font-weight: 600; margin: 0 0 10px 0;">Is shoplifting a felony in Oklahoma?</h3>
+        <p style="color: var(--slate-700); font-size: 1.02rem; line-height: 1.8; margin: 0;">
+          Shoplifting can be either a misdemeanor or a felony in Oklahoma depending on the value of the merchandise. Under SQ 780, which took effect in 2017, the felony threshold for theft was raised to $1,000. Shoplifting merchandise valued at less than $1,000 is a misdemeanor (petit larceny), while shoplifting merchandise valued at $1,000 or more is a felony (grand larceny). Prior convictions and specific circumstances of the offense can also affect how the charge is classified.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 28px; border-bottom: 1px solid var(--slate-200); padding-bottom: 24px;">
+        <h3 style="color: var(--navy); font-size: 1.15rem; font-weight: 600; margin: 0 0 10px 0;">How much is bail for a theft charge in Oklahoma?</h3>
+        <p style="color: var(--slate-700); font-size: 1.02rem; line-height: 1.8; margin: 0;">
+          Bail for a theft charge in Oklahoma varies depending on the severity of the charge, the county, and the defendant's criminal history. For misdemeanor petit larceny, bail typically ranges from $250 to $1,500. For felony grand larceny, bail can range from $2,500 to $10,000 or more. When you work with Angel Bail Bonds, you pay a competitive premium rather than the full bail amount. Call us at <a href="tel:4056143000" style="color: var(--navy); font-weight: 600;">(405) 614-3000</a> for specific information about your situation.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 28px; border-bottom: 1px solid var(--slate-200); padding-bottom: 24px;">
+        <h3 style="color: var(--navy); font-size: 1.15rem; font-weight: 600; margin: 0 0 10px 0;">Can shoplifting charges be reduced or dismissed in Oklahoma?</h3>
+        <p style="color: var(--slate-700); font-size: 1.02rem; line-height: 1.8; margin: 0;">
+          Yes, shoplifting charges can sometimes be reduced or dismissed in Oklahoma, particularly for first-time offenders. Many county district attorneys offer deferred prosecution or diversion programs that allow eligible defendants to complete community service, pay restitution, and attend educational courses in exchange for having the charge reduced or dismissed. An experienced criminal defense attorney can advise you on whether these options are available in your case and how to pursue them effectively.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 28px; border-bottom: 1px solid var(--slate-200); padding-bottom: 24px;">
+        <h3 style="color: var(--navy); font-size: 1.15rem; font-weight: 600; margin: 0 0 10px 0;">What is a civil demand letter after shoplifting in Oklahoma?</h3>
+        <p style="color: var(--slate-700); font-size: 1.02rem; line-height: 1.8; margin: 0;">
+          A civil demand letter is a written notice sent by a retailer or their attorney demanding payment for damages related to a shoplifting incident. Under Oklahoma law (21 O.S. &sect;1731.1), retailers can seek civil penalties of up to $5,000 plus the retail value of any unrecovered or damaged merchandise. A civil demand letter is entirely separate from criminal charges &ndash; it does not come from the court, police, or district attorney. We recommend consulting with an attorney before responding to any civil demand letter to understand your rights and obligations.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 40px; padding-bottom: 24px;">
+        <h3 style="color: var(--navy); font-size: 1.15rem; font-weight: 600; margin: 0 0 10px 0;">Are there first-time offender programs for theft in Oklahoma?</h3>
+        <p style="color: var(--slate-700); font-size: 1.02rem; line-height: 1.8; margin: 0;">
+          Yes, many Oklahoma counties offer first-time offender or diversion programs for theft and shoplifting charges. These programs typically require the defendant to complete community service hours, pay restitution to the victim or retailer, attend a theft awareness or anti-shoplifting course, and remain arrest-free during a probationary period. Successful completion usually results in the charges being dismissed. Eligibility requirements vary by county, so consult with a local defense attorney to determine whether you qualify.
+        </p>
+      </div>
+
+      <!-- CTA Section -->
+      <div style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); border-radius: 12px; padding: 40px 32px; text-align: center; margin: 48px 0;">
+        <h2 style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0 0 12px 0;">Arrested for Theft or Shoplifting? We Can Help.</h2>
+        <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.7; margin: 0 0 24px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Angel Bail Bonds is available 24 hours a day, 7 days a week. Call us now for fast, confidential bail bond service in Payne County and surrounding areas. We offer competitive rates and will walk you through every step of the process.
+        </p>
+        <a href="tel:4056143000" style="display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 1.25rem; font-weight: 700; padding: 16px 40px; border-radius: 8px; text-decoration: none; margin-bottom: 12px;">
+          (405) 614-3000
+        </a>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 12px 0 0 0;">
+          Or email us at <a href="mailto:bailbondangel@gmail.com" style="color: var(--gold); text-decoration: underline;">bailbondangel@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Author Bio -->
+      <div style="display: flex; gap: 20px; align-items: flex-start; background: white; border-radius: 12px; padding: 28px; margin: 48px 0 40px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+        <img
+          src="/images/karri.webp"
+          alt="Karri McBride, owner of Angel Bail Bonds in Stillwater, Oklahoma"
+          width="80"
+          height="80"
+          style="border-radius: 50%; object-fit: cover; flex-shrink: 0;"
+        />
+        <div>
+          <p style="color: var(--navy-deep); font-weight: 700; font-size: 1.05rem; margin: 0 0 4px 0;">Karri McBride</p>
+          <p style="color: var(--slate-500); font-size: 0.9rem; margin: 0 0 10px 0;">Owner, Angel Bail Bonds</p>
+          <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+            Karri McBride is the owner of Angel Bail Bonds, a women-owned bail bond company serving Stillwater and surrounding communities in north-central Oklahoma. With over 15 years of experience in the bail bond industry, Karri has helped hundreds of individuals and families navigate the bail process in Payne, Pawnee, Lincoln, Kay, and Noble counties. Angel Bail Bonds maintains a 5.0-star rating across 27 Google reviews.
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal Disclaimer -->
+      <div style="background: var(--slate-100); border-radius: 8px; padding: 20px 24px; margin: 32px 0 0 0; border: 1px solid var(--slate-200);">
+        <p style="color: var(--slate-500); font-size: 0.85rem; line-height: 1.7; margin: 0;">
+          <strong style="color: var(--slate-600);">Legal Disclaimer:</strong> This article is provided for general informational purposes only and does not constitute legal advice. The information contained herein should not be relied upon as a substitute for professional legal counsel. Theft and shoplifting laws and penalties are subject to change, and the specific facts of your case may affect the applicable laws and potential outcomes. Angel Bail Bonds is a bail bond company, not a law firm. We strongly recommend that you consult with a licensed criminal defense attorney in Oklahoma to discuss your individual situation. No attorney-client relationship is created by reading this article or by contacting Angel Bail Bonds.
+        </p>
+      </div>
+
+    </div>
+  </article>
+</BaseLayout>

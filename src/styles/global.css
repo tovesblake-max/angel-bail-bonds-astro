@@ -71,27 +71,29 @@ body {
 }
 
 /* ─── TYPOGRAPHY ─── */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--slate-900);
-}
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--slate-900);
+  }
 
-h1 {
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-}
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+  }
 
-h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-}
+  h2 {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
 
-h3 {
-  font-size: clamp(1.125rem, 2vw, 1.35rem);
-  font-weight: 700;
+  h3 {
+    font-size: clamp(1.125rem, 2vw, 1.35rem);
+    font-weight: 700;
+  }
 }
 
 p {
