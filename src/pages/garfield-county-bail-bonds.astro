@@ -1,0 +1,273 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/garfield-county-bail-bonds#business',
+      name: 'Angel Bail Bonds - Garfield County',
+      url: 'https://stillwaterokbailbonds.com/garfield-county-bail-bonds',
+      description: 'Professional 24/7 bail bond services for Garfield County, Oklahoma. Serving Enid, Covington, Drummond, Lahoma, Waukomis, Garber, Hunter, and all Garfield County communities. 15+ years experience, 4.9-star rating.',
+      telephone: '(405) 614-3000',
+      email: 'bailbondangel@gmail.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Garfield County, Oklahoma' },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.3956, longitude: -97.8784 },
+      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
+      openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
+      paymentAccepted: 'Cash, Visa, Mastercard, Zelle, Venmo',
+      priceRange: '$$',
+    },
+    {
+      '@type': 'Service',
+      name: 'Garfield County Bail Bond Services',
+      provider: { '@id': 'https://stillwaterokbailbonds.com/garfield-county-bail-bonds#business' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Garfield County, Oklahoma' },
+      description: 'Fast, confidential bail bond services for Garfield County arrests. Serving the Garfield County Detention Center in Enid with typical release times of 2-6 hours after bond posting.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Garfield County Bail Bonds', item: 'https://stillwaterokbailbonds.com/garfield-county-bail-bonds' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I bail someone out of the Garfield County Detention Center in Enid?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We handle Garfield County bonds and can coordinate posting with the detention center. The Garfield County Detention Center is located at 1020 S 10th Street, Enid, OK. You can also reach the jail directly at (580) 548-2429. Once we post the bond, most releases take 2-6 hours.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does a bail bond cost in Garfield County, Oklahoma?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Oklahoma bail bond premiums are regulated by state law. Angel Bail Bonds offers competitive rates with flexible payment options including cash, Visa, Mastercard, Zelle, Venmo, and financing plans for qualifying clients. Call (405) 614-3000 for a free quote on any Garfield County bond.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to get released from the Garfield County Detention Center?',
+          acceptedAnswer: { '@type': 'Answer', text: 'After Angel Bail Bonds posts your bond at the Garfield County Detention Center, most defendants are released within 2-6 hours. The facility houses up to 204 inmates, and processing times depend on jail staffing, time of day, and current booking volume. We work to expedite every release.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where is the Garfield County Courthouse and when are arraignments held?',
+          acceptedAnswer: { '@type': 'Answer', text: 'The Garfield County Courthouse is located at 114 W Broadway Ave, Enid, OK 73701. The courthouse is open Monday through Friday, 8:00 AM to 4:30 PM. For specific arraignment schedules and docket information, contact the Court Clerk at (580) 237-0232 or check oscn.net for current docket calendars.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can Angel Bail Bonds post bail in Garfield County from Stillwater?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Angel Bail Bonds is based in Stillwater, approximately 65 miles from Enid. We handle Garfield County bonds and can often coordinate the entire process remotely by phone. You provide the inmate information and payment, and we work directly with the Garfield County Detention Center to post the bond.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Angel Bail Bonds serve Covington, Drummond, and Waukomis?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve every community in Garfield County, including Enid, Covington, Drummond, Lahoma, Waukomis, Hunter, Garber, Kremlin, Carrier, Hillsdale, Fairmont, Douglas, Breckinridge, and North Enid. Anyone arrested within Garfield County is booked at the Garfield County Detention Center in Enid.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'What payment methods does Angel Bail Bonds accept for Garfield County bonds?',
+          acceptedAnswer: { '@type': 'Answer', text: 'We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing plans for those who qualify. We work with families to find affordable payment solutions so your loved one can be released from the Garfield County Detention Center as quickly as possible.' },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Garfield County Bail Bonds | Enid OK | Angel Bail Bonds"
+  description="24/7 bail bond services for Garfield County, Oklahoma. Serving Enid, Covington, Drummond, Waukomis & all Garfield County. Fast jail release, 15+ years experience, 4.9 stars. Call (405) 614-3000."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Garfield County, Oklahoma</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Garfield County</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Enid, Covington, Drummond, Waukomis &amp; surrounding areas · 24/7 service · Serving from Stillwater</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+
+  <!-- FACILITY + STEPS -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Garfield County Detention Center Details</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 110px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">1020 S 10th St, Enid, OK 73701</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">(580) 548-2429</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Sheriff</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">(580) 237-0244</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Booking</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">24 hours / 7 days a week</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitation</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Mon–Fri 7:30 AM – 9:00 PM · Sat–Sun 7:30 AM – 2:30 PM</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Capacity</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">204 inmates · Medium security</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">County Seat</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Enid</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Population</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">~62,846 (2020 Census)</td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Get a Bail Bond in Garfield County</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
+            <div><strong style="color: var(--slate-800);">Contact the detention center</strong><br><span style="color: var(--slate-500);">Call (580) 548-2429 for inmate info &amp; bail amount</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
+            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · Available 24/7</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+            <div><strong style="color: var(--slate-800);">Pay premium &amp; sign paperwork</strong><br><span style="color: var(--slate-500);">Cash, Visa, MC, Zelle, Venmo, or financing</span></div>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
+            <div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">Most releases in 2–6 hours after posting</span></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 640px) {
+        section div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- ANSWER CAPSULE: How bail works in Garfield County -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">How Does Bail Work in Garfield County, Oklahoma?</h2>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Angel Bail Bonds provides 24/7 bail bond services for anyone arrested in Garfield County, Oklahoma. The Garfield County Detention Center at 1020 South 10th Street in Enid books inmates around the clock and has a capacity of 204 inmates. After bail is set, Angel Bail Bonds can post the bond and most defendants are released within 2 to 6 hours. We serve Garfield County from our Stillwater office, approximately 65 miles away.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">When someone is arrested in Garfield County, they are transported to the Garfield County Detention Center in Enid for booking. The booking process includes identification verification, fingerprinting, a health screening, and entry of charges into the system. The detention center is managed by the Garfield County Sheriff's Office and operates as a medium-security facility established in 1931. Once booking is complete and bail has been set — either through the preset bond schedule or by a judge — a bail bond can be posted to secure release.</p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Garfield County is one of the larger counties in north-central Oklahoma, with a 2020 Census population of 62,846. Enid alone accounts for over 51,000 residents. The county sees a higher volume of arrests than many surrounding rural counties, but Angel Bail Bonds has the experience and availability to handle bonds at the Garfield County Detention Center at any hour. For more serious offenses or felony charges where a judge must set bail, the process moves through the Garfield County Courthouse.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Where Is the Garfield County Courthouse and When Are Arraignments?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>The Garfield County Courthouse is located at 114 West Broadway Avenue, Enid, OK 73701. The courthouse is open Monday through Friday, 8:00 AM to 4:30 PM. For arraignment schedules and docket information, contact the Court Clerk at (580) 237-0232 or check the Oklahoma State Courts Network at oscn.net for current docket calendars.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Garfield County falls within Oklahoma District 4 for court administration. If your loved one's bail requires a judge's approval, Angel Bail Bonds can coordinate with the court schedule to post the bond as quickly as possible after the arraignment hearing. We monitor Garfield County dockets regularly and can advise you on the expected timeline for your case.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">How Do I Visit Someone in the Garfield County Detention Center?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Garfield County Detention Center visitation hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. The detention center is located at 1020 S 10th Street, Enid, OK 73701. Call (580) 548-2429 for current visitation policies. The facility uses Securus Technologies for inmate phone calls and video visitation.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Contact the detention center directly to confirm current visitation policies, as they can change based on facility conditions and staffing. If you need to check on an inmate's status or find out their bail amount, the Garfield County Sheriff's Office also provides inmate roster information. You can reach the Sheriff's Office at (580) 237-0244 for general inquiries.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT GARFIELD COUNTY -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">About Garfield County, Oklahoma</h2>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Garfield County is located in north-central Oklahoma with a population of approximately 62,846 residents as of the 2020 Census. The county seat is Enid, the largest city in northwest Oklahoma with a population of over 51,000. Named after President James A. Garfield, the county covers a substantial area of farmland, oil fields, and communities that were established during the 1893 Cherokee Outlet land opening.</p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">In addition to Enid, Garfield County includes the communities of Covington, Drummond, Lahoma, Waukomis, Hunter, Garber, Kremlin, Carrier, Hillsdale, Fairmont, Douglas, Breckinridge, and North Enid. Enid serves as the commercial hub of northwest Oklahoma and is home to Vance Air Force Base, a major Air Force pilot training installation. Whether the arrest occurs during a traffic stop on US-81, at an Enid business, or anywhere within the Garfield County Sheriff's jurisdiction, Angel Bail Bonds can help secure a fast release.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">How Far Is Garfield County from Stillwater?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>The Garfield County Detention Center in Enid is approximately 65 miles from Stillwater, a drive of about 1 hour and 8 minutes. Angel Bail Bonds handles Garfield County bonds and can often coordinate posting remotely by phone, so you may not need to drive to Enid at all. We accept payment by phone via Visa, Mastercard, Zelle, or Venmo.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Garfield County is within our regular service area. In many cases, we can complete the entire bail bond process over the phone — you provide the inmate's information and payment, and we handle the rest directly with the Garfield County Detention Center. For Garfield County bonds, call Angel Bail Bonds at (405) 614-3000 at any hour. Se habla español.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Garfield County Bail Bonds FAQ</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of the Garfield County Detention Center in Enid?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, day or night. We handle Garfield County bonds and can coordinate posting with the detention center. The Garfield County Detention Center is at 1020 S 10th St, Enid, OK 73701. Direct jail phone: (580) 548-2429. Once we post the bond, most releases take 2-6 hours.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Garfield County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Oklahoma bail bond premiums are regulated by state law. Angel Bail Bonds offers competitive rates with multiple payment options: cash, Visa, Mastercard, Zelle, Venmo, and financing for qualifying clients. Call us at (405) 614-3000 for a free quote on any Garfield County bond.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does release from the Garfield County Detention Center take?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">After Angel Bail Bonds posts the bond, most defendants are released from the Garfield County Detention Center within 2-6 hours. The facility has a capacity of 204 inmates, and processing times depend on current occupancy, staffing levels, and time of day. We work to expedite every release.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Where is the Garfield County Courthouse?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">The Garfield County Courthouse is at 114 W Broadway Ave, Enid, OK 73701. Open Monday–Friday, 8:00 AM–4:30 PM. Court Clerk phone: (580) 237-0232. For docket and arraignment schedules, contact the clerk or visit oscn.net.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I post bail from Stillwater for a Garfield County arrest?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds is based in Stillwater, approximately 65 miles from the Garfield County Detention Center in Enid. We can handle the entire process remotely by phone. You provide the inmate details and payment, and we coordinate directly with the jail to post the bond.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Does Angel Bail Bonds serve Covington, Drummond, and Waukomis?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. We serve every community in Garfield County, including Enid, Covington, Drummond, Lahoma, Waukomis, Hunter, Garber, Kremlin, Carrier, Hillsdale, Fairmont, Douglas, Breckinridge, and North Enid. Anyone arrested within Garfield County is booked at the Garfield County Detention Center in Enid.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What payment methods are accepted for Garfield County bail bonds?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, and Venmo. We also offer financing plans for clients who qualify. Our goal is to remove financial barriers so your loved one can be released from the Garfield County Detention Center as quickly as possible. Call (405) 614-3000 to discuss payment options.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORING COUNTIES -->
+  <section style="padding: 24px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Neighboring Counties We Serve</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Noble County →</a>
+        <a href="/kay-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Kay County →</a>
+        <a href="/logan-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Logan County →</a>
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Payne County →</a>
+        <a href="/pawnee-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAST UPDATED -->
+  <section style="padding: 16px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.75rem; color: var(--slate-300); text-align: right;">Last Updated: March 8, 2026</p>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Garfield County Bail Bond?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Se habla español</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

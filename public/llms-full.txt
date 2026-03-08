@@ -17,6 +17,9 @@ Angel Bail Bonds is a professional, compassionate bail bond service located in S
 - Secondary: Lincoln County
 - Secondary: Kay County
 - Secondary: Noble County
+- Secondary: Logan County
+- Secondary: Creek County
+- Secondary: Garfield County
 
 ---
 
