@@ -1,5 +1,54 @@
 # Angel Bail Bonds SEO Optimization Log
 
+## 2026-03-08 — Run 3: Infrastructure Update — All 15 Counties in llms.txt + Homepage
+
+**Action:** Updated llms.txt, llms-full.txt, and homepage to include ALL 15 target counties (7 were missing from LLM-facing files despite having pages built)
+
+**Problem Identified:**
+Pages existed for Pottawatomie, Oklahoma, Tulsa, Osage, Washington, Grant, and Kingfisher counties, but:
+- llms.txt only listed 8 counties (missing 7 county facility data sections + page URLs)
+- llms-full.txt only listed 5 counties in both service area sections
+- Homepage only showed 9 facility cards (missing 7) and said "8 Counties Served"
+- Homepage meta description and areaServed schema only listed original counties
+
+**Files Changed:**
+1. `public/llms.txt` — Added 7 county facility sections with jail addresses, phone numbers, courthouse info, population, distance from Stillwater, visitation hours, and community lists. Added 7 page URLs. Updated service area count to 15. Updated FAQ answer.
+2. `public/llms-full.txt` — Added 7 counties to both service area lists (top + contact section)
+3. `src/pages/index.astro` — Added 7 new facility cards to "Where We Serve" grid. Updated county count 8→15 in stats badge. Updated hero subhead 5→15. Updated meta description. Updated areaServed schema to include all 15 counties.
+
+**Impact:**
+- AI crawlers (GPTBot, ClaudeBot, PerplexityBot) can now discover and cite all 15 county pages via llms.txt
+- Homepage now surfaces all facility cards for internal link equity
+- Schema markup now declares all 15 service areas for structured data
+
+### Counties Status — ALL COMPLETE
+| County | Status | Page |
+|--------|--------|------|
+| Payne | ✅ Done | payne-county-jail-bail-bonds.astro + 2 sub-pages |
+| Pawnee | ✅ Done | pawnee-county-bail-bonds.astro + jail page |
+| Lincoln | ✅ Done | lincoln-county-bail-bonds.astro + jail page |
+| Kay | ✅ Done | kay-county-bail-bonds.astro + detention center page |
+| Noble | ✅ Done | noble-county-bail-bonds.astro + jail page |
+| Logan | ✅ Done | logan-county-bail-bonds.astro |
+| Creek | ✅ Done | creek-county-bail-bonds.astro |
+| Garfield | ✅ Done | garfield-county-bail-bonds.astro |
+| Pottawatomie | ✅ Done | pottawatomie-county-bail-bonds.astro |
+| Oklahoma | ✅ Done | oklahoma-county-bail-bonds.astro |
+| Tulsa | ✅ Done | tulsa-county-bail-bonds.astro |
+| Osage | ✅ Done | osage-county-bail-bonds.astro |
+| Washington | ✅ Done | washington-county-bail-bonds.astro |
+| Grant | ✅ Done | grant-county-bail-bonds.astro |
+| Kingfisher | ✅ Done | kingfisher-county-bail-bonds.astro |
+
+**What To Do Next Run:**
+1. Optimize weakest pages — Kay County (1614 words, 0 bold capsules, no last updated date) is the weakest main county page
+2. Add GEO answer capsules to original 5 county pages (Payne, Pawnee, Lincoln, Kay, Noble) — they have 0 bold capsules vs newer pages which have 3-36
+3. Add "Last Updated" dates to all pages missing them
+4. Consider adding cross-links from newer pages back to older ones
+5. Add inmate search links for newer county pages to homepage
+
+---
+
 ## 2026-03-08 — Run 1
 
 ### Action Taken

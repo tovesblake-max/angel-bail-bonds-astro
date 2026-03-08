@@ -20,6 +20,13 @@ Angel Bail Bonds is a professional, compassionate bail bond service located in S
 - Secondary: Logan County
 - Secondary: Creek County
 - Secondary: Garfield County
+- Secondary: Pottawatomie County
+- Secondary: Oklahoma County
+- Secondary: Tulsa County
+- Secondary: Osage County
+- Secondary: Washington County
+- Secondary: Grant County
+- Secondary: Kingfisher County
 
 ---
 
@@ -434,6 +441,16 @@ Stillwater, Oklahoma
 - Lincoln County
 - Kay County
 - Noble County
+- Logan County
+- Creek County
+- Garfield County
+- Pottawatomie County
+- Oklahoma County
+- Tulsa County
+- Osage County
+- Washington County
+- Grant County
+- Kingfisher County
 
 ---
 
