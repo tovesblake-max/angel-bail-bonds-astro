@@ -1,6 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog' },
+  ],
+};
+
 const blogPosts = [
   {
     title: 'What to Do If Arrested in Stillwater, Oklahoma',
@@ -13,9 +22,10 @@ const blogPosts = [
 ];
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Blog"
   description="Read articles about bail bonds, the legal process, and how to navigate arrest in Central Oklahoma."
+  structuredData={breadcrumbData}
 >
   <!-- Hero -->
   <section style="background: var(--navy-deep);" class="text-white py-16">

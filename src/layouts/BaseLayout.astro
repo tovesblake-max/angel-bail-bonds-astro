@@ -34,11 +34,17 @@ const alternatePath = hreflangMap[currentPath];
     <meta name="description" content={description} />
 
     <link rel="canonical" href={resolvedCanonical} />
-    {alternatePath && (
-      <link rel="alternate" hreflang={isSpanish ? 'en' : 'es'} href={new URL(alternatePath, Astro.site).href} />
-    )}
-    {alternatePath && (
-      <link rel="alternate" hreflang={isSpanish ? 'es' : 'en'} href={resolvedCanonical} />
+    {alternatePath ? (
+      <>
+        <link rel="alternate" hreflang="en" href={new URL(isSpanish ? alternatePath : currentPath, Astro.site).href} />
+        <link rel="alternate" hreflang="es" href={new URL(isSpanish ? currentPath : alternatePath, Astro.site).href} />
+        <link rel="alternate" hreflang="x-default" href={new URL(isSpanish ? alternatePath : currentPath, Astro.site).href} />
+      </>
+    ) : (
+      <>
+        <link rel="alternate" hreflang={isSpanish ? 'es' : 'en'} href={resolvedCanonical} />
+        <link rel="alternate" hreflang="x-default" href={isSpanish ? new URL('/', Astro.site).href : resolvedCanonical} />
+      </>
     )}
 
     <meta property="og:type" content={ogType} />

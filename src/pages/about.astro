@@ -1,10 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'About' },
+  ],
+};
 ---
 
-<BaseLayout 
+<BaseLayout
   title="About Angel Bail Bonds"
   description="Meet Karri McBride, owner of Angel Bail Bonds. 15+ years of experience, women-owned, and dedicated to compassionate bail bond services in Central Oklahoma."
+  structuredData={breadcrumbData}
 >
   <!-- Hero -->
   <section style="background: var(--navy-deep);" class="text-white py-16">
@@ -149,9 +159,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div>
-            <h3 class="text-agate font-display text-xl mb-2">Flexible Payment Plans</h3>
+            <h3 class="text-agate font-display text-xl mb-2">Competitive Rates</h3>
             <p class="text-charcoal/80">
-              We work with your budget. Payment plans available to make bail affordable during difficult times.
+              We work with your budget. Competitive rates available to make bail affordable during difficult times.
             </p>
           </div>
 
@@ -288,7 +298,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div>
           <h3 class="text-agate font-display text-xl mb-2">What services does Angel Bail Bonds offer?</h3>
-          <p class="text-charcoal/80">Angel Bail Bonds handles all types of bail bonds including felony bail bonds, misdemeanor bail bonds, DUI/DWI bail bonds, domestic violence bail bonds, drug charge bail bonds, outstanding warrant bail bonds, surety bonds, and juvenile bail bonds. They offer flexible payment plans and accept most forms of payment.</p>
+          <p class="text-charcoal/80">Angel Bail Bonds handles all types of bail bonds including felony bail bonds, misdemeanor bail bonds, DUI/DWI bail bonds, domestic violence bail bonds, drug charge bail bonds, outstanding warrant bail bonds, surety bonds, and juvenile bail bonds. They offer competitive rates and accept most forms of payment.</p>
         </div>
 
         <div>
@@ -303,7 +313,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div>
           <h3 class="text-agate font-display text-xl mb-2">How much does a bail bond cost with Angel Bail Bonds?</h3>
-          <p class="text-charcoal/80">In Oklahoma, the standard bail bond premium is 10% of the total bail amount set by the court. Angel Bail Bonds offers flexible payment plans to help families afford bail during financially challenging times. The exact cost depends on the bail amount set by the judge for each specific case.</p>
+          <p class="text-charcoal/80">In Oklahoma, we offer competitive rates on bail bonds. Angel Bail Bonds works with families to make bail affordable during financially challenging times. The exact cost depends on the bail amount set by the judge for each specific case.</p>
         </div>
 
         <div>
@@ -313,7 +323,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div>
           <h3 class="text-agate font-display text-xl mb-2">What makes Angel Bail Bonds different from other bail bond companies?</h3>
-          <p class="text-charcoal/80">Angel Bail Bonds stands out for several reasons: over 15 years of local experience, a perfect 5.0-star Google rating, women-owned business, 24/7 availability including holidays, coverage across five Oklahoma counties, flexible payment plans, bilingual services (English and Spanish), and deep knowledge of the Payne County court system and local jails.</p>
+          <p class="text-charcoal/80">Angel Bail Bonds stands out for several reasons: over 15 years of local experience, a perfect 5.0-star Google rating, women-owned business, 24/7 availability including holidays, coverage across five Oklahoma counties, competitive rates, bilingual services (English and Spanish), and deep knowledge of the Payne County court system and local jails.</p>
         </div>
 
         <div>

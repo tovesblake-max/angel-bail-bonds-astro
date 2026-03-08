@@ -1,6 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Services' },
+  ],
+};
+
 const services = [
   {
     title: 'Felony Bail Bonds',
@@ -45,9 +54,10 @@ const services = [
 ];
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Bail Bond Services"
-  description="Angel Bail Bonds offers comprehensive bail bond services including felony, misdemeanor, DUI, domestic violence, drug charges, warrants, and more. 10% premium with flexible payment options."
+  description="Angel Bail Bonds offers comprehensive bail bond services including felony, misdemeanor, DUI, domestic violence, drug charges, warrants, and more. Competitive rates available."
+  structuredData={breadcrumbData}
 >
   <!-- Hero -->
   <section class="py-16" style="background: var(--navy-deep);">
@@ -81,8 +91,8 @@ const services = [
             </div>
 
             <div class="border-t pt-4 mt-4">
-              <p class="text-gold font-semibold">10% Premium</p>
-              <p class="text-sm text-charcoal/70">Flexible payment plans available</p>
+              <p class="text-gold font-semibold">Competitive Rates</p>
+              <p class="text-sm text-charcoal/70">Competitive rates available</p>
             </div>
           </div>
         ))}
@@ -126,7 +136,7 @@ const services = [
       <h2 class="text-agate font-display text-3xl mb-8 text-center">Affordable, Transparent Pricing</h2>
 
       <div class="bg-white rounded-lg p-8 mb-8">
-        <h3 class="text-agate font-display text-2xl mb-6 text-center">Standard Rate: 10% Premium</h3>
+        <h3 class="text-agate font-display text-2xl mb-6 text-center">Competitive Rates</h3>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div class="text-center">
@@ -147,7 +157,7 @@ const services = [
         </div>
 
         <div class="border-t pt-6">
-          <h4 class="font-semibold text-agate mb-4">Flexible Payment Options:</h4>
+          <h4 class="font-semibold text-agate mb-4">Accepted Payment Methods:</h4>
           <ul class="space-y-2 text-charcoal/80">
             <li class="flex items-center gap-2">
               <span class="text-gold">✓</span>
@@ -159,7 +169,7 @@ const services = [
             </li>
             <li class="flex items-center gap-2">
               <span class="text-gold">✓</span>
-              <span>Payment plans available</span>
+              <span>Competitive rates available</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="text-gold">✓</span>

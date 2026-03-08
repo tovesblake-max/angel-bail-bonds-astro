@@ -1,10 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'How Bail Works' },
+  ],
+};
 ---
 
-<BaseLayout 
+<BaseLayout
   title="How Bail Works"
   description="Learn how the bail bond process works in Oklahoma. Understand bail types, co-signer responsibilities, and what to expect when arrested."
+  structuredData={breadcrumbData}
 >
   <!-- Hero -->
   <section style="background: var(--navy-deep);" class="text-white py-16">
@@ -79,7 +89,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>
               <h3 class="font-display text-xl text-agate mb-2">Paperwork & Payment</h3>
               <p class="text-charcoal/80">
-                Sign the bail bond agreement and pay the required premium (typically 10%). Payment plans available.
+                Sign the bail bond agreement and pay the required premium. Competitive rates available.
               </p>
             </div>
           </div>
@@ -119,7 +129,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <h3 class="font-display text-xl text-agate mb-4">Surety Bond (Bail Bond)</h3>
         <p class="text-charcoal/80 mb-6">
-          A bail bond company (like Angel Bail Bonds) pays the full bail amount to secure the defendant's release. The defendant pays a non-refundable premium (10% in Oklahoma).
+          A bail bond company (like Angel Bail Bonds) pays the full bail amount to secure the defendant's release. The defendant pays a non-refundable premium.
         </p>
 
         <h3 class="font-display text-xl text-agate mb-4">Cash Bail</h3>
@@ -150,7 +160,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </li>
           <li class="flex gap-3">
             <span class="text-gold font-bold">•</span>
-            <span class="text-charcoal/80"><strong>Premium Payment:</strong> The co-signer agrees to pay the bail bond premium (10%).</span>
+            <span class="text-charcoal/80"><strong>Premium Payment:</strong> The co-signer agrees to pay the bail bond premium.</span>
           </li>
           <li class="flex gap-3">
             <span class="text-gold font-bold">•</span>
@@ -249,7 +259,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3 class="font-display text-lg text-agate mb-3">Bail Bond</h3>
             <ul class="space-y-2 text-charcoal/80 text-sm">
               <li>• Surety bond from bail company</li>
-              <li>• Pay 10% premium to company</li>
+              <li>• Pay the premium to company</li>
               <li>• Premium is non-refundable</li>
               <li>• Company posts full bail amount</li>
               <li>• More affordable for defendants</li>
