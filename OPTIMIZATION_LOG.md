@@ -240,3 +240,41 @@
 - OR optimize `pawnee-county-bail-bonds.astro` (214 lines)
 - Check if any existing pages are missing "Last Updated" dates and add them
 - Consider adding a blog post targeting "how to bail someone out of jail in Oklahoma" for long-tail coverage
+
+## 2026-03-08 — Washington County Page GEO Optimization
+
+**Action:** Major optimization of `washington-county-bail-bonds.astro` (337 lines → 482 lines)
+
+**Files Changed:**
+- `src/pages/washington-county-bail-bonds.astro` — Comprehensive rewrite for GEO/LLM citability
+
+**What Was Improved:**
+1. **Self-contained answer capsules added** — 5 bolded answer blocks (40-60 words each) for AI extraction: quick reference, bond costs, visiting hours, courthouse info, why choose Angel
+2. **Question-based H2/H3 headings** — All sections match natural language prompts
+3. **Specific factual data added:**
+   - Sheriff: Scott Owen, phone (918) 337-2800
+   - Jail capacity: ~60 inmates, 74+ staff
+   - Annual bookings: ~2,469 (avg 9/day, 133/month)
+   - Visit scheduling phone: (918) 332-4000
+   - Visit duration: 30 minutes (updated from 15)
+   - Court Clerk: Jean Davis, phone (918) 337-2840
+   - Court hours: Mon-Fri 8:00 AM-5:00 PM (filings close 4:45 PM)
+   - Bond cost table: DUI $1,000-$2,500, misdemeanor $500-$5,000, felony $5,000-$100,000+, drug possession $1,000-$25,000
+   - Driving directions: US-177 N and US-75 N
+   - Inmate roster: updated hourly at washingtoncosheriff.com/inmate-search
+4. **Schema markup improved** — Added 8 city-level areaServed entries, priceRange, updated paymentAccepted
+5. **FAQ expanded** — From 6 to 7 questions with data-rich answers, added inmate search FAQ
+6. **Cross-links expanded** — From 5 to 7 neighboring county pages (added Osage, Pawnee, Creek)
+7. **New sections added:**
+   - Bond cost section with amounts table and premium estimates
+   - Visiting hours answer capsule with scheduling details
+   - Why Choose Angel section with 4-card trust signals grid
+   - Inmate mail section with VINE system reference
+8. **Meta description improved** — Now includes Sheriff Scott Owen and capacity info
+
+**Content Uniqueness:** Page contains Washington County-specific data (Sheriff Scott Owen, Court Clerk Jean Davis, 60-bed capacity, 2,469 annual bookings, hourly-updated inmate roster, 30-minute scheduled visits, Price Tower/Woolaroc references, US-75/US-60 corridor) that no other page shares.
+
+**What To Do Next Run:**
+- Optimize `pawnee-county-bail-bonds.astro` or check for pages missing bond cost tables
+- Consider adding a blog post targeting "how to bail someone out of jail in Oklahoma"
+- Check if llms.txt and llms-full.txt need updating
