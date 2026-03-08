@@ -1,5 +1,54 @@
 # Angel Bail Bonds SEO Optimization Log
 
+## 2026-03-08 (Run 3) — Pawnee County Page GEO Optimization
+
+**Action:** Major optimization of `pawnee-county-bail-bonds.astro` (214 lines → 429 lines)
+
+**Files Changed:**
+- `src/pages/pawnee-county-bail-bonds.astro` — Complete rewrite for GEO/LLM citability
+
+**What Was Improved:**
+1. **Self-contained answer capsules added** — 6 bolded answer blocks (40-70 words each) that AI can extract verbatim, covering: quick reference, bond costs, jail location, visiting hours, Pawnee Nation/tribal jurisdiction, and why choose Angel
+2. **Question-based H2/H3 headings** — All section headings now match natural language prompts (e.g., "How Much Does a Pawnee County Bail Bond Cost?", "Where Is Pawnee County Jail and How Do I Get There?", "What Are Pawnee County Jail Visiting Hours?", "Pawnee Nation Tribal Jurisdiction and Bail Bonds")
+3. **Specific factual data added:**
+   - Jail address: 500 Harrison Street, Pawnee, OK 74058
+   - Jail phone: (918) 762-2565
+   - Jail capacity: 51 inmates
+   - Bookings: ~1,235/year (~3/day), 15 staff members
+   - Sheriff: Shawn Price (took office Oct 2024)
+   - Video visitation only (no contact visits): M-F 7:30 AM-9 PM, Sat-Sun 7:30 AM-2:30 PM
+   - Restricted Tu/Th 1:30-3:30 PM, 2 visits/week, 36 min each, schedule 24hr ahead
+   - Courthouse: 500 Harrison St, Ste 300, Pawnee, OK 74058 (same building as jail)
+   - Court Clerk: Ila Potts, (918) 762-2547
+   - Court hours: Mon-Fri 8:00 AM-4:30 PM
+   - District Court Division 14
+   - Common bond amounts: $500-$1,500 DUI, $500-$5,000 misdemeanor, $5,000-$50,000+ felony
+   - Oklahoma VINE system: (877) 654-8463
+   - County population: ~16,500, area: 595 sq mi, established 1893
+4. **Schema markup improved** — Added city-level areaServed entries (8 cities), payment methods, hours of operation, priceRange
+5. **FAQ expanded** — From 4 generic questions to 7 county-specific questions with detailed, data-rich answers
+6. **Cross-links expanded** — From just Pawnee County Jail sub-page to 7 neighboring county pages (Payne, Osage, Noble, Kay, Creek, Tulsa)
+7. **"Last Updated" date added** — March 8, 2026
+8. **New sections added:**
+   - Answer capsule quick reference block
+   - Bond cost section with payment methods answer capsule
+   - Courthouse/court info section with quick reference table
+   - Visiting hours section with video-only details and mail info
+   - Keystone Lake arrests section (unique differentiator for Pawnee County)
+   - Pawnee Nation tribal jurisdiction section (unique — no other page has this)
+   - Why choose Angel section
+   - Expanded communities list (8 towns including Hallett, Skedee, Lone Chimney)
+9. **Meta title/description improved** — Now includes "24/7 Jail Release in Pawnee, OK" and Keystone Lake area
+
+**Content Uniqueness:** Page now contains Pawnee County-specific data (51-bed capacity, ~1,235 bookings/year, Sheriff Shawn Price, Court Clerk Ila Potts, video-only visitation policy, Pawnee Nation tribal jurisdiction angle, Keystone Lake arrests, District Court Division 14) that no other page shares, keeping content overlap well below 40%.
+
+**What To Do Next Run:**
+- Optimize `garfield-county-bail-bonds.astro` (273 lines, next weakest)
+- OR optimize `logan-county-bail-bonds.astro` (323 lines)
+- Check if any existing pages are missing "Last Updated" dates and add them
+- Consider adding a blog post targeting "how to bail someone out of jail in Oklahoma" for long-tail coverage
+- Update llms.txt and llms-full.txt if not current with all pages
+
 ## 2026-03-08 (Run 2) — Lincoln County Page GEO Optimization
 
 **Action:** Major optimization of `lincoln-county-bail-bonds.astro` (208 lines → 435 lines)
