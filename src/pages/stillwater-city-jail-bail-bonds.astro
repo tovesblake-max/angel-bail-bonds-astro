@@ -47,302 +47,110 @@ const howToData = {
   <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
   <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
 
-  <style define:vars={{
-    'navy-deep': '#001a4d',
-    'navy': '#003366',
-    'blue': '#0055cc',
-    'slate-50': '#f8fafc',
-    'slate-200': '#e2e8f0',
-    'slate-400': '#94a3b8',
-    'slate-500': '#64748b',
-    'slate-900': '#0f172a'
-  }}>
-    :root {
-      --navy-deep: #001a4d;
-      --navy: #003366;
-      --blue: #0055cc;
-      --slate-50: #f8fafc;
-      --slate-200: #e2e8f0;
-      --slate-400: #94a3b8;
-      --slate-500: #64748b;
-      --slate-900: #0f172a;
-    }
+  <!-- HERO — compact -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Stillwater City Jail — Stillwater, OK</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Stillwater City Jail</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">723 S Lewis St, Stillwater, OK 74074 · Short-term facility · Act fast</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+    </div>
+  </section>
 
-    .section-label {
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 16px;
-      display: block;
-    }
+  <!-- FACILITY + STEPS — combined, two-column -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 32px 24px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
+      <!-- Left: Facility Details -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Facility Details</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="https://www.google.com/maps/search/?api=1&query=723+S+Lewis+St+Stillwater+OK+74074" target="_blank" rel="noopener" style="color: var(--blue); text-decoration: none;">723 S Lewis St, Stillwater, OK 74074</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+14053724171" style="color: var(--blue); text-decoration: none;">(405) 372-4171</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Hold Time</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Short-term · Under 72 hours</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">10% premium · Payment plans</td>
+          </tr>
+        </table>
+      </div>
 
-    .card:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transform: translateY(-2px);
-    }
+      <!-- Right: How to Bail Out -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Bail Someone Out Fast</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
+            <div><strong style="color: var(--slate-800);">Check if still there</strong><br><span style="color: var(--slate-500);">Call (405) 372-4171 immediately</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
+            <div><strong style="color: var(--slate-800);">Call us 24/7</strong><br><span style="color: var(--slate-500);">Angel Bail Bonds: (405) 614-3000</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+            <div><strong style="color: var(--slate-800);">Pay 10% &amp; sign</strong><br><span style="color: var(--slate-500);">Cash, cards, or payment plan</span></div>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
+            <div><strong style="color: var(--slate-800);">Released quickly</strong><br><span style="color: var(--slate-500);">Before county transfer</span></div>
+          </li>
+        </ol>
+      </div>
+    </div>
 
-    .card.reveal {
-      animation: slideUp 0.6s ease-out forwards;
-      opacity: 0;
-    }
-
-    .card.reveal-delay-1 {
-      animation-delay: 0.1s;
-    }
-
-    .card.reveal-delay-2 {
-      animation-delay: 0.2s;
-    }
-
-    .card.reveal-delay-3 {
-      animation-delay: 0.3s;
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+    <style>
+      @media (max-width: 640px) {
+        section div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--navy-deep);
-      color: white;
-      padding: 14px 32px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-    }
-
-    .btn-primary:hover {
-      background: var(--navy);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(0, 26, 77, 0.25);
-    }
-
-    .icon-box {
-      font-size: 2.5rem;
-      line-height: 1;
-    }
-
-    details summary {
-      outline: none;
-      user-select: none;
-      padding: 20px;
-      cursor: pointer;
-    }
-
-    details[open] summary {
-      border-bottom: 1px solid var(--slate-200);
-    }
-
-    details summary span:last-child {
-      transition: transform 0.3s ease;
-    }
-
-    details[open] summary span:last-child {
-      transform: rotate(180deg);
-    }
-
-    details p {
-      padding: 0 20px 20px 20px;
-      color: var(--slate-900);
-      opacity: 0.8;
-      line-height: 1.6;
-    }
-  </style>
-
-  <!-- Hero Section -->
-  <section style="background: var(--navy-deep); min-height: 50vh;" class="flex items-center text-white">
-    <div class="max-w-7xl mx-auto px-4 py-20 w-full">
-      <p class="section-label" style="color: white; opacity: 0.9;">Stillwater City Jail</p>
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4 text-white">Bail Bonds for<br>Stillwater City Jail</h1>
-      <p class="text-lg md:text-xl max-w-2xl mb-8 opacity-90">Get fast bail bond services for Stillwater City Jail. Available 24/7 with quick processing before transfer to county facility.</p>
-
-      <div style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; padding: 16px 20px; max-width: 600px; margin-bottom: 32px;">
-        <p style="font-weight: 600; color: white; margin-bottom: 8px;">⚠️ Short-Term Facility — Act Fast</p>
-        <p style="opacity: 0.9; font-size: 0.95rem; line-height: 1.5;">Inmates typically held less than 72 hours before transfer to Payne County Detention Center. Posting bail quickly avoids transfer delays.</p>
-      </div>
-
-      <a href="tel:+14056143000" class="btn-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        (405) 614-3000
-      </a>
-    </div>
+    </style>
   </section>
 
-  <!-- Facility Details Section -->
-  <section style="background: var(--slate-50); padding: 80px 0;">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="section-label">Facility Information</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-12" style="color: var(--slate-900);">Stillwater City Jail Details</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Address Card -->
-        <div class="card reveal">
-          <div class="icon-box">📍</div>
-          <h3 class="font-semibold mt-4 mb-3" style="color: var(--slate-900);">Address</h3>
-          <a href="https://www.google.com/maps/search/?api=1&query=723+S+Lewis+St+Stillwater+OK+74074" target="_blank" rel="noopener" style="color: var(--blue); text-decoration: none; font-weight: 500; line-height: 1.6;">
-            723 S Lewis Street<br>Stillwater, OK 74074
-          </a>
-          <p style="font-size: 0.85rem; color: var(--slate-500); margin-top: 8px;">Click to open in Google Maps</p>
-        </div>
-
-        <!-- Phone Card -->
-        <div class="card reveal reveal-delay-1">
-          <div class="icon-box">📞</div>
-          <h3 class="font-semibold mt-4 mb-3" style="color: var(--slate-900);">Jail Phone</h3>
-          <p style="color: var(--slate-900); opacity: 0.9; font-size: 1rem; font-weight: 500;">
-            <a href="tel:+14053724171" style="color: var(--blue); text-decoration: none;">(405) 372-4171</a>
-          </p>
-          <p style="font-size: 0.85rem; color: var(--slate-500); margin-top: 8px;">Available 24/7</p>
-        </div>
-
-        <!-- Visitation & Hours Card -->
-        <div class="card reveal reveal-delay-2">
-          <div class="icon-box">⏰</div>
-          <h3 class="font-semibold mt-4 mb-3" style="color: var(--slate-900);">Visitation</h3>
-          <p style="color: var(--slate-900); opacity: 0.9; font-size: 0.95rem; line-height: 1.6;">
-            Contact the jail directly at (405) 372-4171 for current visitation hours and procedures.
-          </p>
-        </div>
-
-        <!-- Bail Info Card -->
-        <div class="card reveal reveal-delay-3">
-          <div class="icon-box">⚡</div>
-          <h3 class="font-semibold mt-4 mb-3" style="color: var(--slate-900);">Quick Bail</h3>
-          <p style="color: var(--slate-900); opacity: 0.9; font-size: 0.95rem; line-height: 1.6;">
-            Call Angel Bail Bonds at <a href="tel:+14056143000" style="color: var(--blue); text-decoration: none; font-weight: 500;">(405) 614-3000</a> to post bail 24/7.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How To Section -->
-  <section style="padding: 100px 0; background: white;">
-    <div class="max-w-4xl mx-auto px-4">
-      <p class="section-label">Step-by-Step Process</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-4" style="color: var(--slate-900);">How to Bail Someone Out</h2>
-      <p style="color: var(--slate-500); margin-bottom: 48px; font-size: 1.1rem; line-height: 1.6;">Time matters at Stillwater City Jail. Inmates are typically transferred to Payne County Detention Center within 72 hours. Here's how to act fast.</p>
-
-      <div style="display: flex; flex-direction: column; gap: 32px;">
-        <div class="reveal" style="display: flex; gap: 24px;">
-          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;">1</div>
-          <div>
-            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Confirm They're at Stillwater City Jail</h3>
-            <p style="color: var(--slate-600); line-height: 1.6;">Call the jail at <strong>(405) 372-4171</strong> to verify the person is still at this facility and hasn't been transferred yet.</p>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-1" style="display: flex; gap: 24px;">
-          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;">2</div>
-          <div>
-            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Call Angel Bail Bonds Immediately</h3>
-            <p style="color: var(--slate-600); line-height: 1.6;">Call <strong>(405) 614-3000</strong> — we're available 24/7 and minutes away. We'll confirm the bail amount and begin processing right away.</p>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-2" style="display: flex; gap: 24px;">
-          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;">3</div>
-          <div>
-            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Pay the 10% Premium</h3>
-            <p style="color: var(--slate-600); line-height: 1.6;">Sign the bond agreement and pay 10% of the bail amount. We accept cash, credit cards, and offer flexible payment plans.</p>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-3" style="display: flex; gap: 24px;">
-          <div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;">4</div>
-          <div>
-            <h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Release Before Transfer</h3>
-            <p style="color: var(--slate-600); line-height: 1.6;">We post the bond immediately. Getting released at Stillwater City Jail avoids the longer processing times at Payne County Detention Center.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section style="padding: 80px 0; background: var(--slate-50);">
-    <div class="max-w-4xl mx-auto px-4">
-      <p class="section-label">Common Questions</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--slate-900);">Frequently Asked Questions</h2>
-
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <details class="card" style="background: white;">
-          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
-            <span>How long do inmates stay at Stillwater City Jail?</span>
-            <span>▼</span>
-          </summary>
-          <p>Stillwater City Jail is a short-term holding facility. Inmates typically stay less than 72 hours before being released or transferred to Payne County Detention Center. This is why posting bail quickly is so important.</p>
+  <!-- FAQ — compact accordion -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long do inmates stay at Stillwater City Jail?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Stillwater City Jail is a short-term holding facility. Inmates typically stay less than 72 hours before being released or transferred to Payne County Detention Center. This is why posting bail quickly is so important.</p>
         </details>
-
-        <details class="card" style="background: white;">
-          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
-            <span>What's the difference between Stillwater City Jail and Payne County Detention Center?</span>
-            <span>▼</span>
-          </summary>
-          <p>Stillwater City Jail (723 S Lewis St) is a short-term holding facility run by the Stillwater Police Department. Payne County Detention Center (606 S Husband St) is the larger county facility for longer-term holds. Inmates are typically transferred within 72 hours.</p>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What's the difference between Stillwater City Jail and Payne County Detention Center?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Stillwater City Jail (723 S Lewis St) is a short-term holding facility run by the Stillwater Police Department. Payne County Detention Center (606 S Husband St) is the larger county facility for longer-term holds. Inmates are typically transferred within 72 hours.</p>
         </details>
-
-        <details class="card" style="background: white;">
-          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
-            <span>Can I bail someone out of Stillwater City Jail at night?</span>
-            <span>▼</span>
-          </summary>
-          <p>Yes. Angel Bail Bonds operates 24/7. While the court clerk's office has business hours, bail bondsmen can post bonds at any time. Call us at (405) 614-3000 no matter what time it is.</p>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I bail someone out of Stillwater City Jail at night?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds operates 24/7. While the court clerk's office has business hours, bail bondsmen can post bonds at any time. Call us at (405) 614-3000 no matter what time it is.</p>
         </details>
-
-        <details class="card" style="background: white;">
-          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
-            <span>What forms of payment do you accept?</span>
-            <span>▼</span>
-          </summary>
-          <p>We accept cash, credit cards, and debit cards. We also offer flexible payment plans so finances don't have to delay getting your loved one released. The standard bail bond premium in Oklahoma is 10% of the total bail amount.</p>
-        </details>
-
-        <details class="card" style="background: white;">
-          <summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);">
-            <span>How do I know if someone is at Stillwater City Jail?</span>
-            <span>▼</span>
-          </summary>
-          <p>Call Stillwater City Jail directly at (405) 372-4171 to confirm if someone is in custody and get their booking information. Have their full name ready. If they've already been transferred to Payne County Detention Center, the jail staff will let you know.</p>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What forms of payment do you accept?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">We accept cash, credit cards, and debit cards. We also offer flexible payment plans so finances don't have to delay getting your loved one released. The standard bail bond premium in Oklahoma is 10% of the total bail amount.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA Section -->
-  <section style="background: var(--navy-deep); padding: 80px 0;" class="text-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="section-label" style="color: white; opacity: 0.9;">Don't Wait for a Transfer</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-6 text-white">Someone at Stillwater City Jail Right Now?</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90" style="line-height: 1.6;">Posting bail before the 72-hour transfer window means faster release. Call Angel Bail Bonds now — we're minutes away and ready to help 24/7.</p>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        (405) 614-3000
-      </a>
+  <!-- CTA BAR — tight -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Someone at Stillwater City Jail?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Act fast before transfer · 24/7 service · Payment plans</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
     </div>
   </section>
 </BaseLayout>

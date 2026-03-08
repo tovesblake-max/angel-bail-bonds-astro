@@ -59,99 +59,108 @@ const structuredData = {
   ogImage="/images/hero-agate.webp"
   structuredData={structuredData}
 >
-  <!-- Breadcrumb -->
-  <nav class="bg-agate/10 py-3" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto px-4">
-      <ol class="flex text-sm text-charcoal/70">
-        <li><a href="/" class="hover:text-gold transition-colors">Home</a></li>
-        <li class="mx-2">/</li>
-        <li class="text-agate font-semibold">Noble County Bail Bonds</li>
-      </ol>
-    </div>
-  </nav>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-  <!-- Hero -->
-  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-cream font-display text-4xl md:text-5xl mb-6">Noble County Bail Bonds</h1>
-      <p class="text-cream/90 text-lg mb-8 max-w-2xl mx-auto">
-        Angel Bail Bonds provides fast, confidential bail bond services throughout Noble County, Oklahoma. Available 24 hours a day, 7 days a week.
-      </p>
-      <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">
-        Call Now: (405) 614-3000
-      </a>
+  <!-- HERO — compact -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Noble County, Oklahoma</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Noble County</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Perry, Billings, Morrison, Red Rock, and surrounding areas · 24/7 service</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
     </div>
   </section>
 
-  <div class="gold-divider"></div>
+  <!-- FACILITY + STEPS — combined, two-column -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
 
-  <!-- About This Area -->
-  <section class="section-padding bg-cream">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-agate font-display text-3xl mb-6">Bail Bond Services in Noble County</h2>
-      <p class="text-charcoal/80 mb-4">
-        When someone you care about is arrested in Noble County, you need a bail bondsman who understands the local court system and can act fast. Angel Bail Bonds, led by Karri McBride with over 15 years of experience, has been helping families in Noble County navigate the bail process with compassion and professionalism.
-      </p>
-      <p class="text-charcoal/80 mb-4">
-        Noble County, located in north-central Oklahoma, includes the county seat of Perry and surrounding communities such as Billings, Morrison, and Red Rock. We handle all types of charges in Noble County including felony bonds, misdemeanor bonds, DUI/DWI bonds, domestic violence bonds, drug charge bonds, and outstanding warrant bonds.
-      </p>
-      <p class="text-charcoal/80">
-        As a women-owned business with a 5.0 Google rating from 27+ reviews, Angel Bail Bonds is trusted by families throughout the region for discreet, reliable bail bond service.
-      </p>
+      <!-- Left: County Info -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Noble County Overview</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">County Seat</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Perry</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Major Communities</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Billings, Morrison, Red Rock</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Service Area</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">North-central Oklahoma</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">10% premium · Payment plans</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Right: How to Get Bail Bond -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Get Bail in Noble County</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
+            <div><strong style="color: var(--slate-800);">Contact jail</strong><br><span style="color: var(--slate-500);">Get inmate info & bail amount</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
+            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · 24/7</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+            <div><strong style="color: var(--slate-800);">Pay 10% premium</strong><br><span style="color: var(--slate-500);">Cash, cards, or payment plan</span></div>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
+            <div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">1-4 hours processing time</span></div>
+          </li>
+        </ol>
+      </div>
     </div>
+
+    <style>
+      @media (max-width: 640px) {
+        section div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+    </style>
   </section>
 
-  <div class="gold-divider"></div>
-
-  <!-- Services Grid -->
-  <section class="section-padding bg-white">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-agate font-display text-3xl mb-8 text-center">Types of Bail Bonds We Handle in Noble County</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Felony Bail Bonds</h3><p class="text-charcoal/80">Experienced handling of serious charges with substantial bail amounts in Noble County courts.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Misdemeanor Bonds</h3><p class="text-charcoal/80">Quick processing for misdemeanor arrests in Noble County with flexible payment options.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">DUI/DWI Bonds</h3><p class="text-charcoal/80">Specialized experience with impaired driving charges throughout Noble County.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Domestic Violence Bonds</h3><p class="text-charcoal/80">Confidential handling of sensitive family matters with protective conditions.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Drug Charge Bonds</h3><p class="text-charcoal/80">Expert assistance with drug-related arrests in Noble County.</p></div>
-        <div class="card bg-cream"><h3 class="text-agate font-display text-xl mb-2">Warrant Bonds</h3><p class="text-charcoal/80">Fast resolution for outstanding warrants in Noble County.</p></div>
+  <!-- FAQ — compact accordion -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I get a bail bond in Noble County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Noble County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Noble County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">In Oklahoma, bail bond premiums are typically 10% of the total bail amount. Angel Bail Bonds offers flexible payment plans to help families manage the cost.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does it take to get released from Noble County Jail?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Noble County Jail occur within 1-4 hours depending on jail processing.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <div class="gold-divider"></div>
-
-  <!-- FAQ Section -->
-  <section class="section-padding bg-cream">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-agate font-display text-3xl mb-8 text-center">Noble County Bail Bonds FAQ</h2>
-      <div class="space-y-6">
-        <div class="bg-white rounded-lg p-6">
-          <h3 class="text-agate font-display text-lg mb-2">How do I get a bail bond in Noble County?</h3>
-          <p class="text-charcoal/80">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Noble County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.</p>
-        </div>
-        <div class="bg-white rounded-lg p-6">
-          <h3 class="text-agate font-display text-lg mb-2">How much does a bail bond cost in Noble County?</h3>
-          <p class="text-charcoal/80">In Oklahoma, bail bond premiums are typically 10% of the total bail amount. Angel Bail Bonds offers flexible payment plans to help families manage the cost.</p>
-        </div>
-        <div class="bg-white rounded-lg p-6">
-          <h3 class="text-agate font-display text-lg mb-2">How long does it take to get released from Noble County Jail?</h3>
-          <p class="text-charcoal/80">Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Noble County Jail occur within 1-4 hours depending on jail processing.</p>
-        </div>
+  <!-- CTA BAR — tight -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Noble County Bail Bond?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 5.0 stars · Payment plans</p>
       </div>
-    </div>
-  </section>
-
-  <div class="gold-divider"></div>
-
-  <!-- CTA -->
-  <section class="section-padding" style="background: linear-gradient(135deg, #1a6b6a 0%, #0f4a4a 100%);">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-cream font-display text-3xl mb-6">Need a Bail Bond in Noble County?</h2>
-      <p class="text-cream/90 text-lg mb-8">Contact Angel Bail Bonds now for immediate, confidential assistance.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:+14056143000" class="inline-block bg-gold hover:bg-gold/90 text-charcoal font-display font-bold py-4 px-8 rounded-lg transition-all">(405) 614-3000</a>
-        <a href="/contact" class="inline-block bg-white/20 hover:bg-white/30 text-cream font-bold py-4 px-8 rounded-lg transition-all border border-cream">Contact Us</a>
-      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
     </div>
   </section>
 </BaseLayout>
