@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Terms of Service' },
+  ],
+};
+---
+
+<BaseLayout
+  title="Terms of Service | Angel Bail Bonds"
+  description="Terms of service for Angel Bail Bonds in Stillwater, Oklahoma. Understand your rights and obligations when using our bail bond services, including bond agreements, co-signer responsibilities, and collateral terms."
+  structuredData={breadcrumbData}
+>
+  <!-- Hero -->
+  <section style="background: var(--navy-deep);" class="text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Terms of Service</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Please review the terms and conditions governing the use of Angel Bail Bonds' services.
+      </p>
+    </div>
+  </section>
+
+  <!-- Terms Content -->
+  <section class="section-padding bg-cream">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-charcoal/80 mb-8 text-sm">
+        <strong>Last Updated:</strong> March 7, 2026
+      </p>
+
+      <div class="space-y-10">
+        <!-- Introduction -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Agreement to Terms</h2>
+          <p class="text-charcoal/80 mb-4">
+            These Terms of Service ("Terms") constitute a legally binding agreement between you and Angel Bail Bonds, owned and operated by Karri McBride ("Company," "we," "us," or "our"), located in Stillwater, Oklahoma. By accessing our website at stillwaterokbailbonds.com or using any of our bail bond services, you acknowledge that you have read, understood, and agree to be bound by these Terms.
+          </p>
+          <p class="text-charcoal/80">
+            If you do not agree with these Terms, you must not access the website or use our services. We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to our website, and your continued use of our services constitutes acceptance of the modified Terms.
+          </p>
+        </div>
+
+        <!-- Description of Services -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Description of Services</h2>
+          <p class="text-charcoal/80 mb-4">
+            Angel Bail Bonds provides bail bond services in the State of Oklahoma, including but not limited to:
+          </p>
+          <ul class="list-disc list-inside text-charcoal/80 mb-4 space-y-2 pl-4">
+            <li>Surety bail bonds for felony and misdemeanor charges</li>
+            <li>DUI/DWI bail bonds</li>
+            <li>Domestic violence bail bonds</li>
+            <li>Drug charge bail bonds</li>
+            <li>Outstanding warrant bail bonds</li>
+            <li>Juvenile bail bonds</li>
+            <li>24/7 emergency bail bond assistance</li>
+          </ul>
+          <p class="text-charcoal/80">
+            Our services are available across Payne County, Pawnee County, Lincoln County, Kay County, and Noble County in Oklahoma. All bail bond services are subject to applicable Oklahoma state laws, regulations of the Oklahoma Insurance Department, and the terms of individual bail bond agreements.
+          </p>
+        </div>
+
+        <!-- Bond Agreement Terms -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Bail Bond Agreement Terms</h2>
+          <p class="text-charcoal/80 mb-4">
+            When you enter into a bail bond agreement with Angel Bail Bonds, you agree to the following:
+          </p>
+          <ul class="list-disc list-inside text-charcoal/80 mb-4 space-y-2 pl-4">
+            <li>You will provide accurate, complete, and truthful information in all applications and documents</li>
+            <li>The defendant will appear at all required court dates and comply with all conditions set by the court</li>
+            <li>You will notify Angel Bail Bonds immediately of any changes in the defendant's address, phone number, employment, or any other material changes</li>
+            <li>You will cooperate fully with Angel Bail Bonds in locating and surrendering the defendant if necessary</li>
+            <li>The specific terms of your individual bail bond contract will govern your obligations and supersede any general terms stated here where there is a conflict</li>
+          </ul>
+          <p class="text-charcoal/80">
+            The bail bond agreement is a binding legal contract. All parties to the agreement are strongly encouraged to read all documents carefully and ask questions before signing. Angel Bail Bonds is happy to explain any terms or conditions.
+          </p>
+        </div>
+
+        <!-- Premium Non-Refundability -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Premium and Non-Refundability</h2>
+          <div class="card bg-white border-l-4 border-gold mb-4">
+            <p class="text-charcoal/80 font-semibold">
+              Important: The bail bond premium is fully earned upon the posting of the bail bond and is non-refundable, regardless of the outcome of the case, including dismissal, acquittal, or any other resolution.
+            </p>
+          </div>
+          <p class="text-charcoal/80 mb-4">
+            The premium you pay for a bail bond is the fee for the bail bond service itself -- it is not a deposit and it is not applied toward fines, court costs, or the total bail amount. The premium is set in accordance with Oklahoma state regulations.
+          </p>
+          <p class="text-charcoal/80">
+            Any payment plans or installment agreements for the premium must be honored in full according to the agreed-upon schedule. Failure to make timely payments may result in additional fees, surrender of the defendant, and/or legal action to recover the balance owed.
+          </p>
+        </div>
+
+        <!-- Co-Signer Responsibilities -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Co-Signer (Indemnitor) Responsibilities</h2>
+          <p class="text-charcoal/80 mb-4">
+            If you co-sign (act as an indemnitor) on a bail bond, you accept significant financial and legal responsibilities, including but not limited to:
+          </p>
+          <ul class="list-disc list-inside text-charcoal/80 mb-4 space-y-2 pl-4">
+            <li><strong>Financial Liability:</strong> You are financially responsible for the full face amount of the bail bond if the defendant fails to appear in court or otherwise violates the conditions of the bond</li>
+            <li><strong>Premium Payment:</strong> You are responsible for ensuring the bail bond premium is paid in full, including any agreed-upon installment payments</li>
+            <li><strong>Defendant Compliance:</strong> You are responsible for ensuring the defendant attends all court appearances and complies with all bond conditions</li>
+            <li><strong>Communication:</strong> You must inform Angel Bail Bonds immediately if the defendant changes address, employment, or phone number, or if you believe the defendant may fail to appear</li>
+            <li><strong>Surrender Rights:</strong> You have the right to request the surrender of the defendant to the court at any time if you believe the defendant will fail to meet their obligations, which may limit your financial exposure</li>
+            <li><strong>Recovery Costs:</strong> If the defendant fails to appear and must be located and returned to custody, you may be responsible for all costs associated with the recovery, including but not limited to fugitive recovery agent fees, travel expenses, and legal costs</li>
+          </ul>
+          <p class="text-charcoal/80">
+            Co-signing a bail bond is a serious financial commitment. We encourage all co-signers to fully understand their obligations before entering into a bail bond agreement.
+          </p>
+        </div>
+
+        <!-- Collateral Terms -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Collateral Terms</h2>
+          <p class="text-charcoal/80 mb-4">
+            Angel Bail Bonds may require collateral to secure a bail bond. Collateral may include, but is not limited to:
+          </p>
+          <ul class="list-disc list-inside text-charcoal/80 mb-4 space-y-2 pl-4">
+            <li>Real property (real estate, land)</li>
+            <li>Vehicle titles</li>
+            <li>Jewelry or other valuables</li>
+            <li>Bank accounts or other financial instruments</li>
+            <li>Other assets of value as agreed upon</li>
+          </ul>
+          <p class="text-charcoal/80 mb-4">
+            Collateral will be held by Angel Bail Bonds until the bail bond obligation is fully discharged, which occurs when the defendant's case is resolved and all court appearances have been made, or when the bond is exonerated by the court.
+          </p>
+          <p class="text-charcoal/80">
+            If the defendant fails to appear in court and the bond is forfeited, Angel Bail Bonds may liquidate collateral to satisfy the bond obligation and any associated costs. Any excess proceeds from the liquidation of collateral will be returned to the party who pledged the collateral, minus all fees and expenses incurred.
+          </p>
+        </div>
+
+        <!-- Failure to Appear -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Failure to Appear Consequences</h2>
+          <p class="text-charcoal/80 mb-4">
+            If the defendant fails to appear in court as required, the following consequences may apply:
+          </p>
+          <ul class="list-disc list-inside text-charcoal/80 mb-4 space-y-2 pl-4">
+            <li>The court will issue a bench warrant for the defendant's arrest</li>
+            <li>The bail bond may be forfeited, making the co-signer and/or defendant liable for the full bail amount</li>
+            <li>Additional criminal charges may be filed against the defendant for failure to appear</li>
+            <li>Angel Bail Bonds may employ a fugitive recovery agent (bounty hunter) to locate and return the defendant to custody</li>
+            <li>The co-signer will be responsible for all costs associated with the recovery of the defendant</li>
+            <li>Collateral may be seized and liquidated to cover the bond forfeiture and recovery expenses</li>
+            <li>Legal action may be initiated against the co-signer and/or defendant to recover any remaining amounts owed</li>
+          </ul>
+          <p class="text-charcoal/80">
+            Angel Bail Bonds will make reasonable efforts to contact the defendant and co-signer before taking any forfeiture-related action, as permitted by Oklahoma law.
+          </p>
+        </div>
+
+        <!-- Indemnification -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Indemnification</h2>
+          <p class="text-charcoal/80">
+            You agree to indemnify, defend, and hold harmless Angel Bail Bonds, Karri McBride, and their respective officers, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use of our services; (b) any breach of these Terms or the bail bond agreement; (c) the defendant's failure to appear in court or comply with bond conditions; (d) any inaccurate or misleading information you provide; or (e) any violation of applicable law by you or the defendant.
+          </p>
+        </div>
+
+        <!-- Limitation of Liability -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Limitation of Liability</h2>
+          <p class="text-charcoal/80 mb-4">
+            To the fullest extent permitted by Oklahoma law, Angel Bail Bonds shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services or website, regardless of the theory of liability.
+          </p>
+          <p class="text-charcoal/80 mb-4">
+            Angel Bail Bonds does not guarantee the release of any defendant from custody. Release times depend on jail processing procedures, court availability, and other factors outside our control. We are not responsible for delays caused by court schedules, jail operations, or other governmental processes.
+          </p>
+          <p class="text-charcoal/80">
+            Our website and its contents are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that our website will be uninterrupted, error-free, or free of viruses or other harmful components.
+          </p>
+        </div>
+
+        <!-- Governing Law -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Governing Law and Jurisdiction</h2>
+          <p class="text-charcoal/80 mb-4">
+            These Terms shall be governed by and construed in accordance with the laws of the State of Oklahoma, without regard to its conflict of law provisions. All bail bond services provided by Angel Bail Bonds are subject to regulation by the Oklahoma Insurance Department and applicable Oklahoma statutes governing bail bondsmen.
+          </p>
+          <p class="text-charcoal/80">
+            Any disputes arising out of or relating to these Terms or our services shall be resolved in the state or federal courts located in Payne County, Oklahoma. You consent to the personal jurisdiction of such courts and waive any objection to venue in such courts.
+          </p>
+        </div>
+
+        <!-- Website Use -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Website Use</h2>
+          <p class="text-charcoal/80 mb-4">
+            By using our website, you agree to the following:
+          </p>
+          <ul class="list-disc list-inside text-charcoal/80 space-y-2 pl-4">
+            <li>You will not use the website for any unlawful purpose</li>
+            <li>You will not attempt to gain unauthorized access to any portion of the website or its systems</li>
+            <li>You will not use the website to transmit any malicious software, spam, or harmful content</li>
+            <li>All content on the website, including text, graphics, logos, and images, is the property of Angel Bail Bonds and is protected by copyright and trademark laws</li>
+            <li>Information provided on the website is for general informational purposes only and does not constitute legal advice</li>
+          </ul>
+        </div>
+
+        <!-- No Legal Advice -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">No Legal Advice</h2>
+          <p class="text-charcoal/80">
+            Angel Bail Bonds is not a law firm and does not provide legal advice. The information provided on our website and by our agents is for general informational purposes regarding the bail bond process. For legal advice regarding criminal charges, court proceedings, or your legal rights, you should consult with a licensed attorney. We strongly recommend that all defendants seek legal counsel.
+          </p>
+        </div>
+
+        <!-- Severability -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Severability</h2>
+          <p class="text-charcoal/80">
+            If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect. The invalid or unenforceable provision shall be modified to the minimum extent necessary to make it valid and enforceable while preserving the original intent.
+          </p>
+        </div>
+
+        <!-- Entire Agreement -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Entire Agreement</h2>
+          <p class="text-charcoal/80">
+            These Terms, together with any individual bail bond agreement you sign, constitute the entire agreement between you and Angel Bail Bonds. In the event of a conflict between these Terms and a signed bail bond agreement, the signed bail bond agreement shall control. No waiver of any term or condition shall be deemed a further or continuing waiver of such term or any other term.
+          </p>
+        </div>
+
+        <!-- Changes to Terms -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Changes to These Terms</h2>
+          <p class="text-charcoal/80">
+            We reserve the right to update or modify these Terms at any time without prior notice. Changes will be effective immediately upon posting to our website. The "Last Updated" date at the top of this page indicates when these Terms were last revised. Your continued use of our website or services after any changes constitutes your acceptance of the updated Terms.
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-agate font-display text-2xl mb-4">Contact Us</h2>
+          <p class="text-charcoal/80 mb-4">
+            If you have any questions or concerns about these Terms of Service, please contact us:
+          </p>
+          <div class="card bg-white border-l-4 border-gold">
+            <p class="font-semibold text-agate text-lg mb-3">Angel Bail Bonds</p>
+            <p class="text-charcoal/80 mb-1"><strong>Owner:</strong> Karri McBride</p>
+            <p class="text-charcoal/80 mb-1"><strong>Location:</strong> Stillwater, Oklahoma</p>
+            <p class="text-charcoal/80 mb-1">
+              <strong>Phone:</strong> <a href="tel:+14056143000" class="text-gold font-semibold hover:underline">(405) 614-3000</a>
+            </p>
+            <p class="text-charcoal/80 mb-1">
+              <strong>Email:</strong> <a href="mailto:bailbondangel@gmail.com" class="text-gold font-semibold hover:underline">bailbondangel@gmail.com</a>
+            </p>
+            <p class="text-charcoal/80">
+              <strong>Website:</strong> <a href="https://stillwaterokbailbonds.com" class="text-gold font-semibold hover:underline">stillwaterokbailbonds.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding text-white" style="background: var(--navy-deep);">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-4xl mb-6">Have Questions About Our Terms?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        We're happy to explain any part of our terms or bail bond process. Call us anytime.
+      </p>
+
+      <a
+        href="tel:+14056143000"
+        class="inline-block btn-primary"
+      >
+        (405) 614-3000
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -3,11 +3,44 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const publishedDate = new Date('2024-03-01');
 const formattedDate = publishedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: 'What to Do If Arrested in Stillwater, Oklahoma',
+      description: 'Complete guide to what happens when you\'re arrested in Stillwater, Oklahoma. Know your rights, the arrest process, and how to get bail bonds.',
+      author: { '@type': 'Person', name: 'Karri McBride' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Angel Bail Bonds',
+        url: 'https://stillwaterokbailbonds.com',
+      },
+      datePublished: '2024-03-01',
+      dateModified: '2026-03-07',
+      image: 'https://stillwaterokbailbonds.com/images/hero-agate.webp',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://stillwaterokbailbonds.com/blog/what-to-do-if-arrested-in-stillwater-oklahoma',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://stillwaterokbailbonds.com/blog' },
+        { '@type': 'ListItem', position: 3, name: 'What to Do If Arrested in Stillwater', item: 'https://stillwaterokbailbonds.com/blog/what-to-do-if-arrested-in-stillwater-oklahoma' },
+      ],
+    },
+  ],
+};
 ---
 
-<BaseLayout 
+<BaseLayout
   title="What to Do If Arrested in Stillwater, Oklahoma"
   description="Complete guide to what happens when you're arrested in Stillwater, Oklahoma. Know your rights, the arrest process, and how to get bail bonds."
+  structuredData={structuredData}
 >
   <!-- Hero -->
   <section style="background: var(--navy-deep);" class="text-white py-16">
@@ -256,6 +289,15 @@ const formattedDate = publishedDate.toLocaleDateString('en-US', { year: 'numeric
       <p class="text-charcoal/80 text-center italic mt-12">
         This article is for informational purposes only and is not legal advice. Always consult with a qualified attorney for legal guidance.
       </p>
+
+      <!-- Author Bio -->
+      <div style="background: white; border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 0.5rem; display: flex; gap: 1.5rem; align-items: flex-start;" class="mt-12">
+        <img src="/images/karri.webp" alt="Karri McBride, Owner of Angel Bail Bonds" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;" />
+        <div>
+          <p style="font-weight: 700; color: var(--agate); margin-bottom: 0.25rem;">Written by Karri McBride</p>
+          <p style="font-size: 0.875rem; color: var(--charcoal); opacity: 0.8;">Karri McBride is the owner of Angel Bail Bonds in Stillwater, Oklahoma, with over 15 years of experience in the bail bonds industry. She is a licensed bail bondsman serving Payne, Pawnee, Lincoln, Kay, and Noble counties. For questions about the bail process, call <a href="tel:4056143000" style="color: var(--gold);">(405) 614-3000</a>.</p>
+        </div>
+      </div>
     </article>
   </section>
 </BaseLayout>

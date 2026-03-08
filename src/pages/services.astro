@@ -1,12 +1,64 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const breadcrumbData = {
+const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Services' },
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Services' },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: 'Felony Bail Bonds',
+      serviceType: 'Bail Bond Service',
+      description: 'Professional bail bond services for serious felony charges requiring substantial bail amounts across Central Oklahoma.',
+      provider: { '@type': 'Organization', name: 'Angel Bail Bonds', telephone: '(405) 614-3000' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Misdemeanor Bail Bonds',
+      serviceType: 'Bail Bond Service',
+      description: 'Quick and efficient bail bond processing for misdemeanor charges with fast turnaround times.',
+      provider: { '@type': 'Organization', name: 'Angel Bail Bonds', telephone: '(405) 614-3000' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+    },
+    {
+      '@type': 'Service',
+      name: 'DUI/DWI Bail Bonds',
+      serviceType: 'Bail Bond Service',
+      description: 'Specialized bail bond services for DUI and DWI charges with deep knowledge of Oklahoma impaired driving laws.',
+      provider: { '@type': 'Organization', name: 'Angel Bail Bonds', telephone: '(405) 614-3000' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Domestic Violence Bail Bonds',
+      serviceType: 'Bail Bond Service',
+      description: 'Confidential and sensitive bail bond handling for domestic violence charges with protective conditions.',
+      provider: { '@type': 'Organization', name: 'Angel Bail Bonds', telephone: '(405) 614-3000' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Warrant Resolution Bail Bonds',
+      serviceType: 'Bail Bond Service',
+      description: 'Fast resolution bail bond services for active warrants, bench warrants, and failure to appear charges.',
+      provider: { '@type': 'Organization', name: 'Angel Bail Bonds', telephone: '(405) 614-3000' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Transfer Bail Bonds',
+      serviceType: 'Bail Bond Service',
+      description: 'Bail bond transfer services for defendants with bonds in other jurisdictions needing coverage in Central Oklahoma.',
+      provider: { '@type': 'Organization', name: 'Angel Bail Bonds', telephone: '(405) 614-3000' },
+      areaServed: ['Payne County', 'Pawnee County', 'Lincoln County', 'Kay County', 'Noble County'],
+    },
   ],
 };
 
@@ -57,7 +109,7 @@ const services = [
 <BaseLayout
   title="Bail Bond Services"
   description="Angel Bail Bonds offers comprehensive bail bond services including felony, misdemeanor, DUI, domestic violence, drug charges, warrants, and more. Competitive rates available."
-  structuredData={breadcrumbData}
+  structuredData={structuredData}
 >
   <!-- Hero -->
   <section class="py-16" style="background: var(--navy-deep);">
