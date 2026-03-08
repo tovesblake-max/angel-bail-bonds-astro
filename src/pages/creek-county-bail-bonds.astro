@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/creek-county-bail-bonds#business',
+      name: 'Angel Bail Bonds - Creek County',
+      url: 'https://stillwaterokbailbonds.com/creek-county-bail-bonds',
+      description: 'Professional 24/7 bail bond services for Creek County, Oklahoma. Serving Sapulpa, Bristow, Drumright, Kellyville, Kiefer, Glenpool and all Creek County communities. 15+ years experience, 4.9-star rating.',
+      telephone: '(405) 614-3000',
+      email: 'bailbondangel@gmail.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Creek County, Oklahoma' },
+      geo: { '@type': 'GeoCoordinates', latitude: 35.9415, longitude: -96.3782 },
+      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
+      openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
+      paymentAccepted: 'Cash, Visa, Mastercard, Zelle, Venmo',
+      priceRange: '$$',
+    },
+    {
+      '@type': 'Service',
+      name: 'Creek County Bail Bond Services',
+      provider: { '@id': 'https://stillwaterokbailbonds.com/creek-county-bail-bonds#business' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Creek County, Oklahoma' },
+      description: 'Fast, confidential bail bond services for Creek County arrests. Serving the Creek County Justice Center in Sapulpa with typical release times of 2-4 hours after bond posting.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Creek County Bail Bonds', item: 'https://stillwaterokbailbonds.com/creek-county-bail-bonds' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do I bail someone out of Creek County Justice Center in Sapulpa?', acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. The Creek County Justice Center is located at 9175 Ridgeview Street, Sapulpa, OK 74066. Once we post the bond, most releases take 2-4 hours.' } },
+        { '@type': 'Question', name: 'How much does a bail bond cost in Creek County, Oklahoma?', acceptedAnswer: { '@type': 'Answer', text: 'Oklahoma bail bond premiums are regulated by state law. Angel Bail Bonds offers competitive rates with flexible payment options including cash, Visa, Mastercard, Zelle, Venmo, and financing plans.' } },
+        { '@type': 'Question', name: 'How long does it take to get released from Creek County Justice Center?', acceptedAnswer: { '@type': 'Answer', text: 'After Angel Bail Bonds posts your bond, most defendants are released within 2-4 hours. The facility processes approximately 4,500 inmates annually.' } },
+        { '@type': 'Question', name: 'When are arraignments held in Creek County?', acceptedAnswer: { '@type': 'Answer', text: 'Creek County arraignments are held at 9:00 AM at the Creek County Courthouse, 222 East Dewey Street, Sapulpa, OK 74066. Contact the Court Clerk at (918) 227-2525.' } },
+        { '@type': 'Question', name: 'Can I post bail for someone in Creek County from Stillwater?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Angel Bail Bonds is based in Stillwater, approximately 60 miles from Sapulpa. We can manage the entire process remotely by phone.' } },
+        { '@type': 'Question', name: 'Does Angel Bail Bonds serve all of Creek County?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve Sapulpa, Bristow, Drumright, Kellyville, Kiefer, Glenpool, Depew, Mannford, Oilton, Mounds, and Slick.' } },
+        { '@type': 'Question', name: 'What payment methods does Angel Bail Bonds accept for Creek County bonds?', acceptedAnswer: { '@type': 'Answer', text: 'We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing plans for those who qualify.' } },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Creek County Bail Bonds | Sapulpa OK | Angel Bail Bonds"
+  description="24/7 bail bond services for Creek County, Oklahoma. Serving Sapulpa, Bristow, Drumright, Kellyville and all Creek County. Fast jail release, 15+ years experience, 4.9 stars. Call (405) 614-3000."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Creek County, Oklahoma</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Creek County</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Sapulpa, Bristow, Drumright, Kellyville &amp; surrounding areas · 24/7 service · Serving all Creek County</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+
+  <!-- FACILITY + STEPS -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Creek County Justice Center Details</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 110px;">Address</td><td style="padding: 10px 0; color: var(--slate-700);">9175 Ridgeview St, Sapulpa, OK 74066</td></tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td><td style="padding: 10px 0; color: var(--slate-700);">(918) 227-6371</td></tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Alt Phone</td><td style="padding: 10px 0; color: var(--slate-700);">(918) 224-4964</td></tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Booking</td><td style="padding: 10px 0; color: var(--slate-700);">24 hours / 7 days a week</td></tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitation</td><td style="padding: 10px 0; color: var(--slate-700);">Mon–Fri 7:30 AM – 9:00 PM · Sat–Sun 7:30 AM – 2:30 PM</td></tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">County Seat</td><td style="padding: 10px 0; color: var(--slate-700);">Sapulpa</td></tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);"><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Population</td><td style="padding: 10px 0; color: var(--slate-700);">~72,930 (2020 Census)</td></tr>
+          <tr><td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Inmates/Year</td><td style="padding: 10px 0; color: var(--slate-700);">~4,500 processed annually</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Get a Bail Bond in Creek County</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;"><span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span><div><strong style="color: var(--slate-800);">Contact the jail</strong><br><span style="color: var(--slate-500);">Call (918) 227-6371 for inmate info &amp; bail amount</span></div></li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;"><span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span><div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · Available 24/7</span></div></li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;"><span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span><div><strong style="color: var(--slate-800);">Pay premium &amp; sign paperwork</strong><br><span style="color: var(--slate-500);">Cash, Visa, MC, Zelle, Venmo, or financing</span></div></li>
+          <li style="display: flex; gap: 12px;"><span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span><div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">Most releases in 2–4 hours after posting</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <style>@media (max-width: 640px) { section div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; gap: 32px !important; } }</style>
+  </section>
+
+  <!-- ANSWER CAPSULES -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">How Does Bail Work in Creek County, Oklahoma?</h2>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Angel Bail Bonds provides 24/7 bail bond services for anyone arrested in Creek County, Oklahoma. The Creek County Justice Center at 9175 Ridgeview Street in Sapulpa books inmates around the clock and processes approximately 4,500 inmates per year. After bail is set, Angel Bail Bonds can post the bond and most defendants are released within 2 to 4 hours.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">When someone is arrested in Creek County — whether in Sapulpa, Bristow, Drumright, or anywhere within the county — they are transported to the Creek County Justice Center for booking. The booking process includes identification verification, fingerprinting, a health screening, and entry of charges into the system. The facility opened in July 2005 and serves as the primary detention center for all Creek County law enforcement agencies.</p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Creek County uses a preset bond schedule for many routine misdemeanor charges, which means defendants can sometimes post bail without waiting for a court hearing. For felony charges or more serious offenses, a judge must set bail at arraignment. Oklahoma law requires that bail bond premiums are regulated by the state, and Angel Bail Bonds offers flexible payment options to make the process as affordable as possible.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">What Is the Creek County Courthouse Arraignment Schedule?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Creek County arraignments are held at 9:00 AM at the Creek County Courthouse, 222 East Dewey Street, Suite 201, Sapulpa, OK 74066. Contact the Court Clerk at (918) 227-2525 for specific docket dates. The District Attorney's Office can be reached at (918) 224-3921 at Suite 302 of the same building.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Creek County is part of Oklahoma's 24th Judicial District. The courthouse handles criminal, civil, and family cases for the entire county. If your loved one's bail requires a judge's approval, Angel Bail Bonds can coordinate with the court schedule to post the bond as quickly as possible after arraignment.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">How Do I Visit Someone in Creek County Justice Center?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Creek County Justice Center visitation hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Each inmate is allowed two 25-minute visits per week. Video visitation is available on weekends from 8:00 AM to 3:00 PM by appointment. Call (918) 227-6371 for scheduling.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Visitors should call ahead to confirm availability, as visitation hours may vary by housing unit and security classification. The Creek County Justice Center also offers onsite video visitation on Saturday and Sunday, with appointments that must be made at least 24 hours in advance. The Sapulpa Municipal Jail is a separate facility and can be reached at (918) 224-3862.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">What Are Common Bail Amounts in Creek County?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Creek County bail amounts vary by charge severity and the judge's discretion. Misdemeanor bonds typically range from $500 to $5,000, while felony bonds can range from $5,000 to $100,000 or more depending on the offense. Judges consider flight risk, community ties, criminal history, and charge severity when setting bail.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Angel Bail Bonds handles all bond amounts in Creek County. Whether the charge is a misdemeanor DUI, a drug offense, a domestic violence charge, or a serious felony, we can post the bond and begin the release process. Call (405) 614-3000 for a free quote on any Creek County bond — we answer 24 hours a day, 7 days a week, including holidays.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT CREEK COUNTY -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">About Creek County, Oklahoma</h2>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Creek County is located in northeastern Oklahoma with a population of approximately 72,930 residents as of the 2020 Census. The county seat is Sapulpa, a city of roughly 21,000 people located just southwest of Tulsa along historic Route 66. Creek County covers 956 square miles and is named after the Muscogee (Creek) Nation, which has a significant historical presence in the area.</p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Major communities in Creek County include Sapulpa, Bristow, Drumright, Kellyville, Kiefer, Glenpool, Depew, Mannford, Oilton, Mounds, and Slick. The county's proximity to Tulsa means a higher volume of arrests and bond activity than many rural Oklahoma counties. Whether the arrest occurs during a traffic stop on the Turner Turnpike, at a local event, or anywhere within the Creek County Sheriff's patrol area, Angel Bail Bonds can help secure a fast release.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">How Far Is Creek County from Stillwater?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>The Creek County Justice Center in Sapulpa is approximately 60 miles from Stillwater, a drive of about 55 to 70 minutes via US-412 West and US-75 South. Angel Bail Bonds handles Creek County bonds regularly and can coordinate posting remotely by phone, so you may not need to drive to Sapulpa at all.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Creek County is within our regular service area. In many cases, we can complete the entire bail bond process over the phone — you provide the inmate's information and payment, and we handle the rest directly with the Creek County Justice Center.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Creek County Bail Bonds FAQ</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Creek County Justice Center in Sapulpa?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, day or night. The Creek County Justice Center is at 9175 Ridgeview St, Sapulpa, OK 74066. Phone: (918) 227-6371. Once we post the bond, most releases take 2-4 hours.</p></details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Creek County?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Oklahoma bail bond premiums are regulated by state law. Angel Bail Bonds offers competitive rates with multiple payment options: cash, Visa, Mastercard, Zelle, Venmo, and financing for qualifying clients. Call (405) 614-3000 for a free quote.</p></details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does release from Creek County Justice Center take?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">After Angel Bail Bonds posts the bond, most defendants are released within 2-4 hours. The facility processes about 4,500 inmates annually. Actual release time depends on staffing, time of day, and booking volume.</p></details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">When are Creek County arraignments?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Arraignments are held at 9:00 AM at the Creek County Courthouse, 222 E. Dewey St, Suite 201, Sapulpa, OK 74066. Call the Court Clerk at (918) 227-2525 for specific docket dates.</p></details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I post bail from Stillwater for a Creek County arrest?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds is based in Stillwater, about 60 miles from the Creek County Justice Center. We can handle the entire process remotely by phone.</p></details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Does Angel Bail Bonds serve Bristow, Drumright, and Kellyville?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. We serve every community in Creek County, including Sapulpa, Bristow, Drumright, Kellyville, Kiefer, Glenpool, Depew, Mannford, Oilton, Mounds, and Slick.</p></details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);"><summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What payment methods are accepted for Creek County bail bonds?</summary><p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, and Venmo. We also offer financing plans for clients who qualify. Call (405) 614-3000 to discuss payment options.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORING COUNTIES -->
+  <section style="padding: 24px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Neighboring Counties We Serve</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Payne County →</a>
+        <a href="/lincoln-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County →</a>
+        <a href="/pawnee-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County →</a>
+        <a href="/logan-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Logan County →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAST UPDATED -->
+  <section style="padding: 16px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.75rem; color: var(--slate-300); text-align: right;">Last Updated: March 8, 2026</p>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Creek County Bail Bond?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Se habla español</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>
