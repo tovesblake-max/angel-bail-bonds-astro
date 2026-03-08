@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/logan-county-bail-bonds#business',
+      name: 'Angel Bail Bonds - Logan County',
+      url: 'https://stillwaterokbailbonds.com/logan-county-bail-bonds',
+      description: 'Professional 24/7 bail bond services for Logan County, Oklahoma. Serving Guthrie, Crescent, Coyle, Mulhall, and all Logan County communities. 15+ years experience, 4.9-star rating.',
+      telephone: '(405) 614-3000',
+      email: 'bailbondangel@gmail.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Logan County, Oklahoma' },
+      geo: { '@type': 'GeoCoordinates', latitude: 35.8789, longitude: -97.4253 },
+      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
+      openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' },
+      paymentAccepted: 'Cash, Visa, Mastercard, Zelle, Venmo',
+      priceRange: '$$',
+    },
+    {
+      '@type': 'Service',
+      name: 'Logan County Bail Bond Services',
+      provider: { '@id': 'https://stillwaterokbailbonds.com/logan-county-bail-bonds#business' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Logan County, Oklahoma' },
+      description: 'Fast, confidential bail bond services for Logan County arrests. Serving the Logan County Jail in Guthrie with typical release times of 1-4 hours after bond posting.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Logan County Bail Bonds', item: 'https://stillwaterokbailbonds.com/logan-county-bail-bonds' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I bail someone out of Logan County Jail in Guthrie?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We handle Logan County bonds daily and can often coordinate posting remotely. The Logan County Jail is located at 216 South Broad Street, Guthrie, OK 73044. Once we post the bond, most releases take 1-4 hours.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does a bail bond cost in Logan County, Oklahoma?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Oklahoma bail bond premiums are set by state regulation. Angel Bail Bonds offers competitive rates with flexible payment options including cash, Visa, Mastercard, Zelle, Venmo, and financing plans for qualifying clients.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to get released from Logan County Jail?',
+          acceptedAnswer: { '@type': 'Answer', text: 'After Angel Bail Bonds posts your bond at Logan County Jail, most defendants are released within 1-4 hours. Processing times depend on jail staffing, time of day, and booking volume. We work to expedite every release.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'When are arraignments held in Logan County?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Logan County arraignments are held on Tuesdays and Thursdays at 1:30 PM at the Logan County Courthouse, 301 E. Harrison Street, Guthrie, OK 73044. Contact the Court Clerk at (405) 282-0123 between 8:00 AM and 10:30 AM on the day of the requested appearance.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I post bail for someone in Logan County Jail from Stillwater?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Angel Bail Bonds is based in Stillwater, just 33 miles from Guthrie. We regularly post bonds at the Logan County Jail and can often handle the entire process remotely by phone, so you do not need to drive to Guthrie yourself.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Angel Bail Bonds serve all of Logan County?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve every community in Logan County including Guthrie, Crescent, Coyle, Mulhall, Orlando, Marshall, Cedar Valley, Cimarron City, and Meridian. We also handle bonds for anyone arrested by the Logan County Sheriff within the county limits.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'What payment methods does Angel Bail Bonds accept for Logan County bonds?',
+          acceptedAnswer: { '@type': 'Answer', text: 'We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing plans for those who qualify. We work with families to find affordable payment solutions so your loved one can be released quickly.' },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Logan County Bail Bonds | Guthrie OK | Angel Bail Bonds"
+  description="24/7 bail bond services for Logan County, Oklahoma. Serving Guthrie, Crescent, Coyle & all Logan County. Fast jail release, 15+ years experience, 4.9 stars. Call (405) 614-3000."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Logan County, Oklahoma</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Logan County</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Guthrie, Crescent, Coyle, Mulhall &amp; surrounding areas · 24/7 service · Only 33 miles from Stillwater</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+
+  <!-- FACILITY + STEPS -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Logan County Jail Details</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 110px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">216 S. Broad St, Guthrie, OK 73044</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">(405) 282-4100</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Booking</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">24 hours / 7 days a week</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitation</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Mon–Fri 7:30 AM – 9:00 PM · Sat–Sun 7:30 AM – 2:30 PM (by appointment, call ahead)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">County Seat</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Guthrie</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Population</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">~49,555 (2020 Census)</td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Get a Bail Bond in Logan County</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
+            <div><strong style="color: var(--slate-800);">Contact the jail</strong><br><span style="color: var(--slate-500);">Call (405) 282-4100 for inmate info &amp; bail amount</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
+            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · Available 24/7</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+            <div><strong style="color: var(--slate-800);">Pay premium &amp; sign paperwork</strong><br><span style="color: var(--slate-500);">Cash, Visa, MC, Zelle, Venmo, or financing</span></div>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
+            <div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">Most releases in 1–4 hours after posting</span></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 640px) {
+        section div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- ANSWER CAPSULE: What is bail like in Logan County? -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">How Does Bail Work in Logan County, Oklahoma?</h2>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Angel Bail Bonds provides 24/7 bail bond services for anyone arrested in Logan County, Oklahoma. The Logan County Jail at 216 South Broad Street in Guthrie books inmates around the clock. After bail is set, Angel Bail Bonds can post the bond and most defendants are released within 1 to 4 hours. We are located just 33 miles from Guthrie and handle Logan County bonds daily.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">When someone is arrested in Logan County, they are transported to the Logan County Jail in Guthrie for booking. The booking process includes identification verification, fingerprinting, a health screening, and entry of charges into the system. Once booking is complete and bail has been set — either through the preset bond schedule or by a judge — a bail bond can be posted to secure release.</p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Logan County uses a preset bond schedule for many routine charges, which means defendants can post bail without waiting for a court appearance. For more serious offenses or felony charges, a judge must set bail at an arraignment hearing. Logan County arraignments are held on Tuesdays and Thursdays at 1:30 PM at the Logan County Courthouse, 301 E. Harrison Street, Guthrie, OK 73044.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">What Is the Logan County Courthouse Arraignment Schedule?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Logan County arraignments are held every Tuesday and Thursday at 1:30 PM at the Logan County Courthouse, 301 E. Harrison Street, Guthrie, OK 73044. To appear on the docket, contact the Court Clerk at (405) 282-0123 between 8:00 AM and 10:30 AM on the day of the requested appearance.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">The historic Logan County Courthouse — built in 1907 and originally serving as Oklahoma's first State Capitol from 1907 to 1910 — handles all criminal, civil, and family domestic cases for Logan County. If your loved one's bail requires a judge's approval, Angel Bail Bonds can coordinate with the court schedule to post the bond as quickly as possible after arraignment.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">How Do I Visit Someone in Logan County Jail?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>Logan County Jail visitation is by appointment only. Hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Call the jail at (405) 282-4100 to schedule a visit. An online inmate search is available through the Logan County Sheriff's Office website.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Visitors must call ahead to schedule an appointment — walk-in visits are not permitted. If you need to check on an inmate's status or find out their bail amount, the Logan County Sheriff's Office also offers an online inmate search tool. You can also reach the Records Division at 209 W. Oklahoma Ave., Guthrie, OK 73044 for in-person inquiries.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT LOGAN COUNTY -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">About Logan County, Oklahoma</h2>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Logan County is located in central Oklahoma with a population of approximately 49,555 residents as of the 2020 Census. The county seat is Guthrie, a historic city of roughly 11,000 people that served as Oklahoma's first state capital from 1907 to 1910. The county covers 749 square miles and is named after U.S. Senator John A. Logan of Illinois.</p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">In addition to Guthrie, Logan County includes the communities of Crescent, Coyle, Mulhall, Orlando, Marshall, Cedar Valley, Cimarron City, and Meridian. Whether the arrest occurs during a traffic stop on I-35, at a Guthrie city event, or anywhere within the Logan County Sheriff's 749-square-mile patrol area, Angel Bail Bonds can help secure a fast release.</p>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">How Far Is Logan County from Stillwater?</h3>
+      <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.7; margin-bottom: 14px;"><strong>The Logan County Jail in Guthrie is approximately 33 miles from Stillwater, a drive of about 33 to 40 minutes via US-177 South and SH-33 West. Angel Bail Bonds handles Logan County bonds regularly and can often coordinate posting remotely by phone, so you may not need to drive to Guthrie at all.</strong></p>
+      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Logan County is one of our closest service areas. Our proximity means we can respond quickly to Logan County arrests at any hour. In many cases, we can complete the entire bail bond process over the phone — you provide the inmate's information and payment, and we handle the rest directly with the Logan County Jail.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Logan County Bail Bonds FAQ</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Logan County Jail in Guthrie?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, day or night. We handle Logan County bonds daily and can often post remotely. The Logan County Jail is at 216 S. Broad St, Guthrie, OK 73044. Phone: (405) 282-4100. Once we post the bond, most releases take 1-4 hours.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Logan County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Oklahoma bail bond premiums are regulated by state law. Angel Bail Bonds offers competitive rates with multiple payment options: cash, Visa, Mastercard, Zelle, Venmo, and financing for qualifying clients. Call us at (405) 614-3000 for a free quote on any Logan County bond.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does release from Logan County Jail take?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">After Angel Bail Bonds posts the bond, most defendants are released from Logan County Jail within 1-4 hours. Actual release time depends on jail staffing levels, time of day, and current booking volume. We work to expedite every release.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">When are Logan County arraignments?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Arraignments are held Tuesdays and Thursdays at 1:30 PM at the Logan County Courthouse, 301 E. Harrison St, Guthrie, OK 73044. Call the Court Clerk at (405) 282-0123 between 8:00 AM and 10:30 AM on the same day to get on the docket.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I post bail from Stillwater for a Logan County arrest?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds is based in Stillwater, just 33 miles from the Logan County Jail in Guthrie. We can often handle the entire process remotely by phone. You provide the inmate details and payment, and we coordinate directly with the jail.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Does Angel Bail Bonds serve Crescent, Coyle, and Mulhall?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. We serve every community in Logan County, including Guthrie, Crescent, Coyle, Mulhall, Orlando, Marshall, Cedar Valley, Cimarron City, and Meridian. Anyone arrested within Logan County is booked at the Logan County Jail in Guthrie, and we can post bond there 24/7.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What payment methods are accepted for Logan County bail bonds?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, and Venmo. We also offer financing plans for clients who qualify. Our goal is to remove financial barriers so your loved one can be released from Logan County Jail as quickly as possible. Call (405) 614-3000 to discuss payment options.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORING COUNTIES -->
+  <section style="padding: 24px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Neighboring Counties We Serve</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Payne County →</a>
+        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Noble County →</a>
+        <a href="/lincoln-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County →</a>
+        <a href="/kay-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Kay County →</a>
+        <a href="/pawnee-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAST UPDATED -->
+  <section style="padding: 16px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.75rem; color: var(--slate-300); text-align: right;">Last Updated: March 8, 2026</p>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Logan County Bail Bond?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Se habla español</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>
