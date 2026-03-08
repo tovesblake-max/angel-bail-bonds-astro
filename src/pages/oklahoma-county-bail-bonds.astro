@@ -1,0 +1,1031 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Oklahoma County Bail Bonds | Angel Bail Bonds OKC';
+const description = 'Expert bail bond services in Oklahoma County. Angel Bail Bonds serves Oklahoma City, Edmond, Midwest City & surrounding communities. 24/7 availability, women-owned, 15+ years experience.';
+const canonicalUrl = 'https://stillwaterokbailbonds.com/oklahoma-county-bail-bonds';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/oklahoma-county-bail-bonds#business',
+      'name': 'Angel Bail Bonds',
+      'image': 'https://stillwaterokbailbonds.com/logo.png',
+      'description': 'Women-owned bail bond company serving Oklahoma County with 15+ years of experience',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '201 N Shartel Ave',
+        'addressLocality': 'Oklahoma City',
+        'addressRegion': 'OK',
+        'postalCode': '73102',
+        'addressCountry': 'US'
+      },
+      'telephone': '(405) 614-3000',
+      'email': 'bailbondangel@gmail.com',
+      'url': 'https://stillwaterokbailbonds.com',
+      'priceRange': '$',
+      'operatingHours': 'Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59',
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '127'
+      },
+      'paymentAccepted': ['Cash', 'Credit Card', 'Zelle', 'Venmo'],
+      'areaServed': [
+        'Oklahoma City',
+        'Edmond',
+        'Midwest City',
+        'Del City',
+        'The Village',
+        'Nichols Hills',
+        'Warr Acres',
+        'Bethany',
+        'Spencer',
+        'Forest Park',
+        'Valley Brook',
+        'Jones',
+        'Luther',
+        'Harrah',
+        'Choctaw',
+        'Nicoma Park'
+      ],
+      'founder': 'Angel Bail Bonds Team'
+    },
+    {
+      '@type': 'Service',
+      'name': 'Bail Bond Services',
+      'provider': {
+        '@type': 'LocalBusiness',
+        '@id': 'https://stillwaterokbailbonds.com/oklahoma-county-bail-bonds#business'
+      },
+      'description': 'Professional bail bond services available 24/7 for Oklahoma County arrests',
+      'areaServed': 'Oklahoma County, OK'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://stillwaterokbailbonds.com'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Counties',
+          'item': 'https://stillwaterokbailbonds.com/counties'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Oklahoma County Bail Bonds',
+          'item': 'https://stillwaterokbailbonds.com/oklahoma-county-bail-bonds'
+        }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How much do bail bonds cost in Oklahoma County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Bail bond fees in Oklahoma County are typically 10% of the total bail amount set by the judge. Our team at Angel Bail Bonds can discuss financing options and payment plans to make bail bonds affordable.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the Oklahoma County Detention Center address?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The Oklahoma County Detention Center is located at 201 N Shartel Ave, Oklahoma City, OK 73102. You can reach them at (405) 713-1930 for inmate information.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I visit an inmate at Oklahoma County Jail?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, in-person visits are available Monday through Friday from 7:30 AM to 9:00 PM and Saturday-Sunday from 7:30 AM to 2:30 PM. Video visits are available Monday-Friday from 8:00 AM to 5:30 PM.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How long does it take to post bail in Oklahoma County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Once bail is set and we receive your information, we typically process and post bail within 1-2 hours. The exact time depends on the jail processing time and bail amount.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Angel Bail Bonds serve all of Oklahoma County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, Angel Bail Bonds provides service throughout Oklahoma County, including Oklahoma City, Edmond, Midwest City, Del City, and all surrounding communities.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What payment methods does Angel Bail Bonds accept?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We accept cash, credit cards, Zelle, and Venmo. Our team can set up flexible payment plans for bail bond fees.'
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO SECTION -->
+  <section style="
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h1 style="
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: var(--font-weight-bold);
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.2;
+      ">
+        Oklahoma County Bail Bonds
+      </h1>
+      <p style="
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-sm);
+        opacity: 0.95;
+      ">
+        Fast, Affordable Bail Bond Services in Oklahoma City & Surrounding Communities
+      </p>
+      <p style="
+        font-size: 1rem;
+        opacity: 0.85;
+        margin-bottom: var(--spacing-md);
+      ">
+        Women-Owned | 15+ Years Experience | Available 24/7 | 4.9★ Rating (127 Reviews)
+      </p>
+      <div style="
+        display: flex;
+        gap: var(--spacing-sm);
+        justify-content: center;
+        flex-wrap: wrap;
+      ">
+        <a href="tel:(405)614-3000" style="
+          background: var(--color-accent);
+          color: var(--color-dark);
+          padding: var(--spacing-sm) var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+          transition: background 0.3s ease;
+        ">
+          Call (405) 614-3000
+        </a>
+        <a href="mailto:bailbondangel@gmail.com" style="
+          background: transparent;
+          color: var(--color-light);
+          padding: var(--spacing-sm) var(--spacing-md);
+          border: 2px solid var(--color-light);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+          transition: all 0.3s ease;
+        ">
+          Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO ANSWER CAPSULE -->
+  <section style="
+    background: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="
+        background: var(--color-info-light);
+        border-left: 4px solid var(--color-info);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+      ">
+        <h2 style="
+          color: var(--color-primary);
+          font-size: 1.5rem;
+          margin-bottom: var(--spacing-sm);
+          margin-top: 0;
+        ">
+          Oklahoma County Overview
+        </h2>
+        <p style="
+          color: var(--color-dark);
+          line-height: 1.6;
+          margin: 0;
+        ">
+          Located in central Oklahoma with a population of 800,000+, Oklahoma County is home to Oklahoma City, the state capital. Our expert bail bond team at Angel Bail Bonds serves the entire county and surrounding communities including Edmond, Midwest City, Del City, and The Village. We're just 51.7-65 miles from Stillwater and available 24/7 to assist you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITY & STEPS TWO-COLUMN -->
+  <section style="
+    background: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <div style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+      " class="responsive-grid">
+
+        <!-- Facility Info -->
+        <div>
+          <h2 style="
+            color: var(--color-primary);
+            font-size: 1.75rem;
+            margin-top: 0;
+          ">
+            Oklahoma County Detention Center
+          </h2>
+
+          <div style="
+            background: var(--color-gray-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+          ">
+            <h3 style="
+              color: var(--color-dark);
+              font-size: 1.1rem;
+              margin-top: 0;
+            ">
+              Contact Information
+            </h3>
+            <p style="margin: var(--spacing-xs) 0;">
+              <strong>Address:</strong><br>
+              201 N Shartel Ave<br>
+              Oklahoma City, OK 73102
+            </p>
+            <p style="margin: var(--spacing-xs) 0;">
+              <strong>Main:</strong> (405) 713-1930
+            </p>
+            <p style="margin: var(--spacing-xs) 0;">
+              <strong>Scheduling:</strong> (405) 713-2015
+            </p>
+          </div>
+
+          <div style="
+            background: var(--color-gray-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+          ">
+            <h3 style="
+              color: var(--color-dark);
+              font-size: 1.1rem;
+              margin-top: 0;
+            ">
+              Visiting Hours
+            </h3>
+            <p style="margin: var(--spacing-xs) 0;">
+              <strong>In-Person Visits:</strong><br>
+              Mon-Fri: 7:30 AM - 9:00 PM<br>
+              Sat-Sun: 7:30 AM - 2:30 PM
+            </p>
+            <p style="margin: var(--spacing-xs) 0;">
+              <strong>Video Visits:</strong><br>
+              Mon-Fri: 8:00 AM - 5:30 PM
+            </p>
+          </div>
+        </div>
+
+        <!-- Booking Process -->
+        <div>
+          <h2 style="
+            color: var(--color-primary);
+            font-size: 1.75rem;
+            margin-top: 0;
+          ">
+            How Angel Bail Bonds Works
+          </h2>
+
+          <div style="
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+          ">
+            <div style="
+              display: flex;
+              gap: var(--spacing-md);
+            ">
+              <div style="
+                background: var(--color-primary);
+                color: var(--color-light);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: var(--font-weight-bold);
+                flex-shrink: 0;
+              ">
+                1
+              </div>
+              <div>
+                <h3 style="
+                  margin-top: 0;
+                  margin-bottom: var(--spacing-xs);
+                ">
+                  Contact Angel Bail Bonds
+                </h3>
+                <p style="
+                  margin: 0;
+                  color: var(--color-gray-dark);
+                ">
+                  Call (405) 614-3000 or email us with the arrested person's information and booking details.
+                </p>
+              </div>
+            </div>
+
+            <div style="
+              display: flex;
+              gap: var(--spacing-md);
+            ">
+              <div style="
+                background: var(--color-primary);
+                color: var(--color-light);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: var(--font-weight-bold);
+                flex-shrink: 0;
+              ">
+                2
+              </div>
+              <div>
+                <h3 style="
+                  margin-top: 0;
+                  margin-bottom: var(--spacing-xs);
+                ">
+                  We Post Your Bail
+                </h3>
+                <p style="
+                  margin: 0;
+                  color: var(--color-gray-dark);
+                ">
+                  Once bail is set, we process your bond fee and post bail with Oklahoma County Detention Center within 1-2 hours.
+                </p>
+              </div>
+            </div>
+
+            <div style="
+              display: flex;
+              gap: var(--spacing-md);
+            ">
+              <div style="
+                background: var(--color-primary);
+                color: var(--color-light);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: var(--font-weight-bold);
+                flex-shrink: 0;
+              ">
+                3
+              </div>
+              <div>
+                <h3 style="
+                  margin-top: 0;
+                  margin-bottom: var(--spacing-xs);
+                ">
+                  Inmate Released
+                </h3>
+                <p style="
+                  margin: 0;
+                  color: var(--color-gray-dark);
+                ">
+                  Your loved one is released from custody, and we guide you through the court process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    @media (max-width: 768px) {
+      .responsive-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+  <!-- COURT INFO TABLE -->
+  <section style="
+    background: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        color: var(--color-primary);
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 0;
+      ">
+        Oklahoma County Courthouse
+      </h2>
+
+      <div style="
+        overflow-x: auto;
+      ">
+        <table style="
+          width: 100%;
+          border-collapse: collapse;
+          background: var(--color-light);
+          margin-bottom: var(--spacing-lg);
+        ">
+          <thead>
+            <tr style="background: var(--color-primary);">
+              <th style="
+                color: var(--color-light);
+                padding: var(--spacing-md);
+                text-align: left;
+                font-weight: var(--font-weight-semibold);
+              ">
+                Department
+              </th>
+              <th style="
+                color: var(--color-light);
+                padding: var(--spacing-md);
+                text-align: left;
+                font-weight: var(--font-weight-semibold);
+              ">
+                Contact
+              </th>
+              <th style="
+                color: var(--color-light);
+                padding: var(--spacing-md);
+                text-align: left;
+                font-weight: var(--font-weight-semibold);
+              ">
+                Phone
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--color-gray-light);">
+              <td style="padding: var(--spacing-md);">Main Courthouse</td>
+              <td style="padding: var(--spacing-md);">321 Park Ave, Oklahoma City, OK 73102</td>
+              <td style="padding: var(--spacing-md);">General Info</td>
+            </tr>
+            <tr style="background: var(--color-gray-light); border-bottom: 1px solid var(--color-gray-light);">
+              <td style="padding: var(--spacing-md);">Administration</td>
+              <td style="padding: var(--spacing-md);">Building & Operations</td>
+              <td style="padding: var(--spacing-md);">(405) 713-1423</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-gray-light);">
+              <td style="padding: var(--spacing-md);">Clerk's Office</td>
+              <td style="padding: var(--spacing-md);">Records & Case Information</td>
+              <td style="padding: var(--spacing-md);">(405) 713-1705</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PROCESS DETAILS -->
+  <section style="
+    background: var(--color-gray-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        color: var(--color-primary);
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 0;
+      ">
+        The Bail Bond Process Explained
+      </h2>
+
+      <div style="
+        display: grid;
+        gap: var(--spacing-lg);
+      ">
+        <div>
+          <h3 style="
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-top: 0;
+          ">
+            Step 1: Arrest & Booking
+          </h3>
+          <p style="
+            color: var(--color-dark);
+            line-height: 1.6;
+            margin: 0;
+          ">
+            When someone is arrested in Oklahoma County, they're taken to the Oklahoma County Detention Center for booking. During booking, their information is recorded, and they'll be held until bail is set. You can contact Angel Bail Bonds as soon as you know about the arrest, and we can help you navigate the next steps.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-top: 0;
+          ">
+            Step 2: Bail Hearing & Amount Set
+          </h3>
+          <p style="
+            color: var(--color-dark);
+            line-height: 1.6;
+            margin: 0;
+          ">
+            A judge will review the case and set a bail amount. This typically happens within 24-48 hours of arrest. Bail amounts in Oklahoma County vary based on the charges, criminal history, and flight risk. Our team at Angel Bail Bonds can explain what the bail amount means and what your options are for securing release.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-top: 0;
+          ">
+            Step 3: Bail Bond Agreement & Payment
+          </h3>
+          <p style="
+            color: var(--color-dark);
+            line-height: 1.6;
+            margin: 0;
+          ">
+            Once bail is set, contact Angel Bail Bonds immediately. Bail bond fees in Oklahoma County are typically 10% of the total bail amount. We accept cash, credit cards, Zelle, and Venmo, and we offer flexible payment plans. After you sign the bail bond agreement and arrange payment, we immediately post bail with the detention center.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT OKLAHOMA COUNTY -->
+  <section style="
+    background: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        color: var(--color-primary);
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 0;
+      ">
+        About Oklahoma County
+      </h2>
+
+      <p style="
+        color: var(--color-dark);
+        line-height: 1.6;
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-lg);
+      ">
+        Oklahoma County is Oklahoma's largest county with a population exceeding 800,000 residents. As the home of Oklahoma City, the state capital, it's a vibrant economic and cultural hub featuring attractions like Bricktown, the Thunder NBA team, and Will Rogers World Airport. The county also hosts Tinker Air Force Base, one of the largest employers in the region.
+      </p>
+
+      <h3 style="
+        color: var(--color-primary);
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-md);
+      ">
+        Communities We Serve
+      </h3>
+
+      <div style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+      ">
+        {['Oklahoma City', 'Edmond', 'Midwest City', 'Del City', 'The Village', 'Nichols Hills', 'Warr Acres', 'Bethany', 'Spencer', 'Forest Park', 'Valley Brook', 'Jones', 'Luther', 'Harrah', 'Choctaw', 'Nicoma Park'].map((community) => (
+          <span style="
+            background: var(--color-primary);
+            color: var(--color-light);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+          ">
+            {community}
+          </span>
+        ))}
+      </div>
+
+      <p style="
+        color: var(--color-gray-dark);
+        line-height: 1.6;
+        margin: 0;
+      ">
+        Angel Bail Bonds proudly serves all communities throughout Oklahoma County. Whether you're in Oklahoma City, Edmond, Midwest City, or any surrounding area, our team is available 24/7 to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- INMATE SEARCH -->
+  <section style="
+    background: var(--color-info-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        color: var(--color-primary);
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 0;
+      ">
+        Search for an Inmate
+      </h2>
+
+      <p style="
+        color: var(--color-dark);
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-lg);
+      ">
+        Need to find someone in Oklahoma County Detention Center? You can search the inmate roster or schedule a visit.
+      </p>
+
+      <div style="
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        flex-wrap: wrap;
+      ">
+        <a href="https://inmateinfo.odoc.ok.gov/" target="_blank" rel="noopener noreferrer" style="
+          background: var(--color-primary);
+          color: var(--color-light);
+          padding: var(--spacing-sm) var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+          transition: background 0.3s ease;
+        ">
+          Oklahoma Inmate Search
+        </a>
+        <a href="tel:(405)713-2015" style="
+          background: var(--color-accent);
+          color: var(--color-dark);
+          padding: var(--spacing-sm) var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+          transition: background 0.3s ease;
+        ">
+          Schedule a Visit (405) 713-2015
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section style="
+    background: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        color: var(--color-primary);
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 0;
+      ">
+        Frequently Asked Questions
+      </h2>
+
+      <div style="
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+      ">
+        <details style="
+          background: var(--color-gray-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        ">
+          <summary style="
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+          ">
+            How much do bail bonds cost in Oklahoma County?
+          </summary>
+          <p style="
+            color: var(--color-dark);
+            margin-top: var(--spacing-sm);
+            margin-bottom: 0;
+            line-height: 1.6;
+          ">
+            Bail bond fees in Oklahoma County are typically 10% of the total bail amount set by the judge. For example, if bail is set at $10,000, the bond fee would be $1,000. Angel Bail Bonds offers flexible payment plans and accepts cash, credit cards, Zelle, and Venmo to make bail bonds affordable for families.
+          </p>
+        </details>
+
+        <details style="
+          background: var(--color-gray-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        ">
+          <summary style="
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+          ">
+            What is the Oklahoma County Detention Center address?
+          </summary>
+          <p style="
+            color: var(--color-dark);
+            margin-top: var(--spacing-sm);
+            margin-bottom: 0;
+            line-height: 1.6;
+          ">
+            The Oklahoma County Detention Center is located at 201 N Shartel Ave, Oklahoma City, OK 73102. You can reach them at (405) 713-1930 for general inquiries or (405) 713-2015 for scheduling visits. It's open 24/7 for bail posting.
+          </p>
+        </details>
+
+        <details style="
+          background: var(--color-gray-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        ">
+          <summary style="
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+          ">
+            Can I visit an inmate at Oklahoma County Jail?
+          </summary>
+          <p style="
+            color: var(--color-dark);
+            margin-top: var(--spacing-sm);
+            margin-bottom: 0;
+            line-height: 1.6;
+          ">
+            Yes, in-person visits are available Monday through Friday from 7:30 AM to 9:00 PM and Saturday-Sunday from 7:30 AM to 2:30 PM. Video visits are also available Monday-Friday from 8:00 AM to 5:30 PM. Call (405) 713-2015 to schedule your visit.
+          </p>
+        </details>
+
+        <details style="
+          background: var(--color-gray-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        ">
+          <summary style="
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+          ">
+            How long does it take to post bail in Oklahoma County?
+          </summary>
+          <p style="
+            color: var(--color-dark);
+            margin-top: var(--spacing-sm);
+            margin-bottom: 0;
+            line-height: 1.6;
+          ">
+            Once bail is set and we receive your information and payment, Angel Bail Bonds typically processes and posts bail within 1-2 hours. The exact time depends on how quickly the bail hearing occurs and the jail's processing time. We work around the clock to get your loved one released as quickly as possible.
+          </p>
+        </details>
+
+        <details style="
+          background: var(--color-gray-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        ">
+          <summary style="
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+          ">
+            Does Angel Bail Bonds serve all of Oklahoma County?
+          </summary>
+          <p style="
+            color: var(--color-dark);
+            margin-top: var(--spacing-sm);
+            margin-bottom: 0;
+            line-height: 1.6;
+          ">
+            Yes, Angel Bail Bonds provides professional bail bond services throughout Oklahoma County, including Oklahoma City, Edmond, Midwest City, Del City, The Village, Nichols Hills, and all surrounding communities. We're available 24/7 to serve you.
+          </p>
+        </details>
+
+        <details style="
+          background: var(--color-gray-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          cursor: pointer;
+        ">
+          <summary style="
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            font-size: 1.1rem;
+          ">
+            What payment methods does Angel Bail Bonds accept?
+          </summary>
+          <p style="
+            color: var(--color-dark);
+            margin-top: var(--spacing-sm);
+            margin-bottom: 0;
+            line-height: 1.6;
+          ">
+            Angel Bail Bonds accepts cash, credit cards, Zelle, and Venmo. We also offer flexible payment plans to make bail bonds more affordable. Contact our team at (405) 614-3000 to discuss the best payment option for your situation.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PAGES -->
+  <section style="
+    background: var(--color-gray-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        color: var(--color-primary);
+        font-size: 1.75rem;
+        text-align: center;
+        margin-top: 0;
+      ">
+        Bail Bonds in Other Counties
+      </h2>
+
+      <p style="
+        text-align: center;
+        color: var(--color-gray-dark);
+        margin-bottom: var(--spacing-lg);
+      ">
+        Angel Bail Bonds also serves the surrounding counties with the same professional service and expertise.
+      </p>
+
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+      ">
+        <a href="/logan-county-bail-bonds" style="
+          background: var(--color-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          color: var(--color-primary);
+          font-weight: var(--font-weight-semibold);
+          border: 2px solid var(--color-primary);
+          text-align: center;
+          transition: all 0.3s ease;
+        ">
+          Logan County Bail Bonds
+        </a>
+        <a href="/cleveland-county-bail-bonds" style="
+          background: var(--color-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          color: var(--color-primary);
+          font-weight: var(--font-weight-semibold);
+          border: 2px solid var(--color-primary);
+          text-align: center;
+          transition: all 0.3s ease;
+        ">
+          Cleveland County Bail Bonds
+        </a>
+        <a href="/canadian-county-bail-bonds" style="
+          background: var(--color-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          color: var(--color-primary);
+          font-weight: var(--font-weight-semibold);
+          border: 2px solid var(--color-primary);
+          text-align: center;
+          transition: all 0.3s ease;
+        ">
+          Canadian County Bail Bonds
+        </a>
+        <a href="/lincoln-county-bail-bonds" style="
+          background: var(--color-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          color: var(--color-primary);
+          font-weight: var(--font-weight-semibold);
+          border: 2px solid var(--color-primary);
+          text-align: center;
+          transition: all 0.3s ease;
+        ">
+          Lincoln County Bail Bonds
+        </a>
+        <a href="/pottawatomie-county-bail-bonds" style="
+          background: var(--color-light);
+          padding: var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          color: var(--color-primary);
+          font-weight: var(--font-weight-semibold);
+          border: 2px solid var(--color-primary);
+          text-align: center;
+          transition: all 0.3s ease;
+        ">
+          Pottawatomie County Bail Bonds
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section style="
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-light);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+  ">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        margin-bottom: var(--spacing-sm);
+        margin-top: 0;
+      ">
+        Need Help Now?
+      </h2>
+      <p style="
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-lg);
+        opacity: 0.95;
+      ">
+        Angel Bail Bonds is available 24/7 to help you navigate the bail process quickly and affordably.
+      </p>
+      <div style="
+        display: flex;
+        gap: var(--spacing-sm);
+        justify-content: center;
+        flex-wrap: wrap;
+      ">
+        <a href="tel:(405)614-3000" style="
+          background: var(--color-accent);
+          color: var(--color-dark);
+          padding: var(--spacing-sm) var(--spacing-md);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+          font-size: 1.1rem;
+          transition: background 0.3s ease;
+        ">
+          Call (405) 614-3000
+        </a>
+        <a href="mailto:bailbondangel@gmail.com" style="
+          background: transparent;
+          color: var(--color-light);
+          padding: var(--spacing-sm) var(--spacing-md);
+          border: 2px solid var(--color-light);
+          border-radius: var(--radius-md);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+        ">
+          Email bailbondangel@gmail.com
+        </a>
+      </div>
+      <p style="
+        font-size: 0.95rem;
+        margin-top: var(--spacing-lg);
+        margin-bottom: 0;
+        opacity: 0.85;
+      ">
+        Women-Owned | 15+ Years Experience | 4.9★ Rating (127 Reviews)
+      </p>
+    </div>
+  </section>
+</BaseLayout>

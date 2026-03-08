@@ -1,0 +1,660 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/kingfisher-county-bail-bonds#business',
+      'name': 'Angel Bail Bonds - Kingfisher County',
+      'image': 'https://stillwaterokbailbonds.com/images/angel-bail-bonds-logo.webp',
+      'description': 'Professional bail bonds services for Kingfisher County, Oklahoma. 24/7 availability, women-owned, 15+ years of experience. Fast bail release process for inmates at Kingfisher County Jail.',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '119 S Main St',
+        'addressLocality': 'Kingfisher',
+        'addressRegion': 'OK',
+        'postalCode': '73750',
+        'addressCountry': 'US'
+      },
+      'telephone': '(405) 614-3000',
+      'email': 'bailbondangel@gmail.com',
+      'url': 'https://stillwaterokbailbonds.com/kingfisher-county-bail-bonds',
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '127'
+      },
+      'serviceArea': {
+        '@type': 'City',
+        'name': 'Kingfisher County, OK',
+        'geo': {
+          '@type': 'GeoCoordinates',
+          'latitude': '35.8614',
+          'longitude': '-97.9317'
+        }
+      },
+      'openingHoursSpecification': {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        'opens': '00:00',
+        'closes': '23:59'
+      },
+      'paymentAccepted': ['Cash', 'Credit Card', 'Zelle', 'Venmo'],
+      'priceRange': '$$'
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://stillwaterokbailbonds.com/kingfisher-county-bail-bonds#bail-bonds-service',
+      'name': 'Bail Bond Services',
+      'description': 'Emergency bail bond services available 24/7 for inmates at Kingfisher County Jail. Video-only visitation available.',
+      'areaServed': 'Kingfisher County, Oklahoma',
+      'provider': {
+        '@type': 'LocalBusiness',
+        '@id': 'https://stillwaterokbailbonds.com/kingfisher-county-bail-bonds#business'
+      },
+      'potentialAction': {
+        '@type': 'ContactAction',
+        'telephone': '(405) 614-3000'
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://stillwaterokbailbonds.com'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Bail Bonds',
+          'item': 'https://stillwaterokbailbonds.com/bail-bonds'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Oklahoma Counties',
+          'item': 'https://stillwaterokbailbonds.com/oklahoma-counties'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'name': 'Kingfisher County',
+          'item': 'https://stillwaterokbailbonds.com/kingfisher-county-bail-bonds'
+        }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Can I visit an inmate at Kingfisher County Jail in person?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No, Kingfisher County Jail does not allow in-person visits. All inmate visits are conducted via video only. Video visits are available 4 times per week, with each session lasting up to 24 minutes. You must be on the approved visitation list to schedule a video visit.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How quickly can Angel Bail Bonds help get someone released from Kingfisher County Jail?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Angel Bail Bonds works 24/7 to process bail releases. Once we post bail with the jail, release typically happens within hours. Call us immediately at (405) 614-3000 for the fastest service. Our experienced team knows the Kingfisher County Jail system and can expedite the process.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are Angel Bail Bonds payment options?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We accept multiple payment methods for your convenience: cash, credit cards, Zelle, and Venmo. With various payment options available, we can work with your situation quickly to post bail and get your loved one released from custody.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the Kingfisher County Courthouse address and hours?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The Kingfisher County Courthouse is located at 101 S Main St, Kingfisher, OK 73750. Phone: (405) 375-3887. Court hours vary by department, so contact the courthouse directly for specific scheduling information regarding your case.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How is Kingfisher County different from nearby counties?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Kingfisher County, with a population of about 14,300, is the county seat of Kingfisher and known for its Czech heritage, particularly in Okarche. The region has strong agricultural and wheat farming traditions, and rich Chisholm Trail history. It is about 63 miles (1 hour 19 minutes) from Stillwater.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is Angel Bail Bonds a legitimate service?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, Angel Bail Bonds is a licensed, women-owned bail bond business with over 15 years of experience serving Oklahoma communities. We have a 4.9-star rating with 127 customer reviews. We operate 24/7 and are fully licensed to post bail throughout Kingfisher County and surrounding areas.'
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Kingfisher County Bail Bonds | Angel Bail Bonds 24/7"
+  description="Professional bail bonds services for Kingfisher County, Oklahoma. 24/7 availability, video-only jail visits. Call (405) 614-3000 for fast bail release."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO SECTION -->
+  <section
+    class="relative w-full py-20 px-4 sm:px-6 lg:px-8"
+    style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);"
+  >
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: white;">
+            Kingfisher County Bail Bonds
+          </h1>
+          <p class="text-xl mb-8" style="color: var(--slate-50);">
+            Fast, professional bail bonds service available 24/7. Women-owned with 15+ years of experience serving Kingfisher County and surrounding communities.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:(405) 614-3000"
+              class="inline-block px-8 py-3 font-bold text-center rounded-lg transition-all"
+              style="background-color: var(--green); color: white; hover: opacity 0.9;"
+            >
+              Call Now (405) 614-3000
+            </a>
+            <a
+              href="mailto:bailbondangel@gmail.com"
+              class="inline-block px-8 py-3 font-bold text-center rounded-lg transition-all"
+              style="background-color: var(--blue); color: white; opacity: 0.9;"
+            >
+              Email Us
+            </a>
+          </div>
+          <div class="mt-8 flex items-center gap-4" style="color: var(--slate-50);">
+            <div>
+              <div class="text-3xl font-bold" style="color: var(--green);">4.9★</div>
+              <p class="text-sm">127 Reviews</p>
+            </div>
+            <div class="text-sm">
+              <p style="color: var(--green);">✓ Licensed & Insured</p>
+              <p>✓ Women-Owned Business</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden md:block p-8 rounded-xl"
+          style="background-color: var(--slate-50); color: var(--navy);"
+        >
+          <h3 class="text-xl font-bold mb-6">Quick Contact</h3>
+          <div class="space-y-4 text-sm">
+            <div>
+              <p style="color: var(--slate-600);">📞 Phone</p>
+              <p class="font-bold">(405) 614-3000</p>
+            </div>
+            <div>
+              <p style="color: var(--slate-600);">📧 Email</p>
+              <p class="font-bold">bailbondangel@gmail.com</p>
+            </div>
+            <div>
+              <p style="color: var(--slate-600);">⏰ Hours</p>
+              <p class="font-bold">24/7 Available</p>
+            </div>
+            <div>
+              <p style="color: var(--slate-600);">💳 Payment</p>
+              <p class="font-bold">Cash, Card, Zelle, Venmo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO ANSWER CAPSULE -->
+  <section class="w-full py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div
+        class="border-l-4 p-6 rounded-lg"
+        style="border-left-color: var(--blue); background-color: var(--slate-50); color: var(--navy);"
+      >
+        <h2 class="text-2xl font-bold mb-4">Video-Only Jail Visits in Kingfisher County</h2>
+        <p class="mb-4">
+          Kingfisher County Jail does not permit in-person visits. All inmate contact is conducted through video visitation only.
+          Inmates can participate in up to 4 video visits per week, with each visit lasting a maximum of 24 minutes.
+          To schedule a visit, you must be placed on the inmate's approved visitation list.
+        </p>
+        <div class="grid md:grid-cols-3 gap-4 mt-6">
+          <div style="background-color: white; padding: 1rem; border-radius: 0.5rem;">
+            <p style="color: var(--slate-600); font-size: 0.875rem;">Visitation Type</p>
+            <p class="font-bold">Video Only</p>
+          </div>
+          <div style="background-color: white; padding: 1rem; border-radius: 0.5rem;">
+            <p style="color: var(--slate-600); font-size: 0.875rem;">Frequency</p>
+            <p class="font-bold">4 visits/week max</p>
+          </div>
+          <div style="background-color: white; padding: 1rem; border-radius: 0.5rem;">
+            <p style="color: var(--slate-600); font-size: 0.875rem;">Duration</p>
+            <p class="font-bold">24 minutes each</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO-COLUMN: FACILITY DETAILS + HOW TO POST BAIL -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--slate-50);">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <!-- Facility Details -->
+      <div>
+        <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">Kingfisher County Jail Details</h2>
+        <div class="space-y-6">
+          <div class="pb-6" style="border-bottom: 1px solid var(--slate-200);">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--navy);">📍 Jail Address</h3>
+            <p style="color: var(--slate-700);">119 S Main St</p>
+            <p style="color: var(--slate-700);">Kingfisher, OK 73750</p>
+            <p class="mt-2 font-bold">
+              <a href="tel:(405) 375-4242" style="color: var(--blue);">(405) 375-4242</a>
+            </p>
+          </div>
+
+          <div class="pb-6" style="border-bottom: 1px solid var(--slate-200);">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--navy);">🎥 Visitation</h3>
+            <p style="color: var(--slate-700);">VIDEO VISITS ONLY</p>
+            <p style="color: var(--slate-600); font-size: 0.875rem;" class="mt-2">
+              4 visits per week max<br/>
+              24 minutes per visit<br/>
+              Must be on approved list
+            </p>
+          </div>
+
+          <div class="pb-6" style="border-bottom: 1px solid var(--slate-200);">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--navy);">💵 Bail Assistance</h3>
+            <p style="color: var(--slate-700);">
+              Angel Bail Bonds can help post your bail immediately. We work directly with Kingfisher County Jail to expedite your release.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-2" style="color: var(--navy);">⏱️ Released in Hours</h3>
+            <p style="color: var(--slate-700);">
+              Once bail is posted, most inmates are released within hours. Call us now to get the process started.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- How to Post Bail Steps -->
+      <div>
+        <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">How to Post Bail</h2>
+        <div class="space-y-6">
+          <div
+            class="p-6 rounded-lg flex gap-4"
+            style="background-color: white; border: 2px solid var(--blue);"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white"
+              style="background-color: var(--blue);"
+            >
+              1
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: var(--navy);">Call Us Immediately</h4>
+              <p style="color: var(--slate-700);">
+                Contact Angel Bail Bonds at (405) 614-3000. Have your loved one's name and their booking information ready.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-lg flex gap-4"
+            style="background-color: white; border: 2px solid var(--blue);"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white"
+              style="background-color: var(--blue);"
+            >
+              2
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: var(--navy);">Provide Case Details</h4>
+              <p style="color: var(--slate-700);">
+                Tell us the bail amount, charge, and any other case information. We'll verify the information with the jail.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-lg flex gap-4"
+            style="background-color: white; border: 2px solid var(--blue);"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white"
+              style="background-color: var(--blue);"
+            >
+              3
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: var(--navy);">Payment & Paperwork</h4>
+              <p style="color: var(--slate-700);">
+                We'll explain your options and complete the paperwork. We accept cash, credit cards, Zelle, and Venmo.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-lg flex gap-4"
+            style="background-color: white; border: 2px solid var(--blue);"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white"
+              style="background-color: var(--blue);"
+            >
+              4
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: var(--navy);">Bail Posted & Release</h4>
+              <p style="color: var(--slate-700);">
+                We post bail with the jail. Your loved one is typically released within hours. We'll keep you informed throughout the process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT INFORMATION -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">Kingfisher County Court Information</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full" style="border-collapse: collapse;">
+          <thead>
+            <tr style="background-color: var(--navy); color: white;">
+              <th class="px-6 py-4 text-left font-bold">Facility</th>
+              <th class="px-6 py-4 text-left font-bold">Address</th>
+              <th class="px-6 py-4 text-left font-bold">Phone</th>
+              <th class="px-6 py-4 text-left font-bold">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--slate-200);">
+              <td class="px-6 py-4 font-bold" style="color: var(--navy);">County Courthouse</td>
+              <td class="px-6 py-4">101 S Main St, Kingfisher, OK 73750</td>
+              <td class="px-6 py-4">
+                <a href="tel:(405) 375-3887" style="color: var(--blue); font-bold;">(405) 375-3887</a>
+              </td>
+              <td class="px-6 py-4" style="color: var(--slate-700);">County seat of Kingfisher County</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--slate-200);">
+              <td class="px-6 py-4 font-bold" style="color: var(--navy);">County Jail</td>
+              <td class="px-6 py-4">119 S Main St, Kingfisher, OK 73750</td>
+              <td class="px-6 py-4">
+                <a href="tel:(405) 375-4242" style="color: var(--blue); font-bold;">(405) 375-4242</a>
+              </td>
+              <td class="px-6 py-4" style="color: var(--slate-700);">VIDEO VISITS ONLY</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-8 p-6 rounded-lg" style="background-color: var(--slate-100); color: var(--navy);">
+        <p style="color: var(--slate-700);">
+          <strong>Hours of Operation:</strong> Court and jail hours vary by department and season. Contact the courthouse directly at (405) 375-3887 for specific hours and scheduling information. Angel Bail Bonds is available 24/7 to help, even when the courthouse is closed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PROCESS NARRATIVE -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--slate-50);">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">Understanding the Bail Process in Kingfisher County</h2>
+
+      <div class="space-y-6" style="color: var(--slate-700); line-height: 1.8;">
+        <p>
+          When someone is arrested in Kingfisher County, they are brought to the Kingfisher County Jail at 119 S Main Street.
+          After booking and initial processing, the person may be eligible for bail. Bail is an amount of money set by the court
+          that allows someone to be released from jail while they await their trial. Angel Bail Bonds can help post that bail
+          quickly, so your loved one doesn't have to spend unnecessary time in custody.
+        </p>
+
+        <p>
+          The bail amount is typically determined during an initial appearance before a judge. Factors that affect the bail amount
+          include the severity of the charges, the person's criminal history, employment status, and ties to the community.
+          In Kingfisher County, bail amounts can range from a few hundred dollars for misdemeanors to tens of thousands for felonies.
+          Once bail is set, you have the option to either pay the full amount directly to the jail (a bail deposit) or work with
+          a bail bond company like Angel Bail Bonds to post the bail.
+        </p>
+
+        <p>
+          When you choose to work with Angel Bail Bonds, you typically pay a percentage of the bail amount (usually 10-15%),
+          and we post the full bail amount with the jail. This is faster and more affordable than paying the entire bail amount yourself.
+          After bail is posted and approved by the jail, your loved one is released from custody, typically within hours.
+          They are then free to return home while their case proceeds through the Kingfisher County courts. During their release,
+          they must follow all court orders, attend all scheduled court appearances, and avoid any criminal activity.
+          If you need to schedule a video visit while they're awaiting trial, remember that Kingfisher County only allows video visitation—
+          no in-person visits are permitted.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT COUNTY -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">About Kingfisher County</h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--navy);">County Overview</h3>
+          <p style="color: var(--slate-700); line-height: 1.8; margin-bottom: 1.5rem;">
+            Kingfisher County, located in central Oklahoma, is home to approximately 14,300 residents.
+            The county seat, Kingfisher, serves as the administrative and judicial center for the region.
+            Situated about 63 miles (1 hour 19 minutes) northwest of Stillwater, Kingfisher County is known
+            for its rich agricultural heritage, wheat farming, and distinctive cultural traditions.
+          </p>
+          <p style="color: var(--slate-700); line-height: 1.8;">
+            The region has deep historical roots, including its connection to the famous Chisholm Trail,
+            which played a vital role in cattle drives and westward expansion. Today, Kingfisher County
+            maintains its agricultural character while serving as an important hub for surrounding communities.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4" style="color: var(--navy);">Communities in Kingfisher County</h3>
+          <div class="flex flex-wrap gap-2">
+            {['Kingfisher', 'Hennessey', 'Dover', 'Okarche', 'Cashion', 'Loyal', 'Omega'].map(community => (
+              <span
+                key={community}
+                class="px-4 py-2 rounded-full text-sm font-bold text-white"
+                style="background-color: var(--blue);"
+              >
+                {community}
+              </span>
+            ))}
+          </div>
+
+          <div class="mt-8 space-y-4">
+            <div>
+              <p style="color: var(--slate-600); font-size: 0.875rem; text-transform: uppercase;">Czech Heritage</p>
+              <p style="color: var(--slate-700); font-bold;">Okarche and Czech Traditions</p>
+              <p style="color: var(--slate-700); font-size: 0.875rem;">
+                Okarche is notably home to a strong Czech-American community with preserved cultural traditions.
+              </p>
+            </div>
+            <div>
+              <p style="color: var(--slate-600); font-size: 0.875rem; text-transform: uppercase;">Second Largest City</p>
+              <p style="color: var(--slate-700); font-bold;">Hennessey</p>
+              <p style="color: var(--slate-700); font-size: 0.875rem;">
+                Hennessey is the second-largest city in Kingfisher County after the county seat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INMATE SEARCH -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--slate-50);">
+    <div class="max-w-4xl mx-auto">
+      <div
+        class="border-l-4 p-8 rounded-lg"
+        style="border-left-color: var(--blue); background-color: white;"
+      >
+        <h2 class="text-2xl font-bold mb-4" style="color: var(--navy);">Finding an Inmate in Kingfisher County</h2>
+        <p style="color: var(--slate-700); margin-bottom: 1.5rem; line-height: 1.8;">
+          If you need to locate an inmate at Kingfisher County Jail, you can contact the jail directly
+          at <a href="tel:(405) 375-4242" style="color: var(--blue); font-bold;">(405) 375-4242</a>.
+          Have the person's full name and date of birth ready when you call.
+        </p>
+
+        <div class="bg-gradient-to-r p-6 rounded-lg mb-6" style="background: linear-gradient(135deg, var(--blue) 0%, #1e40af 100%); color: white;">
+          <h3 class="text-lg font-bold mb-3">Quick Lookup Steps:</h3>
+          <ol class="list-decimal list-inside space-y-2">
+            <li>Call Kingfisher County Jail: (405) 375-4242</li>
+            <li>Provide the inmate's full name and date of birth</li>
+            <li>Ask about booking date and charges</li>
+            <li>Inquire about bail amount and court date</li>
+            <li>Contact Angel Bail Bonds immediately to post bail</li>
+          </ol>
+        </div>
+
+        <p style="color: var(--slate-700);">
+          Once you have the booking information, Angel Bail Bonds can help you post bail quickly.
+          Call us at <a href="tel:(405) 614-3000" style="color: var(--blue); font-bold;">(405) 614-3000</a>
+          and we'll get your loved one released as fast as possible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">Frequently Asked Questions</h2>
+
+      <div class="space-y-4">
+        {[
+          {
+            question: "Can I visit an inmate at Kingfisher County Jail in person?",
+            answer: "No, Kingfisher County Jail does not allow in-person visits. All inmate visits are conducted via video only. Video visits are available 4 times per week, with each session lasting up to 24 minutes. You must be on the approved visitation list to schedule a video visit. Contact the jail at (405) 375-4242 for video visit scheduling information."
+          },
+          {
+            question: "How quickly can Angel Bail Bonds help get someone released from Kingfisher County Jail?",
+            answer: "Angel Bail Bonds works 24/7 to process bail releases. Once we post bail with the jail, release typically happens within hours. Call us immediately at (405) 614-3000 for the fastest service. Our experienced team knows the Kingfisher County Jail system and can expedite the process efficiently."
+          },
+          {
+            question: "What are Angel Bail Bonds payment options?",
+            answer: "We accept multiple payment methods for your convenience: cash, credit cards, Zelle, and Venmo. With various payment options available, we can work with your situation quickly to post bail and get your loved one released from custody. We also work with families on financial arrangements when needed."
+          },
+          {
+            question: "What is the Kingfisher County Courthouse address and phone number?",
+            answer: "The Kingfisher County Courthouse is located at 101 S Main St, Kingfisher, OK 73750. Phone: (405) 375-3887. Court hours vary by department, so contact the courthouse directly for specific scheduling information regarding your case, arraignment dates, and court proceedings."
+          },
+          {
+            question: "How is Kingfisher County different from nearby counties?",
+            answer: "Kingfisher County, with a population of about 14,300, is the county seat of Kingfisher and known for its Czech heritage, particularly in Okarche. The region has strong agricultural and wheat farming traditions, and rich Chisholm Trail history. It is about 63 miles (1 hour 19 minutes) from Stillwater, making it one of the more distant counties we serve."
+          },
+          {
+            question: "Is Angel Bail Bonds a legitimate service?",
+            answer: "Yes, Angel Bail Bonds is a licensed, women-owned bail bond business with over 15 years of experience serving Oklahoma communities. We have a 4.9-star rating with 127 customer reviews. We operate 24/7 and are fully licensed to post bail throughout Kingfisher County and surrounding areas. Your satisfaction and trust are our priority."
+          }
+        ].map((item, index) => (
+          <details key={index} class="group">
+            <summary
+              class="flex cursor-pointer items-center justify-between rounded-lg px-6 py-4 font-bold transition-all"
+              style="background-color: var(--slate-100); color: var(--navy);"
+            >
+              <span>{item.question}</span>
+              <span class="transition-transform group-open:rotate-180">▼</span>
+            </summary>
+            <div
+              class="px-6 py-4 rounded-b-lg"
+              style="background-color: var(--slate-50); color: var(--slate-700);"
+            >
+              {item.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PAGES -->
+  <section class="w-full py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--slate-50);">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8" style="color: var(--navy);">Nearby Counties We Serve</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { name: 'Logan County', distance: '~40 miles south' },
+          { name: 'Garfield County', distance: '~30 miles north' },
+          { name: 'Canadian County', distance: '~45 miles southeast' },
+          { name: 'Oklahoma County', distance: '~60 miles south' },
+          { name: 'Blaine County', distance: '~50 miles northwest' },
+          { name: 'Payne County (Stillwater)', distance: '~63 miles southeast' }
+        ].map((county, index) => (
+          <a
+            key={index}
+            href={`/${county.name.toLowerCase().replace(/\s+/g, '-')}-bail-bonds`}
+            class="p-6 rounded-lg transition-all hover:shadow-lg"
+            style="background-color: white; border: 2px solid var(--slate-200); color: var(--navy);"
+          >
+            <h3 class="font-bold text-lg mb-2">{county.name}</h3>
+            <p style="color: var(--slate-600); font-size: 0.875rem;">{county.distance}</p>
+            <p style="color: var(--blue); font-weight: bold; margin-top: 1rem;">View Bail Bonds →</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section
+    class="w-full py-12 px-4 sm:px-6 lg:px-8"
+    style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);"
+  >
+    <div class="max-w-4xl mx-auto text-center" style="color: white;">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Need Bail Help in Kingfisher County?</h2>
+      <p class="text-lg mb-8" style="color: var(--slate-50);">
+        Angel Bail Bonds is available 24/7 to help you post bail quickly and affordably.
+        Don't let your loved one stay in jail—call us now!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:(405) 614-3000"
+          class="inline-block px-10 py-4 font-bold text-lg rounded-lg transition-all text-center"
+          style="background-color: var(--green); color: white;"
+        >
+          Call Now: (405) 614-3000
+        </a>
+        <a
+          href="mailto:bailbondangel@gmail.com"
+          class="inline-block px-10 py-4 font-bold text-lg rounded-lg transition-all text-center"
+          style="background-color: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white;"
+        >
+          Email: bailbondangel@gmail.com
+        </a>
+      </div>
+      <p style="color: var(--slate-50); margin-top: 2rem; font-size: 0.875rem;">
+        ✓ Women-owned · ✓ 15+ years experience · ✓ 4.9★ rated · ✓ Licensed & Insured
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

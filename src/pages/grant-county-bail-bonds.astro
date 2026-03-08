@@ -1,0 +1,521 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/grant-county-bail-bonds#business',
+      'name': 'Angel Bail Bonds - Grant County, OK',
+      'description': 'Professional bail bonds services in Grant County, Oklahoma. 24/7 emergency bail assistance for Medford Jail and Grant County courts.',
+      'url': 'https://stillwaterokbailbonds.com',
+      'telephone': '(405) 614-3000',
+      'email': 'bailbondangel@gmail.com',
+      'areaServed': {
+        '@type': 'City',
+        'name': 'Grant County',
+        'address': {
+          '@type': 'PostalAddress',
+          'addressRegion': 'OK',
+          'postalCode': '73759'
+        }
+      },
+      'priceRange': '$$',
+      'paymentAccepted': ['Cash', 'Credit Card', 'Zelle', 'Venmo'],
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '127'
+      },
+      'founder': {
+        '@type': 'Person',
+        'name': 'Angel Bail Bonds Team'
+      },
+      'foundingDate': '2009',
+      'image': 'https://stillwaterokbailbonds.com/images/hero-agate.webp',
+      'geoCoordinates': {
+        '@type': 'GeoCoordinates',
+        'latitude': '36.8033',
+        'longitude': '-97.7317'
+      }
+    },
+    {
+      '@type': 'Service',
+      'name': 'Bail Bonds Services',
+      'description': 'Professional bail bond services available 24/7 for Grant County residents and visitors arrested in the county.',
+      'provider': {
+        '@type': 'LocalBusiness',
+        '@id': 'https://stillwaterokbailbonds.com/grant-county-bail-bonds#business'
+      },
+      'areaServed': {
+        '@type': 'City',
+        'name': 'Grant County, Oklahoma'
+      },
+      'availableLanguage': 'en'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://stillwaterokbailbonds.com'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Counties',
+          'item': 'https://stillwaterokbailbonds.com/counties'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Grant County Bail Bonds',
+          'item': 'https://stillwaterokbailbonds.com/grant-county-bail-bonds'
+        }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How quickly can Angel Bail Bonds help me post bail in Grant County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Angel Bail Bonds provides 24/7 bail services for Grant County residents. We can typically process and post bail within 1-2 hours once we receive bail information from the Medford Jail. Our experienced team works around the clock to get your loved one released as quickly as possible.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are the visiting hours at Medford Jail in Grant County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Medford Jail (219 N First St) visiting hours are Monday-Friday 7:30 AM-9:00 PM and Saturday-Sunday 7:30 AM-2:30 PM. Inmates are allowed 2 visits per week. Video visitation is available Tuesday-Sunday 8:15 AM-4:00 PM for two 45-minute sessions per week, with a maximum of 2 guests per visit.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Where is the Grant County Courthouse located?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The Grant County Courthouse is located at 112 E Guthrie St, Medford, OK 73759. You can reach them at (580) 395-2274 for questions about court appearances, case information, or bail hearings.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What payment methods does Angel Bail Bonds accept?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We accept Cash, Credit Cards, Zelle, and Venmo for your convenience. Our flexible payment options make it easier for families to secure bail bonds quickly without financial stress.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is Grant County a rural area?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, Grant County is a small rural county in northwestern Oklahoma with a population of approximately 4,169. It is known for its agricultural economy, salt plains, and historical significance. The county is located about 61 miles north of Stillwater and includes communities like Medford, Pond Creek, Wakita, and Deer Creek.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How far is Angel Bail Bonds from Grant County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Angel Bail Bonds is located in Stillwater, approximately 61 miles south of Medford (Grant County seat). Despite the distance, our 24/7 team can assist with bail bonds for Grant County arrests and can coordinate with the Medford Jail and courthouse efficiently.'
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Grant County Bail Bonds | Angel Bail Bonds - Medford, OK"
+  description="24/7 bail bonds services for Grant County, Oklahoma. Professional bail assistance for Medford Jail arrests. Call Angel Bail Bonds today: (405) 614-3000"
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO SECTION -->
+  <section style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); padding: 4rem 1.5rem; text-align: center; color: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2;">Grant County Bail Bonds</h1>
+      <p style="font-size: 1.25rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">Fast, reliable 24/7 bail bond services for Medford Jail and Grant County courts</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:(405)614-3000" style="background-color: var(--green); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; border: none; cursor: pointer; font-size: 1rem;">Call (405) 614-3000</a>
+        <a href="mailto:bailbondangel@gmail.com" style="background-color: var(--blue); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; border: none; cursor: pointer; font-size: 1rem;">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO ANSWER CAPSULE -->
+  <section style="padding: 2rem 1.5rem; background-color: var(--slate-50); border-left: 4px solid var(--blue);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--navy); line-height: 1.6;">
+        Angel Bail Bonds provides 24/7 emergency bail bond services for Grant County arrests. When someone is detained at Medford Jail (219 N First St, Medford, OK 73759), our experienced team can quickly post bail and arrange release. We serve all Grant County communities and work with the Grant County Courthouse (112 E Guthrie St, (580) 395-2274) to ensure fast processing and same-day release in most cases. Call us immediately at (405) 614-3000 for instant bail assistance.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+          <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Medford Jail</h3>
+          <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 0.5rem;">219 N First St, Medford, OK 73759</p>
+          <p style="font-size: 0.9rem; color: var(--slate-600);">(580) 395-2356</p>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem;">
+          <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Grant County Courthouse</h3>
+          <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 0.5rem;">112 E Guthrie St, Medford, OK 73759</p>
+          <p style="font-size: 0.9rem; color: var(--slate-600);">(580) 395-2274</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO-COLUMN: FACILITY DETAILS + HOW TO POST BAIL -->
+  <section style="padding: 3rem 1.5rem; background-color: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+        <!-- FACILITY DETAILS -->
+        <div>
+          <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;">Medford Jail Details</h2>
+
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Basic Information</h3>
+            <ul style="list-style: none; padding: 0; color: var(--slate-700); font-size: 0.95rem;">
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Capacity:</span> 39 beds</li>
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">County:</span> Grant County</li>
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">County Seat:</span> Medford</li>
+              <li><span style="font-weight: 600;">Population:</span> ~4,169</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">In-Person Visiting Hours</h3>
+            <ul style="list-style: none; padding: 0; color: var(--slate-700); font-size: 0.95rem;">
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Mon-Fri:</span> 7:30 AM - 9:00 PM</li>
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Sat-Sun:</span> 7:30 AM - 2:30 PM</li>
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Visits per week:</span> 2</li>
+              <li><span style="font-weight: 600;">Guests per visit:</span> Maximum 2</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Video Visitation</h3>
+            <ul style="list-style: none; padding: 0; color: var(--slate-700); font-size: 0.95rem;">
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Availability:</span> Tue-Sun, 8:15 AM - 4:00 PM</li>
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Session length:</span> 45 minutes each</li>
+              <li style="margin-bottom: 0.5rem;"><span style="font-weight: 600;">Sessions per week:</span> 2</li>
+              <li><span style="font-weight: 600;">Guests per visit:</span> Maximum 2</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HOW TO POST BAIL STEPS -->
+        <div>
+          <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;">How to Post Bail</h2>
+
+          <div style="display: flex; margin-bottom: 1.5rem;">
+            <div style="background-color: var(--blue); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 1rem; flex-shrink: 0;">1</div>
+            <div>
+              <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 0.5rem;">Contact Angel Bail Bonds</h3>
+              <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0;">Call (405) 614-3000 immediately after arrest. Our team is available 24/7 to help you.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; margin-bottom: 1.5rem;">
+            <div style="background-color: var(--blue); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 1rem; flex-shrink: 0;">2</div>
+            <div>
+              <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 0.5rem;">Provide Bail Information</h3>
+              <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0;">Share the arrestee's name, charges, and bail amount. We'll coordinate with Medford Jail to verify details.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; margin-bottom: 1.5rem;">
+            <div style="background-color: var(--blue); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 1rem; flex-shrink: 0;">3</div>
+            <div>
+              <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 0.5rem;">Arrange Payment</h3>
+              <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0;">We accept Cash, Credit Card, Zelle, and Venmo. Flexible payment plans available.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; margin-bottom: 1.5rem;">
+            <div style="background-color: var(--blue); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 1rem; flex-shrink: 0;">4</div>
+            <div>
+              <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 0.5rem;">Bail Posted & Release</h3>
+              <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0;">Once bail is posted, release typically happens within 1-2 hours. We'll keep you informed throughout the process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT INFORMATION TABLE -->
+  <section style="padding: 3rem 1.5rem; background-color: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Grant County Court Information</h2>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background-color: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+          <thead>
+            <tr style="background-color: var(--navy); color: white;">
+              <th style="padding: 1rem; text-align: left; font-weight: 600;">Facility</th>
+              <th style="padding: 1rem; text-align: left; font-weight: 600;">Address</th>
+              <th style="padding: 1rem; text-align: left; font-weight: 600;">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--slate-200);">
+              <td style="padding: 1rem; font-weight: 600; color: var(--navy);">Medford Jail</td>
+              <td style="padding: 1rem; color: var(--slate-700);">219 N First St, Medford, OK 73759</td>
+              <td style="padding: 1rem; color: var(--slate-700);">(580) 395-2356</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--slate-200);">
+              <td style="padding: 1rem; font-weight: 600; color: var(--navy);">Grant County Courthouse</td>
+              <td style="padding: 1rem; color: var(--slate-700);">112 E Guthrie St, Medford, OK 73759</td>
+              <td style="padding: 1rem; color: var(--slate-700);">(580) 395-2274</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 2rem; background-color: white; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid var(--green);">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 0.75rem;">Court Hours & Processing</h3>
+        <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0;">Grant County Courthouse handles all bail hearings, case scheduling, and legal proceedings. Most bail bonds are posted quickly during business hours, but our 24/7 service ensures emergency processing for after-hours arrests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PROCESS NARRATIVE -->
+  <section style="padding: 3rem 1.5rem; background-color: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Understanding the Grant County Bail Process</h2>
+
+      <div style="color: var(--slate-700); font-size: 1rem; line-height: 1.8;">
+        <p style="margin-bottom: 1.5rem;">
+          When someone is arrested in Grant County and booked at Medford Jail, the bail process begins immediately. The arrestee appears before a judge or magistrate who sets a bail amount based on the charges, criminal history, and ties to the community. This initial appearance typically happens within 24 hours of arrest. Angel Bail Bonds works directly with Medford Jail staff and Grant County Courthouse personnel to ensure we have all the information needed to post bail as quickly as possible, often within the first few hours of your call.
+        </p>
+
+        <p style="margin-bottom: 1.5rem;">
+          Posting bail in Grant County involves several key steps. First, our team verifies the charges and bail amount with Medford Jail. Then we assist you with payment arrangements using one of our flexible options: cash, credit card, Zelle, or Venmo. We require a percentage of the bail amount as our fee, which varies based on the specific charges and circumstances. Once payment is secured, we file the bail bond with the Grant County Courthouse and Medford Jail. This process typically takes 1-2 hours, after which the arrestee is processed for release by jail staff.
+        </p>
+
+        <p>
+          Your responsibilities as the bail bond principal include ensuring the arrestee appears for all court dates in Grant County. Missing court appearances can result in bail forfeiture and additional legal consequences. Angel Bail Bonds provides guidance on court dates, scheduling, and compliance requirements. We also offer payment plans and flexible arrangements for families facing financial hardship. Our 15+ years of experience serving Oklahoma communities means we understand the unique challenges of Grant County arrests and can guide you through every step of the process with professionalism and compassion.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE COUNTY -->
+  <section style="padding: 3rem 1.5rem; background-color: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">About Grant County</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div style="background-color: white; padding: 1.5rem; border-radius: 0.5rem;">
+          <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 1rem;">County Overview</h3>
+          <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0; line-height: 1.6;">
+            Grant County is a small, rural county located in northwestern Oklahoma with approximately 4,169 residents. The county seat is Medford, situated about 61 miles north of Stillwater. Grant County is known for its agricultural heritage, natural resources including salt plains, and tight-knit rural communities. The county's economy is primarily agriculture-based, supporting cattle ranching, wheat farming, and related industries.
+          </p>
+        </div>
+
+        <div style="background-color: white; padding: 1.5rem; border-radius: 0.5rem;">
+          <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 1rem;">Geography & Location</h3>
+          <p style="color: var(--slate-700); font-size: 0.95rem; margin: 0; line-height: 1.6;">
+            Located at coordinates 36.8033°N, 97.7317°W, Grant County is in the heart of northwestern Oklahoma's panhandle region. The county is notable for the Salt Plains National Wildlife Refuge and is home to Wakita, the filming location of the iconic movie "Twister." The landscape features rolling prairie, salt flats, and agricultural lands typical of rural Oklahoma.
+          </p>
+        </div>
+      </div>
+
+      <div style="background-color: white; padding: 2rem; border-radius: 0.5rem; margin-bottom: 2rem;">
+        <h3 style="color: var(--navy); font-weight: 600; margin-bottom: 1rem;">Communities in Grant County</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Medford</span>
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Pond Creek</span>
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Wakita</span>
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Lamont</span>
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Deer Creek</span>
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Manchester</span>
+          <span style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Renfrow</span>
+        </div>
+      </div>
+
+      <div style="background-color: var(--navy); color: white; padding: 1.5rem; border-radius: 0.5rem;">
+        <p style="font-size: 0.95rem; margin: 0;">
+          Angel Bail Bonds is proud to serve all residents of Grant County. Whether you're from Medford, Pond Creek, Wakita, or any other community in the county, we're here to help when legal troubles arise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INMATE SEARCH -->
+  <section style="padding: 3rem 1.5rem; background-color: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="background-color: var(--slate-50); padding: 2rem; border-radius: 0.5rem; border-left: 4px solid var(--blue);">
+        <h2 style="color: var(--navy); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Search for an Inmate</h2>
+
+        <p style="color: var(--slate-700); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          To locate someone arrested in Grant County, you can search the Medford Jail inmate roster. Contact the jail directly or speak with an Angel Bail Bonds representative who can assist you.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div style="background-color: white; padding: 1.5rem; border-radius: 0.5rem;">
+            <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Medford Jail Inmate Search</h3>
+            <p style="color: var(--slate-700); font-size: 0.9rem; margin-bottom: 1rem;">Call (580) 395-2356 to inquire about an inmate or search the jail roster.</p>
+            <a href="tel:(580)395-2356" style="background-color: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; text-decoration: none; font-weight: 600; display: inline-block; font-size: 0.9rem;">Call Jail</a>
+          </div>
+          <div style="background-color: white; padding: 1.5rem; border-radius: 0.5rem;">
+            <h3 style="color: var(--navy); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Angel Bail Bonds Assistance</h3>
+            <p style="color: var(--slate-700); font-size: 0.9rem; margin-bottom: 1rem;">Our team can help locate an inmate and provide bail information immediately.</p>
+            <a href="tel:(405)614-3000" style="background-color: var(--green); color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; text-decoration: none; font-weight: 600; display: inline-block; font-size: 0.9rem;">Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section style="padding: 3rem 1.5rem; background-color: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+
+      <div style="space: 1rem;">
+
+        <!-- FAQ ITEM 1 -->
+        <details style="background-color: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid var(--slate-200); cursor: pointer;">
+          <summary style="color: var(--navy); font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>How quickly can Angel Bail Bonds help me post bail in Grant County?</span>
+            <span style="color: var(--blue); font-size: 1.5rem;">+</span>
+          </summary>
+          <p style="color: var(--slate-700); margin-top: 1rem; font-size: 0.95rem;">
+            Angel Bail Bonds provides 24/7 bail services for Grant County residents. We can typically process and post bail within 1-2 hours once we receive bail information from the Medford Jail. Our experienced team works around the clock to get your loved one released as quickly as possible.
+          </p>
+        </details>
+
+        <!-- FAQ ITEM 2 -->
+        <details style="background-color: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid var(--slate-200); cursor: pointer;">
+          <summary style="color: var(--navy); font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>What are the visiting hours at Medford Jail in Grant County?</span>
+            <span style="color: var(--blue); font-size: 1.5rem;">+</span>
+          </summary>
+          <p style="color: var(--slate-700); margin-top: 1rem; font-size: 0.95rem;">
+            Medford Jail (219 N First St) visiting hours are Monday-Friday 7:30 AM-9:00 PM and Saturday-Sunday 7:30 AM-2:30 PM. Inmates are allowed 2 visits per week. Video visitation is available Tuesday-Sunday 8:15 AM-4:00 PM for two 45-minute sessions per week, with a maximum of 2 guests per visit.
+          </p>
+        </details>
+
+        <!-- FAQ ITEM 3 -->
+        <details style="background-color: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid var(--slate-200); cursor: pointer;">
+          <summary style="color: var(--navy); font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>Where is the Grant County Courthouse located?</span>
+            <span style="color: var(--blue); font-size: 1.5rem;">+</span>
+          </summary>
+          <p style="color: var(--slate-700); margin-top: 1rem; font-size: 0.95rem;">
+            The Grant County Courthouse is located at 112 E Guthrie St, Medford, OK 73759. You can reach them at (580) 395-2274 for questions about court appearances, case information, or bail hearings.
+          </p>
+        </details>
+
+        <!-- FAQ ITEM 4 -->
+        <details style="background-color: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid var(--slate-200); cursor: pointer;">
+          <summary style="color: var(--navy); font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>What payment methods does Angel Bail Bonds accept?</span>
+            <span style="color: var(--blue); font-size: 1.5rem;">+</span>
+          </summary>
+          <p style="color: var(--slate-700); margin-top: 1rem; font-size: 0.95rem;">
+            We accept Cash, Credit Cards, Zelle, and Venmo for your convenience. Our flexible payment options make it easier for families to secure bail bonds quickly without financial stress.
+          </p>
+        </details>
+
+        <!-- FAQ ITEM 5 -->
+        <details style="background-color: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid var(--slate-200); cursor: pointer;">
+          <summary style="color: var(--navy); font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>Is Grant County a rural area?</span>
+            <span style="color: var(--blue); font-size: 1.5rem;">+</span>
+          </summary>
+          <p style="color: var(--slate-700); margin-top: 1rem; font-size: 0.95rem;">
+            Yes, Grant County is a small rural county in northwestern Oklahoma with a population of approximately 4,169. It is known for its agricultural economy, salt plains, and historical significance. The county is located about 61 miles north of Stillwater and includes communities like Medford, Pond Creek, Wakita, and Deer Creek.
+          </p>
+        </details>
+
+        <!-- FAQ ITEM 6 -->
+        <details style="background-color: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid var(--slate-200); cursor: pointer;">
+          <summary style="color: var(--navy); font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>How far is Angel Bail Bonds from Grant County?</span>
+            <span style="color: var(--blue); font-size: 1.5rem;">+</span>
+          </summary>
+          <p style="color: var(--slate-700); margin-top: 1rem; font-size: 0.95rem;">
+            Angel Bail Bonds is located in Stillwater, approximately 61 miles south of Medford (Grant County seat). Despite the distance, our 24/7 team can assist with bail bonds for Grant County arrests and can coordinate with the Medford Jail and courthouse efficiently.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PAGES LINKS -->
+  <section style="padding: 3rem 1.5rem; background-color: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Nearby Counties</h2>
+
+      <p style="color: var(--slate-700); font-size: 0.95rem; margin-bottom: 2rem;">
+        Angel Bail Bonds also serves the following counties near Grant County:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+        <a href="/noble-county-bail-bonds" style="background-color: var(--slate-50); padding: 1.5rem; border-radius: 0.5rem; text-decoration: none; border: 2px solid var(--blue); color: var(--navy); font-weight: 600; transition: all 0.3s; display: flex; align-items: center; justify-content: space-between;">
+          Noble County Bail Bonds
+          <span style="color: var(--blue); font-size: 1.25rem;">&rarr;</span>
+        </a>
+
+        <a href="/kay-county-bail-bonds" style="background-color: var(--slate-50); padding: 1.5rem; border-radius: 0.5rem; text-decoration: none; border: 2px solid var(--blue); color: var(--navy); font-weight: 600; transition: all 0.3s; display: flex; align-items: center; justify-content: space-between;">
+          Kay County Bail Bonds
+          <span style="color: var(--blue); font-size: 1.25rem;">&rarr;</span>
+        </a>
+
+        <a href="/garfield-county-bail-bonds" style="background-color: var(--slate-50); padding: 1.5rem; border-radius: 0.5rem; text-decoration: none; border: 2px solid var(--blue); color: var(--navy); font-weight: 600; transition: all 0.3s; display: flex; align-items: center; justify-content: space-between;">
+          Garfield County Bail Bonds
+          <span style="color: var(--blue); font-size: 1.25rem;">&rarr;</span>
+        </a>
+
+        <a href="/logan-county-bail-bonds" style="background-color: var(--slate-50); padding: 1.5rem; border-radius: 0.5rem; text-decoration: none; border: 2px solid var(--blue); color: var(--navy); font-weight: 600; transition: all 0.3s; display: flex; align-items: center; justify-content: space-between;">
+          Logan County Bail Bonds
+          <span style="color: var(--blue); font-size: 1.25rem;">&rarr;</span>
+        </a>
+
+        <a href="/osage-county-bail-bonds" style="background-color: var(--slate-50); padding: 1.5rem; border-radius: 0.5rem; text-decoration: none; border: 2px solid var(--blue); color: var(--navy); font-weight: 600; transition: all 0.3s; display: flex; align-items: center; justify-content: space-between;">
+          Osage County Bail Bonds
+          <span style="color: var(--blue); font-size: 1.25rem;">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); padding: 3rem 1.5rem; color: white; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Need Bail Bonds in Grant County?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">
+        Angel Bail Bonds is available 24/7 for emergency bail assistance. Women-owned, 15+ years serving Oklahoma communities. Fast processing and flexible payments.
+      </p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:(405)614-3000" style="background-color: var(--green); color: white; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; border: none; cursor: pointer; font-size: 1.1rem; display: inline-block;">
+          Call Now: (405) 614-3000
+        </a>
+        <a href="mailto:bailbondangel@gmail.com" style="background-color: var(--blue); color: white; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; border: none; cursor: pointer; font-size: 1.1rem; display: inline-block;">
+          Email: bailbondangel@gmail.com
+        </a>
+      </div>
+
+      <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">
+        4.9 out of 5 stars - 127 customer reviews
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

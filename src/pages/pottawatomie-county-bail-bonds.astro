@@ -1,0 +1,992 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'Pottawatomie County Bail Bonds | Angel Bail Bonds Oklahoma';
+const pageDescription = 'Fast, reliable bail bond services in Pottawatomie County, OK. 24/7 availability, women-owned, 15+ years experience. Serving Shawnee, Tecumseh, McLoud & surrounding communities.';
+const canonicalUrl = 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds';
+
+const businessData = {
+  name: 'Angel Bail Bonds',
+  phone: '(405) 614-3000',
+  email: 'bailbondangel@gmail.com',
+  rating: 4.9,
+  reviewCount: 127,
+  image: '/angel-bail-bonds-logo.png',
+  url: 'https://stillwaterokbailbonds.com',
+  women_owned: true,
+  years_experience: 15,
+  payment_methods: ['Cash', 'Credit Card', 'Zelle', 'Venmo'],
+  availability: '24/7',
+};
+
+const facilityData = {
+  name: 'Pottawatomie County Public Safety Center',
+  address: '14209 US-177, Shawnee, OK 74804',
+  phone: '(405) 275-0043 ext 2',
+  dispatch: '(405) 273-1727',
+  visiting: {
+    weekdays: 'Mon-Fri 7:30 AM - 9:00 PM',
+    weekends: 'Sat-Sun 7:30 AM - 2:30 PM',
+    video: 'Tue/Wed/Thu/Sun 8:00 AM - 4:00 PM',
+  },
+};
+
+const courthouseData = {
+  address: '325 N Broadway Ave, Shawnee, OK 74801',
+  county: 'Pottawatomie County',
+  seat: 'Shawnee',
+};
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds#business',
+      'name': 'Angel Bail Bonds',
+      'image': '/angel-bail-bonds-logo.png',
+      'description': 'Professional bail bond services in Pottawatomie County, Oklahoma. Women-owned business with 15+ years of experience. Available 24/7.',
+      'telephone': '(405) 614-3000',
+      'email': 'bailbondangel@gmail.com',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '14209 US-177',
+        'addressLocality': 'Shawnee',
+        'addressRegion': 'OK',
+        'postalCode': '74804',
+        'addressCountry': 'US'
+      },
+      'geo': {
+        '@type': 'GeoCoordinates',
+        'latitude': '35.3279',
+        'longitude': '-96.9253'
+      },
+      'url': 'https://stillwaterokbailbonds.com',
+      'priceRange': '$',
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '127'
+      },
+      'areaServed': [
+        {
+          '@type': 'City',
+          'name': 'Shawnee'
+        },
+        {
+          '@type': 'City',
+          'name': 'Tecumseh'
+        },
+        {
+          '@type': 'City',
+          'name': 'McLoud'
+        },
+        {
+          '@type': 'City',
+          'name': 'Bethel Acres'
+        },
+        {
+          '@type': 'City',
+          'name': 'Earlsboro'
+        },
+        {
+          '@type': 'City',
+          'name': 'Maud'
+        }
+      ],
+      'openingHoursSpecification': {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        'opens': '00:00',
+        'closes': '23:59'
+      },
+      'sameAs': [
+        'https://www.facebook.com/angelbailbonds',
+        'https://www.google.com/maps/place/Angel+Bail+Bonds'
+      ]
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds#service',
+      'name': 'Bail Bond Services - Pottawatomie County',
+      'description': 'Professional bail bond services for Pottawatomie County residents. Fast processing, flexible payment options, 24/7 availability.',
+      'provider': {
+        '@type': 'LocalBusiness',
+        '@id': 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds#business'
+      },
+      'areaServed': {
+        '@type': 'AdministrativeArea',
+        'name': 'Pottawatomie County'
+      },
+      'availableChannel': {
+        '@type': 'ServiceChannel',
+        'serviceUrl': 'https://stillwaterokbailbonds.com',
+        'servicePhone': '(405) 614-3000'
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds#breadcrumb',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://stillwaterokbailbonds.com'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Counties',
+          'item': 'https://stillwaterokbailbonds.com/bail-bonds-by-county'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Pottawatomie County',
+          'item': 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds'
+        }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://stillwaterokbailbonds.com/pottawatomie-county-bail-bonds#faq',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is the phone number for Angel Bail Bonds?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Angel Bail Bonds is available 24/7 at (405) 614-3000.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What payment methods does Angel Bail Bonds accept?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We accept cash, credit cards, Zelle, and Venmo for your convenience.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are the visitation hours at Pottawatomie County Jail?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'In-person visits: Mon-Fri 7:30 AM-9:00 PM, Sat-Sun 7:30 AM-2:30 PM. Video visitation: Tue/Wed/Thu/Sun 8:00 AM-4:00 PM.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Angel Bail Bonds serve Shawnee and Tecumseh?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, we serve all of Pottawatomie County including Shawnee, Tecumseh, McLoud, Bethel Acres, Earlsboro, and surrounding communities.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How long does the bail bond process take?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Most bail bonds are processed within 1-3 hours. Our team works quickly to get your loved one released as soon as possible.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What documents do I need to post bail in Pottawatomie County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'You will need a valid photo ID and information about the inmate. Our agents will guide you through the exact documentation required for your situation.'
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
+>
+  <style define:vars={{ colorPrimary: '#d32f2f', colorAccent: '#ff6f00', colorDark: '#1a1a1a', colorLight: '#f5f5f5', colorText: '#333333', colorBorder: '#e0e0e0', colorSuccess: '#2e7d32' }}>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--colorPrimary) 0%, var(--colorAccent) 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+
+    .hero .phone-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .geo-capsule {
+      background: white;
+      border-left: 5px solid var(--colorPrimary);
+      padding: 25px;
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .geo-capsule h2 {
+      color: var(--colorPrimary);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .geo-capsule h2::before {
+      content: '📍';
+      font-size: 1.8rem;
+    }
+
+    .geo-capsule p {
+      color: var(--colorText);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .geo-capsule strong {
+      color: var(--colorPrimary);
+      font-weight: 600;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .facility-card {
+      background: white;
+      border: 1px solid var(--colorBorder);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .facility-card h3 {
+      color: var(--colorPrimary);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--colorAccent);
+      padding-bottom: 10px;
+    }
+
+    .facility-card .info-block {
+      margin-bottom: 20px;
+    }
+
+    .facility-card .info-label {
+      color: var(--colorAccent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .facility-card .info-value {
+      color: var(--colorText);
+      font-size: 1.05rem;
+      margin-top: 5px;
+    }
+
+    .facility-card a {
+      color: var(--colorPrimary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .facility-card a:hover {
+      color: var(--colorAccent);
+    }
+
+    .steps-list {
+      list-style: none;
+      counter-reset: step-counter;
+    }
+
+    .steps-list li {
+      counter-increment: step-counter;
+      margin-bottom: 15px;
+      padding-left: 40px;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--colorText);
+    }
+
+    .steps-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 30px;
+      height: 30px;
+      background: var(--colorPrimary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .court-info {
+      margin: 50px auto;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+
+    .court-info h2 {
+      color: var(--colorPrimary);
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .court-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .court-table thead {
+      background: var(--colorPrimary);
+      color: white;
+    }
+
+    .court-table th {
+      padding: 18px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .court-table td {
+      padding: 18px;
+      border-bottom: 1px solid var(--colorBorder);
+      color: var(--colorText);
+    }
+
+    .court-table tbody tr:hover {
+      background: var(--colorLight);
+    }
+
+    .booking-process {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .booking-process h2 {
+      color: var(--colorPrimary);
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .process-paragraph {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--colorAccent);
+      border-radius: 4px;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      color: var(--colorText);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-county {
+      background: var(--colorLight);
+      padding: 50px 20px;
+      margin: 50px 0;
+    }
+
+    .about-county h2 {
+      color: var(--colorPrimary);
+      font-size: 1.8rem;
+      max-width: 1000px;
+      margin: 0 auto 25px;
+      text-align: center;
+    }
+
+    .about-county p {
+      max-width: 1000px;
+      margin: 0 auto 20px;
+      text-align: center;
+      color: var(--colorText);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .community-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .community-tag {
+      background: white;
+      color: var(--colorPrimary);
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid var(--colorPrimary);
+      transition: all 0.3s ease;
+    }
+
+    .community-tag:hover {
+      background: var(--colorPrimary);
+      color: white;
+    }
+
+    .inmate-search {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .inmate-search h2 {
+      color: var(--colorPrimary);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .inmate-search-box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .inmate-search p {
+      color: var(--colorText);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .search-button {
+      display: inline-block;
+      background: var(--colorPrimary);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-button:hover {
+      background: var(--colorAccent);
+    }
+
+    .faq-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .faq-section h2 {
+      color: var(--colorPrimary);
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--colorBorder);
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .faq-question {
+      background: var(--colorLight);
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--colorText);
+      font-size: 1.05rem;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #e8e8e8;
+    }
+
+    .faq-question.active {
+      background: var(--colorPrimary);
+      color: white;
+    }
+
+    .faq-icon {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 20px;
+      max-height: 500px;
+    }
+
+    .faq-answer p {
+      color: var(--colorText);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .related-pages {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .related-pages h2 {
+      color: var(--colorPrimary);
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .related-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .related-link {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid var(--colorBorder);
+      text-align: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--colorPrimary);
+      font-weight: 600;
+    }
+
+    .related-link:hover {
+      border-color: var(--colorPrimary);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .cta-bar {
+      background: linear-gradient(135deg, var(--colorPrimary) 0%, var(--colorAccent) 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin: 50px 0 0 0;
+    }
+
+    .cta-bar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-bar p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      font-weight: 300;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      border: 2px solid white;
+    }
+
+    .cta-btn-primary {
+      background: white;
+      color: var(--colorPrimary);
+    }
+
+    .cta-btn-primary:hover {
+      background: transparent;
+      color: white;
+    }
+
+    .cta-btn-secondary {
+      background: transparent;
+      color: white;
+    }
+
+    .cta-btn-secondary:hover {
+      background: white;
+      color: var(--colorPrimary);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .geo-capsule {
+        margin: 20px 10px;
+      }
+
+      .court-info h2,
+      .booking-process h2,
+      .faq-section h2,
+      .related-pages h2,
+      .cta-bar h2 {
+        font-size: 1.5rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Pottawatomie County Bail Bonds</h1>
+    <p>Fast, Professional Bail Bond Services in Shawnee & Surrounding Communities</p>
+    <div class="phone-badge">
+      📞 Call 24/7: (405) 614-3000
+    </div>
+  </section>
+
+  <!-- Geo Answer Capsule -->
+  <div class="geo-capsule">
+    <h2>Serving Pottawatomie County</h2>
+    <p>
+      Angel Bail Bonds provides <strong>24/7 bail bond services</strong> throughout Pottawatomie County, Oklahoma. Located <strong>60 miles from Stillwater</strong>, we serve the county seat of <strong>Shawnee</strong> and surrounding communities including Tecumseh, McLoud, Bethel Acres, Earlsboro, Maud, Wanette, Asher, Brooksville, St. Louis, and Macomb.
+    </p>
+    <p>
+      As a <strong>women-owned business with 15+ years of experience</strong> and a <strong>4.9-star rating</strong> from 127 customers, we're committed to helping families navigate the bail process quickly and professionally.
+    </p>
+  </div>
+
+  <!-- Facility & Steps Section -->
+  <div class="two-column">
+    <div class="facility-card">
+      <h3>🏢 Pottawatomie County Jail</h3>
+      <div class="info-block">
+        <div class="info-label">Address</div>
+        <div class="info-value">14209 US-177, Shawnee, OK 74804</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Phone</div>
+        <div class="info-value"><a href="tel:+14052750043">(405) 275-0043 ext 2</a></div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Dispatch</div>
+        <div class="info-value"><a href="tel:+14052731727">(405) 273-1727</a></div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">In-Person Visits</div>
+        <div class="info-value">
+          Mon-Fri: 7:30 AM - 9:00 PM<br>
+          Sat-Sun: 7:30 AM - 2:30 PM
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Video Visits</div>
+        <div class="info-value">Tue/Wed/Thu/Sun: 8:00 AM - 4:00 PM</div>
+      </div>
+    </div>
+
+    <div class="facility-card">
+      <h3>⚖️ Bail Bond Process</h3>
+      <ol class="steps-list">
+        <li><strong>Call Angel Bail Bonds</strong> at (405) 614-3000 with the inmate's name and booking information.</li>
+        <li><strong>Provide Information</strong> about the arrest charge and bail amount set by the court.</li>
+        <li><strong>Choose Payment Method</strong> — Cash, Credit Card, Zelle, or Venmo accepted.</li>
+        <li><strong>Complete Paperwork</strong> — Our agent will guide you through all necessary documents.</li>
+        <li><strong>Bond Posted</strong> — Usually processed within 1-3 hours for release.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Court Information -->
+  <div class="court-info">
+    <h2>Pottawatomie County Court Information</h2>
+    <table class="court-table">
+      <thead>
+        <tr>
+          <th>Facility</th>
+          <th>Address</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>District Court</strong></td>
+          <td>325 N Broadway Ave, Shawnee, OK 74801</td>
+          <td>Main courthouse for Pottawatomie County</td>
+        </tr>
+        <tr>
+          <td><strong>County Jail</strong></td>
+          <td>14209 US-177, Shawnee, OK 74804</td>
+          <td>(405) 275-0043 ext 2</td>
+        </tr>
+        <tr>
+          <td><strong>Sheriff's Office</strong></td>
+          <td>500 E McArthur St, Shawnee, OK 74804</td>
+          <td>(405) 275-4040</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Booking Process Section -->
+  <div class="booking-process">
+    <h2>Understanding the Bail Bond Process</h2>
+
+    <div class="process-paragraph">
+      <strong>Step 1: Arrest & Booking</strong> — When someone is arrested in Pottawatomie County, they are taken to the Pottawatomie County Public Safety Center for booking. During this process, their information is recorded, they are photographed and fingerprinted, and they may be charged with one or more offenses. Once booked, they can post bail or bond to be released from custody.
+    </div>
+
+    <div class="process-paragraph">
+      <strong>Step 2: Bail Determination</strong> — A judge sets the bail amount based on factors including the severity of the charge, the person's criminal history, ties to the community, and flight risk. In Pottawatomie County, bail amounts typically range from hundreds to thousands of dollars depending on the offense. If the bail amount is too high to pay upfront, a bail bondsman like Angel Bail Bonds can help by paying the court on your behalf.
+    </div>
+
+    <div class="process-paragraph">
+      <strong>Step 3: Bond Processing & Release</strong> — Once Angel Bail Bonds posts your bond with the court, the inmate is released from custody, usually within 1-3 hours. You will pay Angel Bail Bonds a fee (typically 10-15% of the bail amount), and we handle all court paperwork. This allows your loved one to return home while their case proceeds through the Pottawatomie County judicial system.
+    </div>
+  </div>
+
+  <!-- About Pottawatomie County -->
+  <div class="about-county">
+    <h2>About Pottawatomie County, Oklahoma</h2>
+    <p>
+      Pottawatomie County, with a population of approximately 72,454 to 86,570 residents, is located in central Oklahoma with Shawnee as its county seat. The county is home to the Citizen Potawatomi Nation headquarters and Oklahoma Baptist University. Notable features include the Tecumseh Federal Prison nearby and proximity to Seminole County to the south. Communities we serve include Shawnee, Tecumseh, McLoud, Bethel Acres, Earlsboro, Maud, Wanette, Asher, Brooksville, St. Louis, and Macomb.
+    </p>
+    <div class="community-tags">
+      <span class="community-tag">Shawnee</span>
+      <span class="community-tag">Tecumseh</span>
+      <span class="community-tag">McLoud</span>
+      <span class="community-tag">Bethel Acres</span>
+      <span class="community-tag">Earlsboro</span>
+      <span class="community-tag">Maud</span>
+      <span class="community-tag">Wanette</span>
+      <span class="community-tag">Asher</span>
+      <span class="community-tag">Brooksville</span>
+      <span class="community-tag">St. Louis</span>
+      <span class="community-tag">Macomb</span>
+    </div>
+  </div>
+
+  <!-- Inmate Search Section -->
+  <div class="inmate-search">
+    <h2>Search for an Inmate</h2>
+    <div class="inmate-search-box">
+      <p>
+        Need to find out if someone is in the Pottawatomie County jail? You can search the inmate roster online or call the jail directly at <strong>(405) 275-0043 ext 2</strong> for immediate information.
+      </p>
+      <a href="https://www.odoccustodyreport.doc.state.ok.us/" class="search-button" target="_blank" rel="noopener noreferrer">
+        Search Inmate Roster
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item active">
+      <div class="faq-question active">
+        <span>What is the phone number for Angel Bail Bonds?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Angel Bail Bonds is available 24/7 at <strong>(405) 614-3000</strong>. You can reach us anytime, day or night, including weekends and holidays.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What payment methods does Angel Bail Bonds accept?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>We accept <strong>cash, credit cards, Zelle, and Venmo</strong> for your convenience. We understand that bail situations can be urgent, and we offer multiple payment options to make the process as accessible as possible.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What are the visitation hours at Pottawatomie County Jail?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p><strong>In-person visits:</strong> Monday-Friday 7:30 AM to 9:00 PM, Saturday-Sunday 7:30 AM to 2:30 PM. <strong>Video visitation:</strong> Tuesday, Wednesday, Thursday, and Sunday from 8:00 AM to 4:00 PM. Contact the jail at (405) 275-0043 ext 2 for specific instructions.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Does Angel Bail Bonds serve Shawnee, Tecumseh, and surrounding areas?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, we serve all of Pottawatomie County including Shawnee, Tecumseh, McLoud, Bethel Acres, Earlsboro, Maud, Wanette, Asher, Brooksville, St. Louis, and Macomb. No matter where you are in the county, Angel Bail Bonds is here to help.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How long does the bail bond process take?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Most bail bonds are processed within <strong>1-3 hours</strong> from the time we receive your information. Our experienced team works quickly and efficiently to get your loved one released as soon as possible. In some cases, we can process bonds even faster.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What documents do I need to post bail in Pottawatomie County?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>You will need a <strong>valid photo ID</strong> and information about the inmate including their name, booking number, and the charges against them. Our experienced agents will guide you through the exact documentation required for your specific situation. Call us at (405) 614-3000 and we'll walk you through it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Pages -->
+  <div class="related-pages">
+    <h2>Serving Other Oklahoma Counties</h2>
+    <div class="related-links">
+      <a href="/lincoln-county-bail-bonds" class="related-link">Lincoln County</a>
+      <a href="/oklahoma-county-bail-bonds" class="related-link">Oklahoma County</a>
+      <a href="/seminole-county-bail-bonds" class="related-link">Seminole County</a>
+      <a href="/cleveland-county-bail-bonds" class="related-link">Cleveland County</a>
+      <a href="/creek-county-bail-bonds" class="related-link">Creek County</a>
+    </div>
+  </div>
+
+  <!-- CTA Bar -->
+  <section class="cta-bar">
+    <h2>Need Bail Bonds in Pottawatomie County?</h2>
+    <p>Angel Bail Bonds is available 24/7 to help you or your loved one</p>
+    <div class="cta-buttons">
+      <a href="tel:+14056143000" class="cta-btn cta-btn-primary">Call Now: (405) 614-3000</a>
+      <a href="mailto:bailbondangel@gmail.com" class="cta-btn cta-btn-secondary">Email Us</a>
+    </div>
+  </section>
+
+  <script>
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.classList.remove('active');
+            item.querySelector('.faq-question').classList.remove('active');
+          }
+        });
+
+        // Toggle current item
+        faqItem.classList.toggle('active');
+        question.classList.toggle('active');
+      });
+    });
+  </script>
+</BaseLayout>

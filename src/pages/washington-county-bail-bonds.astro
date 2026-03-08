@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/washington-county-bail-bonds#business',
+      name: 'Angel Bail Bonds - Washington County',
+      url: 'https://stillwaterokbailbonds.com/washington-county-bail-bonds',
+      description: 'Professional 24/7 bail bond services for Washington County, Oklahoma. Serving the Washington County Correctional Facility in Bartlesville with fast releases and competitive rates.',
+      telephone: '(405) 614-3000',
+      email: 'bailbondangel@gmail.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Washington County, Oklahoma' },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.7468, longitude: -95.9805 },
+      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+        opens: '00:00',
+        closes: '23:59',
+      },
+      paymentAccepted: ['Cash', 'Credit Card', 'Zelle', 'Venmo'],
+    },
+    {
+      '@type': 'Service',
+      name: 'Washington County Bail Bond Services',
+      provider: { '@id': 'https://stillwaterokbailbonds.com/washington-county-bail-bonds#business' },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Washington County, Oklahoma' },
+      description: 'Fast, confidential bail bond services for Washington County arrests at the Washington County Correctional Facility in Bartlesville, Oklahoma.',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Washington County Bail Bonds', item: 'https://stillwaterokbailbonds.com/washington-county-bail-bonds' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I bail someone out of Washington County Jail in Bartlesville?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, day or night. We will verify the charges and bail amount with the Washington County Correctional Facility at 611 SW Adams Blvd in Bartlesville, handle all paperwork remotely, and post bail. Most releases take 1-2 hours after bond is posted. The jail can be reached directly at (918) 332-4011.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does a bail bond cost in Washington County, Oklahoma?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Angel Bail Bonds offers competitive rates on Washington County bail bonds. The exact premium depends on the bail amount set by the court. We accept cash, Visa, Mastercard, Zelle, and Venmo, and offer financing options for larger bonds. Call (405) 614-3000 for a free quote on your specific situation.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'What are the visiting hours at Washington County Correctional Facility?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Washington County Correctional Facility visiting hours are Monday through Friday 7:30 AM to 9:00 PM, and Saturday and Sunday 7:30 AM to 2:30 PM. Inmates receive one free 15-minute visit within each 30-day period (first visit is free, then $10 per visit). Visits are limited to one adult and one child per inmate. Call (918) 332-4011 to verify current visiting policies.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'When are arraignments held in Washington County?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Washington County arraignments and court dockets are held at the Washington County Courthouse, 420 S Johnstone Ave in Bartlesville. Contact the Court Clerk at (918) 337-2870 for current arraignment schedules and to inquire about upcoming court dates. Regular business hours are Monday through Friday, 8:30 AM to 4:30 PM.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to get released from Washington County Jail?',
+          acceptedAnswer: { '@type': 'Answer', text: 'After Angel Bail Bonds posts your bail at the Washington County Correctional Facility, most defendants are released within 1-2 hours. Processing includes paperwork verification, property return, and outprocessing. Weekend and holiday releases may take slightly longer due to staffing. We stay in contact until your loved one walks out.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I bail someone out of Washington County Jail over the phone?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Angel Bail Bonds handles the entire Washington County bail process remotely — by phone, email, or e-sign. You do not need to visit our office or the jail. We complete paperwork electronically, post bail at the Washington County Correctional Facility, and keep you updated until release.' },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Washington County Bail Bonds — Bartlesville, OK | Angel Bail Bonds 24/7"
+  description="24/7 bail bond services for Washington County Correctional Facility in Bartlesville, Oklahoma. Angel Bail Bonds offers competitive rates, fast releases (1-2 hours), and 15+ years experience. Call (405) 614-3000."
+  ogImage="/images/hero-agate.webp"
+  structuredData={structuredData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Washington County, Oklahoma · Bartlesville</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Washington County</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Serving Bartlesville, Dewey, Copan, Ochelata, Ramona, Vera, Wann & surrounding areas · 24/7</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+        <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+        <span style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">Competitive Rates · Financing Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO ANSWER CAPSULE — Primary citability block -->
+  <section style="padding: 40px 1.5rem; background: white; border-bottom: 1px solid var(--slate-100);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">How Do I Bail Someone Out of Washington County Jail?</h2>
+      <div style="background: var(--slate-50); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 20px;">
+        <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.75;">
+          <strong>To bail someone out of the Washington County Correctional Facility in Bartlesville, Oklahoma, call Angel Bail Bonds at (405) 614-3000.</strong> The jail is located at 611 SW Adams Boulevard, Bartlesville, OK 74003 and can be reached at (918) 332-4011. After booking, bail amounts are set by the court. Angel Bail Bonds offers competitive rates, accepts cash, credit cards, Zelle, and Venmo, and handles everything remotely by phone or e-sign. Once bond is posted, most defendants are released within 1-2 hours. Visiting hours at Washington County Jail are Monday–Friday 7:30 AM–9:00 PM and Saturday–Sunday 7:30 AM–2:30 PM. Court proceedings are held at the Washington County Courthouse, 420 S Johnstone Ave, Bartlesville.
+        </p>
+      </div>
+      <p style="color: var(--slate-400); font-size: 0.75rem;">Last updated: March 2026 · Verified with Washington County Sheriff's Office</p>
+    </div>
+  </section>
+
+  <!-- FACILITY + STEPS — two-column -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+      <!-- Left: Facility Details -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Washington County Correctional Facility</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 110px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">611 SW Adams Blvd, Bartlesville, OK 74003</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+19183324011" style="color: var(--blue); text-decoration: none;">(918) 332-4011</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visiting Hours</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Mon–Fri 7:30 AM–9:00 PM<br>Sat–Sun 7:30 AM–2:30 PM</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visit Duration</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">15 minutes · Free first visit, $10 thereafter</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitors</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">1 adult + 1 child maximum per visit</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Processing</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">1-2 hours after bond posted</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Payments</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Cash, credit cards, money orders</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Right: Steps -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Post Bail in Washington County</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
+            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · 24/7 · Holidays included</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
+            <div><strong style="color: var(--slate-800);">We verify with the jail</strong><br><span style="color: var(--slate-500);">Charges, bond amount, booking status at Washington County Correctional Facility</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+            <div><strong style="color: var(--slate-800);">Sign paperwork remotely</strong><br><span style="color: var(--slate-500);">E-sign, phone, or email — no office visit needed</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">4</span>
+            <div><strong style="color: var(--slate-800);">We post bail</strong><br><span style="color: var(--slate-500);">Bond posted directly with Washington County Jail</span></div>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
+            <div><strong style="color: var(--slate-800);">Release in 1-2 hours</strong><br><span style="color: var(--slate-500);">We stay in contact until they walk out</span></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <style>
+      @media (max-width: 640px) {
+        section div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- COURT INFORMATION — GEO citability block -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">Washington County Courthouse & Court Schedule</h2>
+      <div style="background: white; border: 1px solid var(--slate-200); border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.75;">
+          <strong>The Washington County Courthouse is located at 420 South Johnstone Avenue, Bartlesville, OK 74003.</strong> The Court Clerk's Office can be reached at (918) 337-2870 and is open Monday through Friday, 8:30 AM to 4:30 PM. Contact the court clerk for information about arraignment schedules, docket dates, and how to request a court appearance. Washington County operates under Oklahoma's criminal justice system with regular docket sessions throughout the month.
+        </p>
+      </div>
+
+      <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse; background: white; border: 1px solid var(--slate-200); border-radius: 8px; overflow: hidden;">
+        <tr style="background: var(--navy); color: white;">
+          <td style="padding: 10px 16px; font-weight: 600;">Court Information</td>
+          <td style="padding: 10px 16px; font-weight: 600;">Details</td>
+          <td style="padding: 10px 16px; font-weight: 600;">Contact</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-700);">Courthouse Address</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">420 S Johnstone Ave, Bartlesville, OK 74003</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">(918) 337-2870</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-700);">Court Clerk Hours</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Monday–Friday 8:30 AM–4:30 PM</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Closed weekends & holidays</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-700);">Docket Scheduling</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Call court clerk for current schedules</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">(918) 337-2870</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Jail Dispatch</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Emergency & non-emergency dispatch</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">(918) 338-4001</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- BOOKING PROCESS — unique content -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">What Happens After an Arrest in Washington County?</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.75;">
+        <p style="margin-bottom: 14px;">When someone is arrested in Washington County, they are transported to the Washington County Correctional Facility at 611 SW Adams Boulevard in Bartlesville for booking. The booking process includes identity verification, a health assessment, inventory of personal belongings, fingerprinting, and a booking photograph. Charges are entered into the system, warrant status is reviewed, and bail is set according to the court's bond schedule. The facility serves a population area of approximately 52,455 residents across Washington County's seven-state-region communities.</p>
+        <p style="margin-bottom: 14px;">Once bail is set, a family member or friend can contact Angel Bail Bonds at (405) 614-3000 to begin the release process. We verify the inmate's information and bail amount directly with the Washington County Correctional Facility at (918) 332-4011. After paperwork is completed — which can be done entirely by phone or e-sign — we post bail at the facility. The jail then begins release processing, which typically takes 1-2 hours. Distance from Stillwater to Bartlesville is approximately 95 miles or 1 hour 47 minutes by car, which many families appreciate when managing detention facility logistics.</p>
+        <p style="margin-bottom: 14px;">Washington County accepts cash, money orders, and credit cards for direct cash bail payments. However, most families choose to work with a bail bondsman because posting the full cash bail amount is significantly more expensive. With Angel Bail Bonds, you pay a competitive premium rather than the full bail amount, and we handle all the logistics with the jail and court. We accept Zelle and Venmo in addition to traditional payment methods, making the bail process flexible and accessible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT WASHINGTON COUNTY — unique local content -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">About Washington County, Oklahoma</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.75;">
+        <p style="margin-bottom: 14px;">Washington County is located in northeastern Oklahoma, approximately 95 miles and 1 hour 47 minutes north of Stillwater. The county seat is Bartlesville, Oklahoma, a city of approximately 40,000 people known as the home of Phillips Petroleum (now ConocoPhillips) headquarters. The county has a total population of approximately 52,455 residents spread across picturesque communities in the rolling hills of northeastern Oklahoma.</p>
+        <p style="margin-bottom: 14px;">Bartlesville is a major commercial and cultural hub featuring the iconic Price Tower, designed by renowned architect Frank Lloyd Wright, and the Woolaroc Museum, a world-class art and wildlife facility. The city sits at the intersection of US-60 and US-75, providing accessibility from throughout the region. Law enforcement activity in Washington County includes traffic stops along major state routes, commercial district incidents in downtown Bartlesville, and arrests at the various state and local establishments that serve the county's substantial daytime population influx from surrounding areas.</p>
+        <p style="margin-bottom: 14px;">Other communities in Washington County include Dewey, Copan, Ochelata, Ramona, Vera, Wann, and Lenapah — all charming rural towns with historical significance to northeastern Oklahoma. The county's economy is historically tied to petroleum and energy production, though it has diversified in recent decades. Angel Bail Bonds has served Washington County families for over 15 years and maintains strong working relationships with the Washington County Sheriff's Office and court system.</p>
+      </div>
+
+      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Communities We Serve in Washington County</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Bartlesville</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Dewey</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Copan</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Ochelata</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Ramona</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Vera</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Wann</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Lenapah</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INMATE SEARCH — GEO citability -->
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;" id="inmate-search">How to Find an Inmate in Washington County Jail</h2>
+      <div style="background: var(--slate-50); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 20px;">
+        <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.75;">
+          <strong>To search for an inmate at the Washington County Correctional Facility, call the facility directly at (918) 332-4011 or contact the Washington County Sheriff's Office at (918) 338-4001.</strong> The facility maintains a current roster of all inmates with booking dates, charges, and bond information. You can also sign up for Oklahoma VINE (Victim Information and Notification Everyday) to receive custody status alerts by email or phone. If you cannot locate someone, call Angel Bail Bonds at (405) 614-3000 and we will look them up for you free of charge.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — compact accordion -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions — Washington County Bail Bonds</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Washington County Jail in Bartlesville?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, day or night. We verify charges and bail with Washington County Correctional Facility at (918) 332-4011, handle all paperwork remotely, and post bail. Most releases take 1-2 hours after bond is posted.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Washington County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Angel Bail Bonds offers competitive rates on Washington County bail bonds. The exact premium depends on the bail amount set by the court. We accept cash, Visa, Mastercard, Zelle, and Venmo, and offer financing for larger bonds. Call (405) 614-3000 for a free quote.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What are the visiting hours at Washington County Jail?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Visiting hours at Washington County Correctional Facility are Monday–Friday 7:30 AM to 9:00 PM, and Saturday–Sunday 7:30 AM to 2:30 PM. Visits are 15 minutes, with one adult and one child per inmate. First visit is free, then $10 per visit. Call (918) 332-4011 to verify current policies.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">When are court dates held in Washington County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Contact the Washington County Court Clerk at (918) 337-2870 for current arraignment and docket schedules. The courthouse is located at 420 S Johnstone Ave, Bartlesville. Court Clerk hours are Monday–Friday 8:30 AM to 4:30 PM.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I bail someone out of Washington County Jail remotely?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds handles the entire Washington County bail process by phone, email, or e-sign. No office visit required. We complete all paperwork electronically, post bail at the correctional facility, and keep you updated until your loved one is released.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How far is Bartlesville from Stillwater?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Bartlesville is approximately 95 miles north of Stillwater, about a 1 hour 47 minute drive. Angel Bail Bonds serves Washington County families throughout the distance and can manage the entire bail process by phone and e-sign, so you don't need to travel to post bail.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section style="padding: 24px 1.5rem 0; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving Nearby Counties</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Payne County (Stillwater) →</a>
+        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Noble County (Perry) →</a>
+        <a href="/lincoln-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County (Chandler) →</a>
+        <a href="/kay-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Kay County (Newkirk) →</a>
+        <a href="/tulsa-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Tulsa County (Tulsa) →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Washington County Bail Bond?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Competitive rates · Hablamos Español</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

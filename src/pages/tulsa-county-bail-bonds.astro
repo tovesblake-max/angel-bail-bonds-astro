@@ -1,0 +1,596 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Tulsa County Bail Bonds | Angel Bail Bonds | 24/7 Service';
+const description = 'Fast bail bonds in Tulsa County, OK. Women-owned Angel Bail Bonds serves David L. Moss Criminal Justice Center. 24/7 availability, flexible payment options, 4.9★ rated.';
+const county = 'Tulsa County';
+const jail = 'David L. Moss Criminal Justice Center';
+const jailAddress = '300 N Denver Ave, Tulsa, OK 74103';
+const jailPhone = '(918) 596-8900';
+const courtAddress = '500 S Denver Ave, Tulsa, OK 74103';
+const courtPhone = '(918) 596-5000';
+const courtCriminal = '(918) 596-5231';
+const courtClerk = '(918) 596-5420';
+const businessPhone = '(405) 614-3000';
+const businessEmail = 'bailbondangel@gmail.com';
+const population = '700,617';
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://stillwaterokbailbonds.com/tulsa-county-bail-bonds#business',
+      'name': 'Angel Bail Bonds',
+      'telephone': '(405) 614-3000',
+      'email': 'bailbondangel@gmail.com',
+      'description': '24/7 bail bonds services for Tulsa County, Oklahoma. Women-owned, 15+ years experience. Serving David L. Moss Criminal Justice Center.',
+      'image': 'https://stillwaterokbailbonds.com/images/angel-bail-bonds-logo.png',
+      'url': 'https://stillwaterokbailbonds.com',
+      'sameAs': ['https://www.google.com/maps/place/Angel+Bail+Bonds'],
+      'areaServed': {
+        '@type': 'Place',
+        'name': 'Tulsa County, Oklahoma',
+        'geo': {
+          '@type': 'GeoCoordinates',
+          'latitude': '36.1540',
+          'longitude': '-95.9928'
+        }
+      },
+      'priceRange': '$$',
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '127',
+        'bestRating': '5',
+        'worstRating': '1'
+      }
+    },
+    {
+      '@type': 'Service',
+      'name': 'Bail Bonds - Tulsa County',
+      'provider': {
+        '@id': 'https://stillwaterokbailbonds.com/tulsa-county-bail-bonds#business'
+      },
+      'serviceType': 'Bail Bonds',
+      'areaServed': {
+        '@type': 'Place',
+        'name': 'Tulsa County, Oklahoma'
+      },
+      'availableChannel': {
+        '@type': 'ServiceChannel',
+        'serviceUrl': 'https://stillwaterokbailbonds.com/tulsa-county-bail-bonds'
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://stillwaterokbailbonds.com'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Bail Bonds',
+          'item': 'https://stillwaterokbailbonds.com/bail-bonds'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Tulsa County',
+          'item': 'https://stillwaterokbailbonds.com/tulsa-county-bail-bonds'
+        }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How much does a bail bond cost in Tulsa County?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Bail bonds typically cost 10% of the bail amount set by the judge. Angel Bail Bonds offers flexible payment plans and accepts cash, credit cards, Zelle, and Venmo to make the process accessible.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are Tulsa County jail visitation hours?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'In-person visits at David L. Moss Criminal Justice Center are available Friday-Saturday, 8AM-3:30PM (immediate relatives only). Video visitation is available daily: onsite 8:30AM-4:30PM (free, close relatives), and offsite 8:30AM-10PM (fee applies, no restrictions).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can Angel Bail Bonds help me 24/7?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes! Angel Bail Bonds operates 24/7 to help you secure release quickly, even on nights, weekends, and holidays. Call (405) 614-3000 anytime.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How long does it take to post bail?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'With Angel Bail Bonds, the process typically takes 1-2 hours from initial contact to release, depending on jail processing times and paperwork completion.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What payment methods do you accept?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Angel Bail Bonds accepts cash, credit cards, Zelle, and Venmo for maximum flexibility. We work with you to find a payment plan that fits your situation.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Where is the Tulsa County Courthouse?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The Tulsa County Courthouse is located at 500 S Denver Ave, Tulsa, OK 74103. Criminal court inquiries can be made at (918) 596-5231.'
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(135deg, var(--color-primary, #1a365d) 0%, var(--color-primary-dark, #0f1f3b) 100%); color: white; padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h1 style="font-size: var(--text-5xl, 2.5rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem); line-height: 1.2;">
+        Tulsa County Bail Bonds | Fast 24/7 Release
+      </h1>
+      <p style="font-size: var(--text-lg, 1.125rem); margin-bottom: var(--spacing-6, 1.5rem); line-height: 1.6; opacity: 0.95;">
+        Angel Bail Bonds — Women-Owned, 15+ Years Experience, 4.9★ Rated
+      </p>
+      <div style="display: flex; gap: var(--spacing-4, 1rem); justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+14056143000" style="background-color: var(--color-accent, #d97706); color: white; padding: var(--spacing-3, 0.75rem) var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; font-weight: 600; border: none; cursor: pointer; display: inline-block; transition: background-color 0.3s;">
+          Call Now: (405) 614-3000
+        </a>
+        <a href="mailto:bailbondangel@gmail.com" style="background-color: transparent; color: white; border: 2px solid white; padding: var(--spacing-3, 0.75rem) var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; font-weight: 600; cursor: pointer; display: inline-block; transition: all 0.3s;">
+          Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO Answer Capsule -->
+  <section style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-6, 1.5rem) var(--spacing-4, 1rem); border-left: 4px solid var(--color-primary, #1a365d);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-xl, 1.25rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem); color: var(--color-primary, #1a365d);">
+        Tulsa County Quick Facts
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-4, 1rem);">
+        <div>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563); font-weight: 600; margin-bottom: var(--spacing-2, 0.5rem);">POPULATION</p>
+          <p style="font-size: var(--text-lg, 1.125rem); font-weight: 700; color: var(--color-primary, #1a365d);">700,617</p>
+        </div>
+        <div>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563); font-weight: 600; margin-bottom: var(--spacing-2, 0.5rem);">COUNTY SEAT</p>
+          <p style="font-size: var(--text-lg, 1.125rem); font-weight: 700; color: var(--color-primary, #1a365d);">Tulsa (2nd Largest Metro in OK)</p>
+        </div>
+        <div>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563); font-weight: 600; margin-bottom: var(--spacing-2, 0.5rem);">DISTANCE FROM STILLWATER</p>
+          <p style="font-size: var(--text-lg, 1.125rem); font-weight: 700; color: var(--color-primary, #1a365d);">63 miles / 1 hr 8 min</p>
+        </div>
+        <div>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563); font-weight: 600; margin-bottom: var(--spacing-2, 0.5rem);">COORDINATES</p>
+          <p style="font-size: var(--text-lg, 1.125rem); font-weight: 700; color: var(--color-primary, #1a365d);">36.1540°N, 95.9928°W</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jail Facility & Steps -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-6, 1.5rem); color: var(--color-primary, #1a365d);">
+        David L. Moss Criminal Justice Center
+      </h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-6, 1.5rem); margin-bottom: var(--spacing-8, 3rem);">
+        <!-- Facility Column -->
+        <div>
+          <h3 style="font-size: var(--text-xl, 1.25rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem); color: var(--color-primary, #1a365d);">
+            Facility Information
+          </h3>
+          <div style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); margin-bottom: var(--spacing-4, 1rem);">
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563); margin-bottom: var(--spacing-2, 0.5rem);">
+              <strong>Address:</strong><br/>
+              300 N Denver Ave<br/>
+              Tulsa, OK 74103
+            </p>
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563); margin-bottom: var(--spacing-2, 0.5rem);">
+              <strong>Main Phone:</strong><br/>
+              <a href="tel:+19185968900" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-8900</a>
+            </p>
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563);">
+              <strong>Court Clerk:</strong><br/>
+              <a href="tel:+19185965420" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-5420</a>
+            </p>
+          </div>
+
+          <h3 style="font-size: var(--text-lg, 1.125rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem); color: var(--color-primary, #1a365d);">
+            ⚠️ Visitation: Complex Schedule
+          </h3>
+          <div style="background-color: #fef3c7; padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); border-left: 4px solid #f59e0b;">
+            <p style="font-size: var(--text-sm, 0.875rem); margin-bottom: var(--spacing-2, 0.5rem); font-weight: 600;">
+              <strong>In-Person Visits (Immediate Relatives Only)</strong>
+            </p>
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-3, 0.75rem);">
+              Friday–Saturday, 8:00 AM – 3:30 PM
+            </p>
+
+            <p style="font-size: var(--text-sm, 0.875rem); margin-bottom: var(--spacing-2, 0.5rem); font-weight: 600;">
+              <strong>Video Onsite (Free, Close Relatives)</strong>
+            </p>
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-3, 0.75rem);">
+              Daily, 8:30 AM – 4:30 PM
+            </p>
+
+            <p style="font-size: var(--text-sm, 0.875rem); margin-bottom: var(--spacing-2, 0.5rem); font-weight: 600;">
+              <strong>Video Offsite (Fee, No Restrictions)</strong>
+            </p>
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151);">
+              Daily, 8:30 AM – 10:00 PM
+            </p>
+          </div>
+        </div>
+
+        <!-- Booking Process Steps -->
+        <div>
+          <h3 style="font-size: var(--text-xl, 1.25rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem); color: var(--color-primary, #1a365d);">
+            Fast Bail Bond Process
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: var(--spacing-4, 1rem);">
+            <div style="display: flex; gap: var(--spacing-3, 0.75rem);">
+              <div style="background-color: var(--color-accent, #d97706); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">
+                1
+              </div>
+              <div>
+                <h4 style="font-weight: 700; margin-bottom: var(--spacing-1, 0.25rem); color: var(--color-primary, #1a365d);">
+                  Contact Angel Bail Bonds
+                </h4>
+                <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563);">
+                  Call (405) 614-3000 with the inmate's name and booking information.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-3, 0.75rem);">
+              <div style="background-color: var(--color-accent, #d97706); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">
+                2
+              </div>
+              <div>
+                <h4 style="font-weight: 700; margin-bottom: var(--spacing-1, 0.25rem); color: var(--color-primary, #1a365d);">
+                  Arrange Payment
+                </h4>
+                <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563);">
+                  Pay the bond fee (typically 10% of bail). We accept cash, credit cards, Zelle, or Venmo.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-3, 0.75rem);">
+              <div style="background-color: var(--color-accent, #d97706); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">
+                3
+              </div>
+              <div>
+                <h4 style="font-weight: 700; margin-bottom: var(--spacing-1, 0.25rem); color: var(--color-primary, #1a365d);">
+                  Release & Instructions
+                </h4>
+                <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563);">
+                  Inmate released within 1–2 hours. Receive court date and obligation details.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); margin-top: var(--spacing-6, 1.5rem);">
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151);">
+              <strong>Payment Options:</strong><br/>
+              Cash, Credit Card, Zelle, Venmo
+            </p>
+            <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-2, 0.5rem);">
+              <strong>Availability:</strong><br/>
+              24/7 — Nights, Weekends, Holidays
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Court Information Table -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: var(--color-neutral-50, #f9fafb);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-6, 1.5rem); color: var(--color-primary, #1a365d);">
+        Tulsa County Court Information
+      </h2>
+
+      <div style="overflow-x: auto; border-radius: var(--radius-lg, 0.5rem); border: 1px solid var(--color-neutral-200, #e5e7eb);">
+        <table style="width: 100%; border-collapse: collapse; background-color: white;">
+          <thead>
+            <tr style="background-color: var(--color-primary, #1a365d); color: white;">
+              <th style="padding: var(--spacing-4, 1rem); text-align: left; font-weight: 700;">Facility/Department</th>
+              <th style="padding: var(--spacing-4, 1rem); text-align: left; font-weight: 700;">Address</th>
+              <th style="padding: var(--spacing-4, 1rem); text-align: left; font-weight: 700;">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--color-neutral-200, #e5e7eb);">
+              <td style="padding: var(--spacing-4, 1rem); font-weight: 600; color: var(--color-primary, #1a365d);">David L. Moss Criminal Justice Center</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);">300 N Denver Ave, Tulsa, OK 74103</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);"><a href="tel:+19185968900" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-8900</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-neutral-200, #e5e7eb);">
+              <td style="padding: var(--spacing-4, 1rem); font-weight: 600; color: var(--color-primary, #1a365d);">Tulsa County Courthouse (Criminal)</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);">500 S Denver Ave, Tulsa, OK 74103</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);"><a href="tel:+19185965231" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-5231</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-neutral-200, #e5e7eb);">
+              <td style="padding: var(--spacing-4, 1rem); font-weight: 600; color: var(--color-primary, #1a365d);">Court Clerk</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);">500 S Denver Ave, Tulsa, OK 74103</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);"><a href="tel:+19185965420" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-5420</a></td>
+            </tr>
+            <tr>
+              <td style="padding: var(--spacing-4, 1rem); font-weight: 600; color: var(--color-primary, #1a365d);">Tulsa County Main</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);">500 S Denver Ave, Tulsa, OK 74103</td>
+              <td style="padding: var(--spacing-4, 1rem); color: var(--color-neutral-700, #374151);"><a href="tel:+19185965000" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-5000</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Process Extended -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-6, 1.5rem); color: var(--color-primary, #1a365d);">
+        How Bail Bonds Work in Tulsa County
+      </h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--spacing-6, 1.5rem); margin-bottom: var(--spacing-8, 3rem);">
+        <div style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); border-top: 4px solid var(--color-accent, #d97706);">
+          <h3 style="font-size: var(--text-lg, 1.125rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem); color: var(--color-primary, #1a365d);">
+            What Is a Bail Bond?
+          </h3>
+          <p style="font-size: var(--text-sm, 0.875rem); line-height: 1.6; color: var(--color-neutral-700, #374151);">
+            A bail bond is a financial agreement between you, the bail bondsperson, and the court. When a judge sets bail, they're requiring money as insurance that the defendant will appear at future court hearings. A bail bond allows you to pay a small percentage (typically 10%) of the total bail amount to secure the defendant's temporary release from custody.
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); border-top: 4px solid var(--color-accent, #d97706);">
+          <h3 style="font-size: var(--text-lg, 1.125rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem); color: var(--color-primary, #1a365d);">
+            Why Choose Angel Bail Bonds?
+          </h3>
+          <p style="font-size: var(--text-sm, 0.875rem); line-height: 1.6; color: var(--color-neutral-700, #374151);">
+            Angel Bail Bonds is women-owned with 15+ years of experience serving Tulsa County. We're available 24/7, offer flexible payment options, and maintain a 4.9-star rating from 127 satisfied clients. Our compassionate team understands that a family member's arrest is stressful—we're here to help make the process as smooth and quick as possible.
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); border-top: 4px solid var(--color-accent, #d97706);">
+          <h3 style="font-size: var(--text-lg, 1.125rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem); color: var(--color-primary, #1a365d);">
+            Typical Costs & Timeline
+          </h3>
+          <p style="font-size: var(--text-sm, 0.875rem); line-height: 1.6; color: var(--color-neutral-700, #374151);">
+            Bond fees are typically 10% of the bail amount set by the court. For example, if bail is set at $5,000, the bond fee would be $500. With Angel Bail Bonds, the process from initial contact to release usually takes 1–2 hours, depending on jail processing times. We work nights, weekends, and holidays.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Tulsa County -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: var(--color-neutral-50, #f9fafb);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem); color: var(--color-primary, #1a365d);">
+        About Tulsa County, Oklahoma
+      </h2>
+      <p style="font-size: var(--text-lg, 1.125rem); line-height: 1.8; color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-6, 1.5rem);">
+        Tulsa County is home to Oklahoma's second-largest metropolitan area, with a population of approximately 700,617 residents. Located in northeastern Oklahoma, Tulsa is known as the "Oil Capital of the World" due to its historic energy industry hub. The county serves as a cultural and economic center, featuring the iconic BOK Center, the beautiful Gathering Place park, and important historical landmarks like the Tulsa Race Massacre memorial. Route 66 passes through the region, adding to its historic significance.
+      </p>
+
+      <h3 style="font-size: var(--text-2xl, 1.5rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem); color: var(--color-primary, #1a365d);">
+        Communities Served
+      </h3>
+      <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-3, 0.75rem); margin-bottom: var(--spacing-8, 3rem);">
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Tulsa</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Broken Arrow</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Owasso</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Bixby</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Jenks</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Sand Springs</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Glenpool</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Sapulpa (Partial)</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Collinsville</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Skiatook</span>
+        <span style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-2, 0.5rem) var(--spacing-3, 0.75rem); border-radius: var(--radius-md, 0.375rem); font-size: var(--text-sm, 0.875rem); font-weight: 600;">Sperry</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inmate Search -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem); color: var(--color-primary, #1a365d);">
+        Search for an Inmate
+      </h2>
+      <p style="font-size: var(--text-lg, 1.125rem); line-height: 1.8; color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-6, 1.5rem);">
+        Need to find out if someone is in custody at David L. Moss Criminal Justice Center? Contact the facility directly or call Angel Bail Bonds, and we'll help you get the information you need.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-6, 1.5rem);">
+        <div style="background-color: var(--color-neutral-50, #f9fafb); padding: var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem);">
+          <h3 style="font-size: var(--text-lg, 1.125rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem); color: var(--color-primary, #1a365d);">
+            David L. Moss Criminal Justice Center
+          </h3>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-3, 0.75rem);">
+            <strong>Phone:</strong> <a href="tel:+19185968900" style="color: var(--color-primary, #1a365d); text-decoration: none;">(918) 596-8900</a>
+          </p>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-3, 0.75rem);">
+            <strong>Address:</strong><br/>
+            300 N Denver Ave<br/>
+            Tulsa, OK 74103
+          </p>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-600, #4b5563);">
+            Call the facility directly to ask about an inmate's location, charges, and bail status.
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-accent, #d97706); color: white; padding: var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem);">
+          <h3 style="font-size: var(--text-lg, 1.125rem); font-weight: 700; margin-bottom: var(--spacing-3, 0.75rem);">
+            Let Angel Bail Bonds Help
+          </h3>
+          <p style="font-size: var(--text-sm, 0.875rem); margin-bottom: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            Call us anytime, and we'll help you locate an inmate and explain your bail bond options.
+          </p>
+          <a href="tel:+14056143000" style="background-color: white; color: var(--color-accent, #d97706); padding: var(--spacing-2, 0.5rem) var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; font-weight: 600; display: inline-block; transition: background-color 0.3s;">
+            Call (405) 614-3000
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: var(--color-neutral-50, #f9fafb);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-8, 3rem); color: var(--color-primary, #1a365d);">
+        Frequently Asked Questions
+      </h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-6, 1.5rem);">
+        <!-- FAQ Item 1 -->
+        <details style="background-color: white; border: 1px solid var(--color-neutral-200, #e5e7eb); border-radius: var(--radius-lg, 0.5rem); padding: var(--spacing-4, 1rem);">
+          <summary style="cursor: pointer; font-weight: 700; color: var(--color-primary, #1a365d); display: flex; justify-content: space-between; align-items: center;">
+            How much does a bail bond cost in Tulsa County?
+            <span style="font-size: var(--text-lg, 1.125rem);">+</span>
+          </summary>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            Bail bonds typically cost 10% of the bail amount set by the judge. For example, if bail is set at $5,000, the bond fee would be $500. Angel Bail Bonds offers flexible payment plans and accepts cash, credit cards, Zelle, and Venmo to make the process accessible.
+          </p>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details style="background-color: white; border: 1px solid var(--color-neutral-200, #e5e7eb); border-radius: var(--radius-lg, 0.5rem); padding: var(--spacing-4, 1rem);">
+          <summary style="cursor: pointer; font-weight: 700; color: var(--color-primary, #1a365d); display: flex; justify-content: space-between; align-items: center;">
+            What are Tulsa County jail visitation hours?
+            <span style="font-size: var(--text-lg, 1.125rem);">+</span>
+          </summary>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            <strong>In-person visits (immediate relatives only):</strong> Friday–Saturday, 8:00 AM – 3:30 PM. <strong>Video onsite (free, close relatives):</strong> Daily, 8:30 AM – 4:30 PM. <strong>Video offsite (fee, no restrictions):</strong> Daily, 8:30 AM – 10:00 PM. Note: Tulsa County has complex visitation rules—contact the facility for specifics.
+          </p>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details style="background-color: white; border: 1px solid var(--color-neutral-200, #e5e7eb); border-radius: var(--radius-lg, 0.5rem); padding: var(--spacing-4, 1rem);">
+          <summary style="cursor: pointer; font-weight: 700; color: var(--color-primary, #1a365d); display: flex; justify-content: space-between; align-items: center;">
+            Can Angel Bail Bonds help me 24/7?
+            <span style="font-size: var(--text-lg, 1.125rem);">+</span>
+          </summary>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            Yes! Angel Bail Bonds operates 24/7 to help you secure release quickly, even on nights, weekends, and holidays. An arrest doesn't follow business hours, and neither do we. Call (405) 614-3000 anytime.
+          </p>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details style="background-color: white; border: 1px solid var(--color-neutral-200, #e5e7eb); border-radius: var(--radius-lg, 0.5rem); padding: var(--spacing-4, 1rem);">
+          <summary style="cursor: pointer; font-weight: 700; color: var(--color-primary, #1a365d); display: flex; justify-content: space-between; align-items: center;">
+            How long does it take to post bail?
+            <span style="font-size: var(--text-lg, 1.125rem);">+</span>
+          </summary>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            With Angel Bail Bonds, the process from initial contact to release typically takes 1–2 hours, depending on David L. Moss Criminal Justice Center's processing times and paperwork completion. We work as fast as possible to reunite families.
+          </p>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details style="background-color: white; border: 1px solid var(--color-neutral-200, #e5e7eb); border-radius: var(--radius-lg, 0.5rem); padding: var(--spacing-4, 1rem);">
+          <summary style="cursor: pointer; font-weight: 700; color: var(--color-primary, #1a365d); display: flex; justify-content: space-between; align-items: center;">
+            What payment methods do you accept?
+            <span style="font-size: var(--text-lg, 1.125rem);">+</span>
+          </summary>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            Angel Bail Bonds accepts cash, credit cards, Zelle, and Venmo for maximum flexibility. We work with you to find a payment plan that fits your situation, and we never turn away someone in crisis because of payment limitations.
+          </p>
+        </details>
+
+        <!-- FAQ Item 6 -->
+        <details style="background-color: white; border: 1px solid var(--color-neutral-200, #e5e7eb); border-radius: var(--radius-lg, 0.5rem); padding: var(--spacing-4, 1rem);">
+          <summary style="cursor: pointer; font-weight: 700; color: var(--color-primary, #1a365d); display: flex; justify-content: space-between; align-items: center;">
+            Where is the Tulsa County Courthouse?
+            <span style="font-size: var(--text-lg, 1.125rem);">+</span>
+          </summary>
+          <p style="font-size: var(--text-sm, 0.875rem); color: var(--color-neutral-700, #374151); margin-top: var(--spacing-3, 0.75rem); line-height: 1.6;">
+            The Tulsa County Courthouse is located at 500 S Denver Ave, Tulsa, OK 74103. For criminal court inquiries, call (918) 596-5231. For general court questions, call (918) 596-5000 or the Court Clerk at (918) 596-5420.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section style="padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem); background-color: white;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-6, 1.5rem); color: var(--color-primary, #1a365d);">
+        Other County Bail Bonds Services
+      </h2>
+      <p style="font-size: var(--text-lg, 1.125rem); line-height: 1.8; color: var(--color-neutral-700, #374151); margin-bottom: var(--spacing-6, 1.5rem);">
+        Angel Bail Bonds serves multiple Oklahoma counties. Visit our other county pages to learn more about local bail bond services:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-4, 1rem);">
+        <a href="/creek-county-bail-bonds" style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; text-align: center; font-weight: 600; transition: background-color 0.3s;">
+          Creek County Bail Bonds
+        </a>
+        <a href="/osage-county-bail-bonds" style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; text-align: center; font-weight: 600; transition: background-color 0.3s;">
+          Osage County Bail Bonds
+        </a>
+        <a href="/washington-county-bail-bonds" style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; text-align: center; font-weight: 600; transition: background-color 0.3s;">
+          Washington County Bail Bonds
+        </a>
+        <a href="/rogers-county-bail-bonds" style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; text-align: center; font-weight: 600; transition: background-color 0.3s;">
+          Rogers County Bail Bonds
+        </a>
+        <a href="/wagoner-county-bail-bonds" style="background-color: var(--color-primary, #1a365d); color: white; padding: var(--spacing-4, 1rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; text-align: center; font-weight: 600; transition: background-color 0.3s;">
+          Wagoner County Bail Bonds
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bar -->
+  <section style="background: linear-gradient(135deg, var(--color-primary, #1a365d) 0%, var(--color-primary-dark, #0f1f3b) 100%); color: white; padding: var(--spacing-8, 3rem) var(--spacing-4, 1rem);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: var(--text-3xl, 1.875rem); font-weight: 700; margin-bottom: var(--spacing-4, 1rem);">
+        Need a Bail Bond in Tulsa County?
+      </h2>
+      <p style="font-size: var(--text-lg, 1.125rem); margin-bottom: var(--spacing-6, 1.5rem); opacity: 0.95;">
+        Angel Bail Bonds is ready to help 24/7. Women-owned, experienced, and compassionate.
+      </p>
+      <div style="display: flex; gap: var(--spacing-4, 1rem); justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+14056143000" style="background-color: var(--color-accent, #d97706); color: white; padding: var(--spacing-3, 0.75rem) var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; font-weight: 600; border: none; cursor: pointer; display: inline-block; transition: background-color 0.3s; font-size: var(--text-lg, 1.125rem);">
+          Call (405) 614-3000
+        </a>
+        <a href="mailto:bailbondangel@gmail.com" style="background-color: transparent; color: white; border: 2px solid white; padding: var(--spacing-3, 0.75rem) var(--spacing-6, 1.5rem); border-radius: var(--radius-lg, 0.5rem); text-decoration: none; font-weight: 600; cursor: pointer; display: inline-block; transition: all 0.3s; font-size: var(--text-lg, 1.125rem);">
+          Email bailbondangel@gmail.com
+        </a>
+      </div>
+      <p style="font-size: var(--text-sm, 0.875rem); margin-top: var(--spacing-4, 1rem); opacity: 0.85;">
+        Available 24/7 | Cash, Credit Card, Zelle, Venmo | Same-Day Release
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,1306 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://stillwaterokbailbonds.com/osage-county-bail-bonds#business",
+      "name": "Angel Bail Bonds",
+      "description": "24/7 bail bond services for Osage County, Oklahoma. Women-owned with 15+ years of experience.",
+      "telephone": "(405) 614-3000",
+      "email": "bailbondangel@gmail.com",
+      "url": "https://stillwaterokbailbonds.com",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pawhuska"
+        },
+        {
+          "@type": "City",
+          "name": "Hominy"
+        },
+        {
+          "@type": "City",
+          "name": "Fairfax"
+        },
+        {
+          "@type": "City",
+          "name": "Barnsdall"
+        },
+        {
+          "@type": "City",
+          "name": "Avant"
+        },
+        {
+          "@type": "City",
+          "name": "Foraker"
+        },
+        {
+          "@type": "City",
+          "name": "Shidler"
+        },
+        {
+          "@type": "City",
+          "name": "Wynona"
+        },
+        {
+          "@type": "City",
+          "name": "Burbank"
+        },
+        {
+          "@type": "City",
+          "name": "Prue"
+        }
+      ],
+      "priceRange": "Varies",
+      "paymentMethod": ["Cash", "Credit Card", "Zelle", "Venmo"],
+      "hoursOfOperation": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "127"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "36.6678",
+        "longitude": "-96.3394"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Bail Bond Services",
+      "description": "Professional bail bond services available 24/7 for Osage County residents.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://stillwaterokbailbonds.com/osage-county-bail-bonds#business"
+      },
+      "areaServed": "Osage County, Oklahoma"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stillwaterokbailbonds.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Counties",
+          "item": "https://stillwaterokbailbonds.com/counties"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Osage County Bail Bonds",
+          "item": "https://stillwaterokbailbonds.com/osage-county-bail-bonds"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Osage County jail visiting hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Osage County jail visiting hours are Monday-Friday, 9:00 AM to 3:00 PM. Visitors must be 18+ with photo ID, limited to one visit per 7 days, with a 30-minute maximum visit duration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Osage County jail located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Osage County jail is located at 900 S St. Paul Ave, Pawhuska, OK 74056."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I contact Angel Bail Bonds in Osage County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact Angel Bail Bonds at (405) 614-3000 or email bailbondangel@gmail.com. We are available 24/7 to assist you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods does Angel Bail Bonds accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Angel Bail Bonds accepts cash, credit cards, Zelle, and Venmo for bail bond payments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can Angel Bail Bonds process bail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With decades of experience and 24/7 availability, we can typically process bail bonds quickly. Contact us immediately for the fastest service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Osage County known for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Osage County is the largest county by area in Oklahoma, home to the Osage Nation headquarters, and notable for the Tallgrass Prairie Preserve and the Killers of the Flower Moon historical events."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const counties = [
+  { name: "Pawnee County", url: "/pawnee-county-bail-bonds" },
+  { name: "Washington County", url: "/washington-county-bail-bonds" },
+  { name: "Kay County", url: "/kay-county-bail-bonds" },
+  { name: "Tulsa County", url: "/tulsa-county-bail-bonds" },
+  { name: "Creek County", url: "/creek-county-bail-bonds" }
+];
+
+const communities = [
+  "Pawhuska",
+  "Hominy",
+  "Fairfax",
+  "Barnsdall",
+  "Avant",
+  "Foraker",
+  "Shidler",
+  "Wynona",
+  "Burbank",
+  "Prue",
+  "Sand Springs (partial)"
+];
+---
+
+<BaseLayout
+  title="Osage County Bail Bonds | Angel Bail Bonds 24/7 Service"
+  description="24/7 bail bond services in Osage County, Oklahoma. Angel Bail Bonds offers fast processing with women-owned expertise and 15+ years experience. Available now."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero Section -->
+  <section style="--bg-primary: #1a237e; --text-primary: #ffffff; --accent: #00bcd4;" class="hero-section">
+    <style>
+      .hero-section {
+        background: linear-gradient(135deg, var(--bg-primary) 0%, #0d47a1 100%);
+        color: var(--text-primary);
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 400px;
+        background: rgba(0, 188, 212, 0.1);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        letter-spacing: -1px;
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+        margin: 0 0 30px 0;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+
+      .hero-cta {
+        display: inline-flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: #1a237e;
+        padding: 15px 35px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: #00acc1;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 188, 212, 0.3);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--text-primary);
+        padding: 15px 35px;
+        border: 2px solid var(--accent);
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background: var(--accent);
+        color: #1a237e;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: rgba(0, 188, 212, 0.2);
+        color: var(--accent);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        border: 1px solid var(--accent);
+      }
+    </style>
+
+    <div class="hero-content">
+      <div class="hero-badge">OSAGE COUNTY, OKLAHOMA</div>
+      <h1>Fast Bail Bonds in Osage County</h1>
+      <p>24/7 bail bond services you can trust. Women-owned with 15+ years of experience helping Osage County families.</p>
+      <div class="hero-cta">
+        <a href="tel:(405) 614-3000" class="btn-primary">Call Now: (405) 614-3000</a>
+        <a href="mailto:bailbondangel@gmail.com" class="btn-secondary">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO Answer Capsule -->
+  <section style="--border-color: #00bcd4; --capsule-bg: #f5f9fa;" class="geo-capsule">
+    <style>
+      .geo-capsule {
+        background: var(--capsule-bg);
+        border-left: 5px solid var(--border-color);
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 900px;
+        border-radius: 8px;
+      }
+
+      .geo-capsule h2 {
+        color: #1a237e;
+        margin: 0 0 15px 0;
+        font-size: 1.4rem;
+      }
+
+      .geo-capsule p {
+        color: #333;
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+
+      .highlight-box {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 4px;
+      }
+
+      .highlight-box strong {
+        color: #d39e00;
+      }
+    </style>
+
+    <h2>Quick Facts About Osage County</h2>
+    <p><strong>Population:</strong> ~47,469 | <strong>County Seat:</strong> Pawhuska | <strong>Distance from Stillwater:</strong> 75 miles (1 hr 16 min)</p>
+    <p><strong>Notable Features:</strong> Largest county by area in Oklahoma, home to Osage Nation headquarters, Tallgrass Prairie Preserve, and Pioneer Woman's Pawhuska</p>
+
+    <div class="highlight-box">
+      <strong>⚠️ Important Visiting Hours:</strong> Osage County jail visiting is <strong>Monday-Friday 9:00 AM - 3:00 PM ONLY</strong>. Maximum 30 minutes per visit, one visit per 7 days. Visitors must be 18+ with photo ID.
+    </div>
+  </section>
+
+  <!-- Facility & Steps Two-Column Section -->
+  <section style="--bg-light: #f5f9fa;" class="facility-steps">
+    <style>
+      .facility-steps {
+        background: var(--bg-light);
+        padding: 60px 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 50px 0;
+        font-weight: 700;
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .two-column {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+      }
+
+      .facility-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .facility-card h3 {
+        color: #1a237e;
+        font-size: 1.5rem;
+        margin: 0 0 20px 0;
+      }
+
+      .info-block {
+        margin: 20px 0;
+        padding: 15px;
+        background: #f0f7ff;
+        border-left: 4px solid #00bcd4;
+        border-radius: 4px;
+      }
+
+      .info-block strong {
+        color: #1a237e;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .info-block p {
+        color: #333;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .steps-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .steps-list li {
+        counter-increment: step-counter;
+        padding: 20px;
+        margin: 15px 0;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #00bcd4;
+        position: relative;
+        padding-left: 50px;
+      }
+
+      .steps-list li::before {
+        content: counter(step-counter);
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        width: 30px;
+        height: 30px;
+        background: #00bcd4;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .steps-list li strong {
+        color: #1a237e;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+      }
+
+      .steps-list li p {
+        color: #555;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .counter-reset {
+        counter-reset: step-counter;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">Osage County Jail & Bail Process</h2>
+
+      <div class="two-column">
+        <!-- Facility Information -->
+        <div class="facility-card">
+          <h3>Osage County Detention Facility</h3>
+
+          <div class="info-block">
+            <strong>Address:</strong>
+            <p>900 S St. Paul Ave, Pawhuska, OK 74056</p>
+          </div>
+
+          <div class="info-block">
+            <strong>Phone:</strong>
+            <p>(918) 287-4395</p>
+          </div>
+
+          <div class="info-block">
+            <strong>Visiting Hours:</strong>
+            <p><strong>Monday-Friday:</strong> 9:00 AM - 3:00 PM<br/>
+            <strong>Saturday-Sunday:</strong> Closed</p>
+          </div>
+
+          <div class="info-block">
+            <strong>Visiting Requirements:</strong>
+            <p>• 18+ with photo ID<br/>
+            • One visit per 7 days<br/>
+            • 30-minute limit<br/>
+            • No contact visits</p>
+          </div>
+
+          <div class="info-block">
+            <strong>Osage County Courthouse:</strong>
+            <p>600 Grandview Ave, Pawhuska, OK 74056<br/>
+            (918) 287-4104</p>
+          </div>
+        </div>
+
+        <!-- Bail Process Steps -->
+        <div class="facility-card">
+          <h3>How Bail Bonds Work</h3>
+          <ul class="steps-list counter-reset">
+            <li>
+              <strong>Arrest & Booking</strong>
+              <p>Person is arrested and booked into Osage County jail. Their information is entered into the system.</p>
+            </li>
+            <li>
+              <strong>Call Angel Bail Bonds</strong>
+              <p>Contact us immediately at (405) 614-3000. We're available 24/7 to help you through the process.</p>
+            </li>
+            <li>
+              <strong>Bail Amount Set</strong>
+              <p>Bail is set by a judge, often within 24 hours. We'll help you understand your options and charges.</p>
+            </li>
+            <li>
+              <strong>Bond Processing</strong>
+              <p>We handle paperwork and coordination with the jail. You pay a percentage of the bail amount to us.</p>
+            </li>
+            <li>
+              <strong>Release from Jail</strong>
+              <p>Once processed, your loved one is released from Osage County jail to await trial.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Court Information Table -->
+  <section style="--bg-white: #ffffff;" class="court-info">
+    <style>
+      .court-info {
+        background: var(--bg-white);
+        padding: 60px 20px;
+      }
+
+      .court-info .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .court-info .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 40px 0;
+        font-weight: 700;
+      }
+
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .info-table thead {
+        background: #1a237e;
+        color: white;
+      }
+
+      .info-table th {
+        padding: 20px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .info-table td {
+        padding: 18px 20px;
+        border-bottom: 1px solid #e0e0e0;
+        color: #333;
+      }
+
+      .info-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .info-table tbody tr:hover {
+        background: #f5f9fa;
+      }
+
+      .facility-name {
+        font-weight: 600;
+        color: #1a237e;
+      }
+
+      .contact-link {
+        color: #00bcd4;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">Osage County Legal Resources</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Facility</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="facility-name">Osage County Jail</td>
+            <td>900 S St. Paul Ave, Pawhuska, OK 74056</td>
+            <td><a href="tel:(918) 287-4395" class="contact-link">(918) 287-4395</a></td>
+            <td>Mon-Fri 9 AM-3 PM</td>
+          </tr>
+          <tr>
+            <td class="facility-name">District Courthouse</td>
+            <td>600 Grandview Ave, Pawhuska, OK 74056</td>
+            <td><a href="tel:(918) 287-4104" class="contact-link">(918) 287-4104</a></td>
+            <td>Mon-Fri 8 AM-5 PM</td>
+          </tr>
+          <tr>
+            <td class="facility-name">Angel Bail Bonds</td>
+            <td>Available Statewide</td>
+            <td><a href="tel:(405) 614-3000" class="contact-link">(405) 614-3000</a></td>
+            <td>24/7 Available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Booking Process Section -->
+  <section style="--section-bg: #f5f9fa;" class="booking-process">
+    <style>
+      .booking-process {
+        background: var(--section-bg);
+        padding: 60px 20px;
+      }
+
+      .booking-process .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .booking-process .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 40px 0;
+        font-weight: 700;
+      }
+
+      .process-content {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .process-paragraph {
+        color: #333;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin: 0 0 25px 0;
+      }
+
+      .process-paragraph:last-child {
+        margin-bottom: 0;
+      }
+
+      .process-paragraph strong {
+        color: #1a237e;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">Understanding the Bail Booking Process</h2>
+
+      <div class="process-content">
+        <p class="process-paragraph">
+          When someone is arrested in Osage County, they are taken to the Osage County Detention Facility at 900 S St. Paul Ave in Pawhuska. The <strong>booking process typically takes 1-4 hours</strong>, during which the arrestee's information is recorded into the system, and a background check is conducted. If you need to contact the jail about inmate information, call <strong>(918) 287-4395</strong> during visiting hours (Monday-Friday, 9:00 AM-3:00 PM). Please note that Osage County has more restricted visiting hours than many other Oklahoma counties, so plan accordingly.
+        </p>
+
+        <p class="process-paragraph">
+          Once booked, the inmate must have a bail hearing where a judge sets the bail amount based on factors like the severity of charges, criminal history, ties to the community, and flight risk. <strong>Angel Bail Bonds can help speed up this process and explain all your options.</strong> We've been serving Osage County families for 15+ years and understand the local court system intimately. Call us immediately at <strong>(405) 614-3000</strong> when someone is arrested, and we'll guide you through every step.
+        </p>
+
+        <p class="process-paragraph">
+          Once bail is set, you have options: pay the full amount directly to the court, or use a bail bond service like Angel Bail Bonds. <strong>With a bail bond, you typically pay 10% of the bail amount</strong> (the premium) instead of the full amount to the court. We accept <strong>cash, credit cards, Zelle, and Venmo</strong>, making it easy to get your loved one released quickly. Our goal is to reunite families as fast as possible, and our <strong>4.9 out of 5 star rating from 127 clients</strong> reflects our commitment to excellent service.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Osage County Section -->
+  <section style="--accent-color: #00bcd4;" class="about-county">
+    <style>
+      .about-county {
+        background: white;
+        padding: 60px 20px;
+      }
+
+      .about-county .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .about-county .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 40px 0;
+        font-weight: 700;
+      }
+
+      .county-description {
+        color: #333;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .county-description strong {
+        color: #1a237e;
+      }
+
+      .communities-section {
+        margin-top: 40px;
+      }
+
+      .communities-section h3 {
+        color: #1a237e;
+        font-size: 1.5rem;
+        margin: 0 0 20px 0;
+      }
+
+      .community-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .tag {
+        background: #f0f7ff;
+        color: #1a237e;
+        padding: 10px 18px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border: 2px solid var(--accent-color);
+        transition: all 0.3s ease;
+      }
+
+      .tag:hover {
+        background: var(--accent-color);
+        color: white;
+      }
+
+      .highlights {
+        background: #f5f9fa;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 30px;
+      }
+
+      .highlights h4 {
+        color: #1a237e;
+        margin: 0 0 15px 0;
+      }
+
+      .highlights ul {
+        list-style-position: inside;
+        color: #333;
+        line-height: 1.8;
+      }
+
+      .highlights li {
+        margin: 8px 0;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">About Osage County, Oklahoma</h2>
+
+      <p class="county-description">
+        Osage County is a unique and historically significant region in north-central Oklahoma. With a population of approximately 47,469 and its county seat in Pawhuska, Osage County stands out as <strong>the largest county by area in Oklahoma</strong>. The region is home to the <strong>Osage Nation headquarters</strong>, making it a culturally and politically important area. Osage County is located about 75 miles (1 hour 16 minutes) from Stillwater, making Angel Bail Bonds your nearest trusted bail bond service for fast, reliable assistance.
+      </p>
+
+      <p class="county-description">
+        Osage County is nationally recognized for several reasons: it's home to the <strong>Tallgrass Prairie Preserve</strong>, one of the largest protected tallgrass prairie ecosystems in the nation. The county is also known for the <strong>Killers of the Flower Moon</strong> historical events, which detail the Osage murders of the 1920s. Additionally, Pawhuska gained fame as the home of <strong>Pioneer Woman Ree Drummond</strong>, whose restaurant and lifestyle brand have brought increased attention to this charming county seat.
+      </p>
+
+      <div class="communities-section">
+        <h3>Communities Served</h3>
+        <div class="community-tags">
+          {communities.map(community => (
+            <span class="tag">{community}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="highlights">
+        <h4>Why Choose Angel Bail Bonds in Osage County?</h4>
+        <ul>
+          <li><strong>Women-Owned Business:</strong> Proud woman-owned bail bond company with deep community roots</li>
+          <li><strong>15+ Years Experience:</strong> Extensive experience serving Oklahoma families through difficult times</li>
+          <li><strong>24/7 Availability:</strong> Always available when you need us, day or night, weekends and holidays</li>
+          <li><strong>4.9/5 Star Rating:</strong> Trusted by 127+ satisfied clients across Oklahoma</li>
+          <li><strong>Local Knowledge:</strong> Familiar with Osage County courts, judges, and procedures</li>
+          <li><strong>Flexible Payment:</strong> Accept cash, credit cards, Zelle, and Venmo for your convenience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inmate Search Section -->
+  <section style="--bg-light: #f5f9fa;" class="inmate-search">
+    <style>
+      .inmate-search {
+        background: var(--bg-light);
+        padding: 60px 20px;
+      }
+
+      .inmate-search .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .inmate-search .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 40px 0;
+        font-weight: 700;
+      }
+
+      .search-card {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .search-instructions {
+        color: #333;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .search-instructions strong {
+        color: #1a237e;
+      }
+
+      .contact-box {
+        background: #f0f7ff;
+        padding: 25px;
+        border-left: 4px solid #00bcd4;
+        border-radius: 8px;
+        margin-top: 25px;
+      }
+
+      .contact-box h4 {
+        color: #1a237e;
+        margin: 0 0 15px 0;
+      }
+
+      .contact-box p {
+        color: #333;
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+
+      .contact-box a {
+        color: #00bcd4;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-box a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">Find an Inmate in Osage County Jail</h2>
+
+      <div class="search-card">
+        <p class="search-instructions">
+          If you need to find information about an inmate currently held in Osage County Detention Facility, you can contact the jail directly during visiting hours. <strong>Remember: visiting hours are Monday-Friday, 9:00 AM - 3:00 PM only.</strong> The jail staff can provide you with inmate information and help answer questions about bail amounts and next court appearances.
+        </p>
+
+        <div class="contact-box">
+          <h4>How to Find an Inmate</h4>
+          <p>
+            <strong>Call the Osage County Jail:</strong><br/>
+            <a href="tel:(918) 287-4395">(918) 287-4395</a><br/>
+            Monday-Friday, 9:00 AM - 3:00 PM
+          </p>
+          <p>
+            <strong>Location:</strong><br/>
+            900 S St. Paul Ave, Pawhuska, OK 74056
+          </p>
+          <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <strong>Need help with bail?</strong> Contact Angel Bail Bonds immediately at <strong>(405) 614-3000</strong>. We can help you navigate the process and get your loved one out quickly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section style="--bg-white: #ffffff;" class="faq-section">
+    <style>
+      .faq-section {
+        background: var(--bg-white);
+        padding: 60px 20px;
+      }
+
+      .faq-section .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .faq-section .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 50px 0;
+        font-weight: 700;
+      }
+
+      .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .accordion-item {
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: white;
+        transition: all 0.3s ease;
+      }
+
+      .accordion-item:hover {
+        border-color: #00bcd4;
+        box-shadow: 0 4px 12px rgba(0, 188, 212, 0.1);
+      }
+
+      .accordion-header {
+        background: #f5f9fa;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        transition: all 0.3s ease;
+      }
+
+      .accordion-item input[type="checkbox"] {
+        display: none;
+      }
+
+      .accordion-item input[type="checkbox"]:checked + .accordion-header {
+        background: #1a237e;
+        color: white;
+      }
+
+      .accordion-item input[type="checkbox"]:checked ~ .accordion-content {
+        display: block;
+      }
+
+      .accordion-header h4 {
+        color: #1a237e;
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .accordion-item input[type="checkbox"]:checked + .accordion-header h4 {
+        color: white;
+      }
+
+      .accordion-toggle {
+        width: 30px;
+        height: 30px;
+        background: #00bcd4;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+      }
+
+      .accordion-item input[type="checkbox"]:checked + .accordion-header .accordion-toggle {
+        background: white;
+        color: #1a237e;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 25px;
+        color: #333;
+        background: white;
+        line-height: 1.8;
+      }
+
+      .accordion-content p {
+        margin: 0;
+      }
+
+      .accordion-content strong {
+        color: #1a237e;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="accordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq1" />
+          <label for="faq1" class="accordion-header">
+            <h4>What are Osage County jail visiting hours?</h4>
+            <span class="accordion-toggle">+</span>
+          </label>
+          <div class="accordion-content">
+            <p>
+              <strong>Osage County jail visiting hours are Monday through Friday, 9:00 AM to 3:00 PM.</strong> The facility is closed on weekends and holidays. Visitors must be at least 18 years old and present a valid photo ID. Each inmate is limited to one visit per 7-day period, and visits are limited to 30 minutes maximum. These hours are more restrictive than many other Oklahoma counties, so plan accordingly when visiting a loved one.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq2" />
+          <label for="faq2" class="accordion-header">
+            <h4>How do I find an inmate at Osage County Jail?</h4>
+            <span class="accordion-toggle">+</span>
+          </label>
+          <div class="accordion-content">
+            <p>
+              To find information about an inmate, call the Osage County Detention Facility at <strong>(918) 287-4395</strong> during visiting hours (Monday-Friday, 9:00 AM - 3:00 PM). The staff can provide you with inmate location information, bail amounts, and court dates. If you need immediate assistance with bail, contact Angel Bail Bonds at <strong>(405) 614-3000</strong> anytime, day or night.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq3" />
+          <label for="faq3" class="accordion-header">
+            <h4>How much does a bail bond cost?</h4>
+            <span class="accordion-toggle">+</span>
+          </label>
+          <div class="accordion-content">
+            <p>
+              Bail bond premiums are typically <strong>10% of the total bail amount</strong>. For example, if bail is set at $5,000, you would pay $500 to Angel Bail Bonds instead of $5,000 to the court. This premium is non-refundable, regardless of the outcome of the case. We accept <strong>cash, credit cards, Zelle, and Venmo</strong> to make payment as easy as possible. We're happy to discuss your specific situation and work with you to find the best solution.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq4" />
+          <label for="faq4" class="accordion-header">
+            <h4>How long does it take to get someone out of jail?</h4>
+            <span class="accordion-toggle">+</span>
+          </label>
+          <div class="accordion-content">
+            <p>
+              Once bail is set and we process your bail bond, release typically happens within <strong>30 minutes to 2 hours</strong>, depending on jail processing times. The initial booking process can take 1-4 hours, and bail may be set within 24 hours of arrest. <strong>Call Angel Bail Bonds immediately when someone is arrested</strong> at <strong>(405) 614-3000</strong>, and we'll work to expedite the process. Our 24/7 availability means we're ready to help no matter when the arrest happens.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq5" />
+          <label for="faq5" class="accordion-header">
+            <h4>What happens if someone doesn't show up for trial?</h4>
+            <span class="accordion-toggle">+</span>
+          </label>
+          <div class="accordion-content">
+            <p>
+              If someone posted bail through Angel Bail Bonds fails to appear for their court date, <strong>we are responsible for paying the full bail amount to the court</strong>. This is why we take the responsibility very seriously and work closely with clients to ensure they understand their court obligations. If someone jumps bail, bounty hunters may be engaged to locate them. A failure to appear is a serious legal matter with additional criminal charges. It's critical that anyone released on bail honors their court date.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq6" />
+          <label for="faq6" class="accordion-header">
+            <h4>What is Osage County known for?</h4>
+            <span class="accordion-toggle">+</span>
+          </label>
+          <div class="accordion-content">
+            <p>
+              Osage County is historically and culturally significant. It's home to the <strong>Osage Nation headquarters</strong> and is the <strong>largest county by area in Oklahoma</strong>. The region is known for the <strong>Killers of the Flower Moon</strong>, which documents the tragic Osage murders of the 1920s. Osage County also features the <strong>Tallgrass Prairie Preserve</strong>, one of the largest protected tallgrass prairie ecosystems in the nation. Additionally, Pawhuska, the county seat, is home to the famous <strong>Pioneer Woman</strong>, Ree Drummond, and her lifestyle brand and restaurant have brought national attention to the community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages Section -->
+  <section style="--bg-light: #f5f9fa;" class="related-pages">
+    <style>
+      .related-pages {
+        background: var(--bg-light);
+        padding: 60px 20px;
+      }
+
+      .related-pages .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .related-pages .section-title {
+        color: #1a237e;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 0 0 40px 0;
+        font-weight: 700;
+      }
+
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .related-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .related-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(0, 188, 212, 0.2);
+        border-top: 4px solid #00bcd4;
+      }
+
+      .related-card h3 {
+        color: #1a237e;
+        margin: 0 0 15px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .related-card p {
+        color: #666;
+        margin: 0 0 15px 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        flex-grow: 1;
+      }
+
+      .related-link {
+        color: #00bcd4;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .related-link:hover {
+        gap: 12px;
+      }
+    </style>
+
+    <div class="container">
+      <h2 class="section-title">Bail Bonds in Nearby Counties</h2>
+
+      <div class="related-grid">
+        {counties.map(county => (
+          <a href={county.url} class="related-card">
+            <div>
+              <h3>{county.name}</h3>
+              <p>Fast, reliable bail bond services available 24/7 with Angel Bail Bonds.</p>
+            </div>
+            <span class="related-link">Learn More →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bar Section -->
+  <section style="--bg-primary: #1a237e; --accent: #00bcd4;" class="cta-bar">
+    <style>
+      .cta-bar {
+        background: linear-gradient(135deg, var(--bg-primary) 0%, #0d47a1 100%);
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .cta-bar .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .cta-bar h2 {
+        font-size: 2rem;
+        margin: 0 0 20px 0;
+        font-weight: 700;
+      }
+
+      .cta-bar p {
+        font-size: 1.15rem;
+        margin: 0 0 30px 0;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .cta-btn {
+        padding: 15px 35px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.05rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .cta-btn-primary {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+
+      .cta-btn-primary:hover {
+        background: #00acc1;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 188, 212, 0.3);
+      }
+
+      .cta-btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid var(--accent);
+      }
+
+      .cta-btn-secondary:hover {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+    </style>
+
+    <div class="container">
+      <h2>Need Bail Help in Osage County?</h2>
+      <p>Angel Bail Bonds is available 24/7 to help you through this difficult time. Our women-owned company has served Oklahoma families for 15+ years.</p>
+      <div class="cta-buttons">
+        <a href="tel:(405) 614-3000" class="cta-btn cta-btn-primary">Call: (405) 614-3000</a>
+        <a href="mailto:bailbondangel@gmail.com" class="cta-btn cta-btn-secondary">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
