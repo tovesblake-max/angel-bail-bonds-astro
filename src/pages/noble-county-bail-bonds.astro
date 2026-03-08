@@ -2,75 +2,148 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'LocalBusiness',
-      '@id': 'https://stillwaterokbailbonds.com/noble-county-bail-bonds#business',
-      name: 'Angel Bail Bonds - Noble County',
-      url: 'https://stillwaterokbailbonds.com/noble-county-bail-bonds',
-      description: 'Professional bail bond services for Noble County, Oklahoma. 24/7 emergency bail bonds with 15+ years experience.',
-      telephone: '(405) 614-3000',
-      email: 'bailbondangel@gmail.com',
-      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Noble County, Oklahoma' },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.2893, longitude: -97.2884 },
-      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
-    },
-    {
-      '@type': 'Service',
-      name: 'Noble County Bail Bond Services',
-      provider: { '@id': 'https://stillwaterokbailbonds.com/noble-county-bail-bonds#business' },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Noble County, Oklahoma' },
-      description: 'Fast, confidential bail bond services for Noble County arrests and jail releases.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Noble County Bail Bonds', item: 'https://stillwaterokbailbonds.com/noble-county-bail-bonds' },
+      "@type": "LocalBusiness",
+      "@id": "https://stillwaterokbailbonds.com/noble-county-bail-bonds#business",
+      "name": "Angel Bail Bonds - Noble County",
+      "url": "https://stillwaterokbailbonds.com/noble-county-bail-bonds",
+      "description": "24/7 bail bond services for Noble County, Oklahoma. Fast jail release from Noble County Jail in Perry. Women-owned, 15+ years experience, 4.9-star rating.",
+      "telephone": "(405) 614-3000",
+      "email": "bailbondangel@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Stillwater",
+        "addressRegion": "OK",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Perry" },
+        { "@type": "City", "name": "Billings" },
+        { "@type": "City", "name": "Morrison" },
+        { "@type": "City", "name": "Red Rock" },
+        { "@type": "City", "name": "Marland" },
+        { "@type": "City", "name": "Lucien" },
+        { "@type": "City", "name": "Ceres" },
+        { "@type": "City", "name": "Sumner" }
       ],
+      "geo": { "@type": "GeoCoordinates", "latitude": "36.2893", "longitude": "-97.2884" },
+      "priceRange": "Varies",
+      "paymentMethod": ["Cash", "Credit Card", "Zelle", "Venmo"],
+      "hoursOfOperation": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "127" },
+      "sameAs": ["https://g.co/kgs/Angel-Bail-Bonds-Stillwater"]
     },
     {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How do I get a bail bond in Noble County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Noble County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does a bail bond cost in Noble County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'In Oklahoma, we offer competitive rates on bail bonds. Angel Bail Bonds offers competitive rates to help families manage the cost.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take to get released from Noble County Jail?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Noble County Jail occur within 1-4 hours depending on jail processing.' },
-        },
-      ],
+      "@type": "Service",
+      "name": "Noble County Bail Bond Services",
+      "provider": { "@id": "https://stillwaterokbailbonds.com/noble-county-bail-bonds#business" },
+      "areaServed": "Noble County, Oklahoma",
+      "description": "Fast, confidential bail bond services for Noble County arrests. Serving Perry, Billings, Morrison, Red Rock, and all Noble County communities."
     },
-  ],
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Noble County Bail Bonds", "item": "https://stillwaterokbailbonds.com/noble-county-bail-bonds" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I bail someone out of Noble County Jail in Perry, Oklahoma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We are located just 25 miles south in Stillwater and can often arrive at Noble County Jail at 721 Cedar St, Perry within 30 minutes. We handle all paperwork and most inmates are released within 1-4 hours after the bond is posted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a bail bond cost in Noble County, Oklahoma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noble County bail bond costs depend on the charge. Common bail amounts include approximately $1,000 for misdemeanor DUI, $500-$2,500 for most misdemeanors, and $5,000-$50,000+ for felonies. You pay a percentage of the total bail amount as a non-refundable premium. Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, Venmo, and offers financing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Noble County Jail visiting hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noble County Jail visiting hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. However, in-person visits have been replaced with video visitation. Visits are limited to 30 minutes. Call (580) 336-3517 to schedule a video visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get released from Noble County Jail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most releases from Noble County Jail take 1-4 hours after the bail bond is posted, depending on the time of day and how busy the facility is. Noble County Jail processes approximately 4,233 bookings per year. Angel Bail Bonds can begin the bond process over the phone before arriving at the jail to speed up release."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I post bail at Noble County Jail at night or on weekends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Angel Bail Bonds is available 24 hours a day, 7 days a week, including nights, weekends, and holidays. Noble County Jail accepts bail bonds around the clock. Call (405) 614-3000 any time and we can begin the release process immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Noble County Courthouse and when are court appearances?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Noble County Courthouse is located at 300 Courthouse Drive, Perry, OK 73077. The Court Clerk's office phone number is (580) 336-5187 and is open Monday-Friday 8:00 AM to 4:30 PM. Arraignments typically occur within 24 hours of arrest. Court dockets are available at oscn.net."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Angel Bail Bonds serve all of Noble County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Angel Bail Bonds serves every community in Noble County including Perry, Billings, Morrison, Red Rock, Marland, Lucien, Ceres, and Sumner. Our Stillwater office is just 25 miles south of Perry via I-35, making us one of the closest bail bond companies to Noble County."
+          }
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <BaseLayout
-  title="Noble County Bail Bonds"
-  description="24/7 bail bond services for Noble County, Oklahoma. Angel Bail Bonds offers fast, confidential bail bond processing. 15+ years experience, 4.9 stars. Call (405) 614-3000."
+  title="Noble County Bail Bonds | 24/7 Jail Release in Perry, OK"
+  description="Need a bail bond in Noble County? Angel Bail Bonds provides 24/7 fast jail release from Noble County Jail in Perry, OK. Just 25 miles from Stillwater. Call (405) 614-3000."
   ogImage="/images/hero-agate.webp"
   structuredData={structuredData}
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-  <!-- HERO — compact -->
+  <!-- HERO -->
   <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
     <div style="max-width: 900px; margin: 0 auto;">
       <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Noble County, Oklahoma</p>
-      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Noble County</h1>
-      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Perry, Billings, Morrison, Red Rock, and surrounding areas · 24/7 service</p>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Noble County Bail Bonds — Fast Jail Release in Perry, OK</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Perry · Billings · Morrison · Red Rock · Marland · Lucien — 24/7 service, just 25 miles from Stillwater</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 Call (405) 614-3000 Now</a>
+      <p style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 10px;">Last Updated: March 8, 2026</p>
+    </div>
+  </section>
+
+  <!-- ANSWER CAPSULE: Quick Reference -->
+  <section style="padding: 32px 1.5rem; background: #f0f7ff; border-bottom: 2px solid var(--blue);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7;"><strong>Angel Bail Bonds provides 24/7 bail bond services for Noble County, Oklahoma. Noble County Jail is located at 721 Cedar Street, Perry, OK 73077. Call (405) 614-3000 to begin the bail process. Our Stillwater office is just 25 miles south of Perry via I-35 — we can arrive at the jail within 30 minutes. Most inmates are released 1-4 hours after the bond is posted. We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing.</strong></p>
     </div>
   </section>
 
@@ -78,48 +151,68 @@ const structuredData = {
   <section style="padding: 48px 1.5rem; background: white;">
     <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
 
-      <!-- Left: County Info -->
+      <!-- Left: Jail Facility Details -->
       <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Noble County Overview</h2>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Noble County Jail Facility Details</h2>
         <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
           <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">County Seat</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Perry</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 120px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">721 Cedar St, Perry, OK 73077</td>
           </tr>
           <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Major Communities</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Billings, Morrison, Red Rock</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Jail Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+15803363517" style="color: var(--blue);">(580) 336-3517</a></td>
           </tr>
           <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Service Area</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">North-central Oklahoma</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Inmate Info</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+15803361001" style="color: var(--blue);">(580) 336-1001</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Capacity</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">48 inmates</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Avg. Bookings</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">~4,233/year (~8/day)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Sheriff</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Charlie Hanger</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitation</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Video only; M-F 7:30 AM - 9 PM, Sat-Sun 7:30 AM - 2:30 PM</td>
           </tr>
           <tr>
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Competitive rates available</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">County Seat</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Perry, Oklahoma</td>
           </tr>
         </table>
       </div>
 
       <!-- Right: How to Get Bail Bond -->
       <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Get Bail in Noble County</h2>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Post Bail in Noble County</h2>
         <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
           <li style="display: flex; gap: 12px; margin-bottom: 14px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
-            <div><strong style="color: var(--slate-800);">Contact jail</strong><br><span style="color: var(--slate-500);">Get inmate info & bail amount</span></div>
+            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · Available 24/7/365</span></div>
           </li>
           <li style="display: flex; gap: 12px; margin-bottom: 14px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
-            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · 24/7</span></div>
+            <div><strong style="color: var(--slate-800);">We confirm inmate details</strong><br><span style="color: var(--slate-500);">Charges, bail amount, booking number from Noble County Jail</span></div>
           </li>
           <li style="display: flex; gap: 12px; margin-bottom: 14px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
-            <div><strong style="color: var(--slate-800);">Pay premium & sign</strong><br><span style="color: var(--slate-500);">Cash, cards accepted</span></div>
+            <div><strong style="color: var(--slate-800);">Pay the premium & sign paperwork</strong><br><span style="color: var(--slate-500);">Cash, Visa, Mastercard, Zelle, Venmo · Financing available</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">4</span>
+            <div><strong style="color: var(--slate-800);">Bond is posted at the jail</strong><br><span style="color: var(--slate-500);">We drive to Perry (25 min from Stillwater) or handle it remotely</span></div>
           </li>
           <li style="display: flex; gap: 12px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
-            <div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">1-4 hours processing time</span></div>
+            <div><strong style="color: var(--slate-800);">Your loved one is released</strong><br><span style="color: var(--slate-500);">Typical processing: 1-4 hours after bond is posted</span></div>
           </li>
         </ol>
       </div>
@@ -135,62 +228,170 @@ const structuredData = {
     </style>
   </section>
 
-  <!-- ABOUT NOBLE COUNTY — unique local content -->
+  <!-- BOND AMOUNTS: What to Expect -->
   <section style="padding: 48px 1.5rem; background: var(--slate-50);">
     <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">About Noble County, Oklahoma</h2>
-      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
-        <p style="margin-bottom: 14px;">Noble County is located in north-central Oklahoma, directly north of Payne County where Stillwater is located. With a population of approximately 11,500, Noble County covers about 740 square miles. The county seat is Perry, a small city of around 5,000 residents situated along I-35 about 30 minutes north of Stillwater. Noble County was created during the Cherokee Outlet Opening of 1893 and is named after U.S. Secretary of the Interior John W. Noble.</p>
-        <p style="margin-bottom: 14px;">In addition to Perry, Angel Bail Bonds serves the communities of Billings, Morrison, Red Rock, Marland, and Lucien throughout Noble County. Morrison, located about 20 minutes west of Stillwater near the Cimarron River, is the closest Noble County community to our base. Red Rock is situated along US-177 between Stillwater and Perry. Billings lies in the northwestern part of the county. No matter where in Noble County the arrest occurs, we can help.</p>
-        <p style="margin-bottom: 14px;">Noble County is one of the closest counties to our Stillwater office, which means we can often post bonds at Noble County Jail in Perry within 30 to 45 minutes of your call. All Noble County criminal cases go through the Noble County District Court in Perry. The Noble County Courthouse, located at 300 Courthouse Dr in Perry, is where court appearances are held. Bail amounts are set based on the charges and the judge's discretion. For misdemeanor charges, bail is often set according to a standard bond schedule. Felony bail amounts are higher and may require a bond hearing before a judge.</p>
-      </div>
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">How Much Does a Noble County Bail Bond Cost?</h2>
 
-      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Closest County to Stillwater</h3>
-      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Perry is only about 25 miles north of Stillwater via I-35, making Noble County one of the fastest counties we can reach. The drive typically takes just 25-30 minutes. Take I-35 North from Stillwater to the Perry exit (Exit 185), then head west into Perry. The Noble County Jail is at 721 Cedar St, near the Noble County Courthouse. Because of our proximity, Angel Bail Bonds can often be the first bondsman on-site for Noble County arrests, getting your loved one out faster than bondsmen coming from further away.</p>
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; padding: 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Noble County bail bond costs are based on the charge and bail amount set by the judge. In Oklahoma, bail bond premiums are a percentage of the total bail amount. Common bail amounts in Noble County include approximately $1,000 for misdemeanor DUI, $500-$2,500 for most misdemeanors, and $5,000-$50,000+ for felony charges. Angel Bail Bonds offers competitive rates and flexible payment plans.</strong></p>
+
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px;">Noble County uses a bail schedule for common offenses, which allows many misdemeanor defendants to post bond immediately after booking without waiting for a judge. For felony charges, a bond hearing before a Noble County District Court judge is typically required. Bail amounts in felony cases depend on the severity of the charge, criminal history, flight risk, and community ties.</p>
+
+        <p style="margin-bottom: 14px;">If the defendant does not post bail within the first 24 hours, they must appear before a judge who will formally set the bond amount. This first appearance can be conducted in person at the Noble County Courthouse or via video. Angel Bail Bonds can begin the paperwork process over the phone before even arriving at the jail, which means we can post the bond faster once we arrive in Perry.</p>
+
+        <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 24px; margin-bottom: 12px;">What Payment Methods Does Angel Bail Bonds Accept for Noble County Bonds?</h3>
+
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;"><strong>Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, and Venmo for Noble County bail bonds. Financing is available for qualifying clients. We can process payments over the phone, making it possible to start the release process before meeting in person. There are no hidden fees.</strong></p>
+      </div>
     </div>
   </section>
 
-  <!-- FAQ — compact accordion -->
+  <!-- ABOUT NOBLE COUNTY — unique local content -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Where Is Noble County Jail and How Do I Get There?</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Noble County Jail is located at 721 Cedar Street, Perry, OK 73077, near the Noble County Courthouse. Perry is 25 miles north of Stillwater via I-35 — take Exit 185 and head west into downtown Perry. The drive takes approximately 25-30 minutes. Angel Bail Bonds is one of the closest bail bond companies to Noble County Jail.</strong></p>
+
+        <p style="margin-bottom: 14px;">Noble County is located in north-central Oklahoma, directly north of Payne County. The county covers approximately 740 square miles and has a population of about 11,500 residents. The county seat is Perry, a community of around 5,000 people situated along Interstate 35. Noble County was established during the Cherokee Outlet Opening of 1893 and is named after U.S. Secretary of the Interior John W. Noble.</p>
+
+        <p style="margin-bottom: 14px;">The Noble County Jail is a 48-bed facility operated by the Noble County Sheriff's Office under Sheriff Charlie Hanger. The facility processes approximately 4,233 bookings per year, averaging about 8 new bookings per day. It is staffed by more than 23 officers. After booking — which includes property inventory, medical screening, and photograph — inmates are classified and assigned to housing based on their charges.</p>
+
+        <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 24px; margin-bottom: 12px;">What Communities Does Angel Bail Bonds Serve in Noble County?</h3>
+
+        <p style="margin-bottom: 14px;">Angel Bail Bonds serves every community in Noble County. In addition to Perry, we regularly post bonds for residents of Billings (northwest Noble County), Morrison (20 minutes west of Stillwater near the Cimarron River), Red Rock (along US-177 between Stillwater and Perry), Marland, Lucien, Ceres, and Sumner. Morrison is the closest Noble County community to our Stillwater office. No matter where in the county the arrest occurs, we respond quickly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURTHOUSE + COURT INFO -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Noble County Courthouse and Court Appearance Information</h2>
+
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; padding: 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>The Noble County Courthouse is located at 300 Courthouse Drive, Perry, OK 73077. The Court Clerk is Hillary Vorndran, reachable at (580) 336-5187. Office hours are Monday through Friday, 8:00 AM to 4:30 PM. All Noble County criminal cases are heard in the Noble County District Court. Court dockets are available at oscn.net.</strong></p>
+
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px;">After posting bail and being released from Noble County Jail, the defendant must appear at all scheduled court hearings at the Noble County Courthouse. Failure to appear will result in forfeiture of the bond, a bench warrant, and additional criminal charges. Angel Bail Bonds will remind you of upcoming court dates and help ensure you understand your obligations.</p>
+
+        <p style="margin-bottom: 14px;">Arraignments in Noble County typically occur within 24 hours of arrest for defendants who have not posted bail. During the arraignment, the judge informs the defendant of the charges and formally sets the bail amount. For misdemeanor cases, bail is often available through a preset bond schedule, meaning the defendant can bond out immediately after booking. Felony cases may require a separate bond hearing.</p>
+      </div>
+
+      <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse; margin-top: 16px; background: white; border-radius: 8px; overflow: hidden; border: 1px solid var(--slate-100);">
+        <tr style="background: var(--navy);">
+          <td colspan="2" style="padding: 12px 16px; color: white; font-weight: 700;">Noble County Courthouse Quick Reference</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600; width: 130px;">Address</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">300 Courthouse Dr, Perry, OK 73077</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Court Clerk</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Hillary Vorndran · (580) 336-5187</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Office Hours</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Mon-Fri 8:00 AM - 4:30 PM</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Dockets</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);"><a href="https://www.oscn.net/dockets/" style="color: var(--blue);" target="_blank" rel="noopener">oscn.net/dockets</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- VISITING HOURS -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">What Are Noble County Jail Visiting Hours?</h2>
+
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; padding: 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Noble County Jail uses video visitation only — in-person visits are not currently permitted. Video visit hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Visits are limited to 30 minutes. Call (580) 336-3517 to schedule a visit. Special visits require approval from the Sheriff, Undersheriff, or Jail Major.</strong></p>
+
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px;">Visitors must schedule video visits in advance by calling (580) 336-3517 or (580) 336-1001. All visitors must be at least 18 years old and have valid photo identification. The best thing you can do for your loved one while they are in Noble County Jail is to get them out. Call Angel Bail Bonds at (405) 614-3000 to start the bail process — we answer 24/7 and can often have your loved one released the same day.</p>
+
+        <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 24px; margin-bottom: 12px;">How Do I Send Mail to an Inmate in Noble County Jail?</h3>
+
+        <p style="margin-bottom: 14px;">Mail should be sent to the inmate's full legal name and identification number at: Noble County Jail, 721 Cedar Street, Perry, OK 73077. All incoming mail is subject to inspection. Packages and certain items may be restricted — call the jail at (580) 336-3517 for current mail policies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ANGEL BAIL BONDS -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Why Choose Angel Bail Bonds for Noble County?</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;"><strong>Angel Bail Bonds is one of the closest bail bond companies to Noble County Jail. Located just 25 miles south in Stillwater, owner Karri McBride and her team can reach Perry in under 30 minutes. With 15+ years of experience, a 4.9-star Google rating from 127+ reviews, and 24/7 availability, Angel Bail Bonds is the trusted choice for Noble County families.</strong></p>
+
+        <p style="margin-bottom: 14px;">Unlike bail bond companies based in Oklahoma City or Tulsa that may take over an hour to reach Perry, Angel Bail Bonds can often be the first bondsman on-site for Noble County arrests. Our proximity to Noble County means faster response times and faster releases. We handle the entire bail bond process with compassion and confidentiality — we understand that an arrest is one of the most stressful experiences a family can face.</p>
+
+        <p style="margin-bottom: 14px;">Angel Bail Bonds is a women-owned business that has been serving Central Oklahoma for over 15 years. We offer bilingual service in English and Spanish (se habla español). Whether the arrest happens at 2 AM on a holiday weekend or during a normal business day, our team is ready to help. We also post bonds remotely by phone when possible, which can further speed up the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
   <section style="padding: 40px 1.5rem; background: white;">
     <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions About Noble County Bail Bonds</h2>
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I get a bail bond in Noble County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Noble County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.</p>
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Noble County Jail in Perry, Oklahoma?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We are located just 25 miles south in Stillwater and can often arrive at Noble County Jail at 721 Cedar St, Perry within 30 minutes. We handle all paperwork and most inmates are released within 1-4 hours after the bond is posted.</p>
         </details>
         <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Noble County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">In Oklahoma, we offer competitive rates on bail bonds. Angel Bail Bonds offers competitive rates to help families manage the cost.</p>
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Noble County, Oklahoma?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Noble County bail bond costs depend on the charge. Common bail amounts include approximately $1,000 for misdemeanor DUI, $500-$2,500 for most misdemeanors, and $5,000-$50,000+ for felony charges. You pay a percentage of the total bail amount as a non-refundable premium. Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, Venmo, and offers financing.</p>
+        </details>
+        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What are Noble County Jail visiting hours?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Noble County Jail uses video visitation only — in-person visits are not currently permitted. Video visit hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Visits are limited to 30 minutes. Call (580) 336-3517 to schedule.</p>
         </details>
         <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
           <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does it take to get released from Noble County Jail?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Noble County Jail occur within 1-4 hours depending on jail processing.</p>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Most releases from Noble County Jail take 1-4 hours after the bail bond is posted, depending on the time of day and how busy the facility is. Noble County Jail processes approximately 4,233 bookings per year. Angel Bail Bonds can begin the bond process over the phone before arriving at the jail to speed up release.</p>
         </details>
         <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Is Noble County Jail easy to get to from Stillwater?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Perry is only about 25 miles north of Stillwater via I-35. The drive takes about 25-30 minutes. Angel Bail Bonds is one of the closest bail bond companies to Noble County Jail, which means we can respond quickly to get your loved one released.</p>
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I post bail at Noble County Jail at night or on weekends?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds is available 24 hours a day, 7 days a week, including nights, weekends, and holidays. Noble County Jail accepts bail bonds around the clock. Call (405) 614-3000 any time and we can begin the release process immediately.</p>
+        </details>
+        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Where is the Noble County Courthouse and when are court appearances?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">The Noble County Courthouse is at 300 Courthouse Drive, Perry, OK 73077. The Court Clerk (Hillary Vorndran) can be reached at (580) 336-5187, open Mon-Fri 8:00 AM - 4:30 PM. Arraignments typically occur within 24 hours of arrest. Court dockets are available at oscn.net.</p>
+        </details>
+        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Does Angel Bail Bonds serve all of Noble County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds serves every community in Noble County including Perry, Billings, Morrison, Red Rock, Marland, Lucien, Ceres, and Sumner. Our Stillwater office is just 25 miles south of Perry via I-35, making us one of the closest bail bond companies to Noble County.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Related Pages -->
+  <!-- NEIGHBORING COUNTIES -->
   <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
     <div style="max-width: 900px; margin: 0 auto;">
-      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Neighboring Counties We Serve</p>
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="/noble-county-jail-perry-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Noble County Jail (Perry) →</a>
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County (Stillwater) →</a>
+        <a href="/kay-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Kay County (Ponca City) →</a>
+        <a href="/pawnee-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County →</a>
+        <a href="/garfield-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Garfield County (Enid) →</a>
+        <a href="/logan-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Logan County (Guthrie) →</a>
+        <a href="/osage-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Osage County →</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA BAR — tight -->
+  <!-- CTA BAR -->
   <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
     <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
       <div>
-        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Noble County Bail Bond?</p>
-        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Competitive rates</p>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Noble County Bail Bond? Call Now.</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · 25 miles from Perry · Se habla español</p>
       </div>
       <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
     </div>
