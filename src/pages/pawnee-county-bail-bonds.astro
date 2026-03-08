@@ -6,19 +6,22 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://stillwaterokbailbonds.com/#business',
-      name: 'Angel Bail Bonds',
+      '@id': 'https://stillwaterokbailbonds.com/pawnee-county-bail-bonds#business',
+      name: 'Angel Bail Bonds - Pawnee County',
+      url: 'https://stillwaterokbailbonds.com/pawnee-county-bail-bonds',
       description: 'Professional bail bond services for Pawnee County, Oklahoma. 24/7 emergency bail bonds with 15+ years experience.',
       telephone: '(405) 614-3000',
       email: 'bailbondangel@gmail.com',
       address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
       areaServed: { '@type': 'AdministrativeArea', name: 'Pawnee County, Oklahoma' },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.3376, longitude: -96.8039 },
+      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '27' },
     },
     {
       '@type': 'Service',
       name: 'Pawnee County Bail Bond Services',
-      provider: { '@id': 'https://stillwaterokbailbonds.com/#business' },
+      provider: { '@id': 'https://stillwaterokbailbonds.com/pawnee-county-bail-bonds#business' },
       areaServed: { '@type': 'AdministrativeArea', name: 'Pawnee County, Oklahoma' },
       description: 'Fast, confidential bail bond services for Pawnee County arrests and jail releases.',
     },
@@ -149,6 +152,16 @@ const structuredData = {
           <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does it take to get released from Pawnee County Jail?</summary>
           <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Pawnee County Jail occur within 1-4 hours depending on jail processing.</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/pawnee-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County Jail →</a>
       </div>
     </div>
   </section>

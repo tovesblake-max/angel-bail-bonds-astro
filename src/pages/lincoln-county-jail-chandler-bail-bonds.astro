@@ -5,6 +5,8 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Angel Bail Bonds - Lincoln County Jail',
+  url: 'https://stillwaterokbailbonds.com/lincoln-county-jail-chandler-bail-bonds',
+  '@id': 'https://stillwaterokbailbonds.com/lincoln-county-jail-chandler-bail-bonds#business',
   description: 'Bail bond services for Lincoln County Jail at 811 Manvel Ave, Chandler, OK. Available 24/7 from Stillwater.',
   image: '/images/logo.webp',
   telephone: '(405) 614-3000',
@@ -16,10 +18,12 @@ const structuredData = {
     postalCode: '74834',
     addressCountry: 'US'
   },
+  geo: { '@type': 'GeoCoordinates', latitude: 35.7012, longitude: -96.8808 },
   areaServed: {
     '@type': 'AdministrativeArea',
     name: 'Lincoln County, Oklahoma'
   },
+  sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -100,6 +104,16 @@ const howToData = {
     }
   ]
 };
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Lincoln County Bail Bonds', item: 'https://stillwaterokbailbonds.com/lincoln-county-bail-bonds' },
+    { '@type': 'ListItem', position: 3, name: 'Lincoln County Jail', item: 'https://stillwaterokbailbonds.com/lincoln-county-jail-chandler-bail-bonds' }
+  ]
+};
 ---
 
 <BaseLayout
@@ -109,6 +123,7 @@ const howToData = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
   <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
   <!-- HERO — compact -->
   <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
@@ -198,6 +213,16 @@ const howToData = {
           <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I use property as bail collateral at Lincoln County?</summary>
           <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes, Lincoln County accepts property bonds using county property as collateral. Contact the jail at (405) 258-1191 for property bond requirements. Note that property bonds take longer to process than using a bail bondsman.</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/lincoln-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County Bail Bonds →</a>
       </div>
     </div>
   </section>

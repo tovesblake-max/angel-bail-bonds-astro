@@ -5,11 +5,15 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Angel Bail Bonds - Noble County Jail',
+  url: 'https://stillwaterokbailbonds.com/noble-county-jail-perry-bail-bonds',
+  '@id': 'https://stillwaterokbailbonds.com/noble-county-jail-perry-bail-bonds#business',
   description: 'Bail bond services for Noble County Jail in Perry, Oklahoma. 24/7 availability, fast processing, payment plans available.',
   image: '/images/logo.webp',
   telephone: '(405) 614-3000',
   address: { '@type': 'PostalAddress', streetAddress: '721 Cedar St', addressLocality: 'Perry', addressRegion: 'OK', postalCode: '73077', addressCountry: 'US' },
+  geo: { '@type': 'GeoCoordinates', latitude: 36.2893, longitude: -97.2884 },
   areaServed: { '@type': 'AdministrativeArea', name: 'Noble County, Oklahoma' },
+  sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
   openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' }
 };
@@ -37,6 +41,16 @@ const howToData = {
     { '@type': 'HowToStep', name: 'Bond posted and inmate released', text: 'We post the bond at Noble County Jail and the release process begins.' }
   ]
 };
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Noble County Bail Bonds', item: 'https://stillwaterokbailbonds.com/noble-county-bail-bonds' },
+    { '@type': 'ListItem', position: 3, name: 'Noble County Jail', item: 'https://stillwaterokbailbonds.com/noble-county-jail-perry-bail-bonds' }
+  ]
+};
 ---
 
 <BaseLayout
@@ -46,6 +60,7 @@ const howToData = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
   <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
   <!-- HERO — compact -->
   <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
@@ -139,6 +154,16 @@ const howToData = {
           <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What payment methods does Noble County Jail accept for bail?</summary>
           <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">For paying the full bail directly, Noble County Jail accepts cash, credit cards, and money orders. If you use Angel Bail Bonds, you only pay 10% and we accept cash, credit cards, and offer flexible payment plans.</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages -->
+  <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Noble County Bail Bonds →</a>
       </div>
     </div>
   </section>

@@ -4,19 +4,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  url: 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds',
+  '@id': 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds#business',
   name: 'Angel Bail Bonds - Payne County Jail Specialist',
   description: 'Specialized bail bond services for Payne County Jail in Stillwater, Oklahoma.',
   image: '/images/logo.webp',
   telephone: '(405) 614-3000',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Stillwater',
+    addressRegion: 'OK',
+    addressCountry: 'US'
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 36.1156, longitude: -97.0584 },
   areaServed: 'Payne County, Oklahoma',
+  sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
+};
+
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Payne County Jail Bail Bonds', item: 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds' }
+  ]
 };
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Payne County Jail Bail Bonds"
   description="Expert bail bond services for Payne County Jail in Stillwater, Oklahoma. We specialize in fast releases and know Payne County procedures inside out."
   structuredData={structuredData}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+
   <!-- HERO — compact -->
   <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
     <div style="max-width: 900px; margin: 0 auto;">

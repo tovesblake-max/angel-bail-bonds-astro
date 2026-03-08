@@ -12,6 +12,18 @@ interface Props {
 
 const { title, description, ogImage, ogType = 'website', canonicalURL, structuredData } = Astro.props;
 const fullTitle = title + ' | Angel Bail Bonds';
+const resolvedCanonical = canonicalURL || new URL(Astro.url.pathname, Astro.site).href;
+
+// hreflang mapping — English ↔ Spanish equivalents
+const hreflangMap: Record<string, string> = {
+  '/': '/es/',
+  '/es/': '/',
+  '/services/': '/es/servicios-de-fianzas/',
+  '/es/servicios-de-fianzas/': '/services/',
+};
+const currentPath = Astro.url.pathname.replace(/\/?$/, '/');
+const isSpanish = currentPath.startsWith('/es/');
+const alternatePath = hreflangMap[currentPath];
 ---
 
 <!doctype html>
@@ -21,7 +33,13 @@ const fullTitle = title + ' | Angel Bail Bonds';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
 
-    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+    <link rel="canonical" href={resolvedCanonical} />
+    {alternatePath && (
+      <link rel="alternate" hreflang={isSpanish ? 'en' : 'es'} href={new URL(alternatePath, Astro.site).href} />
+    )}
+    {alternatePath && (
+      <link rel="alternate" hreflang={isSpanish ? 'es' : 'en'} href={resolvedCanonical} />
+    )}
 
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={Astro.url} />

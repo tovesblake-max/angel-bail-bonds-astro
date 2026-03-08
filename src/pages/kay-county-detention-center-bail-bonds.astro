@@ -2,31 +2,47 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const structuredData = {
-  '@context': 'https://schema.org', '@type': 'LocalBusiness',
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
   name: 'Angel Bail Bonds - Kay County Detention Center',
+  url: 'https://stillwaterokbailbonds.com/kay-county-detention-center-bail-bonds',
+  '@id': 'https://stillwaterokbailbonds.com/kay-county-detention-center-bail-bonds#business',
   description: 'Bail bond services for Kay County Detention Center at 1101 W Dry Rd, Newkirk, OK. Available 24/7 from Stillwater.',
-  image: '/images/logo.webp', telephone: '(405) 614-3000',
-  address: { '@type': 'PostalAddress', streetAddress: '1101 W Dry Rd', addressLocality: 'Newkirk', addressRegion: 'OK', postalCode: '74647', addressCountry: 'US' },
+  image: '/images/logo.webp',
+  telephone: '(405) 614-3000',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1101 W Dry Rd',
+    addressLocality: 'Newkirk',
+    addressRegion: 'OK',
+    postalCode: '74647',
+    addressCountry: 'US'
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 36.8670, longitude: -97.0531 },
   areaServed: { '@type': 'AdministrativeArea', name: 'Kay County, Oklahoma' },
+  sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
   openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' }
 };
 
-const faqData = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-  { '@type': 'Question', name: 'How do I bail someone out of Kay County Detention Center?', acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000. We serve Kay County from Stillwater and can post bonds at the detention center in Newkirk. You pay 10% of the bail amount. Payment plans are available.' } },
-  { '@type': 'Question', name: 'What is the phone number for Kay County Detention Center?', acceptedAnswer: { '@type': 'Answer', text: 'Kay County Detention Center can be reached at (580) 362-3393. The facility is located at 1101 W Dry Rd, Newkirk, OK 74647.' } },
-  { '@type': 'Question', name: 'What are visitation hours at Kay County Detention Center?', acceptedAnswer: { '@type': 'Answer', text: 'Visitation at Kay County Detention Center is Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Visits must be scheduled in advance. A valid government-issued photo ID is required.' } },
-  { '@type': 'Question', name: 'How far is Kay County Detention Center from Stillwater?', acceptedAnswer: { '@type': 'Answer', text: 'Kay County Detention Center in Newkirk is about 90 minutes northwest of Stillwater. Angel Bail Bonds serves this facility regularly and can coordinate bond posting remotely or in person.' } }
-] };
+const faqData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'How do I bail someone out of Kay County Detention Center?', acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000. We serve Kay County from Stillwater and can post bonds at the detention center in Newkirk. You pay 10% of the bail amount. Payment plans are available.' } },
+    { '@type': 'Question', name: 'What is the phone number for Kay County Detention Center?', acceptedAnswer: { '@type': 'Answer', text: 'Kay County Detention Center can be reached at (580) 362-3393. The facility is located at 1101 W Dry Rd, Newkirk, OK 74647.' } },
+    { '@type': 'Question', name: 'What are visitation hours at Kay County Detention Center?', acceptedAnswer: { '@type': 'Answer', text: 'Visitation at Kay County Detention Center is Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Visits must be scheduled in advance. A valid government-issued photo ID is required.' } },
+    { '@type': 'Question', name: 'How far is Kay County Detention Center from Stillwater?', acceptedAnswer: { '@type': 'Answer', text: 'Kay County Detention Center in Newkirk is about 90 minutes northwest of Stillwater. Angel Bail Bonds serves this facility regularly and can coordinate bond posting remotely or in person.' } }
+  ]
+};
 
-const howToData = { '@context': 'https://schema.org', '@type': 'HowTo',
-  name: 'How to Bail Someone Out of Kay County Detention Center in Newkirk, OK',
-  description: 'Complete guide to posting bail at Kay County Detention Center in Newkirk, Oklahoma.',
-  step: [
-    { '@type': 'HowToStep', name: 'Get inmate info', text: 'Call Kay County Detention Center at (580) 362-3393 for inmate information and bail amount.' },
-    { '@type': 'HowToStep', name: 'Call Angel Bail Bonds', text: 'Call (405) 614-3000 any time 24/7. We serve Kay County from Stillwater.' },
-    { '@type': 'HowToStep', name: 'Pay 10% premium', text: 'Sign the bond agreement and pay 10% of the bail amount. Payment plans available.' },
-    { '@type': 'HowToStep', name: 'Release', text: 'Bond posted at Kay County Detention Center and the release process begins.' }
+const breadcrumbData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Kay County Bail Bonds', item: 'https://stillwaterokbailbonds.com/kay-county-bail-bonds' },
+    { '@type': 'ListItem', position: 3, name: 'Kay County Detention Center', item: 'https://stillwaterokbailbonds.com/kay-county-detention-center-bail-bonds' }
   ]
 };
 ---
@@ -37,63 +53,123 @@ const howToData = { '@context': 'https://schema.org', '@type': 'HowTo',
   structuredData={structuredData}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
-  <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
-  <section style="background: var(--navy-deep); min-height: 50vh;" class="flex items-center text-white">
-    <div class="max-w-7xl mx-auto px-4 py-20 w-full">
-      <p class="section-label" style="color: white; opacity: 0.9;">Kay County Detention Center — Newkirk, OK</p>
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4 text-white">Bail Bonds for<br><span>Kay County Detention Center</span></h1>
-      <p class="text-lg md:text-xl max-w-2xl mb-8 opacity-90 text-white">1101 W Dry Road, Newkirk, OK 74647 — Angel Bail Bonds serves Kay County from Stillwater with 24/7 availability.</p>
-      <a href="tel:+14056143000" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(405) 614-3000</a>
+  <!-- HERO — compact -->
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Kay County Detention Center — Newkirk, OK</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Kay County Detention Center</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">1101 W Dry Rd, Newkirk, OK 74647 · Served 24/7 from Stillwater</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
     </div>
   </section>
 
-  <section style="background: var(--slate-50); padding: 80px 0;">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="section-label">Facility Details</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--slate-900);">Kay County Detention Center Information</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="card reveal"><div class="icon-box">📍</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Address</h3><p style="color: var(--slate-500); opacity: 0.8; font-size: 0.95rem;"><a href="https://www.google.com/maps/search/?api=1&query=1101+W+Dry+Rd+Newkirk+OK+74647" target="_blank" rel="noopener" style="color: var(--blue); text-decoration: none; cursor: pointer;">1101 W Dry Road<br>Newkirk, OK 74647</a></p></div>
-        <div class="card reveal reveal-delay-1"><div class="icon-box">📞</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Phone</h3><p style="color: var(--slate-500); opacity: 0.8; font-size: 0.95rem;"><a href="tel:+15803623393" style="color: var(--blue); text-decoration: none;">(580) 362-3393</a></p></div>
-        <div class="card reveal reveal-delay-2"><div class="icon-box">⏰</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Visitation Hours</h3><p style="color: var(--slate-500); opacity: 0.8; font-size: 0.95rem;">M-F: 7:30am - 9:00pm<br>Sat-Sun: 7:30am - 2:30pm</p></div>
-        <div class="card reveal reveal-delay-3"><div class="icon-box">💰</div><h3 class="font-semibold mt-4 mb-2" style="color: var(--slate-900);">Bail Info</h3><p style="color: var(--slate-500); opacity: 0.8; font-size: 0.95rem;">10% premium<br>Payment plans available</p></div>
+  <!-- FACILITY + STEPS — combined, two-column -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+      <!-- Left: Facility Details -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Facility Details</h2>
+        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="https://www.google.com/maps/search/?api=1&query=1101+W+Dry+Rd+Newkirk+OK+74647" target="_blank" rel="noopener" style="color: var(--blue); text-decoration: none;">1101 W Dry Rd, Newkirk, OK 74647</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+15803623393" style="color: var(--blue); text-decoration: none;">(580) 362-3393</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitation</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">M-F 7:30a–9p · Sat-Sun 7:30a–2:30p</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">10% premium · Payment plans available</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Right: How to Bail Out -->
+      <div>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Bail Someone Out</h2>
+        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
+            <div><strong style="color: var(--slate-800);">Get bail amount</strong><br><span style="color: var(--slate-500);">Call the facility at (580) 362-3393</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
+            <div><strong style="color: var(--slate-800);">Call us 24/7</strong><br><span style="color: var(--slate-500);">Angel Bail Bonds: (405) 614-3000</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+            <div><strong style="color: var(--slate-800);">Pay 10% &amp; sign</strong><br><span style="color: var(--slate-500);">Cash, cards, or payment plan</span></div>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
+            <div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">Bond posted, we keep you updated</span></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Responsive: stack columns on mobile -->
+    <style>
+      @media (max-width: 640px) {
+        section div[style*="grid-template-columns: 1fr 1fr"] {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- FAQ — compact accordion -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Kay County Detention Center?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000. We post bonds at Kay County Detention Center in Newkirk and only charge the 10% premium required by Oklahoma law. Payment plans available.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What are visitation hours at Kay County Detention Center?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Monday–Friday 7:30 AM to 9:00 PM, Saturday–Sunday 7:30 AM to 2:30 PM. Schedule visits in advance and bring a valid government-issued photo ID.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How far is it from Stillwater?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">About 90 minutes northwest. Angel Bail Bonds serves this facility regularly and can coordinate bond posting remotely or in person.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What payment methods do you accept?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Cash, Visa, Mastercard, Zelle, Venmo. We also offer flexible payment plans so finances don't delay getting your loved one released.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section style="padding: 100px 0; background: white;">
-    <div class="max-w-4xl mx-auto px-4">
-      <p class="section-label">Step-by-Step Guide</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-4" style="color: var(--slate-900);">How to Bail Someone Out of Kay County Detention Center</h2>
-      <p style="color: var(--slate-500); opacity: 0.8; margin-bottom: 48px; font-size: 1.1rem;">Kay County Detention Center in Newkirk is about 90 minutes northwest of Stillwater. We serve this facility and can post bonds quickly.</p>
-      <div style="display: flex; flex-direction: column; gap: 32px;">
-        <div class="reveal" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</div><div><h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Get the Bail Amount</h3><p style="color: var(--slate-500); opacity: 0.8;">Call Kay County Detention Center at <strong>(580) 362-3393</strong> for the inmate's bail amount, charges, and booking details. Have their full name ready.</p></div></div>
-        <div class="reveal reveal-delay-1" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</div><div><h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Call Angel Bail Bonds</h3><p style="color: var(--slate-500); opacity: 0.8;">Call <strong>(405) 614-3000</strong> — available 24/7. We'll confirm the details, explain the 10% premium, and discuss payment plan options.</p></div></div>
-        <div class="reveal reveal-delay-2" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</div><div><h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Sign Bond & Pay 10% Premium</h3><p style="color: var(--slate-500); opacity: 0.8;">Complete the bond agreement and pay 10% of the bail amount. We accept cash, credit cards, and offer flexible payment plans.</p></div></div>
-        <div class="reveal reveal-delay-3" style="display: flex; gap: 20px;"><div style="min-width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700;">4</div><div><h3 class="font-display text-xl mb-2" style="color: var(--slate-900);">Bond Posted — Release Begins</h3><p style="color: var(--slate-500); opacity: 0.8;">We post the bond at Kay County Detention Center and the release process starts. We'll keep you updated throughout.</p></div></div>
+  <!-- Related Pages -->
+  <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/kay-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Kay County Bail Bonds →</a>
       </div>
     </div>
   </section>
 
-  <section style="padding: 80px 0; background: var(--slate-50);">
-    <div class="max-w-4xl mx-auto px-4">
-      <p class="section-label">Common Questions</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-10" style="color: var(--slate-900);">Kay County Detention Center Bail FAQ</h2>
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);"><span>How do I bail someone out of Kay County Detention Center?</span><span>▼</span></summary><p style="color: var(--slate-500); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Call Angel Bail Bonds at (405) 614-3000. We post bonds at Kay County Detention Center in Newkirk and only charge the 10% premium required by Oklahoma law. Payment plans available.</p></details>
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);"><span>What are visitation hours at Kay County Detention Center?</span><span>▼</span></summary><p style="color: var(--slate-500); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Monday through Friday 7:30 AM to 9:00 PM, Saturday and Sunday 7:30 AM to 2:30 PM. Schedule visits in advance and bring a valid government-issued photo ID.</p></details>
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);"><span>How far is Kay County Detention Center from Stillwater?</span><span>▼</span></summary><p style="color: var(--slate-500); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">Kay County Detention Center in Newkirk is about 90 minutes northwest of Stillwater. Angel Bail Bonds serves this facility regularly and can coordinate bond posting remotely or in person.</p></details>
-        <details class="card" style="background: white; cursor: pointer;"><summary class="flex justify-between items-center font-semibold" style="color: var(--slate-900);"><span>What forms of payment do you accept for Kay County bonds?</span><span>▼</span></summary><p style="color: var(--slate-500); opacity: 0.8; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">We accept cash, credit cards, and debit cards. We also offer flexible payment plans so finances don't delay getting your loved one released. The standard bail bond premium in Oklahoma is 10% of the total bail amount.</p></details>
+  <!-- CTA BAR — tight -->
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Someone in Kay County Detention Center?</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">24/7 availability · Payment plans · Serve all of Kay County</p>
       </div>
-    </div>
-  </section>
-
-  <section style="background: var(--navy-deep); padding: 80px 0;" class="text-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="section-label" style="color: white; opacity: 0.9;">Available 24/7</p>
-      <h2 class="font-display text-3xl md:text-4xl mb-6 text-white">Someone in Kay County Detention Center?</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 text-white">Angel Bail Bonds serves Kay County from Stillwater. Fast processing, payment plans, and 24/7 availability.</p>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1.3rem; padding: 16px 40px;">(405) 614-3000</a>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
     </div>
   </section>
 </BaseLayout>
