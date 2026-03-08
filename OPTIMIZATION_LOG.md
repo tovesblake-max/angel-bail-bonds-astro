@@ -1,5 +1,59 @@
 # Angel Bail Bonds SEO Optimization Log
 
+## 2026-03-08 (Run 4) — Garfield County Page GEO Optimization
+
+**Action:** Major optimization of `garfield-county-bail-bonds.astro` (273 lines → 447 lines)
+
+**Files Changed:**
+- `src/pages/garfield-county-bail-bonds.astro` — Complete rewrite for GEO/LLM citability
+
+**What Was Improved:**
+1. **Self-contained answer capsules added** — 6 bolded answer blocks (40-70 words each) that AI can extract verbatim, covering: quick reference, bond costs, detention center location, visiting hours, Vance AFB arrests, and why choose Angel
+2. **Question-based H2/H3 headings** — All section headings now match natural language prompts (e.g., "How Much Does a Garfield County Bail Bond Cost?", "Where Is the Garfield County Detention Center?", "What Are Garfield County Detention Center Visiting Hours?", "Arrests Near Vance Air Force Base in Enid")
+3. **Specific factual data added/improved:**
+   - Detention Center: 1020 S 10th Street, Enid, OK 73701
+   - Detention Center phone: (580) 548-2429
+   - Capacity: 204 inmates, medium security
+   - Bookings: ~880/year (~4/day), 99 staff members
+   - Operated by: Garfield County Criminal Trust Authority (since Jan 1, 2021)
+   - Sheriff's Office: 216 W. Oxford Ave, Enid, OK 73701, (580) 237-0244
+   - Video visitation only: 30 min sessions, $5.00/visit, 2 visits/week, Securus Technologies
+   - Must be on approved visitor list, government photo ID required, professional dress
+   - Inmate calls: 15 min max, per-minute rate, Securus Technologies, no incoming calls
+   - Courthouse: 114 W Broadway Ave, Enid, OK 73701
+   - Court Clerk: Janelle M. Sharp, (580) 237-0232
+   - Court hours: Mon-Fri 8:00 AM - 4:30 PM
+   - Oklahoma District 4
+   - Common bond amounts: ~$1,000 DUI, $500-$5,000 misdemeanor, $5,000-$50,000+ felony
+   - Oklahoma VINE system: (877) 654-8463
+   - County population: ~62,846, Enid population: 51,000+
+   - Named after President James A. Garfield, established 1893 Cherokee Outlet
+   - Distance: ~65 miles from Stillwater, ~1 hr 8 min drive
+4. **Vance Air Force Base section added** — Unique differentiator for Garfield County covering off-base arrests, military-adjacent cases, and the 71st Flying Training Wing context
+5. **Schema markup improved** — Added 14 city-level areaServed entries, payment methods, hours of operation, priceRange
+6. **FAQ expanded** — 7 county-specific questions with detailed, data-rich answers including Vance AFB question
+7. **Cross-links expanded** — From 5 to 7 neighboring county pages (added Grant County, Kingfisher County)
+8. **Communities served expanded** — 14 cities/towns listed with badge-style tags
+9. **New sections added:**
+   - Answer capsule quick reference block at top
+   - Bond cost section with payment methods answer capsule
+   - Courthouse quick reference table
+   - Visiting hours section with video-only policy, costs, and requirements
+   - Inmate phone calls and communication section
+   - Vance Air Force Base arrests section (unique — no other page has this)
+   - Why choose Angel section
+   - Distance from Stillwater answer capsule
+10. **Meta title/description improved** — Now includes "24/7 Jail Release in Enid, OK" and Vance AFB area mention
+
+**Content Uniqueness:** Page now contains Garfield County-specific data (204-bed capacity, 880 bookings/year, 99 staff, Criminal Trust Authority operation, Court Clerk Janelle M. Sharp, District 4, Vance Air Force Base angle, $5 video visits via Securus, Enid as northwest Oklahoma hub) that no other page shares, keeping content overlap well below 40%.
+
+**What To Do Next Run:**
+- Optimize `logan-county-bail-bonds.astro` (323 lines, next weakest main county page)
+- OR optimize `washington-county-bail-bonds.astro` (337 lines)
+- Consider updating llms.txt and llms-full.txt to ensure all pages are listed
+- Consider adding a blog post targeting "bail bonds near Vance Air Force Base" or "how to bail someone out of jail in Oklahoma"
+- Check homepage "Areas We Serve" section for completeness
+
 ## 2026-03-08 (Run 3) — Pawnee County Page GEO Optimization
 
 **Action:** Major optimization of `pawnee-county-bail-bonds.astro` (214 lines → 429 lines)
