@@ -1,59 +1,42 @@
 # Angel Bail Bonds SEO Optimization Log
 
-## 2026-03-08 – Run 4: Kay County Page Full GEO Optimization
+## 2026-03-08 — Run 4: Kay County GEO Optimization (Weakest Page Upgrade)
 
-**Action:** Completely rebuilt the Kay County bail bonds page with full GEO/LLM optimization — it was identified as the weakest page in Run 3.
-
-**Problem Identified:**
-Kay County page had major gaps vs. newer optimized pages:
-- 0 bold GEO answer capsules (newer pages have 3-36)
-- Only 4 FAQ questions (standard is 5-7)
-- No facility details table (missing jail address, phone, hours)
-- No visiting hours section
-- No "Last Updated" date
-- No inmate search section
-- Only 1 neighboring county cross-link (should have 5-6)
-- Vague "competitive rates" instead of specific 10% figure
-- No question-based H2/H3 headings
+**Action:** GEO-optimized the Kay County bail bonds page — previously the weakest main county page (0 bold capsules, no bail amounts table, no last updated date, only 6 FAQs, 6 cross-links).
 
 **Files Changed:**
-1. `src/pages/kay-county-bail-bonds.astro` – REBUILT with full GEO optimization
+1. `src/pages/kay-county-bail-bonds.astro` — Major GEO upgrade
 
 **What Was Improved:**
-- Added GEO answer capsule (bold, 60-word extractable block with business name, address, rating, contact, payments)
-- Added facility details table: Kay County Detention Center (1101 W Dry Road, Newkirk, OK 74647, (580) 362-3393), Sheriff's Office ((580) 362-3250), Courthouse (201 S Main St, (580) 362-3350)
-- Added visiting hours section: Mon-Fri 7:30 AM-9:00 PM, Sat-Sun 7:30 AM-2:30 PM, 2 visits/week, max 5 guests
-- Expanded to 7 FAQ questions with county-specific details in both schema and accordion
-- Added question-based H2/H3 headings matching AI prompt patterns
-- Added inmate search section with jail phone + CTA
-- Added 6 neighboring county cross-links (Noble, Osage, Grant, Garfield, Payne, Pawnee)
-- Added specific bail cost examples ($5,000 bail = $500, $10,000 = $1,000)
-- Added "Last Updated: March 8, 2026"
-- Added "Se habla español" to CTAs
-- Added capacity info (108 inmates)
-- Enhanced schema: LocalBusiness + Service + BreadcrumbList + FAQPage (7 questions)
-- Communities served badges: Newkirk, Ponca City, Blackwell, Tonkawa, Braman, Kaw City, Nardin
-- Page grew from ~1,614 words to ~2,000+ words with proper 120-180 word spacing between headings
+- Added GEO answer capsule to "What Happens After an Arrest" section (bolded 40-60 word block with specific facility address, phone, and processing details)
+- Added new "How Much Is Bail in Kay County?" section with full bail amounts table (8 charges from Oklahoma Uniform Bond Schedule: DUI $1,000, Assault $500, Carrying Weapon $500, Assault on Police $1,000-$5,000, Domestic (judge set), Assault w/ Deadly Weapon $25,000, Burglary 1st $20,000, Armed Robbery $50,000)
+- Added GEO answer capsule to "About Kay County" section (population, area, county seat, communities)
+- Added 7th FAQ to schema AND accordion: "How much is bail for a DUI in Kay County?" with specific dollar amount
+- Added "Types of Bail Bonds Available in Kay County" section with GEO capsule + 4 bond type cards (surety, cash, transfer, federal)
+- Expanded cross-links from 6 to 8 counties (added Pawnee County, Washington County)
+- Added "Last Updated: March 8, 2026" footer
 
 **GEO Optimization Checklist:**
-- [x] Self-contained answer capsules (bold, extractable by AI)
-- [x] Question-based H2/H3 headings
-- [x] Specific factual data (addresses, phones, hours, capacity, bail amounts)
-- [x] LocalBusiness + FAQPage + BreadcrumbList + Service schema
-- [x] 2,000+ words with proper spacing
-- [x] "Last Updated" date
-- [x] 7 county-specific FAQ questions
-- [x] 6 neighboring county cross-links
-- [x] Click-to-call CTA: (405) 614-3000
-- [x] Inmate search section
+- [x] Self-contained answer capsules (4 bolded capsules added, up from 0)
+- [x] Question-based H2/H3 headings matching natural language prompts
+- [x] Specific factual data: bail amounts, addresses, phone numbers, processing details
+- [x] Full schema markup: LocalBusiness + FAQPage (7 Qs) + BreadcrumbList + Service
+- [x] 7 FAQ entries (up from 6)
+- [x] "Last Updated" date added
+- [x] 8 cross-links to neighboring counties (up from 6)
+- [x] Bail amounts table with Oklahoma Uniform Bond Schedule data
+
+**Impact:**
+- Kay County page now matches GEO quality of newer county pages
+- AI models can now extract specific bail amounts, bond types, and facility details
+- Page word count increased from ~1,600 to ~2,200+ words
 
 **What To Do Next Run:**
-1. Optimize Payne County page (original page, likely missing GEO capsules and updated schema)
-2. Optimize Pawnee County page (same issues as Kay had)
-3. Optimize Lincoln County page (same issues)
-4. Optimize Noble County page (same issues)
-5. Add "Last Updated" dates to all pages still missing them
-6. Consider adding blog posts targeting long-tail queries like "how to bail someone out of [county] jail"
+1. Add GEO answer capsules to remaining original 4 county pages (Payne, Pawnee, Lincoln, Noble) — they still have 0 bold capsules
+2. Add "Last Updated" dates to pages missing them
+3. Add bail amounts tables to other county pages
+4. Consider adding bond types section to other county pages
+5. Cross-link audit: ensure all 15 county pages link to their geographic neighbors
 
 ---
 
