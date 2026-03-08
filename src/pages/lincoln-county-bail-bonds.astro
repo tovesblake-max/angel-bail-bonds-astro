@@ -2,75 +2,150 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'LocalBusiness',
-      '@id': 'https://stillwaterokbailbonds.com/lincoln-county-bail-bonds#business',
-      name: 'Angel Bail Bonds - Lincoln County',
-      url: 'https://stillwaterokbailbonds.com/lincoln-county-bail-bonds',
-      description: 'Professional bail bond services for Lincoln County, Oklahoma. 24/7 emergency bail bonds with 15+ years experience.',
-      telephone: '(405) 614-3000',
-      email: 'bailbondangel@gmail.com',
-      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Lincoln County, Oklahoma' },
-      geo: { '@type': 'GeoCoordinates', latitude: 35.7012, longitude: -96.8808 },
-      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
-    },
-    {
-      '@type': 'Service',
-      name: 'Lincoln County Bail Bond Services',
-      provider: { '@id': 'https://stillwaterokbailbonds.com/lincoln-county-bail-bonds#business' },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Lincoln County, Oklahoma' },
-      description: 'Fast, confidential bail bond services for Lincoln County arrests and jail releases.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Lincoln County Bail Bonds', item: 'https://stillwaterokbailbonds.com/lincoln-county-bail-bonds' },
+      "@type": "LocalBusiness",
+      "@id": "https://stillwaterokbailbonds.com/lincoln-county-bail-bonds#business",
+      "name": "Angel Bail Bonds - Lincoln County",
+      "url": "https://stillwaterokbailbonds.com/lincoln-county-bail-bonds",
+      "description": "24/7 bail bond services for Lincoln County, Oklahoma. Fast jail release from Lincoln County Jail in Chandler. Women-owned, 15+ years experience, 4.9-star rating.",
+      "telephone": "(405) 614-3000",
+      "email": "bailbondangel@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Stillwater",
+        "addressRegion": "OK",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Chandler" },
+        { "@type": "City", "name": "Stroud" },
+        { "@type": "City", "name": "Prague" },
+        { "@type": "City", "name": "Meeker" },
+        { "@type": "City", "name": "Davenport" },
+        { "@type": "City", "name": "Carney" },
+        { "@type": "City", "name": "Agra" },
+        { "@type": "City", "name": "Sparks" },
+        { "@type": "City", "name": "Warwick" },
+        { "@type": "City", "name": "Tryon" }
       ],
+      "geo": { "@type": "GeoCoordinates", "latitude": "35.7012", "longitude": "-96.8808" },
+      "priceRange": "Varies",
+      "paymentMethod": ["Cash", "Credit Card", "Zelle", "Venmo"],
+      "hoursOfOperation": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "127" },
+      "sameAs": ["https://g.co/kgs/Angel-Bail-Bonds-Stillwater"]
     },
     {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How do I get a bail bond in Lincoln County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Lincoln County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does a bail bond cost in Lincoln County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'In Oklahoma, we offer competitive rates on bail bonds. Angel Bail Bonds offers competitive rates to help families manage the cost.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take to get released from Lincoln County Jail?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Lincoln County Jail occur within 1-4 hours depending on jail processing.' },
-        },
-      ],
+      "@type": "Service",
+      "name": "Lincoln County Bail Bond Services",
+      "provider": { "@id": "https://stillwaterokbailbonds.com/lincoln-county-bail-bonds#business" },
+      "areaServed": "Lincoln County, Oklahoma",
+      "description": "Fast, confidential bail bond services for Lincoln County arrests. Serving Chandler, Stroud, Prague, Meeker, and all Lincoln County communities."
     },
-  ],
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Lincoln County Bail Bonds", "item": "https://stillwaterokbailbonds.com/lincoln-county-bail-bonds" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I bail someone out of Lincoln County Jail in Chandler, Oklahoma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. Lincoln County Jail is located at 811 Manvel Ave, Suite 14, Chandler, OK 74834. We are about 50 miles south in Stillwater and handle all paperwork. Most inmates are released within 1-4 hours after the bond is posted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a bail bond cost in Lincoln County, Oklahoma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln County bail bond costs depend on the charge and bail amount set by the judge. Common bail amounts include approximately $500-$1,500 for misdemeanor DUI, $500-$5,000 for most misdemeanors, and $5,000-$100,000+ for felony charges. You pay a percentage of the total bail amount as the premium. Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, Venmo, and offers financing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Lincoln County Jail visiting hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln County Jail on-site visitation hours are Monday through Friday, 10:00 AM to 3:00 PM. Visits must be scheduled 24 hours in advance through Prodigy. Remote visitation is available daily from 6:00 AM to 10:00 PM. A maximum of 3 visitors per visit, including children. A valid photo ID is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get released from Lincoln County Jail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most releases from Lincoln County Jail take 1-4 hours after the bail bond is posted, depending on the time of day and facility processing. Lincoln County Jail has a capacity of 128 inmates. Angel Bail Bonds can begin the bond process over the phone before arriving at the jail to speed up release time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I post bail for a Turner Turnpike arrest in Lincoln County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many arrests in Lincoln County occur on the Turner Turnpike (I-44) near Stroud or Chandler. These are processed through the Lincoln County system at Lincoln County Jail in Chandler. Call Angel Bail Bonds at (405) 614-3000 and we will handle the bail process for any Lincoln County arrest, including turnpike arrests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Lincoln County Courthouse and when are court appearances?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Lincoln County Courthouse is located at 811 Manvel Ave, Chandler, OK 74834, in the same complex as the jail. The Court Clerk is Cindy Kirby, reachable at (405) 258-1264. Office hours are Monday through Friday, 8:30 AM to 4:30 PM. Arraignments typically occur within 24 hours of arrest. Court dockets are available at oscn.net."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Angel Bail Bonds serve all of Lincoln County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Angel Bail Bonds serves every community in Lincoln County including Chandler, Stroud, Prague, Meeker, Davenport, Carney, Agra, Sparks, Warwick, and Tryon. We also handle arrests on the Turner Turnpike (I-44) that pass through Lincoln County."
+          }
+        }
+      ]
+    }
+  ]
 };
 ---
 
 <BaseLayout
-  title="Lincoln County Bail Bonds"
-  description="24/7 bail bond services for Lincoln County, Oklahoma. Angel Bail Bonds offers fast, confidential bail bond processing. 15+ years experience, 4.9 stars. Call (405) 614-3000."
+  title="Lincoln County Bail Bonds | 24/7 Jail Release in Chandler, OK"
+  description="Need a bail bond in Lincoln County? Angel Bail Bonds provides 24/7 fast jail release from Lincoln County Jail in Chandler, OK. Serving Stroud, Prague, Meeker & turnpike arrests. Call (405) 614-3000."
   ogImage="/images/hero-agate.webp"
   structuredData={structuredData}
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-  <!-- HERO — compact -->
+  <!-- HERO -->
   <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
     <div style="max-width: 900px; margin: 0 auto;">
       <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Lincoln County, Oklahoma</p>
-      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Lincoln County</h1>
-      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Chandler, Prague, Stroud, Meeker, and surrounding areas · 24/7 service</p>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Lincoln County Bail Bonds — Fast Jail Release in Chandler, OK</h1>
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Chandler · Stroud · Prague · Meeker · Davenport · Turner Turnpike arrests — 24/7 service</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 Call (405) 614-3000 Now</a>
+      <p style="color: rgba(255,255,255,0.35); font-size: 0.75rem; margin-top: 10px;">Last Updated: March 8, 2026</p>
+    </div>
+  </section>
+
+  <!-- ANSWER CAPSULE: Quick Reference -->
+  <section style="padding: 32px 1.5rem; background: #f0f7ff; border-bottom: 2px solid var(--blue);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7;"><strong>Angel Bail Bonds provides 24/7 bail bond services for Lincoln County, Oklahoma. Lincoln County Jail is located at 811 Manvel Ave, Suite 14, Chandler, OK 74834. Call (405) 614-3000 to begin the bail process. The jail phone number is (405) 258-1191 ext. 294. Lincoln County Jail has a capacity of 128 inmates. Most inmates are released 1-4 hours after the bond is posted. We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing.</strong></p>
     </div>
   </section>
 
@@ -78,48 +153,68 @@ const structuredData = {
   <section style="padding: 48px 1.5rem; background: white;">
     <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
 
-      <!-- Left: County Info -->
+      <!-- Left: Jail Facility Details -->
       <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Lincoln County Overview</h2>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Lincoln County Jail Facility Details</h2>
         <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
           <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">County Seat</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Chandler</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 120px;">Address</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">811 Manvel Ave, Ste 14, Chandler, OK 74834</td>
           </tr>
           <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Major Communities</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Prague, Stroud, Meeker</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Jail Phone</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+14052581191" style="color: var(--blue);">(405) 258-1191 ext. 294</a></td>
           </tr>
           <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Service Area</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">East of OKC · Central OK</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Non-Emergency</td>
+            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+14052589933" style="color: var(--blue);">(405) 258-9933</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Capacity</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">128 inmates</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Sheriff</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Charlie Dougherty</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visitation</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">M-F 10 AM - 3 PM (on-site, scheduled 24hr ahead)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--slate-100);">
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Remote Visits</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Daily 6:00 AM - 10:00 PM</td>
           </tr>
           <tr>
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Competitive rates available</td>
+            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">County Seat</td>
+            <td style="padding: 10px 0; color: var(--slate-700);">Chandler, Oklahoma</td>
           </tr>
         </table>
       </div>
 
       <!-- Right: How to Get Bail Bond -->
       <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Get Bail in Lincoln County</h2>
+        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Post Bail in Lincoln County</h2>
         <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
           <li style="display: flex; gap: 12px; margin-bottom: 14px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
-            <div><strong style="color: var(--slate-800);">Contact jail</strong><br><span style="color: var(--slate-500);">Get inmate info & bail amount</span></div>
+            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · Available 24/7/365</span></div>
           </li>
           <li style="display: flex; gap: 12px; margin-bottom: 14px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
-            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · 24/7</span></div>
+            <div><strong style="color: var(--slate-800);">We confirm inmate details</strong><br><span style="color: var(--slate-500);">Charges, bail amount, booking number from Lincoln County Jail</span></div>
           </li>
           <li style="display: flex; gap: 12px; margin-bottom: 14px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
-            <div><strong style="color: var(--slate-800);">Pay premium & sign</strong><br><span style="color: var(--slate-500);">Cash, cards accepted</span></div>
+            <div><strong style="color: var(--slate-800);">Pay the premium & sign paperwork</strong><br><span style="color: var(--slate-500);">Cash, Visa, Mastercard, Zelle, Venmo · Financing available</span></div>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
+            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">4</span>
+            <div><strong style="color: var(--slate-800);">Bond is posted at the jail</strong><br><span style="color: var(--slate-500);">We travel to Chandler or handle remotely by phone</span></div>
           </li>
           <li style="display: flex; gap: 12px;">
             <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
-            <div><strong style="color: var(--slate-800);">Release begins</strong><br><span style="color: var(--slate-500);">1-4 hours processing time</span></div>
+            <div><strong style="color: var(--slate-800);">Your loved one is released</strong><br><span style="color: var(--slate-500);">Typical processing: 1-4 hours after bond is posted</span></div>
           </li>
         </ol>
       </div>
@@ -135,17 +230,44 @@ const structuredData = {
     </style>
   </section>
 
-  <!-- ABOUT LINCOLN COUNTY — unique local content -->
+  <!-- BOND AMOUNTS -->
   <section style="padding: 48px 1.5rem; background: var(--slate-50);">
     <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">About Lincoln County, Oklahoma</h2>
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">How Much Does a Lincoln County Bail Bond Cost?</h2>
+
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; padding: 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Lincoln County bail bond costs are based on the charge and the bail amount set by the judge. In Oklahoma, bail bond premiums are a percentage of the total bail amount. Common bail amounts in Lincoln County include approximately $500-$1,500 for misdemeanor DUI, $500-$5,000 for most misdemeanors, and $5,000-$100,000+ for felony charges. Angel Bail Bonds offers competitive rates and flexible payment plans.</strong></p>
+
       <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
-        <p style="margin-bottom: 14px;">Lincoln County is located in central Oklahoma, directly south of Payne County. With a population of roughly 35,000, the county covers about 960 square miles of gently rolling terrain between Oklahoma City and Tulsa. The county seat is Chandler, a historic Route 66 town located along SH-66 about 50 miles south of Stillwater. Other communities we serve throughout Lincoln County include Stroud, Prague, Meeker, Davenport, Carney, Agra, Sparks, Tryon, and Warwick.</p>
-        <p style="margin-bottom: 14px;">Stroud is one of the larger towns in Lincoln County, situated right along the Turner Turnpike (I-44) between Oklahoma City and Tulsa. Arrests on the turnpike within Lincoln County are processed through the Lincoln County system. Prague, another key community, lies in the southeastern part of the county and is known as the hometown of Jim Thorpe. Meeker, in the southern part of the county, rounds out the main population centers.</p>
-        <p style="margin-bottom: 14px;">Lincoln County criminal cases are handled by the Lincoln County District Court in Chandler. The Lincoln County Courthouse is located at 811 Manvel Ave in Chandler, the same complex that houses the county jail. Bail amounts in Lincoln County follow Oklahoma's standard bond schedules, with misdemeanor and felony bail amounts varying by the severity of the charge. Angel Bail Bonds regularly works with the Lincoln County court system and jail staff, so we understand the local procedures and can move quickly to get your loved one released.</p>
+        <p style="margin-bottom: 14px;">Lincoln County uses a bail schedule for common offenses, which allows many misdemeanor defendants to post bond immediately after booking without waiting for a judge. For felony charges, a bond hearing before a Lincoln County District Court judge is typically required. Bail amounts in felony cases depend on the severity of the charge, criminal history, flight risk, and community ties.</p>
+
+        <p style="margin-bottom: 14px;">If the defendant does not post bail within the first 24 hours, they must appear before a judge who will formally set the bond amount. This first appearance can be conducted in person at the Lincoln County Courthouse or via telephone. Angel Bail Bonds can begin the paperwork process over the phone before arriving at the jail, which means we can post the bond faster once we get to Chandler.</p>
+
+        <p style="margin-bottom: 14px;">Lincoln County Jail is one of the larger county facilities in central Oklahoma with a 128-inmate capacity. Because the jail shares a complex with the courthouse at 811 Manvel Ave in Chandler, bond hearings and arraignments can be conducted quickly — often by video from the jail itself.</p>
+
+        <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 24px; margin-bottom: 12px;">What Payment Methods Does Angel Bail Bonds Accept for Lincoln County Bonds?</h3>
+
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;"><strong>Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, and Venmo for Lincoln County bail bonds. Financing is available for qualifying clients. We can process payments over the phone, making it possible to start the release process before meeting in person. There are no hidden fees.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT LINCOLN COUNTY — unique local content -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Where Is Lincoln County Jail and How Do I Get There?</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Lincoln County Jail is located at 811 Manvel Avenue, Suite 14, Chandler, OK 74834, in the same complex as the Lincoln County Courthouse. Chandler is approximately 50 miles south of Stillwater along SH-18, and about 50 miles northeast of Oklahoma City. The Lincoln County Sheriff's Office, headed by Sheriff Charlie Dougherty, operates the 128-bed facility. The jail phone number is (405) 258-1191 ext. 294.</strong></p>
+
+        <p style="margin-bottom: 14px;">Lincoln County is located in central Oklahoma, directly south of Payne County. With a population of roughly 34,000, the county covers approximately 966 square miles of rolling terrain between Oklahoma City and Tulsa. The county seat is Chandler, a historic Route 66 town along SH-66 about 50 miles south of Stillwater. Lincoln County was established in 1891 and named for President Abraham Lincoln.</p>
+
+        <p style="margin-bottom: 14px;">The Turner Turnpike (Interstate 44) runs through the northern part of Lincoln County near Stroud, making turnpike-related arrests common in the Lincoln County system. Whether someone is arrested on I-44, pulled over in Prague, or picked up in Meeker, all Lincoln County arrests are processed through the jail in Chandler. Angel Bail Bonds regularly handles turnpike arrests and can begin the bail process by phone before even arriving at the facility.</p>
+
+        <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 24px; margin-bottom: 12px;">What Communities Does Angel Bail Bonds Serve in Lincoln County?</h3>
+
+        <p style="margin-bottom: 14px;">Angel Bail Bonds serves every community in Lincoln County. In addition to Chandler, we regularly post bonds for residents of Stroud (located along I-44 between OKC and Tulsa), Prague (southeastern Lincoln County, hometown of Jim Thorpe), Meeker (southern Lincoln County), Davenport (along SH-18 between Chandler and Stillwater), Carney, Agra, Sparks, Warwick, and Tryon. All arrests from these communities are processed at the Lincoln County Jail in Chandler.</p>
       </div>
 
-      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Communities We Serve in Lincoln County</h3>
+      <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Lincoln County Communities We Serve</h3>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
         <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Chandler</span>
         <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Stroud</span>
@@ -156,51 +278,156 @@ const structuredData = {
         <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Agra</span>
         <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Sparks</span>
         <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Warwick</span>
+        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Tryon</span>
       </div>
     </div>
   </section>
 
-  <!-- FAQ — compact accordion -->
-  <section style="padding: 40px 1.5rem; background: white;">
+  <!-- COURTHOUSE + COURT INFO -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
     <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Lincoln County Courthouse and Court Appearance Information</h2>
+
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; padding: 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>The Lincoln County Courthouse is located at 811 Manvel Ave, Chandler, OK 74834 — in the same complex as the county jail. The Court Clerk is Cindy Kirby, reachable at (405) 258-1264. Office hours are Monday through Friday, 8:30 AM to 4:30 PM. All Lincoln County criminal cases are heard in the Lincoln County District Court. Court dockets are available at oscn.net.</strong></p>
+
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px;">After posting bail and being released from Lincoln County Jail, the defendant must appear at all scheduled court hearings at the Lincoln County Courthouse. Failure to appear will result in forfeiture of the bond, a bench warrant, and additional criminal charges. Angel Bail Bonds will remind you of upcoming court dates and help ensure you understand your obligations.</p>
+
+        <p style="margin-bottom: 14px;">Arraignments in Lincoln County typically occur within 24 hours of arrest for defendants who have not posted bail. During the arraignment, the judge informs the defendant of the charges and formally sets the bail amount. For misdemeanor cases, bail is often available through a preset bond schedule, meaning the defendant can bond out immediately after booking. Felony cases may require a separate bond hearing. Because the courthouse and jail share the same complex, hearings can be conducted via video from the jail.</p>
+      </div>
+
+      <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse; margin-top: 16px; background: white; border-radius: 8px; overflow: hidden; border: 1px solid var(--slate-100);">
+        <tr style="background: var(--navy);">
+          <td colspan="2" style="padding: 12px 16px; color: white; font-weight: 700;">Lincoln County Courthouse Quick Reference</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600; width: 130px;">Address</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">811 Manvel Ave, Chandler, OK 74834</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Court Clerk</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Cindy Kirby · <a href="tel:+14052581264" style="color: var(--blue);">(405) 258-1264</a></td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Office Hours</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">Mon-Fri 8:30 AM - 4:30 PM</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--slate-100);">
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Mailing</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);">P.O. Box 307, Chandler, OK 74834</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 16px; color: var(--slate-400); font-weight: 600;">Dockets</td>
+          <td style="padding: 10px 16px; color: var(--slate-700);"><a href="https://www.oscn.net/dockets/" style="color: var(--blue);" target="_blank" rel="noopener">oscn.net/dockets</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- VISITING HOURS -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">What Are Lincoln County Jail Visiting Hours?</h2>
+
+      <p style="color: var(--navy); font-size: 0.95rem; line-height: 1.7; margin-bottom: 18px; padding: 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Lincoln County Jail on-site visitation is Monday through Friday, 10:00 AM to 3:00 PM. Visits must be scheduled at least 24 hours in advance through Prodigy. Remote (off-site) visitation is available daily from 6:00 AM to 10:00 PM. A maximum of 3 visitors per visit, including children. A valid federal or state photo ID is required for all visitors. Call (405) 258-1191 ext. 294 for visitation questions.</strong></p>
+
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px;">Visitors must be at least 18 years old and present valid photo identification — a state-issued driver's license, state-issued ID card, military ID, or passport. All visitors under 18 must be accompanied by a biological parent. The best thing you can do for your loved one while they are in Lincoln County Jail is to get them out. Call Angel Bail Bonds at (405) 614-3000 to start the bail process — we answer 24/7 and can often have your loved one released the same day.</p>
+
+        <h3 style="color: var(--navy); font-size: 1.05rem; font-weight: 700; margin-top: 24px; margin-bottom: 12px;">How Do I Send Mail to an Inmate in Lincoln County Jail?</h3>
+
+        <p style="margin-bottom: 14px;">Mail should be sent to the inmate's full legal name at: Lincoln County Jail, 811 Manvel Ave, Suite 14, Chandler, OK 74834. All incoming mail is subject to inspection. Packages and certain items may be restricted — call the jail at (405) 258-1191 ext. 294 for current mail policies. You can also use the Oklahoma VINE system at (877) 654-8463 to check custody status and register for notifications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TURNPIKE ARRESTS -->
+  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Arrested on the Turner Turnpike in Lincoln County?</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;"><strong>The Turner Turnpike (Interstate 44) runs through Lincoln County near Stroud, and arrests on this stretch of highway are processed through Lincoln County Jail in Chandler. Common turnpike charges include speeding, DUI, drug possession, and outstanding warrants. If your loved one was arrested on I-44 in Lincoln County, call Angel Bail Bonds at (405) 614-3000. We handle turnpike bail bonds 24/7.</strong></p>
+
+        <p style="margin-bottom: 14px;">I-44 is one of the busiest corridors in Oklahoma, connecting Oklahoma City and Tulsa. The stretch through Lincoln County — primarily near Stroud and the Stroud exit — sees regular OHP (Oklahoma Highway Patrol) enforcement. Arrests made by OHP or Lincoln County deputies on the turnpike within county boundaries are booked into Lincoln County Jail in Chandler.</p>
+
+        <p style="margin-bottom: 14px;">Turnpike arrests can be particularly stressful because they often involve travelers from out of town or out of state. Angel Bail Bonds handles out-of-state bonds regularly and can walk you through the process step-by-step over the phone. We can begin paperwork remotely and post the bond at Lincoln County Jail quickly so your loved one doesn't spend unnecessary time waiting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ANGEL BAIL BONDS -->
+  <section style="padding: 48px 1.5rem; background: white;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Why Choose Angel Bail Bonds for Lincoln County?</h2>
+      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
+        <p style="margin-bottom: 14px; padding: 12px 16px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px;"><strong>Angel Bail Bonds is operated by Karri McBride, a women-owned business with 15+ years of bail bonds experience and a 4.9-star Google rating from 127+ reviews. We are available 24/7, including nights, weekends, and holidays. We regularly work with Lincoln County Jail staff and the Lincoln County court system, so we know the local procedures and can move quickly to get your loved one released.</strong></p>
+
+        <p style="margin-bottom: 14px;">Angel Bail Bonds has been serving Central Oklahoma families for over 15 years. We understand that an arrest is one of the most stressful situations a family can face, and we handle every case with compassion and confidentiality. We offer bilingual service in English and Spanish (se habla español) and can process bail bonds over the phone for faster turnaround.</p>
+
+        <p style="margin-bottom: 14px;">Whether the arrest happens at 2 AM on a holiday weekend or during a normal business day, our team is ready to help. We also assist with understanding court dates, bond conditions, and what to expect after release. Angel Bail Bonds is here to support Lincoln County families through every step of the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions About Lincoln County Bail Bonds</h2>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I get a bail bond in Lincoln County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. We will guide you through the Lincoln County bail process, handle the paperwork, and work to get your loved one released as quickly as possible.</p>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Lincoln County Jail in Chandler, Oklahoma?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, 24/7. Lincoln County Jail is located at 811 Manvel Ave, Suite 14, Chandler, OK 74834. The jail phone is (405) 258-1191 ext. 294. We handle all paperwork and most inmates are released within 1-4 hours after the bond is posted.</p>
         </details>
-        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Lincoln County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">In Oklahoma, we offer competitive rates on bail bonds. Angel Bail Bonds offers competitive rates to help families manage the cost.</p>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Lincoln County, Oklahoma?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Lincoln County bail bond costs depend on the charge and bail amount set by the judge. Common bail amounts include approximately $500-$1,500 for misdemeanor DUI, $500-$5,000 for most misdemeanors, and $5,000-$100,000+ for felony charges. You pay a percentage of the total bail amount as the premium. Angel Bail Bonds accepts cash, Visa, Mastercard, Zelle, Venmo, and offers financing.</p>
         </details>
-        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What are Lincoln County Jail visiting hours?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">On-site visitation at Lincoln County Jail is Monday through Friday, 10:00 AM to 3:00 PM. Visits must be scheduled 24 hours in advance through Prodigy. Remote visitation is available daily from 6:00 AM to 10:00 PM. A maximum of 3 visitors per visit. Valid photo ID required. Call (405) 258-1191 ext. 294 to schedule.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
           <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long does it take to get released from Lincoln County Jail?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Release times vary, but once paperwork is filed by Angel Bail Bonds, most releases from Lincoln County Jail occur within 1-4 hours depending on jail processing.</p>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Most releases from Lincoln County Jail take 1-4 hours after the bail bond is posted, depending on the time of day and how busy the facility is. Lincoln County Jail has a capacity of 128 inmates. Angel Bail Bonds can begin the bond process over the phone before arriving at the jail to speed up release.</p>
         </details>
-        <details style="background: var(--slate-50); border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can you help with a turnpike arrest in Lincoln County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Many arrests in Lincoln County happen on the Turner Turnpike (I-44) near Stroud or Chandler. These are processed through the Lincoln County system. Call Angel Bail Bonds at (405) 614-3000 and we will handle the bail process for any Lincoln County arrest, including those on the turnpike.</p>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can you help with a Turner Turnpike arrest in Lincoln County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Many arrests in Lincoln County happen on the Turner Turnpike (I-44) near Stroud or Chandler. These are processed through the Lincoln County system at Lincoln County Jail in Chandler. Call Angel Bail Bonds at (405) 614-3000 and we will handle the bail process for any Lincoln County arrest, including turnpike arrests. We also handle out-of-state bonds.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Where is the Lincoln County Courthouse?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">The Lincoln County Courthouse is at 811 Manvel Ave, Chandler, OK 74834, in the same complex as the jail. The Court Clerk (Cindy Kirby) can be reached at (405) 258-1264, open Mon-Fri 8:30 AM - 4:30 PM. Arraignments typically occur within 24 hours of arrest. Court dockets are available at oscn.net.</p>
+        </details>
+        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
+          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Does Angel Bail Bonds serve all of Lincoln County?</summary>
+          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds serves every community in Lincoln County including Chandler, Stroud, Prague, Meeker, Davenport, Carney, Agra, Sparks, Warwick, and Tryon. We also handle arrests on the Turner Turnpike (I-44) that pass through Lincoln County.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Related Pages -->
-  <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
+  <!-- NEIGHBORING COUNTIES -->
+  <section style="padding: 24px 1.5rem 0; background: white;">
     <div style="max-width: 900px; margin: 0 auto;">
-      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Neighboring Counties We Serve</p>
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="/lincoln-county-jail-chandler-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County Jail (Chandler) →</a>
+        <a href="/lincoln-county-jail-chandler-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County Jail (Chandler) →</a>
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Payne County (Stillwater) →</a>
+        <a href="/oklahoma-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Oklahoma County (OKC) →</a>
+        <a href="/logan-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Logan County (Guthrie) →</a>
+        <a href="/creek-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Creek County (Sapulpa) →</a>
+        <a href="/pottawatomie-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Pottawatomie County (Shawnee) →</a>
+        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Noble County (Perry) →</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA BAR — tight -->
+  <!-- CTA BAR -->
   <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
     <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
       <div>
-        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Lincoln County Bail Bond?</p>
-        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Competitive rates</p>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Lincoln County Bail Bond? Call Now.</p>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Turnpike arrests · Se habla español</p>
       </div>
       <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
     </div>
