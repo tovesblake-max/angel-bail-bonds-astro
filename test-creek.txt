@@ -1,0 +1,5 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const structuredData={"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://stillwaterokbailbonds.com/creek-county-bail-bonds#business","name":"Angel Bail Bonds - Creek County","url":"https://stillwaterokbailbonds.com/creek-county-bail-bonds","description":"Professional 24/7 bail bond services for Creek County, Oklahoma.","telephone":"(405) 614-3000","email":"bailbondangel@gmail.com"}]};
+---
+<BaseLayout title="Creek County Bail Bonds"><p>Test</p></BaseLayout>
