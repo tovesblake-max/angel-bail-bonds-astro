@@ -1,5 +1,54 @@
 # Angel Bail Bonds SEO Optimization Log
 
+## 2026-03-08 (Run 5) — Logan County Page GEO Optimization
+
+**Action:** Major optimization of `logan-county-bail-bonds.astro` (323 lines → 424 lines)
+
+**Files Changed:**
+- `src/pages/logan-county-bail-bonds.astro` — Complete rewrite for GEO/LLM citability
+
+**What Was Improved:**
+1. **Self-contained answer capsules added** — 6 bolded answer blocks (40-70 words each) that AI can extract verbatim, covering: quick reference, bond costs, visiting hours, I-35/US-77 arrests, why choose Angel, and courthouse info
+2. **Question-based H2/H3 headings** — All section headings now match natural language prompts (e.g., "How Much Does a Logan County Bail Bond Cost?", "Where Is the Logan County Detention Center?", "What Are Logan County Detention Center Visiting Hours?", "Arrested on I-35 or US-77 in Logan County?")
+3. **Specific factual data added/improved:**
+   - Detention Center: 216 S Broad St, Guthrie, OK 73044, (405) 282-4100
+   - Capacity: 198 inmate beds
+   - Staff: 22 full-time detention officers (2 Lieutenants, 2 Sergeants, 2 Corporals, 13 Deputies)
+   - Sheriff: Damon Devereaux
+   - Visiting: M-F 7:30 AM-9 PM, Sat-Sun 7:30 AM-2:30 PM
+   - One free 10-minute lobby visit/day, must schedule in advance, sign in 15 min early
+   - No-show policy: lose visitation rest of week including Saturday
+   - Under-18 policy: parent/guardian required
+   - Former inmate policy: 6-month wait after release
+   - Courthouse: 301 E Harrison St, Guthrie, OK 73044
+   - Court Clerk: Cheryl Smith, (405) 282-0123, cheryl.smith@oscn.net
+   - Court Clerk hours: Mon-Fri 8:30 AM-4:30 PM
+   - Arraignments: Tue & Thu at 1:30 PM (call 8-10:30 AM same day)
+   - Felony dockets: 1st & 3rd Friday at 9 AM
+   - Civil dockets: 1st & 3rd Friday at 1:30 PM
+   - Probate dockets: 1st & 3rd Tuesday at 9 AM
+   - Common bond amounts: ~$1,000 DUI, $500-$5,000 misdemeanor, $5,000-$50,000+ felony
+   - County population: ~49,555 (2020 census), ~55,239 (2025 est.), 749 sq mi
+   - Guthrie: Oklahoma's first state capital (1907-1910), pop ~12,000
+   - VINE system: (877) 654-8463
+   - Distance: ~33 min from Stillwater, ~30 min north of OKC
+4. **I-35 and US-77 corridor section added** — Unique differentiator covering highway arrests, DUI stops, Guthrie/Seward exits, and Angel's proximity advantage from Stillwater
+5. **Langston University section expanded** — Dedicated section covering Oklahoma's only HBCU (founded 1897), student arrests, remote bail for out-of-state families
+6. **Schema markup improved** — Added 11 city-level areaServed entries, payment methods (Visa, Mastercard, cash, Zelle, Venmo), priceRange
+7. **FAQ expanded** — From 6 to 7 county-specific questions with detailed, data-rich answers including Langston University and inmate search questions
+8. **Cross-links expanded** — From 5 to 7 neighboring county pages (added Oklahoma County, Kingfisher County, Garfield County)
+9. **Court docket table expanded** — Added civil docket and probate docket schedules
+10. **Communities list expanded** — From 7 to 10 (added Meridian, Cashion, Seward)
+11. **Meta title/description improved** — Now includes "24/7 Jail Release in Guthrie, OK", 198-bed facility, Langston University mentions
+
+**Content Uniqueness:** Page now contains Logan County-specific data (198-bed capacity, 22 staff, Sheriff Damon Devereaux, Court Clerk Cheryl Smith, I-35/US-77 corridor angle, Langston University HBCU angle, first state capital history, visitation no-show policy, 4 court docket types) that no other page shares, keeping content overlap well below 40%.
+
+**What To Do Next Run:**
+- Optimize `washington-county-bail-bonds.astro` (337 lines, next weakest main county page)
+- Consider updating llms.txt and llms-full.txt to ensure all pages are listed
+- Consider adding a blog post targeting "bail bonds near Langston University" or "arrested on I-35 in Oklahoma"
+- Check homepage "Areas We Serve" section for completeness
+
 ## 2026-03-08 (Run 4) — Garfield County Page GEO Optimization
 
 **Action:** Major optimization of `garfield-county-bail-bonds.astro` (273 lines → 447 lines)
