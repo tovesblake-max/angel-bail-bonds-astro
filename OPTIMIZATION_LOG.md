@@ -1,5 +1,62 @@
 # Angel Bail Bonds SEO Optimization Log
 
+## 2026-03-08 – Run 4: Kay County Page Full GEO Optimization
+
+**Action:** Completely rebuilt the Kay County bail bonds page with full GEO/LLM optimization — it was identified as the weakest page in Run 3.
+
+**Problem Identified:**
+Kay County page had major gaps vs. newer optimized pages:
+- 0 bold GEO answer capsules (newer pages have 3-36)
+- Only 4 FAQ questions (standard is 5-7)
+- No facility details table (missing jail address, phone, hours)
+- No visiting hours section
+- No "Last Updated" date
+- No inmate search section
+- Only 1 neighboring county cross-link (should have 5-6)
+- Vague "competitive rates" instead of specific 10% figure
+- No question-based H2/H3 headings
+
+**Files Changed:**
+1. `src/pages/kay-county-bail-bonds.astro` – REBUILT with full GEO optimization
+
+**What Was Improved:**
+- Added GEO answer capsule (bold, 60-word extractable block with business name, address, rating, contact, payments)
+- Added facility details table: Kay County Detention Center (1101 W Dry Road, Newkirk, OK 74647, (580) 362-3393), Sheriff's Office ((580) 362-3250), Courthouse (201 S Main St, (580) 362-3350)
+- Added visiting hours section: Mon-Fri 7:30 AM-9:00 PM, Sat-Sun 7:30 AM-2:30 PM, 2 visits/week, max 5 guests
+- Expanded to 7 FAQ questions with county-specific details in both schema and accordion
+- Added question-based H2/H3 headings matching AI prompt patterns
+- Added inmate search section with jail phone + CTA
+- Added 6 neighboring county cross-links (Noble, Osage, Grant, Garfield, Payne, Pawnee)
+- Added specific bail cost examples ($5,000 bail = $500, $10,000 = $1,000)
+- Added "Last Updated: March 8, 2026"
+- Added "Se habla español" to CTAs
+- Added capacity info (108 inmates)
+- Enhanced schema: LocalBusiness + Service + BreadcrumbList + FAQPage (7 questions)
+- Communities served badges: Newkirk, Ponca City, Blackwell, Tonkawa, Braman, Kaw City, Nardin
+- Page grew from ~1,614 words to ~2,000+ words with proper 120-180 word spacing between headings
+
+**GEO Optimization Checklist:**
+- [x] Self-contained answer capsules (bold, extractable by AI)
+- [x] Question-based H2/H3 headings
+- [x] Specific factual data (addresses, phones, hours, capacity, bail amounts)
+- [x] LocalBusiness + FAQPage + BreadcrumbList + Service schema
+- [x] 2,000+ words with proper spacing
+- [x] "Last Updated" date
+- [x] 7 county-specific FAQ questions
+- [x] 6 neighboring county cross-links
+- [x] Click-to-call CTA: (405) 614-3000
+- [x] Inmate search section
+
+**What To Do Next Run:**
+1. Optimize Payne County page (original page, likely missing GEO capsules and updated schema)
+2. Optimize Pawnee County page (same issues as Kay had)
+3. Optimize Lincoln County page (same issues)
+4. Optimize Noble County page (same issues)
+5. Add "Last Updated" dates to all pages still missing them
+6. Consider adding blog posts targeting long-tail queries like "how to bail someone out of [county] jail"
+
+---
+
 ## 2026-03-08 — Run 3: Infrastructure Update — All 15 Counties in llms.txt + Homepage
 
 **Action:** Updated llms.txt, llms-full.txt, and homepage to include ALL 15 target counties (7 were missing from LLM-facing files despite having pages built)
