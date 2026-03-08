@@ -2,325 +2,295 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'LocalBusiness',
-      '@id': 'https://stillwaterokbailbonds.com/kay-county-bail-bonds#business',
-      name: 'Angel Bail Bonds - Kay County',
-      url: 'https://stillwaterokbailbonds.com/kay-county-bail-bonds',
-      description: 'Professional 24/7 bail bond services for Kay County, Oklahoma. Serving the Kay County Detention Center in Newkirk with fast releases and competitive rates.',
-      telephone: '(405) 614-3000',
-      email: 'bailbondangel@gmail.com',
-      address: { '@type': 'PostalAddress', addressLocality: 'Stillwater', addressRegion: 'OK', addressCountry: 'US' },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Kay County, Oklahoma' },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.8670, longitude: -97.0531 },
-      sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
-      openingHoursSpecification: {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: '00:00',
-        closes: '23:59',
+      "@type": "LocalBusiness",
+      "@id": "https://stillwaterokbailbonds.com/#business",
+      "name": "Angel Bail Bonds - Kay County",
+      "image": "https://stillwaterokbailbonds.com/angel-bail-bonds-logo.png",
+      "telephone": "+14056143000",
+      "email": "bailbondangel@gmail.com",
+      "url": "https://stillwaterokbailbonds.com/kay-county-bail-bonds",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Serving Kay County from Stillwater",
+        "addressLocality": "Newkirk",
+        "addressRegion": "OK",
+        "postalCode": "74647",
+        "addressCountry": "US"
       },
-      paymentAccepted: ['Cash', 'Credit Card', 'Zelle', 'Venmo'],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.8787,
+        "longitude": -97.0531
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "10% of bail amount",
+      "paymentAccepted": ["Cash","Visa","Mastercard","Zelle","Venmo","Financing"],
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Kay County, Oklahoma"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "100",
+        "bestRating": "5"
+      },
+      "knowsLanguage": ["English","Spanish"]
     },
     {
-      '@type': 'Service',
-      name: 'Kay County Bail Bond Services',
-      provider: { '@id': 'https://stillwaterokbailbonds.com/kay-county-bail-bonds#business' },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Kay County, Oklahoma' },
-      description: 'Fast, confidential bail bond services for Kay County arrests at the Kay County Detention Center in Newkirk, Oklahoma.',
+      "@type": "Service",
+      "name": "Kay County Bail Bonds",
+      "provider": { "@id": "https://stillwaterokbailbonds.com/#business" },
+      "serviceType": "Bail Bond Services",
+      "areaServed": "Kay County, Oklahoma",
+      "description": "24/7 bail bond services for Kay County Detention Center in Newkirk, Oklahoma. 10% premium, financing available."
     },
     {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Kay County Bail Bonds', item: 'https://stillwaterokbailbonds.com/kay-county-bail-bonds' },
-      ],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Kay County Bail Bonds", "item": "https://stillwaterokbailbonds.com/kay-county-bail-bonds" }
+      ]
     },
     {
-      '@type': 'FAQPage',
-      mainEntity: [
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          '@type': 'Question',
-          name: 'How do I bail someone out of Kay County Jail in Newkirk?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000 any time, day or night. We will verify the charges and bail amount with the Kay County Detention Center at 1101 W Dry Rd in Newkirk, handle all paperwork remotely, and post bail. Most releases take 1-4 hours after bond is posted. The jail can be reached directly at (580) 362-3393.' },
+          "@type": "Question",
+          "name": "How much does a bail bond cost in Kay County?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A bail bond in Kay County costs 10% of the total bail amount. For example, a $5,000 bail requires a $500 bond premium. Angel Bail Bonds also offers financing and payment plans for larger bonds. We accept cash, Visa, Mastercard, Zelle, and Venmo." }
         },
         {
-          '@type': 'Question',
-          name: 'How much does a bail bond cost in Kay County, Oklahoma?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Angel Bail Bonds offers competitive rates on Kay County bail bonds. The exact premium depends on the bail amount set by the court. We accept cash, Visa, Mastercard, Zelle, and Venmo, and offer financing options for larger bonds. Call (405) 614-3000 for a free quote on your specific situation.' },
+          "@type": "Question",
+          "name": "How do I bail someone out of Kay County Detention Center?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Call Angel Bail Bonds at (405) 614-3000 anytime 24/7. Provide the inmate's full name, date of birth, and booking number if available. We handle all paperwork with the Kay County Detention Center at 1101 W Dry Road, Newkirk. Most releases take 2-4 hours after bond is posted." }
         },
         {
-          '@type': 'Question',
-          name: 'What are the visiting hours at Kay County Detention Center?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Kay County Detention Center visiting hours are Monday through Friday 7:30 AM to 9:00 PM, and Saturday and Sunday 7:30 AM to 2:30 PM. Visitors must be at least 18 years old with a valid state-issued ID. Maximum of 2 adults per visit, with visits lasting 30-60 minutes. Call (580) 362-3393 to confirm before visiting.' },
+          "@type": "Question",
+          "name": "Where is the Kay County Jail located?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Kay County Detention Center is located at 1101 W Dry Road, Newkirk, OK 74647. The facility is operated by the Kay County Sheriff's Office and has a capacity of 108 inmates. For booking information, call the jail directly at (580) 362-3393 or the Sheriff's Office at (580) 362-3250." }
         },
         {
-          '@type': 'Question',
-          name: 'How long does it take to get released from Kay County Jail?',
-          acceptedAnswer: { '@type': 'Answer', text: 'After Angel Bail Bonds posts your bail at the Kay County Detention Center, most defendants are released within 1-4 hours. Processing includes paperwork verification, background checks, property return, and outprocessing. Weekend and holiday releases may take longer due to staffing. We stay in contact until your loved one walks out.' },
+          "@type": "Question",
+          "name": "What are the visiting hours at Kay County Jail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Kay County Detention Center visiting hours are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Inmates are allowed two visits per week with a maximum of five guests per visit. A visitation form must be completed prior to visiting." }
         },
         {
-          '@type': 'Question',
-          name: 'Can I bail someone out of Kay County Jail over the phone?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Angel Bail Bonds handles the entire Kay County bail process remotely – by phone, email, or e-sign. You do not need to visit our office or the jail. We complete paperwork electronically, post bail at the Kay County Detention Center, and keep you updated until release. This is especially helpful for out-of-town family members.' },
+          "@type": "Question",
+          "name": "Do you serve all of Kay County including Ponca City and Blackwell?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, Angel Bail Bonds serves all of Kay County including Newkirk, Ponca City, Blackwell, Tonkawa, Braman, Kaw City, and Nardin. We are based in Stillwater, approximately 50 minutes from the Kay County Detention Center, and offer 24/7 bail bond services throughout the county." }
         },
         {
-          '@type': 'Question',
-          name: 'How do I find an inmate in Kay County Jail?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Search for inmates through the Kay County Sheriff Office website or call the detention center at (580) 362-3393. You can also register with Oklahoma VINE (Victim Information and Notification Everyday) for automatic custody status alerts. If you cannot locate someone, call Angel Bail Bonds at (405) 614-3000 and we will look them up for you free of charge.' },
+          "@type": "Question",
+          "name": "Can I get a bail bond in Kay County at night or on weekends?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, Angel Bail Bonds provides 24/7 bail bond services for Kay County, including nights, weekends, and holidays. Call (405) 614-3000 anytime and a licensed bail bondsman will begin processing your bond immediately. We can often have bonds posted within 1-2 hours of your call." }
         },
-      ],
-    },
-  ],
+        {
+          "@type": "Question",
+          "name": "How do I find an inmate in Kay County Jail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "To locate an inmate at the Kay County Detention Center, call the jail at (580) 362-3393 or the Kay County Sheriff's Office at (580) 362-3250. Provide the inmate's full legal name and date of birth. You can also call Angel Bail Bonds at (405) 614-3000 and we will help you locate the inmate and determine their bond amount." }
+        }
+      ]
+    }
+  ]
+};
+
+const breadcrumbData = {
+  current: "Kay County Bail Bonds",
+  parent: { name: "Home", href: "/" }
 };
 ---
 
 <BaseLayout
-  title="Kay County Bail Bonds – Newkirk & Ponca City, OK | Angel Bail Bonds 24/7"
-  description="24/7 bail bond services for Kay County Detention Center at 1101 W Dry Rd, Newkirk, Oklahoma. Angel Bail Bonds offers competitive rates, fast releases (1-4 hours), financing available, and 15+ years experience. Call (405) 614-3000."
-  ogImage="/images/hero-agate.webp"
+  title="Kay County Bail Bonds | 24/7 Bonds in Newkirk, Ponca City & Blackwell OK"
+  description="Need bail bonds in Kay County? Angel Bail Bonds provides 24/7 service for the Kay County Detention Center in Newkirk. 10% bonds, financing available. Call (405) 614-3000."
   structuredData={structuredData}
+  breadcrumbData={breadcrumbData}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
-  <!-- HERO -->
-  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Kay County, Oklahoma · Newkirk · Ponca City</p>
-      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Kay County</h1>
-      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">Serving Newkirk, Ponca City, Blackwell, Tonkawa, Braman, Kaw City & surrounding areas · 24/7</p>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-        <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
-        <span style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">Competitive Rates · Financing Available</span>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero" style="background: linear-gradient(135deg, #1a1a4e 0%, #2d2d7f 100%); color: white; padding: 3rem 1rem; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Kay County Bail Bonds — 24/7 Service in Newkirk, Ponca City &amp; Blackwell</h1>
+      <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem;">Fast, affordable bail bonds for the Kay County Detention Center. 10% premium. Financing available. Se habla español.</p>
+      <a href="tel:4056143000" style="display: inline-block; background: #e63946; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1.2rem; font-weight: bold;">📞 Call (405) 614-3000 Now</a>
     </div>
   </section>
 
-  <!-- GEO ANSWER CAPSULE -->
-  <section style="padding: 40px 1.5rem; background: white; border-bottom: 1px solid var(--slate-100);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">How Do I Bail Someone Out of Kay County Jail?</h2>
-      <div style="background: var(--slate-50); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 20px;">
-        <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.75;">
-          <strong>To bail someone out of the Kay County Detention Center in Newkirk, Oklahoma, call Angel Bail Bonds at (405) 614-3000.</strong> The jail is located at 1101 West Dry Road, Newkirk, OK 74647 and can be reached at (580) 362-3393. After booking, bail amounts are set by the court based on charges and criminal history. Angel Bail Bonds offers competitive rates, accepts cash, credit cards, Zelle, and Venmo, and handles everything remotely by phone or e-sign. Once bond is posted, most defendants are released within 1-4 hours. Visiting hours at Kay County Jail are Monday–Friday 7:30 AM–9:00 PM and Saturday–Sunday 7:30 AM–2:30 PM. The Kay County Courthouse is located at 201 S Main St, Newkirk, and the Court Clerk can be reached at (580) 362-2571.
-        </p>
-      </div>
-      <p style="color: var(--slate-400); font-size: 0.75rem;">Last updated: March 2026 · Verified with Kay County Sheriff's Office</p>
-    </div>
+  <!-- GEO Answer Capsule -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <p><strong>Angel Bail Bonds provides 24/7 bail bond services for Kay County, Oklahoma, serving the Kay County Detention Center at 1101 W Dry Road, Newkirk, OK 74647. Owned by Karri McBride with 15+ years of experience and a 4.9-star Google rating, Angel Bail Bonds charges a 10% premium and accepts cash, Visa, Mastercard, Zelle, Venmo, and financing. Call (405) 614-3000 anytime for immediate assistance. Se habla español.</strong></p>
+    <p style="font-size: 0.85rem; color: #666;">Last Updated: March 8, 2026</p>
   </section>
 
-  <!-- FACILITY + STEPS -->
-  <section style="padding: 48px 1.5rem; background: white;">
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-
-      <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Kay County Detention Center</h2>
-        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 110px;">Address</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">1101 W Dry Rd, Newkirk, OK 74647</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Jail Phone</td>
-            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+15803623393" style="color: var(--blue); text-decoration: none;">(580) 362-3393</a></td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Sheriff</td>
-            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+15803623250" style="color: var(--blue); text-decoration: none;">(580) 362-3250</a></td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Visiting Hours</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Mon–Fri 7:30 AM–9:00 PM<br>Sat–Sun 7:30 AM–2:30 PM</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Processing</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">1-4 hours after bond posted</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Payments</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Cash, credit cards, money orders</td>
-          </tr>
-        </table>
-      </div>
-
-      <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">How to Post Bail in Kay County</h2>
-        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
-            <div><strong style="color: var(--slate-800);">Call Angel Bail Bonds</strong><br><span style="color: var(--slate-500);">(405) 614-3000 · 24/7 · Holidays included</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
-            <div><strong style="color: var(--slate-800);">We verify with the jail</strong><br><span style="color: var(--slate-500);">Charges, bond amount, booking status at Kay County Detention Center</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
-            <div><strong style="color: var(--slate-800);">Sign paperwork remotely</strong><br><span style="color: var(--slate-500);">E-sign, phone, or email – no office visit needed</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">4</span>
-            <div><strong style="color: var(--slate-800);">We post bail</strong><br><span style="color: var(--slate-500);">Bond posted directly with Kay County Detention Center</span></div>
-          </li>
-          <li style="display: flex; gap: 12px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
-            <div><strong style="color: var(--slate-800);">Release in 1-4 hours</strong><br><span style="color: var(--slate-500);">We stay in contact until they walk out</span></div>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <style>
-      @media (max-width: 640px) {
-        section div[style*="grid-template-columns: 1fr 1fr"] {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-      }
-    </style>
+  <!-- Who Provides Bail Bonds in Kay County -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Who Provides Bail Bonds in Kay County?</h2>
+    <p>Angel Bail Bonds is a licensed, women-owned bail bond company serving Kay County from nearby Stillwater, Oklahoma — approximately 50 minutes from the Kay County Detention Center. Owner Karri McBride has over 15 years of experience in the Oklahoma bail bonds industry and maintains a 4.9-star rating on Google. Angel Bail Bonds is bilingual (English and Spanish) and available around the clock, 365 days a year.</p>
+    <p>Whether your loved one was arrested in Newkirk, Ponca City, Blackwell, Tonkawa, or anywhere in Kay County, we can begin the bail bond process immediately over the phone and have bonds posted quickly at the Kay County Detention Center.</p>
   </section>
 
-  <!-- COURT INFORMATION -->
-  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">Kay County Courthouse & Court Information</h2>
-      <div style="background: white; border: 1px solid var(--slate-200); border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.75;">
-          <strong>The Kay County Courthouse is located at 201 South Main Street, Newkirk, OK 74647.</strong> The Court Clerk's Office can be reached at (580) 362-2571 and is open Monday through Friday, 8:00 AM to 4:30 PM. All Kay County criminal cases are handled through the Kay County District Court in Newkirk. Misdemeanor bail amounts are generally lower, while felony charges require higher bonds that may need a judge's approval at an initial appearance hearing. Contact the Court Clerk for specific arraignment scheduling and docket information.
-        </p>
-      </div>
-
-      <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse; background: white; border: 1px solid var(--slate-200); border-radius: 8px; overflow: hidden;">
-        <tr style="background: var(--navy); color: white;">
-          <td style="padding: 10px 16px; font-weight: 600;">Detail</td>
-          <td style="padding: 10px 16px; font-weight: 600;">Information</td>
-          <td style="padding: 10px 16px; font-weight: 600;">Contact</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--slate-100);">
-          <td style="padding: 10px 16px; color: var(--slate-700);">Courthouse Address</td>
-          <td style="padding: 10px 16px; color: var(--slate-700);">201 S Main St, Newkirk, OK 74647</td>
-          <td style="padding: 10px 16px; color: var(--slate-700);">(580) 362-2571</td>
-        </tr>
-        <tr style="border-bottom: 1px solid var(--slate-100);">
-          <td style="padding: 10px 16px; color: var(--slate-700);">Court Clerk Hours</td>
-          <td style="padding: 10px 16px; color: var(--slate-700);">Mon–Fri 8:00 AM–4:30 PM</td>
-          <td style="padding: 10px 16px; color: var(--slate-700);">(580) 362-2571</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px 16px; color: var(--slate-700);">District Attorney</td>
-          <td style="padding: 10px 16px; color: var(--slate-700);">District 8 – Kay & Noble Counties</td>
-          <td style="padding: 10px 16px; color: var(--slate-700);">Contact courthouse</td>
-        </tr>
+  <!-- Kay County Facility Details -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Kay County Jail &amp; Courthouse Details</h2>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+        <thead>
+          <tr style="background: #1a1a4e; color: white;">
+            <th style="padding: 0.75rem; text-align: left;">Facility</th>
+            <th style="padding: 0.75rem; text-align: left;">Address</th>
+            <th style="padding: 0.75rem; text-align: left;">Phone</th>
+            <th style="padding: 0.75rem; text-align: left;">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 0.75rem;"><strong>Kay County Detention Center</strong></td>
+            <td style="padding: 0.75rem;">1101 W Dry Road, Newkirk, OK 74647</td>
+            <td style="padding: 0.75rem;"><a href="tel:5803623393">(580) 362-3393</a></td>
+            <td style="padding: 0.75rem;">24/7 Booking</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 0.75rem;"><strong>Kay County Sheriff's Office</strong></td>
+            <td style="padding: 0.75rem;">1101 W Dry Road, Newkirk, OK 74647</td>
+            <td style="padding: 0.75rem;"><a href="tel:5803623250">(580) 362-3250</a></td>
+            <td style="padding: 0.75rem;">Mon-Fri 8am-4:30pm</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 0.75rem;"><strong>Kay County Courthouse</strong></td>
+            <td style="padding: 0.75rem;">201 S Main St, Newkirk, OK 74647</td>
+            <td style="padding: 0.75rem;"><a href="tel:5803623350">(580) 362-3350</a></td>
+            <td style="padding: 0.75rem;">Mon-Fri 8am-4:30pm</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </section>
 
-  <!-- BOOKING PROCESS -->
-  <section style="padding: 48px 1.5rem; background: white;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">What Happens After an Arrest in Kay County?</h2>
-      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.75;">
-        <p style="margin-bottom: 14px;">When someone is arrested in Kay County, they are transported to the Kay County Detention Center at 1101 W Dry Road in Newkirk for booking. The booking process includes identity verification, fingerprinting, a health screening, inventory of personal belongings, and a booking photograph. Charges are entered into the system, warrant status is reviewed, and bail is set according to the court's bond schedule or by a judge during an initial appearance.</p>
-        <p style="margin-bottom: 14px;">Once bail is set, a family member or friend can contact Angel Bail Bonds at (405) 614-3000 to begin the release process. We verify the inmate's information and bail amount directly with the Kay County Detention Center at (580) 362-3393. After paperwork is completed – which can be done entirely by phone or e-sign – we post bail at the facility. The jail then begins release processing, which typically takes 1-4 hours.</p>
-        <p style="margin-bottom: 14px;">Kay County accepts cash, money orders, and credit cards for direct cash bail payments at the jail. However, most families choose to work with a bail bondsman because posting the full cash bail amount is significantly more expensive. With Angel Bail Bonds, you pay a competitive premium rather than the full bail amount, and we handle all the logistics with the jail and court. We also offer financing options for larger bonds so families don't have to come up with the full premium immediately.</p>
-      </div>
+  <!-- Visiting Hours -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>What Are the Visiting Hours at Kay County Jail?</h2>
+    <p><strong>Kay County Detention Center visiting hours are Monday through Friday from 7:30 AM to 9:00 PM and Saturday through Sunday from 7:30 AM to 2:30 PM. Inmates are allowed two visits per week with a maximum of five guests per visit. A visitation request form must be completed prior to visiting.</strong></p>
+    <p>The Kay County Detention Center has a capacity of 108 inmates. All visitors must present valid photo identification and comply with the facility's dress code and conduct rules. Contact the jail directly at (580) 362-3393 for the most current visiting policies and any temporary restrictions.</p>
+  </section>
+
+  <!-- How to Bail Someone Out -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Do I Bail Someone Out of Kay County Jail?</h2>
+    <p>Getting someone released from the Kay County Detention Center is a straightforward process when you work with Angel Bail Bonds. Here is how it works:</p>
+    <ol style="margin: 1rem 0; padding-left: 1.5rem;">
+      <li style="margin-bottom: 0.75rem;"><strong>Call Angel Bail Bonds at (405) 614-3000</strong> — We answer 24 hours a day, 7 days a week, including holidays.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>Provide inmate information</strong> — We need the inmate's full legal name, date of birth, and booking number (if available). We will verify the charges and bail amount with the Kay County Detention Center.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>Complete the bond paperwork</strong> — We handle all documentation. This can often be started over the phone or electronically to save time.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>Pay the bond premium</strong> — The cost is 10% of the total bail amount. We accept cash, Visa, Mastercard, Zelle, Venmo, and offer financing for larger bonds.</li>
+      <li style="margin-bottom: 0.75rem;"><strong>We post the bond</strong> — Angel Bail Bonds posts the bond directly at the Kay County Detention Center. Most releases take 2-4 hours after the bond is posted.</li>
+    </ol>
+  </section>
+
+  <!-- Bail Bond Costs -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Much Does a Bail Bond Cost in Kay County?</h2>
+    <p><strong>Bail bonds in Kay County cost 10% of the total bail amount set by the court. For example, if bail is set at $5,000, the bond premium is $500. A $10,000 bail requires a $1,000 premium. This 10% fee is set by Oklahoma state law and is non-refundable.</strong></p>
+    <p>Angel Bail Bonds offers flexible payment plans and financing options for larger bail amounts. Common bail amounts in Kay County vary by charge — misdemeanors may range from $500 to $5,000, while felonies can range from $5,000 to $100,000 or more depending on the severity of the charge and the defendant's history.</p>
+    <p>We accept cash, Visa, Mastercard, Zelle, and Venmo. Financing is available for those who qualify, allowing you to spread payments over time.</p>
+  </section>
+
+  <!-- How Far Is Kay County from Stillwater -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Far Is Kay County from Stillwater?</h2>
+    <p>The Kay County Detention Center in Newkirk is approximately 50 minutes (45 miles) north of Stillwater via US-177. Angel Bail Bonds regularly serves Kay County and can begin the bail process immediately by phone, often having bonds posted before we arrive at the facility. Our proximity and familiarity with the Kay County jail staff allows us to process bonds efficiently.</p>
+  </section>
+
+  <!-- Inmate Search -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>How Do I Find an Inmate in Kay County Jail?</h2>
+    <p><strong>To locate an inmate at the Kay County Detention Center, call the jail directly at (580) 362-3393 or the Kay County Sheriff's Office at (580) 362-3250. Provide the inmate's full legal name and date of birth for the fastest results.</strong></p>
+    <p>You can also call Angel Bail Bonds at (405) 614-3000 and we will help you locate the inmate, verify their charges, and determine their bail amount — all at no cost. We can then begin the bail bond process immediately if you choose to proceed.</p>
+  </section>
+
+  <!-- Communities Served -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Communities We Serve in Kay County</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+      {["Newkirk", "Ponca City", "Blackwell", "Tonkawa", "Braman", "Kaw City", "Nardin"].map(city => (
+        <span style="background: #f0f0f5; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">{city}</span>
+      ))}
+    </div>
+    <p>No matter where in Kay County the arrest occurred, Angel Bail Bonds can help. We serve every community and jurisdiction within the county and post bonds directly at the Kay County Detention Center in Newkirk.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Frequently Asked Questions About Kay County Bail Bonds</h2>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How much does a bail bond cost in Kay County?</summary>
+      <p style="margin-top: 0.75rem;">A bail bond in Kay County costs 10% of the total bail amount. For example, a $5,000 bail requires a $500 bond premium. Angel Bail Bonds also offers financing and payment plans for larger bonds. We accept cash, Visa, Mastercard, Zelle, and Venmo.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How do I bail someone out of Kay County Detention Center?</summary>
+      <p style="margin-top: 0.75rem;">Call Angel Bail Bonds at (405) 614-3000 anytime 24/7. Provide the inmate's full name, date of birth, and booking number if available. We handle all paperwork with the Kay County Detention Center at 1101 W Dry Road, Newkirk. Most releases take 2-4 hours after bond is posted.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">Where is the Kay County Jail located?</summary>
+      <p style="margin-top: 0.75rem;">The Kay County Detention Center is located at 1101 W Dry Road, Newkirk, OK 74647. The facility is operated by the Kay County Sheriff's Office and has a capacity of 108 inmates. For booking information, call the jail at (580) 362-3393 or the Sheriff's Office at (580) 362-3250.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">What are the visiting hours at Kay County Jail?</summary>
+      <p style="margin-top: 0.75rem;">Visiting hours at the Kay County Detention Center are Monday through Friday 7:30 AM to 9:00 PM and Saturday through Sunday 7:30 AM to 2:30 PM. Inmates are allowed two visits per week with a maximum of five guests per visit. A visitation form must be completed prior to visiting.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">Do you serve all of Kay County including Ponca City and Blackwell?</summary>
+      <p style="margin-top: 0.75rem;">Yes, Angel Bail Bonds serves all of Kay County including Newkirk, Ponca City, Blackwell, Tonkawa, Braman, Kaw City, and Nardin. We are based in Stillwater, approximately 50 minutes from the Kay County Detention Center, and offer 24/7 service throughout the county.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">Can I get a bail bond in Kay County at night or on weekends?</summary>
+      <p style="margin-top: 0.75rem;">Yes, Angel Bail Bonds provides 24/7 bail bond services for Kay County, including nights, weekends, and holidays. Call (405) 614-3000 anytime and a licensed bail bondsman will begin processing your bond immediately. We can often have bonds posted within 1-2 hours of your call.</p>
+    </details>
+
+    <details style="border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem; padding: 1rem;">
+      <summary style="font-weight: bold; cursor: pointer;">How do I find an inmate in Kay County Jail?</summary>
+      <p style="margin-top: 0.75rem;">To locate an inmate at the Kay County Detention Center, call the jail at (580) 362-3393 or the Kay County Sheriff's Office at (580) 362-3250. Provide the inmate's full legal name and date of birth. You can also call Angel Bail Bonds at (405) 614-3000 and we will help you locate the inmate and determine their bond amount at no cost.</p>
+    </details>
+  </section>
+
+  <!-- Neighboring Counties -->
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>Bail Bond Services in Neighboring Counties</h2>
+    <p>Angel Bail Bonds also provides 24/7 bail bond services in counties surrounding Kay County:</p>
+    <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.5rem;">
+      <li><a href="/noble-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Noble County Bail Bonds</a></li>
+      <li><a href="/osage-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Osage County Bail Bonds</a></li>
+      <li><a href="/grant-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Grant County Bail Bonds</a></li>
+      <li><a href="/garfield-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Garfield County Bail Bonds</a></li>
+      <li><a href="/payne-county-jail-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Payne County Bail Bonds</a></li>
+      <li><a href="/pawnee-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Pawnee County Bail Bonds</a></li>
+    </ul>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="background: linear-gradient(135deg, #1a1a4e 0%, #2d2d7f 100%); color: white; padding: 3rem 1rem; text-align: center; margin-top: 2rem;">
+    <div style="max-width: 600px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Need a Bail Bond in Kay County?</h2>
+      <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem;">Angel Bail Bonds is available 24/7 to help you or your loved one. Call now for fast, affordable bail bond service. Se habla español.</p>
+      <a href="tel:4056143000" style="display: inline-block; background: #e63946; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">📞 (405) 614-3000</a>
+      <p style="margin-top: 1rem; opacity: 0.8;">
+        <a href="mailto:bailbondangel@gmail.com" style="color: white;">bailbondangel@gmail.com</a>
+      </p>
     </div>
   </section>
 
-  <!-- ABOUT KAY COUNTY -->
-  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;">About Kay County, Oklahoma</h2>
-      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.75;">
-        <p style="margin-bottom: 14px;">Kay County is one of the largest counties in north-central Oklahoma, with a population of approximately 44,000 residents. The county seat is Newkirk, where the Kay County Courthouse and Detention Center are located. Established during the Cherokee Outlet Land Run of 1893, Kay County sits along the Oklahoma–Kansas border and covers roughly 920 square miles of rolling prairie and river bottom land along the Arkansas River.</p>
-        <p style="margin-bottom: 14px;">Ponca City is the largest city in Kay County with a population of around 25,000, making it a significant hub for arrests and bail bond activity. Other communities include Blackwell (population ~7,000), Tonkawa – home to Northern Oklahoma College – Braman, Kaw City, and Nardin. Whether the arrest happens in Ponca City after a traffic stop on US-77, in Blackwell near I-35, or anywhere else in the county, Angel Bail Bonds can help get your loved one released.</p>
-        <p style="margin-bottom: 14px;">From Stillwater, Kay County is approximately 80-90 minutes north. The most direct route to the Kay County Detention Center in Newkirk is US-177 North through Perry and Red Rock, then continue north on US-77 into Newkirk. For arrests in Ponca City, take US-177 North to I-35 North, then exit onto US-77 North. However, you do not need to make the drive – Angel Bail Bonds handles the entire process remotely by phone, saving you time and getting your loved one released sooner.</p>
-      </div>
-
-      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Communities We Serve in Kay County</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Newkirk</span>
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Ponca City</span>
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Blackwell</span>
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Tonkawa</span>
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Braman</span>
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Kaw City</span>
-        <span style="background: white; border: 1px solid var(--slate-200); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; color: var(--slate-700);">Nardin</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- INMATE SEARCH -->
-  <section style="padding: 40px 1.5rem; background: white;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.2rem; font-weight: 700; margin-bottom: 14px;" id="inmate-search">How to Find an Inmate in Kay County Jail</h2>
-      <div style="background: var(--slate-50); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 20px;">
-        <p style="color: var(--slate-700); font-size: 0.95rem; line-height: 1.75;">
-          <strong>To search for an inmate at the Kay County Detention Center, visit the Kay County Sheriff's Office website or call (580) 362-3393.</strong> The online roster lists all current inmates with booking dates, charges, and bond amounts. You can search by first and last name or booking number. You can also sign up for Oklahoma VINE (Victim Information and Notification Everyday) to receive custody status alerts by email or phone. If you cannot locate someone, call Angel Bail Bonds at (405) 614-3000 and we will look them up for you free of charge.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ ACCORDION -->
-  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions – Kay County Bail Bonds</h2>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I bail someone out of Kay County Jail in Newkirk?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Call Angel Bail Bonds at (405) 614-3000 any time, day or night. We verify charges and bail with Kay County Detention Center at (580) 362-3393, handle all paperwork remotely, and post bail. Most releases take 1-4 hours after bond is posted.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How much does a bail bond cost in Kay County?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Angel Bail Bonds offers competitive rates on Kay County bail bonds. The exact premium depends on the bail amount set by the court. We accept cash, Visa, Mastercard, Zelle, and Venmo, and offer financing for larger bonds. Call (405) 614-3000 for a free quote.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What are the visiting hours at Kay County Detention Center?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Visiting hours at Kay County Detention Center are Monday–Friday 7:30 AM to 9:00 PM, and Saturday–Sunday 7:30 AM to 2:30 PM. Visitors must be 18+ with valid state ID. Maximum 2 adults per visit, lasting 30-60 minutes. Call (580) 362-3393 to schedule before visiting.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I bail someone out of Kay County Jail remotely?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds handles the entire Kay County bail process by phone, email, or e-sign. No office visit required. We complete all paperwork electronically, post bail at the detention center, and keep you updated until your loved one is released. This is especially helpful for out-of-town family members.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Does Angel Bail Bonds serve Ponca City and Blackwell?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. We serve all of Kay County including Ponca City, Blackwell, Tonkawa, Newkirk, Braman, Kaw City, Nardin, and every other community. All Kay County arrests are processed through the Kay County Detention Center in Newkirk. We handle everything remotely so you don't have to drive to Newkirk.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How do I find an inmate in Kay County Jail?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Search for inmates through the Kay County Sheriff's Office website or call (580) 362-3393. The online roster shows booking dates, charges, and bond amounts. You can also use Oklahoma VINE for automatic custody alerts. Or call Angel Bail Bonds at (405) 614-3000 – we'll look them up for free.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- RELATED PAGES -->
-  <section style="padding: 24px 1.5rem 0; background: white;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving Nearby Counties</p>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="/kay-county-detention-center-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Kay County Detention Center →</a>
-        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Payne County (Stillwater) →</a>
-        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Noble County (Perry) →</a>
-        <a href="/osage-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Osage County (Pawhuska) →</a>
-        <a href="/grant-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Grant County (Medford) →</a>
-        <a href="/garfield-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 6px;">Garfield County (Enid) →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAR -->
-  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-      <div>
-        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need a Kay County Bail Bond?</p>
-        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Women-owned · 15+ years · 4.9 stars · Competitive rates · Financing Available · Hablamos Español</p>
-      </div>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
-    </div>
-  </section>
 </BaseLayout>
