@@ -604,14 +604,12 @@ const structuredData = {
         {[
           { name: 'Logan County', distance: '~40 miles south' },
           { name: 'Garfield County', distance: '~30 miles north' },
-          { name: 'Canadian County', distance: '~45 miles southeast' },
           { name: 'Oklahoma County', distance: '~60 miles south' },
-          { name: 'Blaine County', distance: '~50 miles northwest' },
-          { name: 'Payne County (Stillwater)', distance: '~63 miles southeast' }
+          { name: 'Payne County (Stillwater)', distance: '~63 miles southeast', slug: 'payne-county-jail' }
         ].map((county, index) => (
           <a
             key={index}
-            href={`/${county.name.toLowerCase().replace(/\s+/g, '-')}-bail-bonds`}
+            href={`/${county.slug ?? county.name.toLowerCase().replace(/\s+/g, '-')}-bail-bonds`}
             class="p-6 rounded-lg transition-all hover:shadow-lg"
             style="background-color: white; border: 2px solid var(--slate-200); color: var(--navy);"
           >
