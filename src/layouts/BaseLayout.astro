@@ -63,6 +63,14 @@ const alternatePath = hreflangMap[currentPath];
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+
+    <!-- Vercel Web Analytics (needs Web Analytics enabled on the Vercel project; remove if the site moves off Vercel) -->
+    <script is:inline>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script is:inline defer src="/_vercel/insights/script.js"></script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{fullTitle}</title>
   </head>
@@ -104,6 +112,11 @@ const alternatePath = hreflangMap[currentPath];
             <a href="tel:+14056143000" class="hidden sm:inline-flex items-center gap-2 font-extrabold text-base py-2.5 px-5 rounded-lg transition-all" style="background: #dc2626; color: white; box-shadow: 0 2px 10px rgba(220,38,38,0.2);">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               (405) 614-3000
+            </a>
+
+            <a href="tel:+14056143000" class="sm:hidden inline-flex items-center gap-1.5 font-bold text-sm py-2 px-3 rounded-lg" style="background: #dc2626; color: white;" aria-label="Call Angel Bail Bonds now">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Call
             </a>
 
             <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg transition-all" style="color: #1e3a5f;" aria-label="Toggle menu">
@@ -230,7 +243,7 @@ const alternatePath = hreflangMap[currentPath];
                 <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: rgba(255,255,255,0.05);">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                 </div>
-                <span class="text-sm">Stillwater, Oklahoma</span>
+                <span class="text-sm">800 E 6th Ave, Ste Z<br />Stillwater, OK 74075</span>
               </div>
               <p class="text-xs mt-2" style="color: rgba(255,255,255,0.35);">Hablamos Espa&ntilde;ol</p>
             </div>
@@ -256,6 +269,18 @@ const alternatePath = hreflangMap[currentPath];
         </div>
       </div>
     </footer>
+
+    <!-- Mobile action bar: Call + Text (phones only) -->
+    <div class="mobile-action-bar" role="navigation" aria-label="Contact Angel Bail Bonds">
+      <a href="tel:+14056143000" class="mab-call">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        Call 24/7
+      </a>
+      <a href="sms:+14056143000?body=Hello%2C%20I%20need%20bail%20bonds%20assistance." class="mab-text">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Text Us
+      </a>
+    </div>
 
     <!-- Sticky SMS Button -->
     <a href="sms:+14056143000?body=Hello%2C%20I%20need%20bail%20bonds%20assistance." class="sticky-sms" aria-label="Text us for bail bond help">
@@ -288,6 +313,16 @@ const alternatePath = hreflangMap[currentPath];
           });
         });
       }
+
+      // Conversion tracking: every tel: and sms: link
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="sms:"]');
+        if (!a) return;
+        const name = a.getAttribute('href').startsWith('tel:') ? 'call_click' : 'text_click';
+        const data = { page: location.pathname };
+        try { window.va && window.va('event', { name, data }); } catch (_) {}
+        try { window.gtag && window.gtag('event', name, data); } catch (_) {}
+      });
 
       // Nav scroll shadow
       const nav = document.getElementById('main-nav');
