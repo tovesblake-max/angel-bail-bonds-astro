@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why can't I find someone on the Noble County roster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They may have been released already. The Noble County Sheriff's Office keeps a separate released-inmates list. If they are on neither, call the jail at (580) 336-3517 ext. 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a bail bond in Noble County need to be notarized?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Sheriff's Office says bonds that are not filled out or notarized properly will not be accepted by the Court Clerk and the defendant may be re-arrested. Filed cases also need the case number on the bond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I visit in person at Noble County Jail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All visits are by video and are recorded. Schedule through Prodigy at least 24 hours in advance with a valid ID and a headshot photo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I send books to a Noble County inmate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only new paperbacks ordered from Amazon or the publisher. Hardback books are rejected."
+      }
+    }
+  ]
+};
+const breadcrumbData = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/"}, {"@type": "ListItem", "position": 2, "name": "Noble County Bail Bonds", "item": "https://stillwaterokbailbonds.com/noble-county-bail-bonds"}, {"@type": "ListItem", "position": 3, "name": "Noble County Inmate Search", "item": "https://stillwaterokbailbonds.com/noble-county-inmate-search"}]};
+const webPageData = {"@context": "https://schema.org", "@type": "WebPage", "name": "Noble County Inmate Search", "url": "https://stillwaterokbailbonds.com/noble-county-inmate-search", "dateModified": "2026-11-15", "about": {"@type": "GovernmentBuilding", "name": "Noble County Jail", "address": {"@type": "PostalAddress", "streetAddress": "721 Cedar Street", "addressLocality": "Perry", "postalCode": "73077", "addressRegion": "OK", "addressCountry": "US"}, "telephone": "+1-580-336-3517"}, "publisher": {"@type": "LocalBusiness", "name": "Angel Bail Bonds", "telephone": "+1-405-614-3000", "address": {"@type": "PostalAddress", "streetAddress": "800 E 6th Ave, Ste Z", "addressLocality": "Stillwater", "addressRegion": "OK", "postalCode": "74075", "addressCountry": "US"}}};
+---
+
+<BaseLayout
+  title="Noble County Inmate Search | Noble County Jail Roster, Perry OK"
+  description="Search the Noble County Jail roster in Perry, OK, check the released list, send money through Prodigy and schedule a video visit. What the jail requires on a bond. Call (405) 614-3000."
+  structuredData={webPageData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 52px 1.5rem 44px;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;"><a href="/noble-county-bail-bonds" style="color: inherit;">Noble County Bail Bonds</a> › Inmate Search</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.2; font-weight: 800; margin-bottom: 14px;">Noble County Inmate Search</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.02rem; line-height: 1.7; margin-bottom: 22px;">The Noble County Sheriff's Office posts a roster of everyone at the Noble County Jail, 721 Cedar Street in Perry, and a separate list of people recently released. Neither shows the bond. If you cannot find someone, check the released list first: they may already be out.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://noblecosook.gov/inmate-search" rel="nofollow noopener" target="_blank" class="btn-primary" style="background: white; color: var(--navy); padding: 12px 22px;">Open the official roster ↗</a>
+        <a href="tel:+14056143000" class="btn-primary" style="padding: 12px 22px;">Call us to find them: (405) 614-3000</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">How to look someone up in Noble County Jail</h2>
+      <ol style="color: var(--slate-600); line-height: 1.7; padding-left: 1.2rem; list-style: decimal;">
+        <li style="margin-bottom:10px;">Search the <a href="https://noblecosook.gov/inmate-search" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County inmate roster</a> by name.</li>
+        <li style="margin-bottom:10px;">Not there? Check the <a href="https://noblecosook.gov/released-inmates" rel="nofollow noopener" target="_blank" style="color: var(--blue);">recently released list</a> before you call anyone.</li>
+        <li style="margin-bottom:10px;">Call the jail at <a href="tel:+15803363517" style="color: var(--blue);">(580) 336-3517</a>, extension 2, for the bond amount or anything the roster does not show.</li>
+        <li style="margin-bottom:10px;">Call Angel Bail Bonds at <a href="tel:+14056143000" style="color: var(--blue);">(405) 614-3000</a>. Noble County's bond rules are below.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Noble County Jail at a glance</h2>
+      <div style="overflow-x:auto;"><table style="width:100%; border-collapse:collapse; background:white; border:1px solid var(--slate-200); border-radius:10px; font-size:0.95rem;">
+        <tbody>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Address</th><td style="padding:10px 12px; color:var(--slate-600);">721 Cedar Street, Perry, OK 73077</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Jail phone</th><td style="padding:10px 12px; color:var(--slate-600);"><a href="tel:+15803363517" style="color: var(--blue);">(580) 336-3517</a>, ext. 2</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Roster shows</th><td style="padding:10px 12px; color:var(--slate-600);">Booking date and charges; separate released-inmates list</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Money for inmates</th><td style="padding:10px 12px; color:var(--slate-600);">Prodigy online, or a money order made out to the inmate's name, in person</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Books</th><td style="padding:10px 12px; color:var(--slate-600);">Paperback only, ordered new from Amazon or the publisher</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Visits</th><td style="padding:10px 12px; color:var(--slate-600);">Video only, recorded, booked 24 hours ahead through Prodigy</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Court Clerk</th><td style="padding:10px 12px; color:var(--slate-600);"><a href="tel:+15803365187" style="color: var(--blue);">(580) 336-5187</a> · Noble County Courthouse, 300 Courthouse Drive, Perry</td></tr>
+        </tbody>
+      </table></div>
+      <p style="color: var(--slate-500); font-size: 0.82rem; margin-top: 10px;">Checked against the official pages listed at the bottom of this page on November 15, 2026. Jails change vendors and hours, so confirm with the jail before you drive.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">What Noble County requires on a bail bond</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">The Noble County Sheriff's Office publishes its rules for bondsmen, and they are strict:</p>
+      <ul style="color: var(--slate-600); line-height: 1.75; padding-left: 1.2rem; list-style: disc; margin-bottom: 12px;">
+        <li>A bond that is not filled out or <strong>notarized</strong> properly will not be accepted, approved or filed by the Court Clerk, and the defendant can be <strong>re-arrested</strong>.</li>
+        <li>If charges have already been filed, the bond must carry the <strong>case number</strong>.</li>
+        <li>The bondsman is responsible for the paperwork, not the jail staff.</li>
+      </ul>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Those rules put the paperwork on the bondsman, not on you or the jail. A bond with a missing case number or a bad notarization can get your family member picked back up, so ask any bondsman you call how they handle Noble County filings.</p>
+    </div>
+  </section>
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Money, mail and video visits</h2>
+      <ul style="color: var(--slate-600); line-height: 1.75; padding-left: 1.2rem; list-style: disc; margin-bottom: 12px;">
+        <li><strong>Commissary:</strong> Prodigy Solutions online, or a money order made out to the inmate's name dropped off in person. Questions go to (580) 336-3517 ext. 2.</li>
+        <li><strong>Books:</strong> paperback only, ordered new from Amazon or the publisher. Hardbacks are rejected.</li>
+        <li><strong>Visits:</strong> video only, and all visits are recorded. Schedule through Prodigy at least 24 hours in advance. Visitors need a valid ID and must submit a headshot photo.</li>
+        <li>Anyone released from the jail cannot visit for six months.</li>
+      </ul>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Oklahoma VINE (toll-free 877-654-8463) can notify you when a person's custody status changes.</p>
+    </div>
+  </section>
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Arrests along I-35</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Perry sits on I-35 between Oklahoma City and Wichita. If your family member was arrested while traveling through, you do not need to be in Perry to get started: call us and we can begin the bail process by phone.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Questions families ask</h2>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Why can't I find someone on the Noble County roster?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">They may have been released already. The Noble County Sheriff's Office keeps a separate released-inmates list. If they are on neither, call the jail at (580) 336-3517 ext. 2.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Does a bail bond in Noble County need to be notarized?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Yes. The Sheriff's Office says bonds that are not filled out or notarized properly will not be accepted by the Court Clerk and the defendant may be re-arrested. Filed cases also need the case number on the bond.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Can I visit in person at Noble County Jail?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">No. All visits are by video and are recorded. Schedule through Prodigy at least 24 hours in advance with a valid ID and a headshot photo.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Can I send books to a Noble County inmate?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Only new paperbacks ordered from Amazon or the publisher. Hardback books are rejected.</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="padding: 28px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Official sources</p>
+      <ul style="font-size: 0.85rem; line-height: 1.8; padding-left: 1.1rem; list-style: disc;">
+        <li><a href="https://noblecosook.gov/inmate-search" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County Sheriff: Inmate Search</a></li>
+        <li><a href="https://noblecosook.gov/released-inmates" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County Sheriff: Released Inmates</a></li>
+        <li><a href="https://noblecosook.gov/contact-us" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County Sheriff: Contact Us</a></li>
+        <li><a href="https://noblecosook.gov/commissary" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County Sheriff: Commissary</a></li>
+        <li><a href="https://noblecosook.gov/visitation" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County Sheriff: Visitation</a></li>
+        <li><a href="https://noblecosook.gov/bondsmen" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County Sheriff: Bondsmen</a></li>
+        <li><a href="https://noblecountyok.com/" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Noble County, Oklahoma (Court Clerk listing)</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; color: var(--slate-400); margin-top: 10px;">Angel Bail Bonds is a private bail bond company and is not affiliated with the Noble County Sheriff's Office.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 1.5rem 28px; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Related</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/noble-county-jail-perry-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Noble County Jail Bail Bonds →</a>
+        <a href="/noble-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Noble County Bail Bonds →</a>
+        <a href="/pawnee-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County Inmate Search →</a>
+        <a href="/lincoln-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County Inmate Search →</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 820px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Found them in Noble County Jail?</p>
+        <p style="color: rgba(255,255,255,0.55); font-size: 0.85rem;">Open 24 hours · 7 days a week</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">Call (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

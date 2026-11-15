@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the Pawnee County roster show bond amounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Sheriff's Office roster shows who is in custody, when they were booked and their charges. For the bond amount, call the jail at (918) 762-2565 ext. 2 or call Angel Bail Bonds at (405) 614-3000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mail a money order to a Pawnee County inmate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Sheriff's Office says money orders are not accepted. Use Tiger Inmate Services online or the Tiger kiosk in the jail lobby."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When can I video visit someone in Pawnee County Jail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remote visits through Prodigy run 6 a.m. to 11 p.m. daily. On-site kiosk visits run 8:30 a.m. to 4:15 p.m. Monday to Friday. No visits from 1:30 to 3:30 p.m. on Tuesdays and Thursdays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can Angel Bail Bonds get someone out of Pawnee County Jail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call (405) 614-3000 any time. Release time after the bond is posted depends on the jail's processing."
+      }
+    }
+  ]
+};
+const breadcrumbData = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/"}, {"@type": "ListItem", "position": 2, "name": "Pawnee County Bail Bonds", "item": "https://stillwaterokbailbonds.com/pawnee-county-bail-bonds"}, {"@type": "ListItem", "position": 3, "name": "Pawnee County Inmate Search", "item": "https://stillwaterokbailbonds.com/pawnee-county-inmate-search"}]};
+const webPageData = {"@context": "https://schema.org", "@type": "WebPage", "name": "Pawnee County Inmate Search", "url": "https://stillwaterokbailbonds.com/pawnee-county-inmate-search", "dateModified": "2026-11-15", "about": {"@type": "GovernmentBuilding", "name": "Pawnee County Jail", "address": {"@type": "PostalAddress", "streetAddress": "500 Harrison Street", "addressLocality": "Pawnee", "postalCode": "74058", "addressRegion": "OK", "addressCountry": "US"}, "telephone": "+1-918-762-2565"}, "publisher": {"@type": "LocalBusiness", "name": "Angel Bail Bonds", "telephone": "+1-405-614-3000", "address": {"@type": "PostalAddress", "streetAddress": "800 E 6th Ave, Ste Z", "addressLocality": "Stillwater", "addressRegion": "OK", "postalCode": "74075", "addressCountry": "US"}}};
+---
+
+<BaseLayout
+  title="Pawnee County Inmate Search | Pawnee County Jail Roster, Pawnee OK"
+  description="How to search the Pawnee County Jail roster in Pawnee, OK, check charges, put money on an inmate's account with Tiger, and schedule a Prodigy video visit. Bail help 24/7: (405) 614-3000."
+  structuredData={webPageData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 52px 1.5rem 44px;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;"><a href="/pawnee-county-bail-bonds" style="color: inherit;">Pawnee County Bail Bonds</a> › Inmate Search</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.2; font-weight: 800; margin-bottom: 14px;">Pawnee County Inmate Search</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.02rem; line-height: 1.7; margin-bottom: 22px;">The Pawnee County Sheriff's Office posts everyone currently held at the Pawnee County Jail, 500 Harrison Street in Pawnee, with booking date and charges. The roster does not show the bond amount. Call us and we will get the bond amount and start the release.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://www.pawneecountysook.gov/inmate-search" rel="nofollow noopener" target="_blank" class="btn-primary" style="background: white; color: var(--navy); padding: 12px 22px;">Open the official roster ↗</a>
+        <a href="tel:+14056143000" class="btn-primary" style="padding: 12px 22px;">Call us to find them: (405) 614-3000</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">How to look someone up in Pawnee County Jail</h2>
+      <ol style="color: var(--slate-600); line-height: 1.7; padding-left: 1.2rem; list-style: decimal;">
+        <li style="margin-bottom:10px;">Open the <a href="https://www.pawneecountysook.gov/inmate-search" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Pawnee County inmate search</a> on the Sheriff's Office website and search by last name.</li>
+        <li style="margin-bottom:10px;">Note the booking date and each charge listed. One arrest can carry several charges, and each can have its own bond.</li>
+        <li style="margin-bottom:10px;">Call the jail at <a href="tel:+19187622565" style="color: var(--blue);">(918) 762-2565</a>, extension 2, if the name does not show up yet. People booked in the last few hours may not be listed.</li>
+        <li style="margin-bottom:10px;">Call Angel Bail Bonds at <a href="tel:+14056143000" style="color: var(--blue);">(405) 614-3000</a> with the full name and date of birth. We confirm the total bond with the jail and tell you what it takes to get them out.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Pawnee County Jail at a glance</h2>
+      <div style="overflow-x:auto;"><table style="width:100%; border-collapse:collapse; background:white; border:1px solid var(--slate-200); border-radius:10px; font-size:0.95rem;">
+        <tbody>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Address</th><td style="padding:10px 12px; color:var(--slate-600);">500 Harrison Street, Pawnee, OK 74058</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Jail phone</th><td style="padding:10px 12px; color:var(--slate-600);"><a href="tel:+19187622565" style="color: var(--blue);">(918) 762-2565</a>, ext. 2 (same main line as the Sheriff's Office)</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Roster shows</th><td style="padding:10px 12px; color:var(--slate-600);">Who is in custody, booking date, charges</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Roster does not show</th><td style="padding:10px 12px; color:var(--slate-600);">Bond amount. Call the jail or call us.</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Money for inmates</th><td style="padding:10px 12px; color:var(--slate-600);">Tiger Inmate Services: online, or the Tiger kiosk in the lobby. Money orders are not accepted.</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Commissary orders</th><td style="padding:10px 12px; color:var(--slate-600);">Due Thursday before midnight, delivered the following Tuesday</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Video visits</th><td style="padding:10px 12px; color:var(--slate-600);">Prodigy app or website</td></tr>
+        </tbody>
+      </table></div>
+      <p style="color: var(--slate-500); font-size: 0.82rem; margin-top: 10px;">Checked against the official pages listed at the bottom of this page on November 15, 2026. Jails change vendors and hours, so confirm with the jail before you drive.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Putting money on a Pawnee County inmate's account</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Pawnee County uses <strong>Tiger Inmate Services</strong> for inmate accounts. You can deposit online or at the Tiger kiosk in the jail lobby. The Sheriff's Office says plainly that <strong>money orders are not accepted</strong>, so do not mail one.</p>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Commissary orders have to be in by <strong>Thursday before midnight</strong> and are delivered the following <strong>Tuesday</strong>. If your family member is booked on a Friday, money you add over the weekend will not turn into commissary until the Tuesday after next Thursday's cutoff.</p>
+    </div>
+  </section>
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Video visits at Pawnee County Jail</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">All visits are scheduled through <strong>Prodigy</strong>. Pawnee County has one of the longest remote windows in the area:</p>
+      <ul style="color: var(--slate-600); line-height: 1.75; padding-left: 1.2rem; list-style: disc; margin-bottom: 12px;">
+        <li><strong>From home:</strong> 6:00 a.m. to 11:00 p.m., every day</li>
+        <li><strong>On-site kiosk at the jail:</strong> 8:30 a.m. to 4:15 p.m., Monday to Friday</li>
+        <li><strong>No visits:</strong> 1:30 to 3:30 p.m. on Tuesdays and Thursdays</li>
+        <li>Visitors must be 18 or older, or have a parent or legal guardian with them</li>
+        <li>Anyone released from the jail cannot visit for six months after release</li>
+      </ul>
+    </div>
+  </section>
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Getting someone out of Pawnee County Jail</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Pawnee is east of Stillwater, and you do not need to drive over to get started. Call us any time and we can begin the bail process by phone while you gather the details.</p>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Oklahoma VINE (toll-free 877-654-8463) can also alert you by phone, text or email when a person's custody status changes.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Questions families ask</h2>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Does the Pawnee County roster show bond amounts?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">No. The Sheriff's Office roster shows who is in custody, when they were booked and their charges. For the bond amount, call the jail at (918) 762-2565 ext. 2 or call Angel Bail Bonds at (405) 614-3000.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Can I mail a money order to a Pawnee County inmate?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">No. The Sheriff's Office says money orders are not accepted. Use Tiger Inmate Services online or the Tiger kiosk in the jail lobby.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">When can I video visit someone in Pawnee County Jail?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Remote visits through Prodigy run 6 a.m. to 11 p.m. daily. On-site kiosk visits run 8:30 a.m. to 4:15 p.m. Monday to Friday. No visits from 1:30 to 3:30 p.m. on Tuesdays and Thursdays.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">How fast can Angel Bail Bonds get someone out of Pawnee County Jail?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Call (405) 614-3000 any time. Release time after the bond is posted depends on the jail's processing.</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="padding: 28px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Official sources</p>
+      <ul style="font-size: 0.85rem; line-height: 1.8; padding-left: 1.1rem; list-style: disc;">
+        <li><a href="https://www.pawneecountysook.gov/inmate-search" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Pawnee County Sheriff: Inmate Search</a></li>
+        <li><a href="https://www.pawneecountysook.gov/contact-us" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Pawnee County Sheriff: Contact Us</a></li>
+        <li><a href="https://www.pawneecountysook.gov/commissary" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Pawnee County Sheriff: Commissary</a></li>
+        <li><a href="https://www.pawneecountysook.gov/visitation" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Pawnee County Sheriff: Visitation</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; color: var(--slate-400); margin-top: 10px;">Angel Bail Bonds is a private bail bond company and is not affiliated with the Pawnee County Sheriff's Office.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 1.5rem 28px; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Related</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/pawnee-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County Jail Bail Bonds →</a>
+        <a href="/pawnee-county-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County Bail Bonds →</a>
+        <a href="/lincoln-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Lincoln County Inmate Search →</a>
+        <a href="/noble-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Noble County Inmate Search →</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 820px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Found them in Pawnee County Jail?</p>
+        <p style="color: rgba(255,255,255,0.55); font-size: 0.85rem;">Open 24 hours · 7 days a week</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">Call (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>
