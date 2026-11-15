@@ -67,10 +67,6 @@ const alternatePath = hreflangMap[currentPath];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
 
-    <!-- Vercel Web Analytics (needs Web Analytics enabled on the Vercel project; remove if the site moves off Vercel) -->
-    <script is:inline>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-    <script is:inline defer src="/_vercel/insights/script.js"></script>
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{fullTitle}</title>
   </head>
@@ -314,13 +310,12 @@ const alternatePath = hreflangMap[currentPath];
         });
       }
 
-      // Conversion tracking: every tel: and sms: link
+      // Conversion tracking: every tel: and sms: link (sends to GA4 once gtag is on the page)
       document.addEventListener('click', (e) => {
         const a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="sms:"]');
         if (!a) return;
         const name = a.getAttribute('href').startsWith('tel:') ? 'call_click' : 'text_click';
         const data = { page: location.pathname };
-        try { window.va && window.va('event', { name, data }); } catch (_) {}
         try { window.gtag && window.gtag('event', name, data); } catch (_) {}
       });
 
