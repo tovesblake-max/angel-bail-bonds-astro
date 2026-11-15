@@ -1,0 +1,18 @@
+---
+// Google Analytics 4. Renders nothing until PUBLIC_GA4_ID is set
+// (Cloudflare > Workers > angel-bail-bonds > Settings > Build > Variables,
+// e.g. G-XXXXXXXXXX). It is read at build time.
+// call_click / text_click are sent by the listener in BaseLayout.astro.
+const gaId = import.meta.env.PUBLIC_GA4_ID;
+---
+{gaId && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+    <script is:inline define:vars={{ gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){dataLayer.push(arguments);};
+      gtag('js', new Date());
+      gtag('config', gaId);
+    </script>
+  </>
+)}
