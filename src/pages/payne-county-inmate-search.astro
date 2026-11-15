@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Payne County have an online inmate roster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not right now. The county's website says it is under construction and its old inmate search page no longer loads. Call the Payne County Sheriff's Office at (405) 372-4522 or Angel Bail Bonds at (405) 614-3000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find out someone's bond in Payne County?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call the Sheriff's Office at (405) 372-4522, or call us at (405) 614-3000 and we will confirm it. Once a case is filed, the bond also shows on the OSCN docket for Payne County District Court."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the Payne County Court Clerk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the Payne County Courthouse, 606 S. Husband St., Rooms 206 and 207, Stillwater. Phone (405) 372-4774, Monday to Friday, 8 a.m. to 5 p.m."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Angel Bail Bonds help if I don't know which jail they are in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Call (405) 614-3000 any time with their full name and date of birth. We find out where they are held and start the paperwork by phone."
+      }
+    }
+  ]
+};
+const breadcrumbData = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/"}, {"@type": "ListItem", "position": 2, "name": "Payne County Jail Bail Bonds", "item": "https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds"}, {"@type": "ListItem", "position": 3, "name": "Payne County Inmate Search", "item": "https://stillwaterokbailbonds.com/payne-county-inmate-search"}]};
+const webPageData = {"@context": "https://schema.org", "@type": "WebPage", "name": "Payne County Inmate Search", "url": "https://stillwaterokbailbonds.com/payne-county-inmate-search", "dateModified": "2026-11-15", "about": {"@type": "GovernmentBuilding", "name": "Payne County Sheriff's Office", "telephone": "+1-405-372-4522"}, "publisher": {"@type": "LocalBusiness", "name": "Angel Bail Bonds", "telephone": "+1-405-614-3000", "address": {"@type": "PostalAddress", "streetAddress": "800 E 6th Ave, Ste Z", "addressLocality": "Stillwater", "addressRegion": "OK", "postalCode": "74075", "addressCountry": "US"}}};
+---
+
+<BaseLayout
+  title="Payne County Inmate Search | Find Someone in Jail in Stillwater, OK"
+  description="Payne County has no working online jail roster right now. Here is how to find out if someone is in custody in Stillwater: the Sheriff's number, OSCN court records and the Court Clerk. Bail help 24/7: (405) 614-3000."
+  structuredData={webPageData}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 52px 1.5rem 44px;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;"><a href="/payne-county-jail-bail-bonds" style="color: inherit;">Payne County Jail Bail Bonds</a> › Inmate Search</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.2; font-weight: 800; margin-bottom: 14px;">Payne County Inmate Search</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.02rem; line-height: 1.7; margin-bottom: 22px;">Payne County does not have a working online inmate roster right now. The county's website says it is under construction, and its old jail page no longer loads. The fastest way to find out if someone is being held in Stillwater is a phone call: to the Sheriff's Office, or to us.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="tel:+14053724522" class="btn-primary" style="background: white; color: var(--navy); padding: 12px 22px;">Call the Sheriff: (405) 372-4522</a>
+        <a href="tel:+14056143000" class="btn-primary" style="padding: 12px 22px;">Call us to find them: (405) 614-3000</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">How to look someone up in Payne County</h2>
+      <ol style="color: var(--slate-600); line-height: 1.7; padding-left: 1.2rem; list-style: decimal;">
+        <li style="margin-bottom:10px;">Call the Payne County Sheriff's Office at <a href="tel:+14053724522" style="color: var(--blue);">(405) 372-4522</a> and ask whether the person is in custody. Have their full name and date of birth ready.</li>
+        <li style="margin-bottom:10px;">Once charges are filed, look up the case on <a href="https://www.oscn.net/dockets/Search.aspx" rel="nofollow noopener" target="_blank" style="color: var(--blue);">OSCN</a>, the Oklahoma courts' public docket. Pick "Payne County District Court" and search by name. A brand-new arrest may not show a case for a day or two.</li>
+        <li style="margin-bottom:10px;">For help with a court record, call the Payne County Court Clerk at <a href="tel:+14053724774" style="color: var(--blue);">(405) 372-4774</a>, Monday to Friday, 8 a.m. to 5 p.m.</li>
+        <li style="margin-bottom:10px;">Call Angel Bail Bonds at <a href="tel:+14056143000" style="color: var(--blue);">(405) 614-3000</a>, day or night. We find out where they are held and what the bond is, and start the release.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Payne County at a glance</h2>
+      <div style="overflow-x:auto;"><table style="width:100%; border-collapse:collapse; background:white; border:1px solid var(--slate-200); border-radius:10px; font-size:0.95rem;">
+        <tbody>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Online jail roster</th><td style="padding:10px 12px; color:var(--slate-600);">None right now. The county site says it is under construction.</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Sheriff's Office</th><td style="padding:10px 12px; color:var(--slate-600);"><a href="tel:+14053724522" style="color: var(--blue);">(405) 372-4522</a></td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Court records</th><td style="padding:10px 12px; color:var(--slate-600);"><a href="https://www.oscn.net/dockets/Search.aspx" rel="nofollow noopener" target="_blank" style="color: var(--blue);">OSCN docket search</a>, Payne County District Court</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Court Clerk</th><td style="padding:10px 12px; color:var(--slate-600);">Payne County Courthouse, 606 S. Husband St., Rooms 206 and 207, Stillwater · <a href="tel:+14053724774" style="color: var(--blue);">(405) 372-4774</a> · 8 a.m. to 5 p.m., Monday to Friday, open through lunch</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Clerk record search</th><td style="padding:10px 12px; color:var(--slate-600);">$5 with full name and date of birth, by mail, email or in person</td></tr>
+        </tbody>
+      </table></div>
+      <p style="color: var(--slate-500); font-size: 0.82rem; margin-top: 10px;">Checked against the official pages listed at the bottom of this page on November 15, 2026. Call before you drive, since offices change hours.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Why there is no Payne County roster to click</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Older pages around the web, including some of ours until now, sent people to an inmate search on paynecountyok.gov. That page no longer exists, and the county's homepage says the site is under construction. Until the Sheriff's Office puts a roster back online, a phone call is the reliable way to check.</p>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">If someone was arrested inside Stillwater city limits, they may be held by the city instead of the county. See our <a href="/stillwater-city-jail-bail-bonds" style="color: var(--blue);">Stillwater City Jail</a> page, or just call us and we will find out which jail has them.</p>
+    </div>
+  </section>
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Checking the court case</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;"><a href="https://www.oscn.net/dockets/Search.aspx" rel="nofollow noopener" target="_blank" style="color: var(--blue);">OSCN</a> is the Oklahoma courts' own public docket, and it covers Payne County District Court. It shows charges, the case number, hearing dates and, once it is set, the bond. The Court Clerk says self-searches there go back to 1994.</p>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Oklahoma VINE, run through the <a href="https://oklahoma.gov/oag/about/divisions/victim-advocacy-and-services-unit/ok-vine.html" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Attorney General's office</a>, sends custody alerts by phone, text or email (toll-free 877-654-8463). We could not confirm that VINE lists this jail, so call the jail first.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Questions families ask</h2>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Does Payne County have an online inmate roster?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Not right now. The county's website says it is under construction and its old inmate search page no longer loads. Call the Payne County Sheriff's Office at (405) 372-4522 or Angel Bail Bonds at (405) 614-3000.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">How do I find out someone's bond in Payne County?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Call the Sheriff's Office at (405) 372-4522, or call us at (405) 614-3000 and we will confirm it. Once a case is filed, the bond also shows on the OSCN docket for Payne County District Court.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Where is the Payne County Court Clerk?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">In the Payne County Courthouse, 606 S. Husband St., Rooms 206 and 207, Stillwater. Phone (405) 372-4774, Monday to Friday, 8 a.m. to 5 p.m.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Can Angel Bail Bonds help if I don't know which jail they are in?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Yes. Call (405) 614-3000 any time with their full name and date of birth. We find out where they are held and start the paperwork by phone.</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="padding: 28px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Official sources</p>
+      <ul style="font-size: 0.85rem; line-height: 1.8; padding-left: 1.1rem; list-style: disc;">
+        <li><a href="https://www.paynecounty.org/general-information" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Payne County: General Information (Sheriff and Court Clerk phones)</a></li>
+        <li><a href="https://courtclerk.paynecounty.org/record-searches" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Payne County Court Clerk: Record Searches</a></li>
+        <li><a href="https://www.paynecountyok.gov/" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Payne County Sheriff website (under construction)</a></li>
+        <li><a href="https://www.oscn.net/dockets/Search.aspx" rel="nofollow noopener" target="_blank" style="color: var(--blue);">OSCN: Oklahoma State Courts Network docket search</a></li>
+        <li><a href="https://oklahoma.gov/oag/about/divisions/victim-advocacy-and-services-unit/ok-vine.html" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Oklahoma Attorney General: OK VINE</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; color: var(--slate-400); margin-top: 10px;">Angel Bail Bonds is a private bail bond company and is not affiliated with the Payne County Sheriff's Office.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 1.5rem 28px; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Related</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County Jail Bail Bonds →</a>
+        <a href="/payne-county-detention-center-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County Detention Center →</a>
+        <a href="/stillwater-city-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Stillwater City Jail →</a>
+        <a href="/pawnee-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Pawnee County Inmate Search →</a>
+        <a href="/noble-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Noble County Inmate Search →</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
+    <div style="max-width: 820px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Need someone out of jail in Stillwater?</p>
+        <p style="color: rgba(255,255,255,0.55); font-size: 0.85rem;">Open 24 hours · We start the paperwork by phone</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">Call (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>
