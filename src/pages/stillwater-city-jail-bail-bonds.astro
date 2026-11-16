@@ -1,197 +1,148 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  url: 'https://stillwaterokbailbonds.com/stillwater-city-jail-bail-bonds',
-  '@id': 'https://stillwaterokbailbonds.com/stillwater-city-jail-bail-bonds#business',
-  name: 'Angel Bail Bonds - Stillwater City Jail',
-  description: 'Fast bail bond services for Stillwater City Jail at 723 S Lewis St, Stillwater, OK. 24/7 availability with quick release times.',
-  image: '/images/logo.webp',
-  telephone: '(405) 614-3000',
-  address: { '@type': 'PostalAddress', streetAddress: '723 S Lewis St', addressLocality: 'Stillwater', addressRegion: 'OK', postalCode: '74074', addressCountry: 'US' },
-  geo: { '@type': 'GeoCoordinates', latitude: 36.1156, longitude: -97.0584 },
-  areaServed: { '@type': 'AdministrativeArea', name: 'Stillwater, Oklahoma' },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '29' },
-  sameAs: ['https://g.co/kgs/Angel-Bail-Bonds-Stillwater'],
-  openingHoursSpecification: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], opens: '00:00', closes: '23:59' }
-};
-
 const faqData = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How long do inmates stay at Stillwater City Jail?', acceptedAnswer: { '@type': 'Answer', text: 'Stillwater City Jail is a short-term holding facility. Inmates typically stay less than 72 hours before being released or transferred to Payne County Detention Center. This is why acting fast on bail is critical — call Angel Bail Bonds at (405) 614-3000 before a transfer adds delays.' } },
-    { '@type': 'Question', name: 'How do I bail someone out of Stillwater City Jail?', acceptedAnswer: { '@type': 'Answer', text: 'Call Angel Bail Bonds at (405) 614-3000. We need the inmate\'s name and charges. Since Stillwater City Jail is a short-term facility, we prioritize getting bonds posted quickly before any transfer to the county detention center.' } },
-    { '@type': 'Question', name: 'What is Stillwater City Jail\'s phone number?', acceptedAnswer: { '@type': 'Answer', text: 'Stillwater City Jail can be reached at (405) 372-4171. They are located at 723 S Lewis Street, Stillwater, OK 74074.' } },
-    { '@type': 'Question', name: 'What happens after arrest at Stillwater City Jail?', acceptedAnswer: { '@type': 'Answer', text: 'After arrest, the individual is booked (fingerprinted, photographed, and personal information collected). They may be released without bail, held until a court appearance, or have bail set. If bail is set, calling a bail bondsman immediately is the fastest way to get released.' } }
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Stillwater City Jail still open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The City of Stillwater announced on March 19, 2026 that it would contract with Payne County for jail services starting July 1, 2026, and close the city jail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do Stillwater police take people they arrest now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To Payne County custody, since Payne County took over the city's jail services on July 1, 2026. Call the Payne County Sheriff's Office at (405) 372-4522 to check on someone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I bail someone out after a Stillwater arrest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call Angel Bail Bonds at (405) 614-3000 any time. We find out where they are held, confirm the bond with Payne County and start the paperwork by phone."
+      }
+    }
   ]
 };
-
-const howToData = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How to Bail Someone Out of Stillwater City Jail',
-  description: 'Step-by-step guide to posting bail at Stillwater City Jail in Oklahoma.',
-  step: [
-    { '@type': 'HowToStep', name: 'Get inmate information', text: 'Call Stillwater City Jail at (405) 372-4171 to confirm the person is in custody and get their booking details.' },
-    { '@type': 'HowToStep', name: 'Call Angel Bail Bonds', text: 'Call (405) 614-3000 any time 24/7. We will confirm the bail amount and walk you through the process.' },
-    { '@type': 'HowToStep', name: 'Complete bond paperwork and pay premium', text: 'Sign the bond agreement and pay the premium. Cash and credit cards accepted. Competitive rates available.' },
-    { '@type': 'HowToStep', name: 'Bond posted and inmate released', text: 'We post the bond and the jail processes the release. Act fast — Stillwater City Jail transfers inmates to county within 72 hours.' }
-  ]
-};
-
-const breadcrumbData = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://stillwaterokbailbonds.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Payne County Jail Bail Bonds', item: 'https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds' },
-    { '@type': 'ListItem', position: 3, name: 'Stillwater City Jail', item: 'https://stillwaterokbailbonds.com/stillwater-city-jail-bail-bonds' }
-  ]
-};
+const breadcrumbData = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://stillwaterokbailbonds.com/"}, {"@type": "ListItem", "position": 2, "name": "Payne County Jail Bail Bonds", "item": "https://stillwaterokbailbonds.com/payne-county-jail-bail-bonds"}, {"@type": "ListItem", "position": 3, "name": "Stillwater City Jail: Arrests Now Go to Payne County", "item": "https://stillwaterokbailbonds.com/stillwater-city-jail-bail-bonds"}]};
+const webPageData = {"@context": "https://schema.org", "@type": "WebPage", "name": "Stillwater City Jail: Arrests Now Go to Payne County", "url": "https://stillwaterokbailbonds.com/stillwater-city-jail-bail-bonds", "dateModified": "2026-11-16", "about": {"@type": "GovernmentBuilding", "name": "Payne County Sheriff's Office", "telephone": "+1-405-372-4522"}, "publisher": {"@type": "LocalBusiness", "name": "Angel Bail Bonds", "telephone": "+1-405-614-3000", "address": {"@type": "PostalAddress", "streetAddress": "800 E 6th Ave, Ste Z", "addressLocality": "Stillwater", "addressRegion": "OK", "postalCode": "74075", "addressCountry": "US"}}};
 ---
 
 <BaseLayout
-  title="Stillwater City Jail Bail Bonds | 24/7 Fast Release"
-  description="Need bail bonds for Stillwater City Jail at 723 S Lewis St? Angel Bail Bonds posts bonds 24/7. This is a short-term facility — act fast before transfer to county. Call (405) 614-3000."
-  structuredData={structuredData}
+  title="Stillwater City Jail Closed: Stillwater Arrests Now Go to Payne County"
+  description="The Stillwater City Jail closed when Payne County took over the city's jail services on July 1, 2026. Here is how to find someone arrested by Stillwater police and get them out. Bail help 24/7: (405) 614-3000."
+  structuredData={webPageData}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqData)} />
-  <script type="application/ld+json" set:html={JSON.stringify(howToData)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
-  <!-- HERO — compact -->
-  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 56px 1.5rem 48px;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <p style="color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;">Stillwater City Jail — Stillwater, OK</p>
-      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;">Bail Bonds for Stillwater City Jail</h1>
-      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 20px;">723 S Lewis St, Stillwater, OK 74074 · Short-term facility · Act fast</p>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 (405) 614-3000</a>
+  <section style="background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 52px 1.5rem 44px;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;"><a href="/payne-county-jail-bail-bonds" style="color: inherit;">Payne County Jail Bail Bonds</a> › Stillwater City Jail</p>
+      <h1 style="color: white; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.2; font-weight: 800; margin-bottom: 14px;">Stillwater City Jail: Arrests Now Go to Payne County</h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.02rem; line-height: 1.7; margin-bottom: 22px;">The City of Stillwater announced on March 19, 2026 that it would close the city jail and contract with Payne County for jail services starting July 1, 2026. If someone was arrested by Stillwater police, Payne County now holds them. Call us and we will find them and start the bond.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://stillwaterok.gov/m/newsflash/Home/Detail/470" rel="nofollow noopener" target="_blank" class="btn-primary" style="background: white; color: var(--navy); padding: 12px 22px;">Read the city's announcement ↗</a>
+        <a href="tel:+14056143000" class="btn-primary" style="padding: 12px 22px;">Call us to find them: (405) 614-3000</a>
+      </div>
     </div>
   </section>
 
-  <!-- FACILITY + STEPS — combined, two-column -->
-  <section style="padding: 48px 1.5rem; background: white;">
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-
-      <!-- Left: Facility Details -->
-      <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Facility Details</h2>
-        <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse;">
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600; width: 100px;">Address</td>
-            <td style="padding: 10px 0; color: var(--slate-700);"><a href="https://www.google.com/maps/search/?api=1&query=723+S+Lewis+St+Stillwater+OK+74074" target="_blank" rel="noopener" style="color: var(--blue); text-decoration: none;">723 S Lewis St, Stillwater, OK 74074</a></td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Phone</td>
-            <td style="padding: 10px 0; color: var(--slate-700);"><a href="tel:+14053724171" style="color: var(--blue); text-decoration: none;">(405) 372-4171</a></td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--slate-100);">
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Hold Time</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Short-term · Under 72 hours</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; color: var(--slate-400); font-weight: 600;">Bond Cost</td>
-            <td style="padding: 10px 0; color: var(--slate-700);">Competitive rates available</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- Right: How to Bail Out -->
-      <div>
-        <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Bail Someone Out Fast</h2>
-        <ol style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</span>
-            <div><strong style="color: var(--slate-800);">Check if still there</strong><br><span style="color: var(--slate-500);">Call (405) 372-4171 immediately</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</span>
-            <div><strong style="color: var(--slate-800);">Call us 24/7</strong><br><span style="color: var(--slate-500);">Angel Bail Bonds: (405) 614-3000</span></div>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 14px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
-            <div><strong style="color: var(--slate-800);">Pay premium &amp; sign</strong><br><span style="color: var(--slate-500);">Cash, cards accepted</span></div>
-          </li>
-          <li style="display: flex; gap: 12px;">
-            <span style="min-width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">✓</span>
-            <div><strong style="color: var(--slate-800);">Released quickly</strong><br><span style="color: var(--slate-500);">Before county transfer</span></div>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <style>
-      @media (max-width: 640px) {
-        section div[style*="grid-template-columns: 1fr 1fr"] {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-      }
-    </style>
-  </section>
-
-  <!-- ABOUT STILLWATER CITY JAIL — unique local content -->
-  <section style="padding: 48px 1.5rem; background: var(--slate-50);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">About Stillwater City Jail</h2>
-      <div style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7;">
-        <p style="margin-bottom: 14px;">Stillwater City Jail is a short-term municipal holding facility located at 723 S Lewis Street in Stillwater, Oklahoma 74074. It is operated by the Stillwater Police Department and primarily serves as a booking and temporary holding facility for individuals arrested within the Stillwater city limits. Unlike the Payne County Detention Center, which handles longer-term detention, the city jail typically holds inmates for less than 72 hours before they are either released or transferred to the county facility.</p>
-        <p style="margin-bottom: 14px;">Stillwater is the home of Oklahoma State University and has a population of roughly 50,000, making it the largest city in Payne County. The city jail on Lewis Street is located just south of downtown Stillwater, near the intersection of S Lewis St and W 8th Ave. It sits about two blocks west of Main Street (US-177). The area is easily accessible and well-known to local residents. If you are coming to pick someone up after their release, there is parking available on Lewis Street near the facility.</p>
-        <p style="margin-bottom: 14px;">The critical thing to understand about Stillwater City Jail is the 72-hour transfer window. When someone is arrested by Stillwater Police and bail is set, you have a limited time to post bail before the inmate is transferred to the Payne County Detention Center at 606 S Husband St. While posting bail at either facility achieves the same result, getting someone out of the city jail is typically faster because the facility is smaller with quicker processing times. Once someone is transferred to the county detention center, the release process restarts with new paperwork and a different processing queue, which can add hours to the wait.</p>
-      </div>
-
-      <h3 style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-top: 28px; margin-bottom: 12px;">Why Speed Matters at Stillwater City Jail</h3>
-      <p style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.7; margin-bottom: 14px;">Angel Bail Bonds is based in Stillwater, which means we can reach the city jail in minutes. If you call us immediately after learning about an arrest, we can often post the bond before the inmate is transferred to the county detention center. This matters because city jail releases tend to be processed faster than county releases. Every hour counts -- the sooner you call (405) 614-3000, the sooner your loved one can come home. We are available 24 hours a day, 7 days a week, including OSU game days, holidays, and weekends when arrests are often more common.</p>
-    </div>
-  </section>
-
-  <!-- FAQ — compact accordion -->
   <section style="padding: 40px 1.5rem; background: white;">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 style="color: var(--navy); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Frequently Asked Questions</h2>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">How long do inmates stay at Stillwater City Jail?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Stillwater City Jail is a short-term holding facility. Inmates typically stay less than 72 hours before being released or transferred to Payne County Detention Center. This is why posting bail quickly is so important.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What's the difference between Stillwater City Jail and Payne County Detention Center?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Stillwater City Jail (723 S Lewis St) is a short-term holding facility run by the Stillwater Police Department. Payne County Detention Center (606 S Husband St) is the larger county facility for longer-term holds. Inmates are typically transferred within 72 hours.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">Can I bail someone out of Stillwater City Jail at night?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">Yes. Angel Bail Bonds operates 24/7. While the court clerk's office has business hours, bail bondsmen can post bonds at any time. Call us at (405) 614-3000 no matter what time it is.</p>
-        </details>
-        <details style="background: white; border-radius: 8px; padding: 14px 18px; cursor: pointer; border: 1px solid var(--slate-100);">
-          <summary style="font-weight: 600; font-size: 0.9rem; color: var(--slate-800);">What forms of payment do you accept?</summary>
-          <p style="color: var(--slate-500); margin-top: 10px; font-size: 0.85rem; line-height: 1.6;">We accept cash, credit cards, and debit cards. Angel Bail Bonds offers competitive rates so finances don't have to delay getting your loved one released. Call us at (405) 614-3000 to discuss pricing.</p>
-        </details>
-      </div>
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">How to look someone up in Stillwater</h2>
+      <ol style="color: var(--slate-600); line-height: 1.7; padding-left: 1.2rem; list-style: decimal;">
+        <li style="margin-bottom:10px;">Call the Payne County Sheriff's Office at <a href="tel:+14053724522" style="color: var(--blue);">(405) 372-4522</a> with the person's full name and date of birth, and ask whether they are in custody.</li>
+        <li style="margin-bottom:10px;">Once charges are filed, find the case on <a href="https://www.oscn.net/dockets/Search.aspx" rel="nofollow noopener" target="_blank" style="color: var(--blue);">OSCN</a> under Payne County District Court. Our <a href="/payne-county-inmate-search" style="color: var(--blue);">Payne County inmate search guide</a> covers this and the Court Clerk.</li>
+        <li style="margin-bottom:10px;">Call Angel Bail Bonds at <a href="tel:+14056143000" style="color: var(--blue);">(405) 614-3000</a>, day or night. We confirm the bond and start the release by phone.</li>
+      </ol>
     </div>
   </section>
 
-  <!-- Related Pages -->
-  <section style="padding: 24px 1.5rem 0; background: var(--slate-50);">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Also Serving</p>
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Stillwater at a glance</h2>
+      <div style="overflow-x:auto;"><table style="width:100%; border-collapse:collapse; background:white; border:1px solid var(--slate-200); border-radius:10px; font-size:0.95rem;">
+        <tbody>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">City jail</th><td style="padding:10px 12px; color:var(--slate-600);">Closed. Payne County took over jail services on July 1, 2026, according to the City of Stillwater.</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Who holds Stillwater arrests now</th><td style="padding:10px 12px; color:var(--slate-600);">Payne County</td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Payne County Sheriff's Office</th><td style="padding:10px 12px; color:var(--slate-600);"><a href="tel:+14053724522" style="color: var(--blue);">(405) 372-4522</a></td></tr>
+          <tr><th scope="row" style="text-align:left; padding:10px 12px; color:var(--navy); font-weight:700; vertical-align:top; width:34%;">Online roster</th><td style="padding:10px 12px; color:var(--slate-600);">Payne County has none right now. Call the Sheriff's Office or call us.</td></tr>
+        </tbody>
+      </table></div>
+      <p style="color: var(--slate-500); font-size: 0.82rem; margin-top: 10px;">Checked against the official pages listed at the bottom of this page on November 16, 2026.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">What changed</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Until mid-2026 the Stillwater Police Department ran its own short-term jail. In a <a href="https://stillwaterok.gov/m/newsflash/Home/Detail/470" rel="nofollow noopener" target="_blank" style="color: var(--blue);">March 19, 2026 announcement</a>, the city said it would contract with Payne County for jail services beginning July 1, 2026. Police Chief Chris Hassig and Sheriff Joe Harper both described it as centralizing jail services with the county.</p>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">So older advice about "the city jail" no longer applies. If a Stillwater officer made the arrest, the person is in Payne County custody, and the bond goes through Payne County.</p>
+    </div>
+  </section>
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Arrested by OSU police or a deputy?</h2>
+      <p style="color: var(--slate-600); line-height: 1.75; margin-bottom: 12px;">Arrests by the Payne County Sheriff's Office were already booked into Payne County, so nothing changes there. If you are not sure which agency made the arrest, call us with the person's name and we will find out where they are.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 1.5rem; background: var(--slate-50);">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <h2 style="color: var(--navy); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">Questions families ask</h2>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Is the Stillwater City Jail still open?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">No. The City of Stillwater announced on March 19, 2026 that it would contract with Payne County for jail services starting July 1, 2026, and close the city jail.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">Where do Stillwater police take people they arrest now?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">To Payne County custody, since Payne County took over the city's jail services on July 1, 2026. Call the Payne County Sheriff's Office at (405) 372-4522 to check on someone.</p>
+      </details>
+      <details style="border:1px solid var(--slate-200); border-radius:10px; padding:14px 16px; margin-bottom:10px; background:white;">
+        <summary style="font-weight:700; color:var(--navy); cursor:pointer;">How do I bail someone out after a Stillwater arrest?</summary>
+        <p style="color: var(--slate-600); margin-top: 10px; line-height: 1.7;">Call Angel Bail Bonds at (405) 614-3000 any time. We find out where they are held, confirm the bond with Payne County and start the paperwork by phone.</p>
+      </details>
+    </div>
+  </section>
+
+  <section style="padding: 28px 1.5rem; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Official sources</p>
+      <ul style="font-size: 0.85rem; line-height: 1.8; padding-left: 1.1rem; list-style: disc;">
+        <li><a href="https://stillwaterok.gov/m/newsflash/Home/Detail/470" rel="nofollow noopener" target="_blank" style="color: var(--blue);">City of Stillwater: City to Contract with Payne County for Jail Services (Mar 19, 2026)</a></li>
+        <li><a href="https://www.paynecounty.org/general-information" rel="nofollow noopener" target="_blank" style="color: var(--blue);">Payne County: General Information (Sheriff phone)</a></li>
+        <li><a href="https://www.oscn.net/dockets/Search.aspx" rel="nofollow noopener" target="_blank" style="color: var(--blue);">OSCN: Oklahoma State Courts Network docket search</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; color: var(--slate-400); margin-top: 10px;">Angel Bail Bonds is a private bail bond company and is not affiliated with the City of Stillwater or the Payne County Sheriff's Office.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 1.5rem 28px; background: white;">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Related</p>
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County Jail →</a>
+        <a href="/payne-county-inmate-search" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County Inmate Search →</a>
+        <a href="/payne-county-jail-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County Jail Bail Bonds →</a>
         <a href="/payne-county-detention-center-bail-bonds" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: white; border: 1px solid var(--slate-100); border-radius: 6px;">Payne County Detention Center →</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA BAR — tight -->
   <section style="background: var(--navy-deep); padding: 36px 1.5rem;">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+    <div style="max-width: 820px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
       <div>
-        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Someone at Stillwater City Jail?</p>
-        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Act fast before transfer · 24/7 service · Competitive rates</p>
+        <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px;">Someone arrested in Stillwater?</p>
+        <p style="color: rgba(255,255,255,0.55); font-size: 0.85rem;">Open 24 hours · We start the paperwork by phone</p>
       </div>
-      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">Call (405) 614-3000</a>
     </div>
   </section>
 </BaseLayout>
