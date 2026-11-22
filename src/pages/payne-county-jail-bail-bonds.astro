@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CountyTownLinks from '../components/local/CountyTownLinks.astro';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -283,6 +284,8 @@ const breadcrumbData = {
       <li><a href="/kay-county-bail-bonds" style="display: block; padding: 0.75rem; background: #f0f0f5; border-radius: 8px; text-decoration: none; color: #1a1a4e;">→ Kay County Bail Bonds</a></li>
     </ul>
   </section>
+
+  <CountyTownLinks county="payne" label="Payne" />
 
   <!-- Final CTA -->
   <section style="background: linear-gradient(135deg, #1a1a4e 0%, #2d2d7f 100%); color: white; padding: 3rem 1rem; text-align: center; margin-top: 2rem;">

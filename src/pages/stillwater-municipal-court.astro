@@ -1,0 +1,6 @@
+---
+import CourtPage from '../components/local/CourtPage.astro';
+import { courts } from '../data/local/courts';
+const court = courts.find((k) => k.slug === 'stillwater-municipal-court')!;
+---
+<CourtPage court={court} />

@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhotoFigure from './PhotoFigure.astro';
+import './local.css';
+import { towns } from '../../data/local/towns';
+import { counties, telHref, mapHref } from '../../data/local/counties';
+import { SITE, PAGE_DATE, business, imageObject } from '../../data/local/site';
+import type { Court } from '../../data/local/types';
+
+interface Props { court: Court }
+const { court: k } = Astro.props;
+const c = k.county ? counties[k.county] : counties.payne;
+const url = `${SITE}/${k.slug}`;
+const full = `${k.street}, ${k.city}, OK ${k.zip}`;
+const served = towns.filter((t) => t.county === c.key);
+
+const graph: any[] = [
+  {
+    '@type': 'Courthouse',
+    '@id': `${url}#courthouse`,
+    name: k.name,
+    telephone: k.phone,
+    address: { '@type': 'PostalAddress', streetAddress: k.street, addressLocality: k.city, addressRegion: 'OK', postalCode: k.zip, addressCountry: 'US' },
+    ...(k.lat !== null && k.lng !== null ? { geo: { '@type': 'GeoCoordinates', latitude: k.lat, longitude: k.lng } } : {}),
+    ...(k.photo ? { image: imageObject(k.photo) } : {}),
+  },
+  {
+    ...business,
+    '@id': `${url}#business`,
+    name: `Angel Bail Bonds - ${c.name} County`,
+    url,
+    areaServed: { '@type': 'AdministrativeArea', name: `${c.name} County, Oklahoma` },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: `${k.name}: address, clerk and court dates after bail`,
+    datePublished: PAGE_DATE,
+    dateModified: PAGE_DATE,
+    about: { '@id': `${url}#courthouse` },
+    ...(k.photo ? { primaryImageOfPage: imageObject(k.photo) } : {}),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Towns & Courts', item: `${SITE}/service-areas` },
+      { '@type': 'ListItem', position: 3, name: k.shortName, item: url },
+    ],
+  },
+  { '@type': 'FAQPage', mainEntity: k.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+];
+const structuredData = { '@context': 'https://schema.org', '@graph': graph };
+---
+
+<BaseLayout
+  title={`${k.name}, ${k.city} OK | Address, Clerk & Court Dates After Bail`}
+  description={k.metaDescription}
+  structuredData={structuredData}
+  ogImage={k.photo ? k.photo.src : undefined}
+>
+  <section class="lp-hero">
+    <div class="lp-wrap">
+      <nav class="lp-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/service-areas">Towns &amp; Courts</a> › {k.shortName}</nav>
+      <p class="lp-kicker">{k.kind === 'district' ? `${c.name} County District Court` : 'City court'} · {k.city}, Oklahoma</p>
+      <h1>{k.name}</h1>
+      <p class="lp-sub">{k.tagline}</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 Bail help 24/7: (405) 614-3000</a>
+    </div>
+  </section>
+
+  {k.photo && (
+    <section class="lp-section" style="padding-bottom: 8px;">
+      <div class="lp-wrap"><PhotoFigure photo={k.photo} eager /></div>
+    </section>
+  )}
+
+  <section class="lp-section">
+    <div class="lp-wrap">
+      <h2>What happens at the {k.shortName} after an arrest?</h2>
+      <p class="lp-answer">{k.answer}</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="lp-wrap">
+      <h2>{k.shortName} address, phone and hours</h2>
+      <table class="lp-table">
+        <tbody>
+          <tr><th scope="row">Address</th><td><a href={mapHref(full)} target="_blank" rel="noopener">{full}</a></td></tr>
+          <tr><th scope="row">{k.phoneLabel}</th><td><a href={`tel:${telHref(k.phone)}`}>{k.phone}</a></td></tr>
+          {k.otherPhones?.map((o) => <tr><th scope="row">{o.label}</th><td><a href={`tel:${telHref(o.phone)}`}>{o.phone}</a></td></tr>)}
+          {k.hours && <tr><th scope="row">Office hours</th><td>{k.hours}</td></tr>}
+          {k.district && <tr><th scope="row">Judicial district</th><td>{k.district}</td></tr>}
+          {k.kind === 'district' && <tr><th scope="row">Case lookup</th><td>Search {c.name} County cases on <a href="https://www.oscn.net/dockets/Search.aspx" target="_blank" rel="noopener">OSCN (Oklahoma State Courts Network)</a></td></tr>}
+          <tr><th scope="row">Jail for this court</th><td><a href={c.jail.page}>{c.jail.name}</a>, {c.jail.street}, {c.jail.city} · <a href={`tel:${telHref(c.jail.phone)}`}>{c.jail.phone}</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="lp-wrap">
+      {k.body.map((p) => <p>{p}</p>)}
+      <h3>Your bond and your court date</h3>
+      <ol class="lp-steps">
+        <li><div><strong>Get the date in writing.</strong> When someone bonds out of the {c.jail.name}, the release papers list the first court date. Keep a photo of them on your phone.</div></li>
+        <li><div><strong>Check the case online.</strong> {k.kind === 'district' ? <>Look up the case on <a href="https://www.oscn.net/dockets/Search.aspx" target="_blank" rel="noopener">OSCN</a> by name. Dockets and dates update as the case moves.</> : <>Call the court at <a href={`tel:${telHref(k.phone)}`}>{k.phone}</a> to confirm the date and time.</>}</div></li>
+        <li><div><strong>Arrive early.</strong> Bring photo ID and your paperwork, and plan for security screening at the door.</div></li>
+        <li><div><strong>Never skip a date.</strong> Missing court can forfeit the bond and lead to a bench warrant. If something comes up, call us at <a href="tel:+14056143000">(405) 614-3000</a> before the hearing, not after.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  {k.history && (
+    <section class="lp-section alt">
+      <div class="lp-wrap">
+        <h2>About the building</h2>
+        <p>{k.history}</p>
+      </div>
+    </section>
+  )}
+
+  <section class="lp-section lp-faq">
+    <div class="lp-wrap">
+      <h2>{k.shortName} questions</h2>
+      {k.faqs.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="lp-wrap">
+      <h2>{c.name} County help</h2>
+      <div class="lp-chips" style="margin-bottom: 18px;">
+        <a href={c.countyPage}>{c.name} County bail bonds →</a>
+        {c.jail.page !== c.countyPage && <a href={c.jail.page}>{c.jail.name} →</a>}
+        {c.inmateSearchPage && <a href={c.inmateSearchPage}>{c.name} County inmate search →</a>}
+        {k.kind === 'municipal' && <a href="/stillwater-city-jail-bail-bonds">Stillwater City Jail (closed) →</a>}
+        {k.kind === 'district' && k.county === 'payne' && <a href="/stillwater-municipal-court">Stillwater Municipal Court →</a>}
+        {k.kind === 'municipal' && <a href="/payne-county-courthouse">Payne County Courthouse →</a>}
+      </div>
+      {served.length > 0 && k.kind === 'district' && (
+        <>
+          <h3>Towns whose cases go to this court</h3>
+          <div class="lp-chips">
+            {served.map((t) => <a href={`/${t.slug}-ok-bail-bonds`}>{t.name} →</a>)}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+
+  <section class="lp-section" style="padding-top: 28px; padding-bottom: 28px;">
+    <div class="lp-wrap">
+      <p style="font-size: 0.8rem; color: var(--slate-500); margin-bottom: 6px;"><strong>Sources</strong> (checked November 2026). Court hours and dockets change, so confirm with the clerk.</p>
+      <ul class="lp-sources">
+        {k.sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-cta">
+    <div class="lp-wrap">
+      <div>
+        <p class="big">Need a bond for a {c.name} County case?</p>
+        <p>24/7 · Competitive rates · Court date reminders · Hablamos español</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

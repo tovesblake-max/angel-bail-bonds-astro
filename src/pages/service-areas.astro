@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../components/local/local.css';
+import { towns } from '../data/local/towns';
+import { courts } from '../data/local/courts';
+import { counties } from '../data/local/counties';
+import { SITE, PAGE_DATE, business } from '../data/local/site';
+import type { CountyKey } from '../data/local/types';
+
+const order: CountyKey[] = ['payne', 'pawnee', 'lincoln', 'kay', 'noble', 'logan'];
+const groups = order.map((k) => ({ c: counties[k], towns: towns.filter((t) => t.county === k), court: courts.find((x) => x.county === k && x.kind === 'district') }));
+const url = `${SITE}/service-areas`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      ...business,
+      '@id': `${SITE}/#business`,
+      name: 'Angel Bail Bonds',
+      url: `${SITE}/`,
+      areaServed: towns.map((t) => ({ '@type': 'City', name: `${t.name}, Oklahoma` })),
+    },
+    { '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: 'Towns and courts Angel Bail Bonds serves', dateModified: PAGE_DATE },
+    {
+      '@type': 'ItemList',
+      itemListElement: [
+        ...towns.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: `Bail bonds in ${t.name}, OK`, url: `${SITE}/${t.slug}-ok-bail-bonds` })),
+        ...courts.map((k, i) => ({ '@type': 'ListItem', position: towns.length + i + 1, name: k.name, url: `${SITE}/${k.slug}` })),
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Towns & Courts', item: url },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Towns & Courts We Serve | Bail Bonds Across North Central Oklahoma"
+  description="Angel Bail Bonds serves Stillwater and the towns around it: Cushing, Perkins, Perry, Ponca City, Chandler, Guthrie and more. Find your town's jail and courthouse. Call 24/7: (405) 614-3000."
+  structuredData={structuredData}
+>
+  <section class="lp-hero">
+    <div class="lp-wrap">
+      <nav class="lp-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › Towns &amp; Courts</nav>
+      <p class="lp-kicker">Service area</p>
+      <h1>Towns and courts we serve</h1>
+      <p class="lp-sub">We're based in Stillwater and post bonds at every county jail on this page, day or night. Pick a town to see where an arrest there is booked, how far it is, and which court hears the case.</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 Call 24/7: (405) 614-3000</a>
+    </div>
+  </section>
+
+  {groups.map((g, i) => (
+    <section class={`lp-section${i % 2 ? ' alt' : ''}`}>
+      <div class="lp-wrap">
+        <h2>{g.c.name} County</h2>
+        <p>Arrests are booked into the <a href={g.c.jail.page}>{g.c.jail.name}</a> in {g.c.jail.city}.{g.court && <> Cases are heard at the <a href={`/${g.court.slug}`}>{g.court.name}</a>.</>} <a href={g.c.countyPage}>{g.c.name} County bail bonds</a>.</p>
+        <div class="sa-grid">
+          {g.towns.map((t) => (
+            <a class="sa-card" href={`/${t.slug}-ok-bail-bonds`}>
+              {t.photo ? <img src={t.photo.src} alt={t.photo.alt} width="640" height={Math.round((640 * t.photo.height) / t.photo.width)} loading="lazy" decoding="async" /> : <span class="sa-ph" aria-hidden="true">{t.name}</span>}
+              <span class="sa-name">{t.name}</span>
+              <span class="sa-meta">{t.population ? `Pop. ${t.population.toLocaleString('en-US')}` : `${g.c.name} County`}{t.milesToStillwater !== null ? ` · ${t.milesToStillwater} mi from Stillwater` : ''}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="lp-section">
+    <div class="lp-wrap">
+      <h2>Courthouses</h2>
+      <div class="lp-chips">
+        {courts.map((k) => <a href={`/${k.slug}`}>{k.name} →</a>)}
+      </div>
+      <h3>Other counties we cover</h3>
+      <div class="lp-chips">
+        <a href="/creek-county-bail-bonds">Creek County →</a>
+        <a href="/garfield-county-bail-bonds">Garfield County →</a>
+        <a href="/grant-county-bail-bonds">Grant County →</a>
+        <a href="/kingfisher-county-bail-bonds">Kingfisher County →</a>
+        <a href="/oklahoma-county-bail-bonds">Oklahoma County →</a>
+        <a href="/osage-county-bail-bonds">Osage County →</a>
+        <a href="/pottawatomie-county-bail-bonds">Pottawatomie County →</a>
+        <a href="/tulsa-county-bail-bonds">Tulsa County →</a>
+        <a href="/washington-county-bail-bonds">Washington County →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-cta">
+    <div class="lp-wrap">
+      <div>
+        <p class="big">Don't see your town?</p>
+        <p>Call anyway. If there's a jail within reach of Stillwater, we can usually help.</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sa-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 8px; }
+  .sa-card { display: flex; flex-direction: column; background: white; border: 1px solid var(--slate-200); border-radius: 10px; overflow: hidden; text-decoration: none; }
+  .sa-card img, .sa-ph { width: 100%; height: 130px; object-fit: cover; display: block; }
+  .sa-ph { background: var(--navy); color: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+  .sa-name { padding: 10px 12px 2px; color: var(--navy); font-weight: 700; }
+  .sa-meta { padding: 0 12px 12px; color: var(--slate-500); font-size: 0.8rem; }
+</style>

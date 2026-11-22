@@ -1,0 +1,12 @@
+---
+import CourtPage from '../components/local/CourtPage.astro';
+import { courts } from '../data/local/courts';
+
+export function getStaticPaths() {
+  return courts
+    .filter((k) => k.kind === 'district' && k.slug.endsWith('-county-courthouse'))
+    .map((k) => ({ params: { county: k.slug.replace('-county-courthouse', '') }, props: { court: k } }));
+}
+const { court } = Astro.props;
+---
+<CourtPage court={court} />

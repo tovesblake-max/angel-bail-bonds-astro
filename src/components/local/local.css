@@ -1,0 +1,34 @@
+/* Shared styles for town and courthouse pages */
+.lp-hero { background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 52px 1.5rem 44px; }
+.lp-wrap { max-width: 900px; margin: 0 auto; }
+.lp-kicker { color: rgba(255,255,255,0.55); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.lp-hero h1 { color: white; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 10px; }
+.lp-hero p.lp-sub { color: rgba(255,255,255,0.7); font-size: 0.98rem; line-height: 1.6; margin-bottom: 20px; max-width: 680px; }
+.lp-crumbs { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+.lp-crumbs a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.lp-section { padding: 44px 1.5rem; background: white; }
+.lp-section.alt { background: var(--slate-50); }
+.lp-section h2 { color: var(--navy); font-size: 1.3rem; font-weight: 700; margin-bottom: 14px; line-height: 1.3; }
+.lp-section h3 { color: var(--navy); font-size: 1.05rem; font-weight: 700; margin: 22px 0 10px; }
+.lp-section p { color: var(--slate-600); font-size: 0.95rem; line-height: 1.75; margin-bottom: 14px; }
+.lp-section a { color: var(--blue); }
+.lp-answer { color: var(--navy) !important; padding: 16px 18px; background: #f0f7ff; border-left: 3px solid var(--blue); border-radius: 4px; }
+.lp-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: white; border: 1px solid var(--slate-200); border-radius: 8px; overflow: hidden; }
+.lp-table th { text-align: left; padding: 11px 14px; color: var(--navy); font-weight: 700; vertical-align: top; width: 34%; border-bottom: 1px solid var(--slate-100); }
+.lp-table td { padding: 11px 14px; color: var(--slate-600); border-bottom: 1px solid var(--slate-100); line-height: 1.55; }
+.lp-steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+.lp-steps li { display: flex; gap: 14px; margin-bottom: 16px; color: var(--slate-600); font-size: 0.93rem; line-height: 1.6; }
+.lp-steps li::before { counter-increment: s; content: counter(s); min-width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; }
+.lp-faq details { background: white; border-radius: 8px; padding: 14px 18px; border: 1px solid var(--slate-200); margin-bottom: 8px; }
+.lp-faq summary { font-weight: 600; font-size: 0.93rem; color: var(--slate-800); cursor: pointer; }
+.lp-faq details p { margin: 10px 0 0; font-size: 0.9rem; }
+.lp-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.lp-chips a { font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 7px 14px; background: white; border: 1px solid var(--slate-200); border-radius: 6px; }
+.lp-sources { font-size: 0.8rem; color: var(--slate-500); line-height: 1.6; padding-left: 18px; }
+.lp-sources a { color: var(--slate-500); word-break: break-word; }
+.lp-cta { background: var(--navy-deep); padding: 36px 1.5rem; }
+.lp-cta .lp-wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.lp-cta p { color: rgba(255,255,255,0.55); font-size: 0.85rem; margin: 0; }
+.lp-cta p.big { color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 2px; }
+.lp-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 700px) { .lp-grid2 { grid-template-columns: 1fr; } .lp-table th { width: 40%; } }

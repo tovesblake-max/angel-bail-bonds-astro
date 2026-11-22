@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CountyTownLinks from '../components/local/CountyTownLinks.astro';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -424,6 +425,8 @@ const structuredData = {
       </div>
     </div>
   </section>
+
+  <CountyTownLinks county="kay" label="Kay" />
 
   <!-- CTA BAR -->
   <section style="background: var(--navy-deep); padding: 36px 1.5rem;">

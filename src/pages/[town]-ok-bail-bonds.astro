@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhotoFigure from '../components/local/PhotoFigure.astro';
+import '../components/local/local.css';
+import { towns } from '../data/local/towns';
+import { courts } from '../data/local/courts';
+import { counties, telHref, mapHref } from '../data/local/counties';
+import { SITE, PAGE_DATE, business, imageObject } from '../data/local/site';
+import type { Town } from '../data/local/types';
+
+export function getStaticPaths() {
+  return towns.map((t) => ({ params: { town: t.slug }, props: { t } }));
+}
+
+const { t } = Astro.props as { t: Town };
+const c = counties[t.county];
+const court = courts.find((x) => x.county === t.county && x.kind === 'district');
+const url = `${SITE}/${t.slug}-ok-bail-bonds`;
+const nearby = t.nearby.map((s) => towns.find((x) => x.slug === s)).filter(Boolean) as Town[];
+const jailFull = `${c.jail.street}, ${c.jail.city}, OK ${c.jail.zip}`;
+const jailInTown = c.jail.city === t.name;
+
+const graph: any[] = [
+  {
+    ...business,
+    '@id': `${url}#business`,
+    name: `Angel Bail Bonds - ${t.name}, OK`,
+    url,
+    description: t.metaDescription,
+    areaServed: [
+      { '@type': 'City', name: `${t.name}, Oklahoma`, geo: { '@type': 'GeoCoordinates', latitude: t.lat, longitude: t.lng } },
+      { '@type': 'AdministrativeArea', name: `${c.name} County, Oklahoma` },
+    ],
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: `Bail Bonds in ${t.name}, Oklahoma`,
+    datePublished: PAGE_DATE,
+    dateModified: PAGE_DATE,
+    about: { '@id': `${url}#business` },
+    ...(t.photo ? { primaryImageOfPage: imageObject(t.photo) } : {}),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Towns We Serve', item: `${SITE}/service-areas` },
+      { '@type': 'ListItem', position: 3, name: `${t.name}, OK`, item: url },
+    ],
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: t.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+const structuredData = { '@context': 'https://schema.org', '@graph': graph };
+---
+
+<BaseLayout
+  title={`${t.name}, OK Bail Bonds | 24/7 Help for ${c.name} County Arrests`}
+  description={t.metaDescription}
+  structuredData={structuredData}
+  ogImage={t.photo ? t.photo.src : undefined}
+>
+  <section class="lp-hero">
+    <div class="lp-wrap">
+      <nav class="lp-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/service-areas">Towns We Serve</a> › {t.name}</nav>
+      <p class="lp-kicker">{t.name}, Oklahoma · {c.name} County</p>
+      <h1>Bail Bonds in {t.name}, Oklahoma</h1>
+      <p class="lp-sub">{t.tagline}</p>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px;">📞 Call 24/7: (405) 614-3000</a>
+    </div>
+  </section>
+
+  {t.photo && (
+    <section class="lp-section" style="padding-bottom: 8px;">
+      <div class="lp-wrap"><PhotoFigure photo={t.photo} eager /></div>
+    </section>
+  )}
+
+  <section class="lp-section">
+    <div class="lp-wrap">
+      <h2>What happens when someone is arrested in {t.name}?</h2>
+      <p class="lp-answer">{t.answer}</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="lp-wrap">
+      <h2>{t.name} arrest and jail quick facts</h2>
+      <table class="lp-table">
+        <tbody>
+          <tr><th scope="row">County</th><td><a href={c.countyPage}>{c.name} County</a> (county seat: {c.seat})</td></tr>
+          {t.population && <tr><th scope="row">Population</th><td>{t.population.toLocaleString('en-US')} (2020 U.S. Census)</td></tr>}
+          {t.police && (
+            <tr><th scope="row">Local police</th><td>
+              {t.police.name}
+              {t.police.street && <>{', '}{t.police.street}</>}
+              {t.police.phone && <>{' · '}<a href={`tel:${telHref(t.police.phone)}`}>{t.police.phone}</a></>}
+            </td></tr>
+          )}
+          <tr><th scope="row">Where people are held</th><td>
+            <a href={c.jail.page}>{c.jail.name}</a>, <a href={mapHref(jailFull)} target="_blank" rel="noopener">{jailFull}</a> · <a href={`tel:${telHref(c.jail.phone)}`}>{c.jail.phone}</a>
+          </td></tr>
+          {t.milesToJail !== null && !jailInTown && <tr><th scope="row">Distance to the jail</th><td>About {t.milesToJail} miles by road from {t.name}</td></tr>}
+          {court && <tr><th scope="row">Court</th><td><a href={`/${court.slug}`}>{court.name}</a>, {court.street}, {court.city}</td></tr>}
+          {t.municipalCourt && (t.municipalCourt.street || t.municipalCourt.phone) && (
+            <tr><th scope="row">City (municipal) court</th><td>
+              {t.name} Municipal Court{t.municipalCourt.street && <>, {t.municipalCourt.street}</>}
+              {t.municipalCourt.phone && <>{' · '}<a href={`tel:${telHref(t.municipalCourt.phone)}`}>{t.municipalCourt.phone}</a></>}
+            </td></tr>
+          )}
+          {c.inmateSearchPage && <tr><th scope="row">Find an inmate</th><td><a href={c.inmateSearchPage}>{c.name} County inmate search guide</a></td></tr>}
+          <tr><th scope="row">Main roads</th><td>{t.highways}</td></tr>
+          {t.milesToStillwater !== null && <tr><th scope="row">From our office</th><td>About {t.milesToStillwater} miles from Angel Bail Bonds, 800 E 6th Ave, Stillwater</td></tr>}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="lp-wrap">
+      <h2>How to bail someone out after a {t.name} arrest</h2>
+      <ol class="lp-steps">
+        <li><div><strong>Confirm where they are.</strong> Someone held on state charges after a {t.name} arrest is normally booked into the {c.jail.name} in {c.jail.city}. Call the jail at <a href={`tel:${telHref(c.jail.phone)}`}>{c.jail.phone}</a>{c.inmateSearchPage ? <> or use our <a href={c.inmateSearchPage}>{c.name} County inmate search guide</a></> : null} for the full name, booking number and bond amount.</div></li>
+        <li><div><strong>Call Angel Bail Bonds at <a href="tel:+14056143000">(405) 614-3000</a>.</strong> We answer 24 hours a day. Give us the name and the jail, and we confirm the charges and the bond amount for you.</div></li>
+        <li><div><strong>Sign and pay from wherever you are.</strong> Paperwork can be done by phone and e-signature, so you don't have to drive to {jailInTown ? 'the jail' : c.jail.city} first. We take cash, Visa, Mastercard, Zelle and Venmo, and offer financing on larger bonds.</div></li>
+        <li><div><strong>We post the bond and track the release.</strong> Once the bond is posted at the {c.jail.name}, the jail finishes its release paperwork. We tell you when to pick them up.</div></li>
+        <li><div><strong>Show up for court.</strong> {court ? <>Felony and misdemeanor cases for {t.name} are heard at the <a href={`/${court.slug}`}>{court.name}</a> in {court.city}.</> : null} Missing a court date can forfeit the bond and lead to a warrant, so we remind you of every date.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="lp-wrap">
+      <h2>About {t.name}</h2>
+      {t.local.map((p) => <p>{p}</p>)}
+    </div>
+  </section>
+
+  <section class="lp-section lp-faq">
+    <div class="lp-wrap">
+      <h2>{t.name} bail bond questions</h2>
+      {t.faqs.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="lp-wrap">
+      <h2>More help for {c.name} County</h2>
+      <div class="lp-chips" style="margin-bottom: 18px;">
+        <a href={c.countyPage}>{c.name} County bail bonds →</a>
+        {c.jail.page !== c.countyPage && <a href={c.jail.page}>{c.jail.name} →</a>}
+        {c.inmateSearchPage && <a href={c.inmateSearchPage}>{c.name} County inmate search →</a>}
+        {court && <a href={`/${court.slug}`}>{court.name} →</a>}
+        <a href="/how-bail-works">How bail works in Oklahoma →</a>
+      </div>
+      {nearby.length > 0 && (
+        <>
+          <h3>Nearby towns we serve</h3>
+          <div class="lp-chips">
+            {nearby.map((n) => <a href={`/${n.slug}-ok-bail-bonds`}>{n.name} bail bonds →</a>)}
+            <a href="/service-areas">All towns →</a>
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+
+  <section class="lp-section" style="padding-top: 28px; padding-bottom: 28px;">
+    <div class="lp-wrap">
+      <p style="font-size: 0.8rem; color: var(--slate-500); margin-bottom: 6px;"><strong>Sources</strong> (checked November 2026). Jail and police details change, so call before you drive.</p>
+      <ul class="lp-sources">
+        {t.sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="lp-cta">
+    <div class="lp-wrap">
+      <div>
+        <p class="big">Someone arrested in {t.name}?</p>
+        <p>24/7 · Competitive rates · Payment plans · Hablamos español</p>
+      </div>
+      <a href="tel:+14056143000" class="btn-primary" style="font-size: 1rem; padding: 12px 28px; white-space: nowrap;">📞 (405) 614-3000</a>
+    </div>
+  </section>
+</BaseLayout>

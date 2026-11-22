@@ -1,0 +1,19 @@
+---
+import { towns } from '../../data/local/towns';
+import { courts } from '../../data/local/courts';
+import type { CountyKey } from '../../data/local/types';
+interface Props { county: CountyKey; label: string }
+const { county, label } = Astro.props;
+const list = towns.filter((t) => t.county === county);
+const court = courts.find((k) => k.county === county && k.kind === 'district');
+---
+<section style="padding: 32px 1.5rem; background: white; border-top: 1px solid var(--slate-100);">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <p style="font-size: 0.8rem; color: var(--slate-400); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;">{label} County towns &amp; court</p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      {list.map((t) => <a href={`/${t.slug}-ok-bail-bonds`} style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px;">{t.name} bail bonds →</a>)}
+      {court && <a href={`/${court.slug}`} style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px;">{court.name} →</a>}
+      <a href="/service-areas" style="font-size: 0.85rem; color: var(--blue); text-decoration: none; padding: 6px 14px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 6px;">All towns we serve →</a>
+    </div>
+  </div>
+</section>

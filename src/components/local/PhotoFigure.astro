@@ -1,0 +1,31 @@
+---
+import type { Photo } from '../../data/local/types';
+interface Props { photo: Photo; eager?: boolean }
+const { photo, eager = false } = Astro.props;
+---
+<figure class="lp-figure">
+  <img
+    src={photo.src}
+    width={photo.width}
+    height={photo.height}
+    alt={photo.alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    fetchpriority={eager ? 'high' : 'auto'}
+  />
+  <figcaption>
+    {photo.caption}
+    <span class="lp-credit">
+      Photo: <a href={photo.sourceUrl} target="_blank" rel="noopener">{photo.author}</a>,
+      <a href={photo.licenseUrl} target="_blank" rel="noopener license">{photo.license}</a>, via Wikimedia Commons.
+    </span>
+  </figcaption>
+</figure>
+
+<style>
+  .lp-figure { margin: 0; }
+  .lp-figure img { width: 100%; height: auto; max-height: 460px; object-fit: cover; border-radius: 12px; display: block; background: var(--slate-100); }
+  .lp-figure figcaption { font-size: 0.8rem; color: var(--slate-500); margin-top: 8px; line-height: 1.5; }
+  .lp-credit { display: block; font-size: 0.72rem; color: var(--slate-400); }
+  .lp-credit a { color: var(--slate-500); text-decoration: underline; }
+</style>
