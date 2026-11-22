@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { towns } from '../data/local/towns';
+import { courts } from '../data/local/courts';
 
 const faqItems = [
   { q: 'How much does a bail bond cost?', a: 'In Oklahoma, we offer competitive rates on bail bonds. The premium is non-refundable and is the fee for the bail bond service. Contact us to discuss pricing for your specific situation.' },
@@ -348,6 +350,15 @@ const structuredData = {
           <p style="color: var(--slate-500); font-size: 0.85rem; margin-bottom: 0.5rem;">119 S Main St, Kingfisher, OK</p>
           <p style="color: var(--blue); font-size: 0.8rem; font-weight: 600;">View Jail Info & Bail Bonds →</p>
         </a>
+      </div>
+
+      <div class="reveal" style="margin-top: 2.5rem;">
+        <h3 style="color: var(--slate-900); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">Towns and courthouses we serve</h3>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          {towns.map((t) => <a href={`/${t.slug}-ok-bail-bonds`} style="font-size: 0.85rem; color: #1e3a5f; text-decoration: none; padding: 6px 12px; background: white; border: 1px solid #e2e8f0; border-radius: 6px;">{t.name}</a>)}
+          {courts.map((k) => <a href={`/${k.slug}`} style="font-size: 0.85rem; color: #1e3a5f; text-decoration: none; padding: 6px 12px; background: white; border: 1px solid #e2e8f0; border-radius: 6px;">{k.name}</a>)}
+          <a href="/service-areas" style="font-size: 0.85rem; font-weight: 600; color: #dc2626; text-decoration: none; padding: 6px 12px;">All towns &amp; courts →</a>
+        </div>
       </div>
     </div>
   </section>
